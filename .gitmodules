@@ -1,0 +1,15 @@
+[submodule ".vim/pack/plugins/start/vim-codefmt"]
+	path = .vim/pack/plugins/start/vim-codefmt
+	url = https://github.com/google/vim-codefmt
+[submodule ".vim/pack/plugins/start/vim-maktaba"]
+	path = .vim/pack/plugins/start/vim-maktaba
+	url = https://github.com/google/vim-maktaba
+[submodule ".vim/pack/plugins/start/vim-glaive"]
+	path = .vim/pack/plugins/start/vim-glaive
+	url = https://github.com/google/vim-glaive
+[submodule ".vim/pack/plugins/start/ctrlp.vim"]
+	path = .vim/pack/plugins/start/ctrlp.vim
+	url = https://github.com/kien/ctrlp.vim
+[submodule ".vim/pack/plugins/start/lexima"]
+	path = .vim/pack/plugins/start/lexima
+	url = https://github.com/cohama/lexima.vim
