@@ -1,8 +1,0 @@
-Run the following to clone this repo and install its files:
-
-```
-mkdir ~/.dotfiles
-git clone --recurse-submodules https://github.com/joshuaseaton/dotfiles ~/.dotfiles
-~/.dotfiles/install.sh
-```
-
