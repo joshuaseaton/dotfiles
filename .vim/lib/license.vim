@@ -7,12 +7,17 @@ let s:headers_by_pattern = {
         \"// Copyright " . strftime("%Y") . " The Fuchsia Authors. All rights reserved.",
         \"// Use of this source code is governed by a BSD-style license that can",
         \"// found in the LICENSE file.",
-        \], "\n"),
+    \], "\n"),
     \"/The LUCI Authors/": join([
         \"// Copyright " . strftime("%Y") . " The LUCI Authors. All rights reserved.",
         \"// Use of this source code is governed under the Apache License, Version 2.0",
         \"// that can be found in the LICENSE file.",
-        \], "\n"),
+    \], "\n"),
+    \"/the Dart project authors/": join([
+        \"// Copyright (c) " . strftime("%Y") . ", the Dart project authors.  Please see the AUTHORS file",
+        \"// for details. All rights reserved. Use of this source code is governed by a",
+        \"// BSD-style license that can be found in the LICENSE file.",
+    \])
 \}
 
 " Returns the absolute path to a license file found within a parent directory,

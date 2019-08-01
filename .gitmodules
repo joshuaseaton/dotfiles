@@ -13,3 +13,6 @@
 [submodule ".vim/pack/plugins/start/lexima"]
 	path = .vim/pack/plugins/start/lexima
 	url = https://github.com/cohama/lexima.vim
+[submodule ".vim/pack/plugins/start/youcompleteme"]
+	path = .vim/pack/plugins/start/youcompleteme
+	url = https://github.com/ycm-core/YouCompleteMe
