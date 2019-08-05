@@ -30,10 +30,10 @@ readonly EXTRA_PLUGIN_INSTALL_STEPS=(
   "pip3 install python-language-server"
 
   "get go language server"
-  "go get golang.org/x/tools/cmd/gopls"
+  "go get -u golang.org/x/tools/cmd/gopls"
 
   "build go language server"
-  "go build -o ~/go/bin/gopls ~/go/src/golang.org/x/tools/cmd/gopls"
+  "go build -o $HOME/go/bin/gopls $HOME/go/src/golang.org/x/tools/cmd/gopls"
 )
 
 
