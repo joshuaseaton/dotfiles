@@ -41,13 +41,9 @@ set wildmenu    " visial auto-complete for command menu
 nnoremap <leader><space> :nohlsearch<CR>
 
 
-"======"
-" FILE "
-"======"
-filetype plugin indent on
-
-" Enable auto-continuation of comments across newlines.
-autocmd BufRead,BufNewFile * set formatoptions+=r
+"=========="
+" LANGUAGE "
+"=========="
 
 " Ensure that "gn" is a recognized filetype and set its syntax as python's,
 " for lack of the actual option.
@@ -62,8 +58,49 @@ augroup autoformat
   autocmd FileType python AutoFormatBuffer yapf
 augroup END
 
-" Auto-populate a bash shebang in shell files.
+" Auto-populate shebangs.
 autocmd BufNewFile *.sh call io#InsertText("#!/bin/bash\n")
+autocmd BufNewFile *.py call io#InsertText("#!/usr/bin/env python\n")
+
+" Configure language servers.
+
+function! EnsureExecutables(...)
+  for e in a:000
+    if ! executable(e)
+      execute "echoerr \"Ensure that " . e . " is on your PATH\""
+    endif
+  endfor
+endfunction
+
+call EnsureExecutables('clangd', 'pyls', 'gopls')
+augroup lsp_setup
+    autocmd User call lsp#register_server({
+        \ 'name': 'clangd',
+        \ 'cmd': {server_info->['clangd', '-background-index']},
+        \ 'whitelist': ['c', 'cpp', 'objc', 'objcpp'],
+        \ })
+    autocmd User call lsp#register_server({
+        \ 'name': 'pyls',
+        \ 'cmd': {server_info->['pyls']},
+        \ 'whitelist': ['python'],
+        \ })
+    autocmd User call lsp#register_server({
+        \ 'name': 'gopls',
+        \ 'cmd': {server_info->['gopls', '-mode', 'stdio']},
+        \ 'whitelist': ['go'],
+        \ })
+augroup END
+
+
+"======"
+" FILE "
+"======"
+filetype plugin indent on
+
+" Enable auto-continuation of comments across newlines.
+autocmd BufRead,BufNewFile * set formatoptions+=r
 
 " Enable auto-population of license headers in new files.
 source ~/.vim/lib/license.vim
+
+
