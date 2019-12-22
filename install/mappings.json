@@ -1,0 +1,10 @@
+[
+    {
+        "key": "vim",
+        "val": ".vim"
+    },
+    {
+        "key": "vimrc",
+        "val": ".vimrc"
+    }
+]

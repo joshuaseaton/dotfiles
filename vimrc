@@ -63,33 +63,34 @@ autocmd BufNewFile *.sh call io#InsertText("#!/bin/bash\n")
 autocmd BufNewFile *.py call io#InsertText("#!/usr/bin/env python\n")
 
 " Configure language servers.
+" Broken! TODO: fix me.
 
-function! EnsureExecutables(...)
-  for e in a:000
-    if ! executable(e)
-      execute "echoerr \"Ensure that " . e . " is on your PATH\""
-    endif
-  endfor
-endfunction
+" function! EnsureExecutables(...)
+"   for e in a:000
+"    if ! executable(e)
+"      execute "echoerr \"Ensure that " . e . " is on your PATH\""
+"    endif
+"  endfor
+"endfunction
 
-call EnsureExecutables('clangd', 'pyls', 'gopls')
-augroup lsp_setup
-    autocmd User call lsp#register_server({
-        \ 'name': 'clangd',
-        \ 'cmd': {server_info->['clangd', '-background-index']},
-        \ 'whitelist': ['c', 'cpp', 'objc', 'objcpp'],
-        \ })
-    autocmd User call lsp#register_server({
-        \ 'name': 'pyls',
-        \ 'cmd': {server_info->['pyls']},
-        \ 'whitelist': ['python'],
-        \ })
-    autocmd User call lsp#register_server({
-        \ 'name': 'gopls',
-        \ 'cmd': {server_info->['gopls', '-mode', 'stdio']},
-        \ 'whitelist': ['go'],
-        \ })
-augroup END
+"call EnsureExecutables('clangd', 'pyls', 'gopls')
+"augroup lsp_setup
+"    autocmd User call lsp#register_server({
+"        \ 'name': 'clangd',
+"        \ 'cmd': {server_info->['clangd', '-background-index']},
+"        \ 'whitelist': ['c', 'cpp', 'objc', 'objcpp'],
+"        \ })
+"    autocmd User call lsp#register_server({
+"        \ 'name': 'pyls',
+"        \ 'cmd': {server_info->['pyls']},
+"        \ 'whitelist': ['python'],
+"        \ })
+"    autocmd User call lsp#register_server({
+"        \ 'name': 'gopls',
+"        \ 'cmd': {server_info->['gopls', '-mode', 'stdio']},
+"        \ 'whitelist': ['go'],
+"        \ })
+"augroup END
 
 
 "======"

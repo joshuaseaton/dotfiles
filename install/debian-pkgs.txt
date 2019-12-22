@@ -1,0 +1,3 @@
+clang-tools
+jq
+python3-pip
