@@ -6,5 +6,10 @@
     {
         "key": "vimrc",
         "val": ".vimrc"
+    },
+    {
+        "key": "vscode/settings.json",
+        "val": ".config/Code/User/settings.json",
+        "os": "GNU/Linux"
     }
 ]

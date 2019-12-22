@@ -74,10 +74,18 @@ done
 read_json_into_array() {
     local -n arr=$1
     arr=()
+    host_os="$(uname --operating-system)"
     IFS=$'\n'
     for row in $(jq -c '.[]' < "$2"); do
-        key=$(echo "$row" | jq -r '.key')
-        val=$(echo "$row" | jq -r '.val')
+        # If the OS is specified for the mapping and does not match the host
+        # OS, skip.
+        os="$(echo "$row" | jq -r '.os')"
+        if [[ -z "$os" ]] && [[ "$host_os" -ne "$os" ]] ; then
+            continue
+        fi
+
+        key="$(echo "$row" | jq -r '.key')"
+        val="$(echo "$row" | jq -r '.val')"
         arr+=("$key" "$val")
     done
 }
