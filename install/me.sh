@@ -6,6 +6,7 @@ set -o errexit    # exit when a command fails
 set -o nounset    # error when an undefined variable is referenced
 set -o pipefail   # error if the input command to a pipe fails
 set -u            # treat unset variables as an error when substituting
+set -x
 
 readonly DOTFILES_ROOT="$( cd "$( dirname "$(dirname "${BASH_SOURCE[0]}" )")" >/dev/null 2>&1 && pwd )"
 
@@ -27,9 +28,9 @@ readonly MAPPINGS_JSON="$DOTFILES_ROOT/install/mappings.json"
 readonly COMMANDS_JSON="$DOTFILES_ROOT/install/commands.json"
 
 readonly ORIGINAL_COLOUR="\\033[1;0m"
-readonly RED="\\033[0;31m"
-readonly GREEN="\\033[0;32m"
-readonly YELLOW="\\033[1;33m"
+readonly RED="\\033[1;31m"
+readonly GREEN="\\033[1;32m"
+readonly BLUE="\\033[01;34m"
 
 error() {
   echo -e "${RED}$1${ORIGINAL_COLOUR}" >&2
@@ -37,11 +38,11 @@ error() {
 success() {
   echo -e "${GREEN}$1${ORIGINAL_COLOUR}"
 }
-warn() {
-  echo -e "${YELLOW}$1${ORIGINAL_COLOUR}"
+info() {
+  echo -e "${BLUE}$1${ORIGINAL_COLOUR}"
 }
 
-print_usage_and_exit() {  
+print_usage_and_exit() {
   echo ""
   echo "Installs dotfiles, and any required packages or plugins"
   echo "Usage: $0 <options>"
@@ -51,7 +52,7 @@ print_usage_and_exit() {
   echo "-d|--dry-run    Enable dry-run mode, which does not do any actual file or package operations"
   echo "-f|--force      Enable force mode, which will force links and not create backups"
   echo ""
-  
+
   exit "$1"
 }
 
@@ -91,10 +92,9 @@ read_json_into_array() {
 }
 
 link_dot() {
-    name="$1"
-    src="$2"
-    dest="$3"
-    warn "attempting to link $src -> $dest"
+    src="$1"
+    dest="$2"
+    info "attempting to link $src -> $dest"
     if $dry_run_mode ; then
       success "would have linked $dest"
     else
@@ -113,20 +113,22 @@ main() {
     exit 1
   fi
 
-  # (1) Install required Debian packages.
-  readarray -t pkgs < "$DEBIAN_PKGS_TXT"
-  for pkg in "${pkgs[@]}"; do
-    if ! dpkg -s "$pkg" &>/dev/null; then
-      if ! $dry_run_mode ; then
-          warn "attempting to install $pkg"
-          if sudo apt install "$pkg"; then
-            success "successfully installed $pkg"
-          else
-            error "failed to install $pkg"
-          fi
+  # (1) Install required packages.
+  if [[ $(uname --operating-system) == "GNU/Linux" ]]; then
+    readarray -t pkgs < "$DEBIAN_PKGS_TXT"
+    for pkg in "${pkgs[@]}"; do
+      if ! dpkg -s "$pkg" &>/dev/null; then
+        if ! $dry_run_mode ; then
+            info "attempting to install $pkg"
+            if sudo apt install "$pkg"; then
+              success "successfully installed $pkg"
+            else
+              error "failed to install $pkg"
+            fi
+        fi
       fi
-    fi
-  done
+    done
+  fi
 
   # (2) Link dotfiles to $HOME.
   local mappings
@@ -135,6 +137,7 @@ main() {
     local src="$DOTFILES_ROOT/${mappings[i]}"
     local name="${mappings[i+1]}"
     local dest="$HOME/$name"
+    mkdir -p "$(dirname "$dest")"
 
     if [[ -s $dest ]] || [[ -d $dest ]]; then
       if ! diff --quiet --recursive "$dest" "$src" &>/dev/null; then
@@ -143,14 +146,14 @@ main() {
           if ! $dry_run_mode ; then
             mv "$dest" "$backup"
           fi
-          warn "existing $name found; moved to $backup"
+          info "existing $name found; moved to $backup"
         fi
-        link_dot "$name" "$src" "$dest"
+        link_dot "$src" "$dest"
       else
         success "$name is already up to date"
       fi
     else
-      link_dot "$name" "$src" "$dest"
+      link_dot "$src" "$dest"
     fi
   done
 
@@ -160,7 +163,7 @@ main() {
   for (( i=0; i<${#cmds[@]} ; i+=2 )) ; do
     desc="${cmds[i]}"
     cmd="${cmds[i+1]}"
-    warn "attempting to: $desc"
+    info "attempting to: $desc"
     if $dry_run_mode; then
       success "would have ran \`$cmd\`"
     else
