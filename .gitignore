@@ -1,4 +1,0 @@
-*.swp
-*.netrwhist
-.vim/cache/*
-.vim/pack/secret/*
