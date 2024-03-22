@@ -1,0 +1,26 @@
+{
+    "editor.rulers": [ 80 ],
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "nushellLanguageServer.includeDirs": [ "~/.dotfiles/nu/lib" ],
+    "security.workspace.trust.untrustedFiles": "open",
+    "terminal.integrated.automationProfile.osx": null,
+    "terminal.integrated.automationProfile.windows": null,
+    "terminal.integrated.defaultProfile.osx": "nu",
+    "terminal.integrated.profiles.osx": {
+        "bash": {
+            "path": "bash",
+            "args": [ "-l" ],
+            "icon": "terminal-bash"
+        },
+        "nu": {
+            "path": "nu",
+            "args": [ "--login" ]
+        },
+        "zsh": {
+            "path": "zsh",
+            "args": [ "-l" ]
+        }
+    },
+    "workbench.colorTheme": "Default Dark Modern"
+}

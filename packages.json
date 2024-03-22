@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Brave",
+    "brew": "brave-browser"
+  },
+  {
+    "name": "Nushell",
+    "brew": "nushell"
+  },
+  {
+    "name": "VSCode",
+    "brew": "visual-studio-code"
+  }
+]
