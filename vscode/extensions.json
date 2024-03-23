@@ -1,3 +1,6 @@
 [
+  "ms-vscode-remote.remote-ssh@0.109.0",
+  "ms-vscode-remote.remote-ssh-edit@0.86.0",
+  "ms-vscode.remote-explorer@0.4.3",
   "thenuprojectcontributors.vscode-nushell-lang@1.9.0"
 ]

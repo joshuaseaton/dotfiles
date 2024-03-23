@@ -1,8 +1,10 @@
 {
+    "editor.inlayHints.enabled": false,
     "editor.rulers": [ 80 ],
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
     "nushellLanguageServer.includeDirs": [ "~/.dotfiles/nu/lib" ],
+    "search.followSymlinks": false,
     "security.workspace.trust.untrustedFiles": "open",
     "terminal.integrated.automationProfile.osx": null,
     "terminal.integrated.automationProfile.windows": null,
@@ -22,5 +24,6 @@
             "args": [ "-l" ]
         }
     },
-    "workbench.colorTheme": "Default Dark Modern"
+    "workbench.colorTheme": "Default Dark Modern",
+    "workbench.editor.enablePreview": false
 }
