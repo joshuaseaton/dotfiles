@@ -9,7 +9,7 @@ use log.nu
 #
 
 log newline
-log info $"(ansi wb)Updating Homebrew casks and formulae..."
+log info $"(ansi wb)Updating Homebrew casks and formulae...(ansi reset)"
 
 ^brew update
 
@@ -24,7 +24,7 @@ open $"($env.DOTFILES)/packages.json"
 #
 
 log newline
-log info $"(ansi wb)Applying macOS system settings..."
+log info $"(ansi wb)Applying macOS system settings...(ansi reset)"
 
 #
 # General

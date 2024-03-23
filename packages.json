@@ -4,8 +4,8 @@
     "brew": "brave-browser"
   },
   {
-    "name": "Nushell",
-    "brew": "nushell"
+    "name": "Rust",
+    "brew": "rust"
   },
   {
     "name": "VSCode",

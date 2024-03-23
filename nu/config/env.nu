@@ -40,9 +40,18 @@ $env.PROMPT_INDICATOR = {|| $"(ansi white) ❯ " }
 # Directories to search for scripts when calling `source` or `use`
 $env.NU_LIB_DIRS = [ ([$nu.home-path .dotfiles nu lib] | path join) ]
 
-if (sys | get host.name) == Darwin {
-    $env.PATH = $"($env.PATH):/opt/homebrew/bin"
-}
+$env.PATH = ($env.PATH |
+    split row (char esep) |
+    append [
+        $"($nu.home-path)/.cargo/bin"
+    ] |
+    append (if (sys | get host.name) == Darwin {
+        [ /opt/homebrew/bin ]
+    } else {
+        []
+    }) |
+    uniq |
+    str join ":")
 
 $env.DOTFILES = ([$nu.home-path .dotfiles] | path join)
 

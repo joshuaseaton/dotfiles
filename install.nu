@@ -8,7 +8,7 @@ open $"($env.DOTFILES)/packages.json" |
     save --force $"($env.DOTFILES)/packages.json"
 
 # Git
-log info $"(ansi wb)Installing Git configuration..."
+log info $"(ansi wb)Installing Git configuration...(ansi reset)"
 
 let gitconfig = $"($env.HOME)/.gitconfig"
 ^ln -sf $"($env.DOTFILES)/.gitconfig" $gitconfig
@@ -21,3 +21,9 @@ run $"($env.DOTFILES)/vscode/install.nu"
 match (sys | get host.name) {
     Darwin => (run $"($env.DOTFILES)/macos/install.nu")
 }
+
+# OS-specific set-up will have ensured that cargo is up-to-date, at which point
+# we can update the cargo-managed installations.
+log info $"(ansi wb)Updating cargo installations...(ansi reset)"
+
+^cargo install nu

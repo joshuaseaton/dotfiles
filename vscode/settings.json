@@ -16,7 +16,7 @@
             "icon": "terminal-bash"
         },
         "nu": {
-            "path": "nu",
+            "path": "${env:HOME}/.cargo/bin/nu",
             "args": [ "--login" ]
         },
         "zsh": {

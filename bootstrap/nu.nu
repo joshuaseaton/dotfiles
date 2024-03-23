@@ -19,7 +19,6 @@ use log.nu
     }
 
 # Set Nushell as the default terminal shell.
-let nupath = which nu | get path.0
 if (sys | get host.name) == Darwin {
-    defaults write --verbose com.apple.Terminal "Window Settings".Basic.CommandString $"($nupath) --login"
+    defaults write --verbose com.apple.Terminal "Window Settings".Basic.CommandString $"($nu.current-exe) --login"
 }

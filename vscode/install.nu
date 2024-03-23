@@ -7,7 +7,7 @@ def installed-extensions [] {
 } 
 
 log newline
-log info $"(ansi wb)Applying and updating VSCode configuration..."
+log info $"(ansi wb)Applying and updating VSCode configuration...(ansi reset)"
 
 #
 # settings.json
