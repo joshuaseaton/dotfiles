@@ -1,23 +1,7 @@
 # Performs the macOS-specific portion of the installation and configuration. 
 
-use brew.nu
 use defaults.nu
 use log.nu
-
-#
-# Homebrew and installed packages
-#
-
-log newline
-log info $"(ansi wb)Updating Homebrew casks and formulae...(ansi reset)"
-
-^brew update
-
-let installed = brew list | get name
-open $"($env.DOTFILES)/packages.json"
-| get brew
-| where {|pkg| not ($pkg in $installed)}
-| each { |pkg| ^brew install $pkg }
 
 #
 # System settings

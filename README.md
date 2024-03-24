@@ -20,3 +20,8 @@ git clone git@github.com:joshuaseaton/dotfiles.git "${HOME}/.dotfiles"
 
 Once bootstrapped, running `run $"($env.DOTFILES)/install.nu` should complete
 the installation (which should always be a idemptotent process).
+
+## Updating
+
+Once installed, running `run $"($env.DOTFILES)/update.nu` will update any
+relevant installations (e.g., those managed by a package manager).
