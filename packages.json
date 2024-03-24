@@ -1,7 +1,15 @@
 [
   {
+    "name": "AltTab",
+    "brew": "alt-tab"
+  },
+  {
     "name": "Brave",
     "brew": "brave-browser"
+  },
+  {
+    "name": "Rectangle",
+    "brew": "rectangle-pro"
   },
   {
     "name": "Rust",
