@@ -12,10 +12,6 @@
     "brew": "rectangle-pro"
   },
   {
-    "name": "Rust",
-    "brew": "rust"
-  },
-  {
     "name": "VSCode",
     "brew": "visual-studio-code"
   }
