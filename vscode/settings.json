@@ -6,24 +6,14 @@
     "nushellLanguageServer.includeDirs": [ "~/.dotfiles/nu/lib" ],
     "search.followSymlinks": false,
     "security.workspace.trust.untrustedFiles": "open",
-    "terminal.integrated.automationProfile.osx": null,
-    "terminal.integrated.automationProfile.windows": null,
     "terminal.integrated.defaultProfile.osx": "nu",
     "terminal.integrated.profiles.osx": {
-        "bash": {
-            "path": "bash",
-            "args": [ "-l" ],
-            "icon": "terminal-bash"
-        },
         "nu": {
             "path": "${env:HOME}/.cargo/bin/nu",
             "args": [ "--login" ]
-        },
-        "zsh": {
-            "path": "zsh",
-            "args": [ "-l" ]
         }
     },
     "workbench.colorTheme": "Default Dark Modern",
-    "workbench.editor.enablePreview": false
+    "workbench.editor.enablePreview": false,
+    "editor.accessibilitySupport": "off"
 }
