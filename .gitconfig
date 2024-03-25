@@ -1,5 +1,9 @@
 [core]
 	editor = code --wait
+
 [user]
 	name = Joshua Seaton
 	email = josh.a.seaton@gmail.com
+
+[includeIf "gitdir:~/fuchsia/"]
+	path = ~/.gitconfig.corp
