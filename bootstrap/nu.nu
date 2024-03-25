@@ -26,15 +26,15 @@ if $os == Darwin {
     defaults write --verbose com.apple.Terminal "Window Settings".Basic.CommandString $nu_cmd
 } else if ("GNU/Linux" in $os) {
     if (which gsettings | is-not-empty) {  # GNOME
-        let uuid = gsettings get org.gnome.Terminal.ProfilesList default | str trim --char "'"
-        let profile_path = $"/org/gnome/terminal/legacy/profiles:/:($uuid)/"
-        ^gsettings set $"org.gnome.Terminal.Legacy.Profile:($profile_path)" custom-command $nu_cmd
-        ^gsettings set $"org.gnome.Terminal.Legacy.Profile:($profile_path)" use-custom-command true
+        let uuid = ^gsettings get org.gnome.Terminal.ProfilesList default | str trim --char "'"
+        let schema = $"org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:($uuid)/"
+        ^gsettings set $schema custom-command $nu_cmd
+        ^gsettings set $schema use-custom-command true
         
         # Dark mode too while we're at it.
-        ^gsettings set $"org.gnome.Terminal.Legacy.Profile:($profile_path)" use-theme-colors false
-        ^gsettings set $"org.gnome.Terminal.Legacy.Profile:($profile_path)" background-color "rgb(23,20,33)"
-        ^gsettings set $"org.gnome.Terminal.Legacy.Profile:($profile_path)" foreground-color "rgb(208,207,204)"
+        ^gsettings set $schema use-theme-colors false
+        ^gsettings set $schema background-color "rgb(23,20,33)"
+        ^gsettings set $schema foreground-color "rgb(208,207,204)"
     } else {
         log error "Unknown Linux desktop environment: unable to set Nushell as the default terminal shell"
     }
