@@ -6,6 +6,13 @@
     "nushellLanguageServer.includeDirs": [ "~/.dotfiles/nu/lib" ],
     "search.followSymlinks": false,
     "security.workspace.trust.untrustedFiles": "open",
+    "terminal.integrated.defaultProfile.linux": "nu",
+    "terminal.integrated.profiles.linux": {
+        "nu": {
+            "path": "${env:HOME}/.cargo/bin/nu",
+            "args": [ "--login" ]
+        }
+    },
     "terminal.integrated.defaultProfile.osx": "nu",
     "terminal.integrated.profiles.osx": {
         "nu": {

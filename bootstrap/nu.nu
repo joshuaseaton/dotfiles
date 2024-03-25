@@ -10,6 +10,7 @@ use log.nu
 # Install via symlink our custom configuration in the default configuration
 # directory. This ensures that running `nu` in its interactive mode (as the
 # terminal will do) will implicitly execute with our configuration.
+mkdir $nu.default-config-dir
 [config.nu env.nu login.nu] |
     each { |config|
         let source = $"($env.DOTFILES)/nu/config/($config)"
@@ -19,6 +20,24 @@ use log.nu
     }
 
 # Set Nushell as the default terminal shell.
-if (sys | get host.name) == Darwin {
-    defaults write --verbose com.apple.Terminal "Window Settings".Basic.CommandString $"($nu.current-exe) --login"
+let nu_cmd = $"($nu.current-exe) --login"
+let os = sys | get host.name
+if $os == Darwin {
+    defaults write --verbose com.apple.Terminal "Window Settings".Basic.CommandString $nu_cmd
+} else if ("GNU/Linux" in $os) {
+    if (which gsettings | is-not-empty) {  # GNOME
+        let uuid = gsettings get org.gnome.Terminal.ProfilesList default | str trim --char "'"
+        let profile_path = $"/org/gnome/terminal/legacy/profiles:/:($uuid)/"
+        ^gsettings set $"org.gnome.Terminal.Legacy.Profile:($profile_path)" custom-command $nu_cmd
+        ^gsettings set $"org.gnome.Terminal.Legacy.Profile:($profile_path)" use-custom-command true
+        
+        # Dark mode too while we're at it.
+        ^gsettings set $"org.gnome.Terminal.Legacy.Profile:($profile_path)" use-theme-colors false
+        ^gsettings set $"org.gnome.Terminal.Legacy.Profile:($profile_path)" background-color "rgb(23,20,33)"
+        ^gsettings set $"org.gnome.Terminal.Legacy.Profile:($profile_path)" foreground-color "rgb(208,207,204)"
+    } else {
+        log error "Unknown Linux desktop environment: unable to set Nushell as the default terminal shell"
+    }
+} else {
+    log error $"Unknown operating system ($os): unable to set Nushell as the default terminal shell"
 }

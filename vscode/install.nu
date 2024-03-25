@@ -12,8 +12,11 @@ log info $"(ansi wb)Installing VSCode configuration...(ansi reset)"
 let source_settings_json = $"($env.DOTFILES)/vscode/settings.json"
 
 # See https://code.visualstudio.com/docs/getstarted/settings#_settings-file-locations
-let target_settings_json = match (sys | get host.name)  {
-    "Darwin" => $"($env.HOME)/Library/Application Support/Code/User/settings.json"
+let os = sys | get host.name
+let target_settings_json = if $os == Darwin  {
+    $"($env.HOME)/Library/Application Support/Code/User/settings.json"
+} else if ("GNU/Linux" in $os) {
+    $"($env.HOME)/.config/Code/User/settings.json"
 }
 
 ln -sf $source_settings_json $target_settings_json
