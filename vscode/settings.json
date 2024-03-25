@@ -3,7 +3,16 @@
     "editor.rulers": [ 80 ],
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
+    "files.exclude": {
+        "**/out/**": true
+    },
+    "files.watcherExclude": {
+        "**/out/**": true
+    },
     "nushellLanguageServer.includeDirs": [ "~/.dotfiles/nu/lib" ],
+    "search.exclude": {
+        "**/out/**": true
+    },
     "search.followSymlinks": false,
     "security.workspace.trust.untrustedFiles": "open",
     "terminal.integrated.defaultProfile.linux": "nu",
@@ -20,7 +29,7 @@
             "args": [ "--login" ]
         }
     },
+    "window.zoomLevel": 3,
     "workbench.colorTheme": "Default Dark Modern",
-    "workbench.editor.enablePreview": false,
-    "editor.accessibilitySupport": "off"
+    "workbench.editor.enablePreview": false
 }

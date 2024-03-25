@@ -1,6 +1,9 @@
 [
+  "fuchsia-authors.language-fidl@0.5.0",
+  "llvm-vs-code-extensions.vscode-clangd@0.1.28",
   "ms-vscode-remote.remote-ssh@0.109.0",
   "ms-vscode-remote.remote-ssh-edit@0.86.0",
   "ms-vscode.remote-explorer@0.4.3",
+  "msedge-dev.gnls@0.1.4",
   "thenuprojectcontributors.vscode-nushell-lang@1.9.0"
 ]
