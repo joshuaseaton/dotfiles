@@ -6,6 +6,8 @@ use log.nu
 #
 # System settings
 #
+# Largely cribbed from https://github.com/mathiasbynens/dotfiles/blob/main/.macos.
+#
 
 log newline
 log info $"(ansi wb)Applying macOS system settings...(ansi reset)"
@@ -59,10 +61,10 @@ defaults write --verbose --force com.apple.dock launchanim false
 defaults write --verbose --force com.apple.dock show-recents false
 
 # Only show open applications in the dock.
-defaults write --verbose --force com.apple.dock static-only true
+# defaults write --verbose --force com.apple.dock static-only true
 
-# Do not show the "open application" indicator, as it's redundant with the last
-# setting.
+# Do not show the "open application" indicator. We can CTRL+TAB through them
+# instead.
 defaults write --verbose com.apple.dock show-process-indicators false
 
 # Minimize windows into their application’s icon.
