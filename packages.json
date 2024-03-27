@@ -29,6 +29,13 @@
     }
   },
   {
+    "name": "Shellcheck",
+    "brew":
+    {
+      "name": "shellcheck"
+    }
+  },
+  {
     "name": "VSCode",
     "brew":
     {

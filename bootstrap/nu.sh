@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# POSIX-compliancy checked with shellcheck.
+
 #
 # The primary job of this script is to install Nushell (via cargo) and our
 # custom configuration for it, and register it as the default terminal shell.
@@ -19,13 +21,13 @@ if [ "${OS}" = Darwin ]; then
         bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     fi
 elif [ "${OS}" = GNU/Linux ]; then
-    # Building Nushell on Linux has some dynamic dependencies that might need to
-    # be downloaded.
+    # Building Nushell on Linux has some dependencies that might need to be
+    # downloaded.
     if [ "$(which apt)" ]; then
-        if ! $(apt-cache show pkg-config &> /dev/null); then
+        if ! apt-cache show pkg-config 2>&1 /dev/null; then
             sudo apt-get install pkg-config
         fi
-        if ! $(apt-cache show libssl-dev &> /dev/null); then
+        if ! apt-cache show libssl-dev 2>&1 /dev/null; then
             sudo apt-get install libssl-dev
         fi
     else
