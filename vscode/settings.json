@@ -1,6 +1,8 @@
 {
     "editor.inlayHints.enabled": false,
+    "editor.mouseWheelScrollSensitivity": 2,
     "editor.rulers": [ 80 ],
+    "editor.showDeprecated": false,
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
     "files.exclude": {
@@ -31,5 +33,5 @@
     },
     "window.zoomLevel": 3,
     "workbench.colorTheme": "Default Dark Modern",
-    "workbench.editor.enablePreview": false
+    "workbench.editor.enablePreview": false    
 }
