@@ -1,0 +1,16 @@
+# See https://alacritty.org/config-alacritty.html
+
+[font]
+size = 14
+
+[scrolling]
+history = 100000
+
+[shell]
+program = ".cargo/bin/nu"
+args = [ "--login" ]
+
+[window]
+opacity = 0.9
+title = "Terminal"
+

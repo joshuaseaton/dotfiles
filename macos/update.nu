@@ -15,5 +15,10 @@ log info $"(ansi wb)Updating Homebrew casks and formulae...(ansi reset)"
 let installed = brew list | get name
 open $"($env.DOTFILES)/packages.json"
 | get brew
-| where {|pkg| not ($pkg in $installed)}
-| each { |pkg| ^brew install $pkg }
+| default true quarantine
+| where {|pkg| not ($pkg.name in $installed)}
+| each { |pkg|
+    log info $"Installing ($pkg.name)"
+    let args = if $pkg.quarantine { [] } else { [ --no-quarantine ]} 
+    ^brew install $pkg.name ...$args
+  }

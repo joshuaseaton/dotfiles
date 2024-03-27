@@ -1,18 +1,38 @@
 [
   {
+    "name": "Allacrity",
+    "brew":
+    {
+      "name": "alacritty",
+      "quarantine": false
+    }
+  },
+  {
     "name": "AltTab",
-    "brew": "alt-tab"
+    "brew":
+    {
+      "name": "alt-tab"
+    }
   },
   {
     "name": "Brave",
-    "brew": "brave-browser"
+    "brew":
+    {
+      "name": "brave-browser"
+    }
   },
   {
     "name": "Rectangle",
-    "brew": "rectangle-pro"
+    "brew":
+    {
+      "name": "rectangle-pro"
+    }
   },
   {
     "name": "VSCode",
-    "brew": "visual-studio-code"
+    "brew":
+    {
+      "name": "visual-studio-code"
+    }
   }
 ]

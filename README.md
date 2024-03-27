@@ -5,9 +5,8 @@ Dotfiles with Nushell-driven installation.
 ## Bootstrap
 
 This routine is just intended to set things up on a new machine, bootstrapping
-the checkout of this repo, the installation of Nushell and the custom
-configuration contained within, and the setting of it as the default terminal
-shell.
+the checkout of this repo and installing Nushell (along with our custom
+configuration for it).
 
 ```sh
 # The checkout *must* take place at $HOME/.dotfiles.
