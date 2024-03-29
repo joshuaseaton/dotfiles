@@ -25,6 +25,6 @@ log info $"Linked: ($env.DOTFILES)/alacritty.toml ->\n\t($alacritty_toml)"
 run $"($env.DOTFILES)/vscode/install.nu"
 
 # OS-specific set-up.
-match (sys | get host.name) {
-    Darwin => (run $"($env.DOTFILES)/macos/install.nu")
+match $nu.os-info.name {
+    macos => (run $"($env.DOTFILES)/macos/install.nu")
 }

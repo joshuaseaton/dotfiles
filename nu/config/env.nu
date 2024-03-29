@@ -45,10 +45,9 @@ $env.PATH = ($env.PATH |
     append [
         $"($nu.home-path)/.cargo/bin"
     ] |
-    append (if (sys | get host.name) == Darwin {
-        [ /opt/homebrew/bin ]
-    } else {
-        []
+    append (match $nu.os-info.name {
+        macos => [ /opt/homebrew/bin ]
+        _ => []
     }) |
     uniq |
     str join ":")

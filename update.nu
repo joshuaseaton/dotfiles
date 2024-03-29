@@ -17,8 +17,8 @@ log info $"(ansi wb)Updating Rust installations...(ansi reset)"
 ^cargo install nu
 
 # OS-specific set-up.
-match (sys | get host.name) {
-    Darwin => (run $"($env.DOTFILES)/macos/update.nu")
+match $nu.os-info.name {
+    macos => (run $"($env.DOTFILES)/macos/update.nu")
 }
 
 exit
