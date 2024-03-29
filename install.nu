@@ -18,6 +18,7 @@ log info $"Linked: ($env.DOTFILES)/.gitconfig ->\n\t($gitconfig)"
 log newline
 log info $"(ansi wb)Installing Alacritty configuration...(ansi reset)"
 let alacritty_toml = $"($env.HOME)/.config/alacritty/alacritty.toml"
+mkdir ($alacritty_toml | path dirname)
 ^ln -sf $"($env.DOTFILES)/alacritty.toml" $alacritty_toml
 log info $"Linked: ($env.DOTFILES)/alacritty.toml ->\n\t($alacritty_toml)"
 
