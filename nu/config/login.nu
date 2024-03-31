@@ -2,4 +2,4 @@
 # always present in a terminal context.
 use defaults.nu
 
-source git-completions.nu
+source completions/git.nu
