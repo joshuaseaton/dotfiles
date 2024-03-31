@@ -61,28 +61,28 @@ export extern "git branch" [
 
 # Check out git branches and files
 export extern "git checkout" [
-  ...targets: string@"nu-complete git checkout"  # Name of the branch or files to checkout
-  --conflict: string                             # Conflict style (merge or diff3)
-  --detach(-d)                                   # Detach HEAD at named commit
-  --force(-f)                                    # Force checkout (throw away local modifications)
-  --guess                                        # Second guess 'git checkout <no-such-branch>' (default)
-  --ignore-other-worktrees                       # Do not check if another worktree is holding the given ref
-  --ignore-skip-worktree-bits                    # Do not limit pathspecs to sparse entries only
-  --merge(-m)                                    # Perform a 3-way merge with the new branch
-  --orphan: string                               # New unparented branch
-  --ours(-2)                                     # Checkout our version for unmerged files
-  --overlay                                      # Use overlay mode (default)
-  --overwrite-ignore                             # Update ignored files (default)
-  --patch(-p)                                    # Select hunks interactively
-  --pathspec-from-file: string                   # Read pathspec from file
-  --progress                                     # Force progress reporting
-  --quiet(-q)                                    # Suppress progress reporting
-  --recurse-submodules                           # Control recursive updating of submodules
-  --theirs(-3)                                   # Checkout their version for unmerged files
-  --track(-t)                                    # Set upstream info for new branch
-  -b                                             # Create and checkout a new branch
-  -B: string                                     # Create/reset and checkout a branch
-  -l                                             # Create reflog for new branch
+  ...targets: string@"nu-complete git checkout"         # Name of the branch or files to checkout
+  --conflict: string@"nu-complete git conflict styles"  # Conflict style
+  --detach(-d)                                          # Detach HEAD at named commit
+  --force(-f)                                           # Force checkout (throw away local modifications)
+  --guess                                               # Second guess 'git checkout <no-such-branch>' (default)
+  --ignore-other-worktrees                              # Do not check if another worktree is holding the given ref
+  --ignore-skip-worktree-bits                           # Do not limit pathspecs to sparse entries only
+  --merge(-m)                                           # Perform a 3-way merge with the new branch
+  --orphan: string                                      # New unparented branch
+  --ours(-2)                                            # Checkout "our" version for unmerged files
+  --overlay                                             # Use overlay mode (default)
+  --overwrite-ignore                                    # Update ignored files (default)
+  --patch(-p)                                           # Select hunks interactively
+  --pathspec-from-file: string                          # Read pathspec from file
+  --progress                                            # Force progress reporting
+  --quiet(-q)                                           # Suppress progress reporting
+  --recurse-submodules                                  # Control recursive updating of submodules
+  --theirs(-3)                                          # Checkout "their" version for unmerged files
+  --track(-t)                                           # Set upstream info for new branch
+  -b                                                    # Create and checkout a new branch
+  -B: string                                            # Create/reset and checkout a branch
+  -l                                                    # Create reflog for new branch
 ]
 
 # Apply the change introduced by an existing commit
@@ -274,6 +274,26 @@ export extern "git remote set-url" [
   url: string                               # New URL for remote
 ]
 
+# Restore files
+export extern "git restore" [
+  ...file: string@"nu-complete git restore"               # Files to restore
+  --conflict: string@"nu-complete git conflict styles"  # Conflict style
+  --ours(-2)                                            # Restore "our" version for unmerged files
+  --overlay                                             # Use overlay mode (default)
+  --merge(-m)                                           # Perform a 3-way merge with the index
+  --no-overlay                                          # Do not use overlay mode
+  --no-progress                                         # Do not report progress
+  --no-recurse-submodules                               # Do not update the contents of submodules
+  --patch(-p)                                           # Interactively choose hunks to restore
+  --pathspec-from-file: string                          # Read pathspec from file
+  --progress                                            # Report progress on stderr
+  --quiet(-q)                                           # Suppress feedback messages. Implies --no-progess
+  --recurse-submodules                                  # Update the contents of the submodules in the pathspec
+  --staged(-S)                                          # Set the index as the restore location
+  --theirs(-3)                                          # Restore "their" version for unmerged files
+  --worktree(-W)                                        # Set the worktree as the restore location.
+]
+
 # Delete file from the working tree and the index
 export extern "git rm" [
   -r             # Recursive
@@ -328,12 +348,12 @@ export extern "git switch" [
   --merge(-m)                                 # Attempts to merge changes when switching branches if there are local changes
   --no-guess                                  # Do not attempt to match remote branch names
   --no-progress                               # Do not report progress
-  --no-recurse-submodules                     # Do not update the contents of sub-modules
+  --no-recurse-submodules                     # Do not update the contents of submodules
   --no-track                                  # Do not set "upstream" configuration
   --orphan: string                            # Create a new orphaned branch
   --progress                                  # Report progress status
-  --quiet(-q)                                 # Suppress feedback messages
-  --recurse-submodules                        # Update the contents of sub-modules
+  --quiet(-q)                                 # Suppress feedback
+  --recurse-submodules                        # Update the contents of submodules
   --track(-t)                                 # Set "upstream" configuration
 ]
 
@@ -347,12 +367,14 @@ const built_in_refs = [HEAD FETCH_HEAD ORIG_HEAD]
 # See `man git-status` under "Short Format"
 # This is incomplete, but should cover the most common cases.
 const short_status_descriptions = {
-  ".D": "Deleted"
-  ".M": "Modified"
+  ".D": "Deleted (unstaged)"
+  ".M": "Modified (unstaged)"
   "!" : "Ignored"
   "?" : "Untracked"
   "AU": "Staged, not merged"
-  "MD": "Some modifications staged, file deleted in work tree"
+  "D": "Deleted (staged)"
+  "M.": "Modified (staged)"
+  "MD": "Some modifications staged, file deleted in worktree"
   "MM": "Some modifications staged, some modifications untracked"
   "R.": "Renamed"
   "UU": "Both modified (in merge conflict)"
@@ -387,8 +409,15 @@ def "nu-complete git commits current branch" [] {
   ^git log --pretty="%h %s" | lines | parse "{value} {description}"
 }
 
-def "nu-complete git files" [] {
-  let relevant_statuses = ["?",".M", "MM", "MD", ".D", "UU"]
+def "nu-complete git conflict styles" [] { [merge diff3 zdiff3] }
+
+def "nu-complete git files" [--include-staged] {
+  let relevant_statuses = ["?", ".M", "MM", "MD", ".D", "UU"] |
+    append (if $include_staged {
+      ["M."]
+    } else {
+      []
+    })
   ^git status -uall --porcelain=2
   | lines
   | each { |$it|
@@ -465,6 +494,8 @@ def "nu-complete git remote branches nonlocal without prefix" [] {
   let local_branches = (nu-complete git local branches)
   ^git branch -r | lines | parse -r (['^[\* ]+', $remotes_regex, '?(?P<branch>\S+)'] | flatten | str join) | get branch | uniq | where {|branch| $branch != "HEAD"} | where {|branch| $branch not-in $local_branches }
 }
+
+def "nu-complete git restore" [] { nu-complete git files --include-staged }
 
 def "nu-complete git stash-list" [] {
   git stash list | lines | parse "{value}: {description}"

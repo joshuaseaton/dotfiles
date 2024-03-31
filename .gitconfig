@@ -1,3 +1,6 @@
+[advice]
+	addEmptyPathspec = false
+
 [core]
 	editor = code --wait
 
