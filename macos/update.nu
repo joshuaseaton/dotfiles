@@ -22,3 +22,5 @@ open $"($env.DOTFILES)/packages.json"
     let args = if $pkg.quarantine { [] } else { [ --no-quarantine ]} 
     ^brew install $pkg.name ...$args
   }
+
+  exit
