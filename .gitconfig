@@ -1,12 +1,64 @@
 [advice]
 	addEmptyPathspec = false
 
+[branch]
+	# Sort branches by most recently used, instead of alphabetically.
+	sort = -committerdate
+
+[commit]
+	# Show the diff when editing a commit message.
+	verbose = true
+
 [core]
 	editor = code --wait
+	pager = delta
+
+[diff]
+	algorithm = histogram
+
+	# Give a more useful diff of submodules.
+	submodule = log
+
+[delta]
+	# Use n to navigate to the next diff section, and N to the previous.
+	navigate = true
+    side-by-side = true
+
+# Corporate git configuration overrides.
+[includeIf "gitdir:~/fuchsia/"]
+	path = ~/.gitconfig.corp
+
+[interactive]
+	diffFilter = delta --color-only
+
+[merge]
+	conflictStyle = zdiff3
+
+[pull]
+	rebase = true
+
+[push]
+	# The remote branch name will default to the local's name.
+	default = current
+
+	# When a branch is first pushed, it will set the remote as the upstream.
+	autoSetupRemote = true
+
+[rerere]
+	# Enables ”reuse, recovered, resolution”: try to automatically resolve merge
+	# conflicts the way they were done last time, when possible.
+	enabled = true
+
+[status]
+	# Show the status of submodules as well.
+	submoduleSummary = true
+
+[submodule]
+	recurse = true
+
+[url "git@github.com:"]
+	insteadOf = https://github.com/
 
 [user]
 	name = Joshua Seaton
 	email = josh.a.seaton@gmail.com
-
-[includeIf "gitdir:~/fuchsia/"]
-	path = ~/.gitconfig.corp
