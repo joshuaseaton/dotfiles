@@ -5,6 +5,7 @@
     "editor.autoClosingDelete": "never",
     "editor.autoClosingOvertype": "never",
     "editor.autoClosingQuotes": "beforeWhitespace",
+    "editor.cursorBlinking": "solid",
     "editor.inlayHints.enabled": "off",
     "editor.mouseWheelScrollSensitivity": 2,
     "editor.rulers": [ 80 ],
@@ -41,5 +42,6 @@
     },
     "window.zoomLevel": 3,
     "workbench.colorTheme": "Default Dark Modern",
-    "workbench.editor.enablePreview": false
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.highlightModifiedTabs": true
 }
