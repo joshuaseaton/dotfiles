@@ -1,10 +1,11 @@
 {
+    "editor.accessibilitySupport": "off",
     "editor.autoClosingBrackets": "beforeWhitespace",
     "editor.autoClosingComments": "beforeWhitespace",
     "editor.autoClosingDelete": "never",
     "editor.autoClosingOvertype": "never",
     "editor.autoClosingQuotes": "beforeWhitespace",
-    "editor.inlayHints.enabled": false,
+    "editor.inlayHints.enabled": "off",
     "editor.mouseWheelScrollSensitivity": 2,
     "editor.rulers": [ 80 ],
     "editor.showDeprecated": false,
