@@ -15,9 +15,5 @@ log info "Updating Rust installations..."
 # cargo install --list.
 ^cargo install nu
 
-# OS-specific set-up.
-match $nu.os-info.name {
-    macos => (run $"($env.DOTFILES)/macos/update.nu")
-}
-
-exit
+# OS-specific updates.
+run $"($env.DOTFILES)/($nu.os-info.name)/update.nu"

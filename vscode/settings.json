@@ -3,7 +3,7 @@
     "editor.autoClosingBrackets": "beforeWhitespace",
     "editor.autoClosingComments": "beforeWhitespace",
     "editor.autoClosingDelete": "never",
-    "editor.autoClosingOvertype": "never",
+    "editor.autoClosingOvertype": "always",
     "editor.autoClosingQuotes": "beforeWhitespace",
     "editor.cursorBlinking": "solid",
     "editor.inlayHints.enabled": "off",

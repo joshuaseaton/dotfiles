@@ -16,6 +16,4 @@ open $"($env.DOTFILES)/links.json" |
 run $"($env.DOTFILES)/vscode/install.nu"
 
 # OS-specific set-up.
-match $nu.os-info.name {
-    macos => (run $"($env.DOTFILES)/macos/install.nu")
-}
+run $"($env.DOTFILES)/($nu.os-info.name)/install.nu"
