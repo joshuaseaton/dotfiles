@@ -2,20 +2,15 @@
 
 use log.nu
 
-# Git
-log info $"(ansi wb)Installing Git configuration...(ansi reset)"
-
-let gitconfig = $"($env.HOME)/.gitconfig"
-^ln -sf $"($env.DOTFILES)/.gitconfig" $gitconfig
-log info $"Linked: ($env.DOTFILES)/.gitconfig ->\n\t($gitconfig)"
-
-# Alacritty
-log newline
-log info $"(ansi wb)Installing Alacritty configuration...(ansi reset)"
-let alacritty_toml = $"($env.HOME)/.config/alacritty/alacritty.toml"
-mkdir ($alacritty_toml | path dirname)
-^ln -sf $"($env.DOTFILES)/alacritty.toml" $alacritty_toml
-log info $"Linked: ($env.DOTFILES)/alacritty.toml ->\n\t($alacritty_toml)"
+# Linked configuration files.
+open $"($env.DOTFILES)/links.json" |
+    append (open $"($env.DOTFILES)/($nu.os-info.name)/links.json")
+    | each { |link|
+        let target = $"($env.HOME)/($link.target)"
+        mkdir ($target | path dirname)
+        ^ln -sf $"($env.HOME)/($link.source)" $target
+        log info $"Linked: ($link.source) -> ($link.target)"
+    } 
 
 # VSCode
 run $"($env.DOTFILES)/vscode/install.nu"

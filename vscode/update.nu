@@ -2,8 +2,7 @@
 
 use log.nu
 
-log newline
-log info $"(ansi wb)Updating VSCode extensions...(ansi reset)"
+log info "Updating VSCode extensions..."
 
 # Update all installed extensions and dump the now up-to-date last back out to
 # extensions.json.

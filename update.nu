@@ -7,8 +7,7 @@ run $"($env.DOTFILES)/vscode/update.nu"
 
 # Rust
 
-log newline
-log info $"(ansi wb)Updating Rust installations...(ansi reset)"
+log info "Updating Rust installations..."
 
 ^rustup update
 

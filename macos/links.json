@@ -1,0 +1,6 @@
+[
+    {
+        "source": ".dotfiles/vscode/settings.json",
+        "target": "Library/Application Support/Code/User/settings.json"
+    }
+]

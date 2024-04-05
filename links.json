@@ -1,0 +1,10 @@
+[
+    {
+        "source": ".dotfiles/.gitconfig",
+        "target": ".gitconfig"
+    },
+    {
+        "source": ".dotfiles/alacritty.toml",
+        "target": "alacritty.toml"
+    }
+]

@@ -1,10 +1,5 @@
 # Logging convenience utilities.
 
-# Logs a newline.
-export def newline [] {
-    print --stderr ""
-}
-
 # Logs information.
 export def info [msg: string] {
     print --stderr $"(ansi blue_bold)Info:(ansi reset) ($msg)"

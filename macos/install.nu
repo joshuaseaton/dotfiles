@@ -8,8 +8,7 @@ use log.nu
 # Homebrew-installed packages
 #
 
-log newline
-log info $"(ansi wb)Installing Homebrew casks and formulae...(ansi reset)"
+log info $"Installing Homebrew casks and formulae..."
 
 let installed = brew list | get name
 open $"($env.DOTFILES)/macos/brew.json"
@@ -27,8 +26,7 @@ open $"($env.DOTFILES)/macos/brew.json"
 # Largely cribbed from https://github.com/mathiasbynens/dotfiles/blob/main/.macos.
 #
 
-log newline
-log info $"(ansi wb)Applying macOS system settings...(ansi reset)"
+log info $"Applying macOS system settings..."
 
 #
 # General
