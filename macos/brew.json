@@ -1,0 +1,21 @@
+[
+  {
+    "name": "alacritty",
+    "quarantine": false
+  },
+  {
+    "name": "brave-browser"
+  },
+  {
+    "name": "git-delta"
+  },
+  {
+    "name": "rectangle-pro"
+  },
+  {
+    "name": "shellcheck"
+  },
+  {
+    "name": "visual-studio-code"
+  }
+]

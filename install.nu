@@ -2,11 +2,6 @@
 
 use log.nu
 
-# Ensure package order for readability.
-open $"($env.DOTFILES)/packages.json" |
-    sort-by name |
-    save --force $"($env.DOTFILES)/packages.json"
-
 # Git
 log info $"(ansi wb)Installing Git configuration...(ansi reset)"
 
