@@ -6,7 +6,6 @@ use log.nu
 # Homebrew-installed packages
 #
 
-log newline
-log info $"(ansi wb)Updating Homebrew casks and formulae...(ansi reset)"
+log info "Updating Homebrew casks and formulae..."
 
 ^brew update
