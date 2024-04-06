@@ -1,5 +1,6 @@
 # The main update entrypoint.
 
+use cargo.nu
 use log.nu
 
 # VSCode
@@ -11,9 +12,8 @@ log info "Updating Rust installations..."
 
 ^rustup update
 
-# TODO: When we have multiple cargo-managed installations, parse the list from
-# cargo install --list.
-^cargo install nu
+^cargo install-update --all
+cargo installed | to json | save --force $"($env.DOTFILES)/cargo-installs.json"
 
 # OS-specific updates.
 run $"($env.DOTFILES)/($nu.os-info.name)/update.nu"
