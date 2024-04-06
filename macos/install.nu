@@ -8,14 +8,12 @@ use log.nu
 # Homebrew-installed packages
 #
 
-log info $"Installing Homebrew casks and formulae..."
-
 let installed = brew list | get name
 open $"($env.DOTFILES)/macos/brew.json"
 | default true quarantine
 | where {|pkg| not ($pkg.name in $installed)}
 | each { |pkg|
-    log info $"Installing ($pkg.name)"
+    log info $"Installing Homebrew cask/formula: ($pkg.name)"
     let args = if $pkg.quarantine { [] } else { [ --no-quarantine ]} 
     ^brew install $pkg.name ...$args
   }
