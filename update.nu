@@ -3,8 +3,10 @@
 use cargo.nu
 use log.nu
 
+cd $env.DOTFILES
+
 # VSCode
-run $"($env.DOTFILES)/vscode/update.nu"
+run vscode/update.nu
 
 # Rust
 
@@ -13,7 +15,7 @@ log info "Updating Rust installations..."
 ^rustup update
 
 ^cargo install-update --all
-cargo installed | to json | save --force $"($env.DOTFILES)/cargo-installs.json"
+cargo installed | to json | save --force cargo-installs.json
 
 # OS-specific updates.
-run $"($env.DOTFILES)/($nu.os-info.name)/update.nu"
+run $"($nu.os-info.name)/update.nu"

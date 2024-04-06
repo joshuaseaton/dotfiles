@@ -4,12 +4,14 @@ use brew.nu
 use defaults.nu
 use log.nu
 
+cd $env.DOTFILES
+
 #
 # Homebrew-installed packages
 #
 
 let installed = brew list | get name
-open $"($env.DOTFILES)/macos/brew.json"
+open macos/brew.json
 | default true quarantine
 | where {|pkg| not ($pkg.name in $installed)}
 | each { |pkg|

@@ -1,6 +1,7 @@
 use apt.nu
 
+cd $env.DOTFILES
+
 if (which apt | is-not-empty) {
-    open $"($env.DOTFILES)/linux/apt.json" |
-        do { apt install ...$in }
+    open linux/apt.json | do { apt install ...$in }
 }
