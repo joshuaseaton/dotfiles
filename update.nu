@@ -15,7 +15,7 @@ log info "Updating Rust installations..."
 ^rustup update
 
 ^cargo install-update --all
-cargo installed | to json | save --force cargo-installs.json
+cargo installed | reject binaries | to json | save --force cargo-installs.json
 
 # OS-specific updates.
 run $"($nu.os-info.name)/update.nu"
