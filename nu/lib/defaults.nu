@@ -18,7 +18,8 @@ export def read [domain: string@domain-completions, key?: cell-path] {
     }
 }
 
-# Overwrites a setting within a given domain.
+# Applies a setting within a given domain, and returns whether it was
+# overwritten.
 export def write [domain: string@domain-completions, key: cell-path, value: any, --force, --verbose] {
     if $value == null {
         return (error make --unspanned {msg: "Value cannot be null"})
@@ -26,7 +27,7 @@ export def write [domain: string@domain-completions, key: cell-path, value: any,
     let plist = read $domain
     let current = $plist | get --ignore-errors $key
     if $current == $value {
-        return
+        return false
     }
 
     let updated = if $current == null {  # Inserting
@@ -49,6 +50,7 @@ export def write [domain: string@domain-completions, key: cell-path, value: any,
     if $verbose {
         log info $"($domain): ($key) = ($value) \(($updated.context)\)"
     }
+    return true
 }
 
 # Getting the full list of domains via `defaults domains` takes too long to be

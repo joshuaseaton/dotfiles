@@ -33,8 +33,6 @@ brew-install formula
 # Largely cribbed from https://github.com/mathiasbynens/dotfiles/blob/main/.macos.
 #
 
-log info "Applying macOS system settings..."
-
 #
 # General
 #
@@ -77,34 +75,38 @@ defaults write --verbose com.apple.symbolichotkeys AppleSymbolicHotKeys."160".va
 # Dock
 #
 
-# Disable launch animations.
-defaults write --verbose --force com.apple.dock launchanim false
+[
+    # Disable launch animations.
+    (defaults write --verbose --force com.apple.dock launchanim false),
 
-# Don't show recently opened applications.
-defaults write --verbose --force com.apple.dock show-recents false
+    # Don't show recently opened applications.
+    (defaults write --verbose --force com.apple.dock show-recents false),
 
-# Only show open applications in the dock.
-# defaults write --verbose --force com.apple.dock static-only true
+    # Only show open applications in the dock.
+    # defaults write --verbose --force com.apple.dock static-only true
 
-# Do not show the "open application" indicator. We can CTRL+TAB through them
-# instead.
-defaults write --verbose com.apple.dock show-process-indicators false
+    # Do not show the "open application" indicator. We can CTRL+TAB through them
+    # instead.
+    (defaults write --verbose com.apple.dock show-process-indicators false),
 
-# Minimize windows into their application’s icon.
-defaults write --verbose --force com.apple.dock minimize-to-application true
+    # Minimize windows into their application’s icon.
+    (defaults write --verbose --force com.apple.dock minimize-to-application true),
 
-# Change the minimize/maximize window effect.
-defaults write --verbose --force com.apple.dock mineffect "scale"
+    # Change the minimize/maximize window effect.
+    (defaults write --verbose --force com.apple.dock mineffect "scale"),
 
-# Don’t group windows by application in Mission Control.
-defaults write --verbose --force com.apple.dock expose-group-by-app false
+    # Don’t group windows by application in Mission Control.
+    (defaults write --verbose --force com.apple.dock expose-group-by-app false),
 
-# Enable auto-hiding of the dock and make it reappear quickly.
-defaults write --verbose --force com.apple.dock autohide true
-defaults write --verbose --force com.apple.dock autohide-delay 0.0
-
-# Force the changes to take effect by restarting the Dock.
-^killall Dock
+    # Enable auto-hiding of the dock and make it reappear quickly.
+    (defaults write --verbose --force com.apple.dock autohide true),
+    (defaults write --verbose --force com.apple.dock autohide-delay 0.0),
+] |
+    reduce {|result, changed| $changed or $result } |
+    if $in {
+        # Force the changes to take effect by restarting the Dock.
+        ^killall Dock
+    }
 
 #
 # Spotlight
@@ -131,3 +133,5 @@ defaults write --verbose --force com.apple.messageshelper.MessageController SOIn
     # Disable spell check.
     continuousSpellCheckingEnabled: false,
 }
+
+exit
