@@ -11,10 +11,7 @@ let installed = vscode installed-extensions |
     reduce {|ext, acc| $acc | merge $ext}
 
 open $"($env.DOTFILES)/vscode/extensions.json" |
-    where { |ext|
-        let installed_version = $installed | get --ignore-errors $ext.name
-        $installed_version == null or $installed_version != $ext.version
-    } |
+    where ($installed | get --ignore-errors $it.name) != $it.version |
     each { |ext|
         let ext = $"($ext.name)@($ext.version)"
         log info $"Installing VSCode extension: ($ext)"
