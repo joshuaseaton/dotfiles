@@ -10,5 +10,6 @@ shell:
   program: .cargo/bin/nu
 window:
   opacity: 0.9
+  startup_mode: Maximized
   title: Terminal
 

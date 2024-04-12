@@ -40,6 +40,7 @@
             "args": [ "--login" ]
         }
     },
+    "window.newWindowDimensions": "maximized",
     "window.zoomLevel": 3,
     "workbench.colorTheme": "Default Dark Modern",
     "workbench.editor.enablePreview": false,
