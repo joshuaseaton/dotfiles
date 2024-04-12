@@ -7,8 +7,9 @@ cd $env.DOTFILES
 
 # Linked configuration files.
 open links.json |
-    append (open $"($nu.os-info.name)/links.json")
-    | each { |link|
+    default $nu.os-info.name os |
+    where $it.os == $nu.os-info.name |
+    each { |link|
         let source = $"($env.HOME)/($link.source)"
         let target = $"($env.HOME)/($link.target)"
         if not ($target | path exists) or (ls --long $target | get 0.target) != $source {
@@ -16,7 +17,7 @@ open links.json |
             ^ln -sf $source $target
             log info $"Linked: ($link.source) -> ($link.target)"
         }
-    } 
+    }
 
 # VSCode
 run vscode/install.nu
