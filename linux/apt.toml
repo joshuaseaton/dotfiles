@@ -1,0 +1,19 @@
+# A slick, minimal terminal emulator.
+[[package]]
+name = "alacritty"
+
+# Visual Studio: Current code editor of choice.
+[[package]]
+name = "code"
+
+# A better git pager.
+[[package]]
+name = "git-delta"
+
+# Checks shell for syntax errors and POSIX-compliance.
+[[package]]
+name = "shellcheck"
+
+# For manipulating the clipboard on the command-line.
+[[package]]
+name = "xclip"
