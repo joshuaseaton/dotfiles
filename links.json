@@ -5,7 +5,7 @@
     },
     {
         "source": ".dotfiles/alacritty/alacritty.toml",
-        "target": "alacritty.toml"
+        "target": ".alacritty.toml"
     },
     {
         "source": ".dotfiles/alacritty/alacritty.yml",
