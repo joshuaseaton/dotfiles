@@ -26,14 +26,15 @@
     },
     "search.followSymlinks": false,
     "security.workspace.trust.untrustedFiles": "open",
+    "terminal.integrated.defaultLocation": "editor",
     "terminal.integrated.defaultProfile.linux": "nu",
+    "terminal.integrated.defaultProfile.osx": "nu",
     "terminal.integrated.profiles.linux": {
         "nu": {
             "path": "${env:HOME}/.cargo/bin/nu",
             "args": [ "--login" ]
         }
     },
-    "terminal.integrated.defaultProfile.osx": "nu",
     "terminal.integrated.profiles.osx": {
         "nu": {
             "path": "${env:HOME}/.cargo/bin/nu",
@@ -46,3 +47,5 @@
     "workbench.editor.enablePreview": false,
     "workbench.editor.highlightModifiedTabs": true
 }
+
+
