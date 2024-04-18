@@ -1,9 +1,5 @@
 [
     {
-        "source": ".dotfiles/gitconfig",
-        "target": ".gitconfig"
-    },
-    {
         "source": ".dotfiles/alacritty/alacritty.toml",
         "target": ".alacritty.toml"
     },
@@ -12,9 +8,23 @@
         "target": ".config/alacritty/alacritty.yml"
     },
     {
+        "source": ".dotfiles/gitconfig",
+        "target": ".gitconfig"
+    },
+    {
+        "source": ".dotfiles/vscode/keybindings.json",
+        "target": ".config/Code/User/keybindings.json",
+        "os": "linux"
+    },
+    {
         "source": ".dotfiles/vscode/settings.json",
         "target": ".config/Code/User/settings.json",
         "os": "linux"
+    },
+    {
+        "source": ".dotfiles/vscode/keybindings.json",
+        "target": "Library/Application Support/Code/User/keybindings.json",
+        "os": "macos"
     },
     {
         "source": ".dotfiles/vscode/settings.json",
