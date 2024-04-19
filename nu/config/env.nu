@@ -39,11 +39,16 @@ def create_right_prompt [] {
     let git_context = if $in_git_repo {
         let branch = ^git branch --show-current
         let context = if ($branch | is-empty) {
-            ^git branch |
-                lines |
-                first |
-                parse "* (HEAD detached at {detached_name})" |
-                get detached_name.0
+            let first = ^git branch | lines | first
+            let detached = $first | parse "* (HEAD detached at {name})"
+            if ($detached | is-not-empty) {
+                $detached | get name.0
+            } else {
+                let rebasing = $first |
+                    parse "* (no branch, rebasing {branch})" |
+                    get branch.0
+                $rebasing + " (rebasing)"
+            }
         } else {
             $branch
         }
