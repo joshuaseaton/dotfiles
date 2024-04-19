@@ -1,4 +1,10 @@
 {
+    "[cpp]" : {
+        "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
+        "editor.formatOnSave": true,
+        "files.insertFinalNewline": true
+    },
+    "clangd.arguments": [ "-header-insertion=never" ],
     "editor.accessibilitySupport": "off",
     "editor.autoClosingBrackets": "beforeWhitespace",
     "editor.autoClosingComments": "beforeWhitespace",
@@ -12,18 +18,11 @@
     "editor.showDeprecated": false,
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
-    "files.autoSave": "afterDelay",
-    "files.exclude": {
-        "**/out/**": true
-    },
-    "files.insertFinalNewline": true,
-    "files.watcherExclude": {
-        "**/out/**": true
-    },
+    "files.autoSave": "onFocusChange",
+    "files.exclude": { "**/out/**": true },
+    "files.watcherExclude": { "**/out/**": true },
     "nushellLanguageServer.includeDirs": [ "~/.dotfiles/nu/lib" ],
-    "search.exclude": {
-        "**/out/**": true
-    },
+    "search.exclude": { "**/out/**": true },
     "search.followSymlinks": false,
     "security.workspace.trust.untrustedFiles": "open",
     "terminal.integrated.defaultProfile.linux": "nu",
