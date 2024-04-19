@@ -25,6 +25,7 @@
     "search.exclude": { "**/out/**": true },
     "search.followSymlinks": false,
     "security.workspace.trust.untrustedFiles": "open",
+    "shellcheck.customArgs" : [ "--external-sources" ],
     "terminal.integrated.defaultProfile.linux": "nu",
     "terminal.integrated.defaultProfile.osx": "nu",
     "terminal.integrated.profiles.linux": {
