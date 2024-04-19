@@ -7,7 +7,7 @@
     "editor.autoClosingQuotes": "beforeWhitespace",
     "editor.cursorBlinking": "solid",
     "editor.inlayHints.enabled": "off",
-    "editor.mouseWheelScrollSensitivity": 2,
+    "editor.mouseWheelScrollSensitivity": 3,
     "editor.rulers": [ 80 ],
     "editor.showDeprecated": false,
     "explorer.confirmDelete": false,
@@ -26,7 +26,6 @@
     },
     "search.followSymlinks": false,
     "security.workspace.trust.untrustedFiles": "open",
-    "terminal.integrated.defaultLocation": "editor",
     "terminal.integrated.defaultProfile.linux": "nu",
     "terminal.integrated.defaultProfile.osx": "nu",
     "terminal.integrated.profiles.linux": {
