@@ -25,12 +25,34 @@ def create_right_prompt [] {
     ] | str join)
 
     let last_exit_code = if ($env.LAST_EXIT_CODE != 0) {([
+        (ansi reset)
         (ansi rb)
         ($env.LAST_EXIT_CODE)
     ] | str join)
-    } else { "" }
+    }
 
-    ([$last_exit_code, (char space), $time_segment] | str join)
+    let in_git_repo = ^git rev-parse --is-inside-work-tree |
+        complete |
+        get stderr |
+        is-empty
+
+    let git_context = if $in_git_repo {
+        let branch = ^git branch --show-current
+        let context = if ($branch | is-empty) {
+            ^git branch |
+                lines |
+                first |
+                parse "* (HEAD detached at {detached_name})" |
+                get detached_name.0
+        } else {
+            $branch
+        }
+        [(ansi reset) (ansi purple) $context] | str join
+    }
+
+    [$last_exit_code $git_context $time_segment] |
+        where $it != null |
+        str join (char space)
 }
 
 $env.PROMPT_COMMAND = {|| create_left_prompt }
