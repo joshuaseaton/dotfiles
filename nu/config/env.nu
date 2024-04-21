@@ -70,7 +70,7 @@ $env.NU_LIB_DIRS = [ ([$nu.home-path .dotfiles nu lib] | path join) ]
 $env.PATH = ($env.PATH |
     split row (char esep) |
     append [
-        $"($nu.home-path)/.cargo/bin"
+       [$nu.home-path .cargo bin] | path join
     ] |
     append (match $nu.os-info.name {
         macos => [ /opt/homebrew/bin ]

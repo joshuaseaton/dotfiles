@@ -10,4 +10,4 @@ log info "Updating VSCode extensions..."
 ^code --update-extensions
 vscode installed-extensions |
     to json |
-    save --force $"($env.DOTFILES)/vscode/extensions.json"
+    save --force ([$env.DOTFILES vscode extensions.json] | path join)

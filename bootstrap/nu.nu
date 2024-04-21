@@ -13,8 +13,8 @@ use log.nu
 mkdir $nu.default-config-dir
 [config.nu env.nu login.nu] |
     each { |config|
-        let source = $"($env.DOTFILES)/nu/config/($config)"
-        let target = $"($nu.default-config-dir)/($config)"
+        let source = [$env.DOTFILES nu config $config] | path join
+        let target = [$nu.default-config-dir $config] | path join
         file symlink $source $target
     }
 
