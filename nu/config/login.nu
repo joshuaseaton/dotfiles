@@ -5,5 +5,6 @@ use cargo.nu
 use clipboard.nu
 use defaults.nu
 use dict.nu
+use file.nu
 
 source completions/git.nu

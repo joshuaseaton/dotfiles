@@ -4,6 +4,7 @@
 # It finishes the job of bootstrap/nu.sh in installing our custom Nushell
 # configuration.
 
+use file.nu
 use log.nu
 
 # Install via symlink our custom configuration in the default configuration
@@ -14,8 +15,7 @@ mkdir $nu.default-config-dir
     each { |config|
         let source = $"($env.DOTFILES)/nu/config/($config)"
         let target = $"($nu.default-config-dir)/($config)"
-        ^ln -sf $source $target
-        log info $"Linked: ($source) ->\n\t ($target)"
+        file symlink $source $target
     }
 
 exit 0

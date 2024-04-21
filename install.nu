@@ -1,6 +1,7 @@
  # The main installation entrypoint. This script should be idempotent.
 
 use cargo.nu
+use file.nu
 use log.nu
 
 cd $env.DOTFILES
@@ -11,11 +12,7 @@ open links.json |
     each { |link|
         let source = $"($env.HOME)/($link.source)"
         let target = $"($env.HOME)/($link.target)"
-        if not ($target | path exists) or (ls --long $target | get 0.target) != $source {
-            mkdir ($target | path dirname)
-            ^ln -sf $source $target
-            log info $"Linked: ~/($link.source) -> ~/($link.target)"
-        }
+        file symlink $source $target
     }
 
 
