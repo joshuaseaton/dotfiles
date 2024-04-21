@@ -7,8 +7,7 @@ cd $env.DOTFILES
 
 # Linked configuration files.
 open links.json |
-    default $nu.os-info.name os |
-    where $it.os == $nu.os-info.name |
+    append (open ([$nu.os-info.name links.json] | path join)) |
     each { |link|
         let source = $"($env.HOME)/($link.source)"
         let target = $"($env.HOME)/($link.target)"
