@@ -10,9 +10,16 @@
 set -e
 
 BREW=/opt/homebrew/bin/brew
+DOTFILES="${HOME}/.dotfiles"
+DOTFILES_ACTUAL="$(dirname "$(dirname "$(realpath "$0")")")"
 OS="$(uname -o)"
-NU_ENV_CONFIG="${HOME}/.dotfiles/nu/config/env.nu"
-readonly BREW OS NU_ENV_CONFIG
+NU_ENV_CONFIG="${DOTFILES}/nu/config/env.nu"
+readonly BREW DOTFILES DOTFILES_ACTUAL OS NU_ENV_CONFIG
+
+if [ "${DOTFILES_ACTUAL}" !=  "${DOTFILES}" ]; then
+    echo "ERROR: dotfiles.git must be cloned to ${DOTFILES}; not ${DOTFILES_ACTUAL}"
+    exit 1
+fi
 
 if [ "${OS}" = Darwin ]; then
     # This is also the most convenient spot to install Homebrew, which is
@@ -51,4 +58,4 @@ if [ -z "$(which nu)" ]; then
 fi
 
 # Now finish our bootstrap in the richer Nushell environment.
-nu --env-config "${NU_ENV_CONFIG}" "${HOME}/.dotfiles/bootstrap/nu.nu"
+nu --env-config "${NU_ENV_CONFIG}" "${DOTFILES}/bootstrap/nu.nu"
