@@ -67,10 +67,15 @@ $env.PROMPT_INDICATOR = {|| $"(ansi white) ❯ " }
 # Directories to search for scripts when calling `source` or `use`
 $env.NU_LIB_DIRS = [ ([$nu.home-path .dotfiles nu lib] | path join) ]
 
+# The default value, but it's handy in scripts to be able to refer to it without
+# taking the location as a hard-coded dependency.
+$env.GOBIN = ([$nu.home-path go bin] | path join)
+
 $env.PATH = ($env.PATH |
     split row (char esep) |
     append [
-       ([$nu.home-path .cargo bin] | path join)
+       ([$nu.home-path .cargo bin] | path join),
+       $env.GOBIN,
     ] |
     append (match $nu.os-info.name {
         macos => [ /opt/homebrew/bin ]

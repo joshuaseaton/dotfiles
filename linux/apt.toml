@@ -10,6 +10,10 @@ name = "code"
 [[package]]
 name = "git-delta"
 
+# Golang.
+[[package]]
+name = "golang-go"
+
 # Checks shell for syntax errors and POSIX-compliance.
 [[package]]
 name = "shellcheck"

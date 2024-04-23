@@ -4,6 +4,10 @@
     "version": "0.5.0"
   },
   {
+    "name": "golang.go",
+    "version": "0.41.3"
+  },
+  {
     "name": "llvm-vs-code-extensions.vscode-clangd",
     "version": "0.1.28"
   },

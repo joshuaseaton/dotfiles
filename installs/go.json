@@ -1,0 +1,14 @@
+[
+  {
+    "name": "gopls",
+    "module": "golang.org/x/tools/gopls",
+    "path": "golang.org/x/tools/gopls",
+    "version": "v0.15.3"
+  },
+  {
+    "name": "staticcheck",
+    "module": "honnef.co/go/tools",
+    "path": "honnef.co/go/tools/cmd/staticcheck",
+    "version": "v0.4.7"
+  }
+]

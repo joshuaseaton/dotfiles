@@ -2,6 +2,7 @@
 
 use cargo.nu
 use file.nu
+use go.nu
 use log.nu
 
 cd $env.DOTFILES
@@ -28,6 +29,16 @@ open ([alacritty alacritty.toml] | path join) |
 # VSCode
 run ([vscode install.nu] | path join)
 
+# Go binaries.
+open ([installs go.json] | path join) |
+    each { |bin|
+        let local = [$env.GOBIN $bin.name] | path join
+        if not ($local | path exists) or ((go build-info $local | get main.version) != $bin.version) {
+            log info $"Installing ($bin.name) \(($bin.path)@($bin.version)\)..."
+            ^go install $"($bin.path)@($bin.version)"
+        }
+    }
+
 # OS-specific set-up.
 run ([$nu.os-info.name install.nu] | path join)
 
@@ -36,7 +47,7 @@ run ([$nu.os-info.name install.nu] | path join)
 let cargo_installed = cargo installed |
     each {|crate| {$crate.name: $crate.version}} |
     reduce {|crate, record| $record | merge $crate }
-open cargo-installs.json |
+open ([installs cargo.json] | path join)|
     where ($cargo_installed | get --ignore-errors $it.name) != $it.version |
     each {|crate|
         log info $"Installing crate: ($crate.name)@($crate.version)"

@@ -6,5 +6,6 @@ use clipboard.nu
 use defaults.nu
 use dict.nu
 use file.nu
+use go.nu
 
 source completions/git.nu

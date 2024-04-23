@@ -11,6 +11,10 @@ name = "brave-browser"
 [[formula]]
 name = "git-delta"
 
+# Golang.
+[[formula]]
+name = "go"
+
 # A common build dependency.
 [[formula]]
 name = "openssl@3"

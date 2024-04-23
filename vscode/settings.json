@@ -4,6 +4,11 @@
         "editor.formatOnSave": true,
         "files.insertFinalNewline": true
     },
+    "[go]" : {
+        "editor.defaultFormatter": "golang.go",
+        "editor.formatOnSave": true,
+        "files.insertFinalNewline": true
+    },
     "clangd.arguments": [ "-header-insertion=never" ],
     "editor.accessibilitySupport": "off",
     "editor.autoClosingBrackets": "beforeWhitespace",
