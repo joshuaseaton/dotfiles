@@ -1,13 +1,11 @@
 {
     "[cpp]" : {
         "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
-        "editor.formatOnSave": true,
-        "files.insertFinalNewline": true
+        "editor.formatOnSave": true
     },
     "[go]" : {
         "editor.defaultFormatter": "golang.go",
         "editor.formatOnSave": true,
-        "files.insertFinalNewline": true
     },
     "clangd.arguments": [ "-header-insertion=never" ],
     "editor.accessibilitySupport": "off",
@@ -25,6 +23,7 @@
     "explorer.confirmDragAndDrop": false,
     "files.autoSave": "onFocusChange",
     "files.exclude": { "**/out/**": true },
+    "files.insertFinalNewline": true,
     "files.watcherExclude": { "**/out/**": true },
     "nushellLanguageServer.includeDirs": [ "~/.dotfiles/nu/lib" ],
     "search.exclude": { "**/out/**": true },
@@ -51,5 +50,4 @@
     "workbench.editor.enablePreview": false,
     "workbench.editor.highlightModifiedTabs": true
 }
-
 
