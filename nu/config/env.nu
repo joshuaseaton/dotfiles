@@ -81,6 +81,14 @@ $env.PATH = ($env.PATH |
 
 $env.DOTFILES = ([$nu.home-path .dotfiles] | path join)
 
+match $nu.os-info.name {
+    macos => {
+        # Do not print any hints about changing Homebrew’s behaviour with
+        # environment variables.
+        $env.HOMEBREW_NO_ENV_HINTS = 1
+    }
+}
+
 # TODO: Remove this if/when --env-config ever gets a sane default.
 export def run [script: string, ...args: string] {
     ^nu --env-config $nu.env-path $script ...$args
