@@ -10,22 +10,14 @@ cd $env.DOTFILES
 # Homebrew-installed packages
 #
 
-let to_brew = open macos/brew.toml 
-def brew-install [what: string] {
-    let installed = brew list | where $it.type == $what | get name
-    $to_brew |
-        get $what |
-        default true quarantine |
-        where {|pkg| not ($pkg.name in $installed)} |
-        each {|pkg|
-            log info $"Installing Homebrew ($what): ($pkg.name)"
-            let args = if not $pkg.quarantine { [] } else { [ --no-quarantine ]} 
-            ^brew install $"--($what)" ...$args $pkg.name
-        } 
-}
-
-brew-install cask
-brew-install formula
+let installed = brew installed | get name
+open macos/brew.json |
+    where not ($it.name in $installed) |
+    each {|pkg|
+            log info $"Installing Homebrew ($pkg.type): ($pkg.name)"
+            let args = if (pkg.name == "alacritty") { [ --no-quarantine ] } else { [] } 
+            ^brew install $"--($pkg.type)" ...$args $pkg.name
+    }
 
 #
 # System settings
