@@ -1,23 +1,23 @@
 # A slick, minimal terminal emulator.
 [[package]]
-name = "alacritty"
+apt = "alacritty"
 
 # Visual Studio: Current code editor of choice.
 [[package]]
-name = "code"
+apt = "code"
 
 # A better git pager.
 [[package]]
-name = "git-delta"
+apt = "git-delta"
 
 # Golang.
 [[package]]
-name = "golang-go"
+apt = "golang-go"
 
 # Checks shell for syntax errors and POSIX-compliance.
 [[package]]
-name = "shellcheck"
+apt = "shellcheck"
 
 # For manipulating the clipboard on the command-line.
 [[package]]
-name = "xclip"
+apt = "xclip"

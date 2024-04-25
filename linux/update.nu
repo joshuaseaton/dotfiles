@@ -3,9 +3,9 @@ use log.nu
 
 cd $env.DOTFILES
 
-log info "Updating apt package info..."
-apt update
-
+let packages = open linux/package.toml | get package
 if (which apt | is-not-empty) {
-    open linux/apt.toml | get package.name | do { apt upgrade ...$in }
+    log info "Updating apt package info..."
+    apt update
+    apt upgrade ...($packages | get apt)
 }

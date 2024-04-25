@@ -2,6 +2,7 @@ use apt.nu
 
 cd $env.DOTFILES
 
+let packages = open linux/package.toml | get package
 if (which apt | is-not-empty) {
-    open linux/apt.toml | get package.name | do { apt install ...$in }
+    apt install ...($packages | get apt)
 }
