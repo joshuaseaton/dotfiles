@@ -11,6 +11,6 @@ log info "Updating Homebrew casks and formulae..."
 ^brew update
 
 # Upgrade anything outdated.
-if (^brew outdated | complete | get stdout | is-empty) {
+if (^brew outdated | complete | get stdout | is-not-empty) {
     ^brew upgrade
 }
