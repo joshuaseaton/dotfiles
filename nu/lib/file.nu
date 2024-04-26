@@ -8,9 +8,3 @@ export def symlink [source: string, target: string] {
         log info $"Linked: ($source) -> ($target)"
     }
 }
-
-# Saves the stdin contents to the provided file with an added newline.
-export def save-with-newline [file: string] {
-    $in | save --force $file
-    (char newline) | save --append $file
-}

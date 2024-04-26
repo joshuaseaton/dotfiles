@@ -1,53 +1,65 @@
 {
-    "[cpp]" : {
-        "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
-        "editor.formatOnSave": true
-    },
-    "[go]" : {
-        "editor.defaultFormatter": "golang.go",
-        "editor.formatOnSave": true
-    },
-    "clangd.arguments": [ "-header-insertion=never" ],
-    "editor.accessibilitySupport": "off",
-    "editor.autoClosingBrackets": "beforeWhitespace",
-    "editor.autoClosingComments": "beforeWhitespace",
-    "editor.autoClosingDelete": "never",
-    "editor.autoClosingOvertype": "always",
-    "editor.autoClosingQuotes": "beforeWhitespace",
-    "editor.cursorBlinking": "solid",
-    "editor.inlayHints.enabled": "off",
-    "editor.mouseWheelScrollSensitivity": 3,
-    "editor.rulers": [ 80 ],
-    "editor.showDeprecated": false,
-    "explorer.confirmDelete": false,
-    "explorer.confirmDragAndDrop": false,
-    "files.autoSave": "onFocusChange",
-    "files.exclude": { "**/out/**": true },
-    "files.insertFinalNewline": true,
-    "files.watcherExclude": { "**/out/**": true },
-    "nushellLanguageServer.includeDirs": [ "~/.dotfiles/nu/lib" ],
-    "search.exclude": { "**/out/**": true },
-    "search.followSymlinks": false,
-    "security.workspace.trust.untrustedFiles": "open",
-    "shellcheck.customArgs" : [ "--external-sources" ],
-    "terminal.integrated.defaultProfile.linux": "nu",
-    "terminal.integrated.defaultProfile.osx": "nu",
-    "terminal.integrated.profiles.linux": {
-        "nu": {
-            "path": "${env:HOME}/.cargo/bin/nu",
-            "args": [ "--login" ]
-        }
-    },
-    "terminal.integrated.profiles.osx": {
-        "nu": {
-            "path": "${env:HOME}/.cargo/bin/nu",
-            "args": [ "--login" ]
-        }
-    },
-    "window.newWindowDimensions": "maximized",
-    "window.zoomLevel": 3,
-    "workbench.colorTheme": "Default Dark Modern",
-    "workbench.editor.enablePreview": false,
-    "workbench.editor.highlightModifiedTabs": true
+  "[cpp]": {
+    "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+  },
+  "[go]": {
+    "editor.defaultFormatter": "golang.go",
+  },
+  "[json]": {
+    "editor.detectIndentation": false,
+    "editor.tabSize": 2,
+    "files.insertFinalNewline": false
+  },
+  "clangd.arguments": [ "-header-insertion=never" ],
+  "editor.accessibilitySupport": "off",
+  "editor.autoClosingBrackets": "beforeWhitespace",
+  "editor.autoClosingComments": "beforeWhitespace",
+  "editor.autoClosingDelete": "never",
+  "editor.autoClosingOvertype": "always",
+  "editor.autoClosingQuotes": "beforeWhitespace",
+  "editor.cursorBlinking": "solid",
+  "editor.formatOnSave": true,
+  "editor.inlayHints.enabled": "off",
+  "editor.mouseWheelScrollSensitivity": 3,
+  "editor.rulers": [ 80 ],
+  "editor.showDeprecated": false,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "files.associations": {
+    "*.json": "json"
+  },
+  "files.autoSave": "onFocusChange",
+  "files.exclude": {
+    "**/out/**": true
+  },
+  "files.insertFinalNewline": true,
+  "files.watcherExclude": {
+  "**/out/**": true
+  },
+  "nushellLanguageServer.includeDirs": [ "~/.dotfiles/nu/lib" ],
+  "search.exclude": {
+    "**/out/**": true
+  },
+  "search.followSymlinks": false,
+  "security.workspace.trust.untrustedFiles": "open",
+  "shellcheck.customArgs": [ "--external-sources" ],
+  "terminal.integrated.defaultProfile.linux": "nu",
+  "terminal.integrated.defaultProfile.osx": "nu",
+  "terminal.integrated.profiles.linux": {
+    "nu": {
+      "path": "${env:HOME}/.cargo/bin/nu",
+      "args": [ "--login" ]
+    }
+  },
+  "terminal.integrated.profiles.osx": {
+    "nu": {
+      "path": "${env:HOME}/.cargo/bin/nu",
+      "args": [ "--login" ]
+    }
+  },
+  "window.newWindowDimensions": "maximized",
+  "window.zoomLevel": 3,
+  "workbench.colorTheme": "Default Dark Modern",
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.highlightModifiedTabs": true,
 }
-

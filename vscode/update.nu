@@ -1,6 +1,5 @@
 # Udates VSCode extensions.
 
-use file.nu
 use log.nu
 use vscode.nu
 
@@ -12,4 +11,4 @@ log info "Updating VSCode extensions..."
 
 vscode installed-extensions |
     to json |
-    file save-with-newline ([$env.DOTFILES vscode extensions.json] | path join)
+    save --force ([$env.DOTFILES vscode extensions.json] | path join)

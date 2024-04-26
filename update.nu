@@ -1,7 +1,6 @@
 # The main update entrypoint.
 
 use cargo.nu
-use file.nu
 use go.nu
 use log.nu
 
@@ -20,7 +19,7 @@ log info "Updating Rust installations..."
 cargo installed |
     reject binaries |
     to json |
-    file save-with-newline ([installs cargo.json] | path join)
+    save --force ([installs cargo.json] | path join)
 
 # OS-specific updates.
 run ([$nu.os-info.name update.nu] | path join)
@@ -43,4 +42,4 @@ go installed |
         }
     }
 
-go installed | to json | file save-with-newline ([installs go.json] | path join)
+go installed | to json | save --force ([installs go.json] | path join)
