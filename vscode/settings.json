@@ -58,7 +58,7 @@
     }
   },
   "window.newWindowDimensions": "maximized",
-  "window.zoomLevel": 3,
+  "window.zoomLevel": 2,
   "workbench.colorTheme": "Default Dark Modern",
   "workbench.editor.enablePreview": false,
   "workbench.editor.highlightModifiedTabs": true,
