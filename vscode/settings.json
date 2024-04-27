@@ -10,6 +10,10 @@
     "editor.tabSize": 2,
     "files.insertFinalNewline": false
   },
+  "[toml]": {
+    "editor.defaultFormatter": "tamasfe.even-better-toml",
+    "editor.formatOnSave": false
+  },
   "clangd.arguments": [ "-header-insertion=never" ],
   "editor.accessibilitySupport": "off",
   "editor.autoClosingBrackets": "beforeWhitespace",
@@ -23,10 +27,14 @@
   "editor.mouseWheelScrollSensitivity": 3,
   "editor.rulers": [ 80 ],
   "editor.showDeprecated": false,
+  "evenBetterToml.formatter.alignComments": true,
+  "evenBetterToml.formatter.alignEntries": true,
+  "evenBetterToml.formatter.arrayTrailingComma": true,
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "files.associations": {
-    "*.json": "json"
+    "*.json": "json",
+    "*.toml": "toml"
   },
   "files.autoSave": "onFocusChange",
   "files.exclude": {
