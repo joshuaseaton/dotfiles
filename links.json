@@ -4,10 +4,6 @@
         "target": ".alacritty.toml"
     },
     {
-        "source": ".dotfiles/alacritty/alacritty.yml",
-        "target": ".config/alacritty/alacritty.yml"
-    },
-    {
         "source": ".dotfiles/gitconfig",
         "target": ".gitconfig"
     }

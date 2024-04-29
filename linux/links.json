@@ -1,5 +1,9 @@
 [
     {
+        "source": ".dotfiles/alacritty/alacritty.yml",
+        "target": ".config/alacritty/alacritty.yml"
+    },
+    {
         "source": ".dotfiles/vscode/keybindings.json",
         "target": ".config/Code/User/keybindings.json"
     },
