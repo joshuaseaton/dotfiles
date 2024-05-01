@@ -14,11 +14,14 @@ export def installed [] {
     }
     let formulae = $info.formulae |
         each {|formula|
+        let deps = $formula | get dependencies
         {
             name: ($formula | get name),
             description: ($formula | get desc),
             type: formula,
             version: ($formula | get installed.version.0),
+        } | if ($deps | is-not-empty) {
+            $in | insert dependencies $deps
         }
     }
     $casks | append $formulae | sort-by name
