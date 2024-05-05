@@ -10,7 +10,6 @@
 	verbose = true
 
 [core]
-	editor = code --wait
 	pager = delta
 
 [diff]

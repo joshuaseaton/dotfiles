@@ -5,7 +5,7 @@
   "[go]": {
     "editor.defaultFormatter": "golang.go"
   },
-  "[json]": {         
+  "[json]": {
     "editor.formatOnSave": false,
     "editor.tabSize": 2,
     "files.insertFinalNewline": false
@@ -53,11 +53,17 @@
   "shellcheck.customArgs": [ "--external-sources" ],
   "terminal.integrated.defaultProfile.linux": "nu",
   "terminal.integrated.defaultProfile.osx": "nu",
+  "terminal.integrated.env.linux": {
+    "EDITOR": "code --wait"
+  },
   "terminal.integrated.profiles.linux": {
     "nu": {
       "path": "${env:HOME}/.cargo/bin/nu",
       "args": [ "--login" ]
     }
+  },
+  "terminal.integrated.env.osx": {
+    "EDITOR": "code --wait"
   },
   "terminal.integrated.profiles.osx": {
     "nu": {
