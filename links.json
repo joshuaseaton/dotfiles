@@ -1,10 +1,10 @@
 [
-    {
-        "source": ".dotfiles/alacritty/alacritty.toml",
-        "target": ".alacritty.toml"
-    },
-    {
-        "source": ".dotfiles/gitconfig",
-        "target": ".gitconfig"
-    }
+  {
+    "source": ".dotfiles/alacritty/alacritty.toml",
+    "target": ".alacritty.toml"
+  },
+  {
+    "source": ".dotfiles/gitconfig",
+    "target": ".gitconfig"
+  }
 ]

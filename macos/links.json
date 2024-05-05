@@ -1,10 +1,10 @@
 [
-    {
-        "source": ".dotfiles/vscode/keybindings.json",
-        "target": "Library/Application Support/Code/User/keybindings.json"
-    },
-    {
-        "source": ".dotfiles/vscode/settings.json",
-        "target": "Library/Application Support/Code/User/settings.json"
-    }
+  {
+    "source": ".dotfiles/vscode/keybindings.json",
+    "target": "Library/Application Support/Code/User/keybindings.json"
+  },
+  {
+    "source": ".dotfiles/vscode/settings.json",
+    "target": "Library/Application Support/Code/User/settings.json"
+  }
 ]
