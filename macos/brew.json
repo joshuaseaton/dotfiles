@@ -32,5 +32,11 @@
     "description": "Open-source code editor",
     "type": "cask",
     "version": "1.87.2"
+  },
+  {
+    "name": "zed",
+    "description": "Multiplayer code editor",
+    "type": "cask",
+    "version": "0.133.7"
   }
 ]

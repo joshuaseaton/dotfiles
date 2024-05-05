@@ -6,5 +6,9 @@
   {
     "source": ".dotfiles/vscode/settings.json",
     "target": "Library/Application Support/Code/User/settings.json"
+  },
+  {
+    "source": ".dotfiles/zed/settings.json",
+    "target": ".config/zed/settings.json"
   }
 ]

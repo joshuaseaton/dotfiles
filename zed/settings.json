@@ -1,0 +1,37 @@
+// See https://zed.dev/docs/configuring-zed for documentation.
+{
+  "auto_install_extensions": {
+    "everforest": true,
+    "git-firefly": true,
+    "html": false,
+    "nu": true,
+    "toml": true
+  },
+  "autosave": "on_focus_change",
+  "buffer_font_size": 16,
+  "cursor_blink": false,
+  "features": {
+    "copilot": false
+  },
+  "language_overrides": {
+    "JSON": {
+      "ensure_final_newline_on_save": false,
+      "format_on_save": "off",
+      "tab_size": 2
+    }
+  },
+  "terminal": {
+    "blinking": "off",
+    "env": {
+      "EDITOR": "zed --wait"
+    },
+    "shell": {
+      "with_arguments": {
+        "program": "nu",
+        "args": ["--login"]
+      }
+    }
+  },
+  "theme": "Everforest Dark",
+  "ui_font_size": 16
+}

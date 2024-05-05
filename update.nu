@@ -6,8 +6,9 @@ use log.nu
 
 cd $env.DOTFILES
 
-# VSCode
+# Editors
 run ([vscode update.nu] | path join)
+run ([zed update.nu] | path join)
 
 # Rust
 log info "Updating Rust installations..."
