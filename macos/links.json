@@ -8,6 +8,10 @@
     "target": "Library/Application Support/Code/User/settings.json"
   },
   {
+    "source": ".dotfiles/zed/keymap.json",
+    "target": ".config/zed/keymap.json"
+  },
+  {
     "source": ".dotfiles/zed/settings.json",
     "target": ".config/zed/settings.json"
   }
