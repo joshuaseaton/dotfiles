@@ -12,6 +12,30 @@
     "version": "1.64.109.0"
   },
   {
+    "name": "ca-certificates",
+    "description": "Mozilla CA certificate store",
+    "type": "formula",
+    "version": "2024-03-11"
+  },
+  {
+    "name": "git-delta",
+    "description": "Syntax-highlighting pager for git and diff output",
+    "type": "formula",
+    "version": "0.17.0"
+  },
+  {
+    "name": "go",
+    "description": "Open source programming language to build simple/reliable/efficient software",
+    "type": "formula",
+    "version": "1.22.3"
+  },
+  {
+    "name": "gpatch",
+    "description": "Apply a diff file to an original",
+    "type": "formula",
+    "version": "2.7.6"
+  },
+  {
     "name": "openssl@3",
     "description": "Cryptography and SSL/TLS Toolkit",
     "type": "formula",
@@ -26,6 +50,12 @@
     "description": "Window snapping tool",
     "type": "cask",
     "version": "3.0.20"
+  },
+  {
+    "name": "shellcheck",
+    "description": "Static analysis and lint tool, for (ba)sh scripts",
+    "type": "formula",
+    "version": "0.10.0"
   },
   {
     "name": "visual-studio-code",

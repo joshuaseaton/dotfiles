@@ -22,6 +22,8 @@ export def installed [] {
             version: ($formula | get installed.version.0),
         } | if ($deps | is-not-empty) {
             $in | insert dependencies $deps
+        } else {
+            $in
         }
     }
     $casks | append $formulae | sort-by name
