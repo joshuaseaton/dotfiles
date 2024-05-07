@@ -23,7 +23,8 @@
   "terminal": {
     "blinking": "off",
     "env": {
-      "EDITOR": "zed --wait"
+      "EDITOR": "zed --wait",
+      "GIT_PAGER": "less"  // `delta` doesn't yet work here.
     },
     "shell": {
       "with_arguments": {
@@ -33,5 +34,6 @@
     }
   },
   "theme": "Everforest Dark",
-  "ui_font_size": 16
+  "ui_font_size": 16,
+  "wrap_guides": [80]
 }
