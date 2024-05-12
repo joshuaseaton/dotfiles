@@ -4,7 +4,7 @@
     "target": ".alacritty.toml"
   },
   {
-    "source": ".dotfiles/gitconfig",
+    "source": ".dotfiles/.gitconfig",
     "target": ".gitconfig"
   }
 ]
