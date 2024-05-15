@@ -9,7 +9,7 @@ export def installed [] {
             name: ($cask | get token),
             description: ($cask | get desc),
             type: cask,
-            version: ($cask | get installed),
+            version: ($cask | get version),
         }
     }
     let formulae = $info.formulae |

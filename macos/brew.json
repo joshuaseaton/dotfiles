@@ -9,7 +9,7 @@
     "name": "brave-browser",
     "description": "Web browser focusing on privacy",
     "type": "cask",
-    "version": "1.64.109.0"
+    "version": "1.65.133.0"
   },
   {
     "name": "ca-certificates",
@@ -49,7 +49,7 @@
     "name": "rectangle-pro",
     "description": "Window snapping tool",
     "type": "cask",
-    "version": "3.0.20"
+    "version": "3.0.26"
   },
   {
     "name": "shellcheck",
@@ -61,12 +61,12 @@
     "name": "visual-studio-code",
     "description": "Open-source code editor",
     "type": "cask",
-    "version": "1.87.2"
+    "version": "1.89.1"
   },
   {
     "name": "zed",
     "description": "Multiplayer code editor",
     "type": "cask",
-    "version": "0.133.7"
+    "version": "0.134.4"
   }
 ]
