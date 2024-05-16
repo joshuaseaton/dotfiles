@@ -14,7 +14,8 @@ log info "Updating Homebrew casks and formulae..."
 ^brew update
 brew installed | to json | save --force macos/brew.json
 
-# Upgrade anything outdated.
+# Upgrade and tidy anything outdated.
 if (^brew outdated | complete | get stdout | is-not-empty) {
     ^brew upgrade
 }
+^brew cleanup
