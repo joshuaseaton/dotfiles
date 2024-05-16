@@ -9,7 +9,7 @@
     "name": "brave-browser",
     "description": "Web browser focusing on privacy",
     "type": "cask",
-    "version": "1.65.133.0"
+    "version": "1.66.110.0"
   },
   {
     "name": "ca-certificates",
@@ -30,12 +30,6 @@
     "version": "1.22.3"
   },
   {
-    "name": "gpatch",
-    "description": "Apply a diff file to an original",
-    "type": "formula",
-    "version": "2.7.6"
-  },
-  {
     "name": "openssl@3",
     "description": "Cryptography and SSL/TLS Toolkit",
     "type": "formula",
@@ -52,12 +46,6 @@
     "version": "3.0.26"
   },
   {
-    "name": "shellcheck",
-    "description": "Static analysis and lint tool, for (ba)sh scripts",
-    "type": "formula",
-    "version": "0.10.0"
-  },
-  {
     "name": "visual-studio-code",
     "description": "Open-source code editor",
     "type": "cask",
@@ -67,6 +55,6 @@
     "name": "zed",
     "description": "Multiplayer code editor",
     "type": "cask",
-    "version": "0.134.4"
+    "version": "0.135.2"
   }
 ]
