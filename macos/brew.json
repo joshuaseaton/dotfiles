@@ -46,6 +46,12 @@
     "version": "3.0.26"
   },
   {
+    "name": "spotify",
+    "description": "Music streaming service",
+    "type": "cask",
+    "version": "1.2.37.701,e66eb7bc,1226"
+  },
+  {
     "name": "visual-studio-code",
     "description": "Open-source code editor",
     "type": "cask",
