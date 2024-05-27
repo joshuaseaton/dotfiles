@@ -1,4 +1,4 @@
-# Performs the macOS-specific portion of the installation and configuration. 
+# Performs the macOS-specific portion of the installation and configuration.
 
 use brew.nu
 use defaults.nu
@@ -15,7 +15,7 @@ open macos/brew.json |
     where not ($it.name in $installed) |
     each {|pkg|
             log info $"Installing Homebrew ($pkg.type): ($pkg.name)"
-            let args = if (pkg.name == "alacritty") { [ --no-quarantine ] } else { [] } 
+            let args = if (pkg.name == "alacritty") { [ --no-quarantine ] } else { [] }
             ^brew install $"--($pkg.type)" ...$args $pkg.name
     }
 
@@ -119,11 +119,18 @@ defaults write --verbose com.apple.spotlight orderedItems $spotlight_items
 #
 
 defaults write --verbose --force com.apple.messageshelper.MessageController SOInputLineSettings {
-    # Disable automatic 'correction' of ASCII smiley faces to emojis. 
+    # Disable automatic 'correction' of ASCII smiley faces to emojis.
     automaticEmojiSubstitutionEnablediMessage: false,
 
     # Disable spell check.
     continuousSpellCheckingEnabled: false,
 }
+
+#
+# UnnaturalScrollWheels
+#
+
+defaults write --verbose com.theron.UnnaturalScrollWheels LaunchAtLogin true
+defaults write --verbose com.theron.UnnaturalScrollWheels ScrollLines 4
 
 exit
