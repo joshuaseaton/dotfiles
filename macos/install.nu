@@ -127,6 +127,12 @@ defaults write --verbose --force com.apple.messageshelper.MessageController SOIn
 }
 
 #
+# Rectangle Pro
+#
+
+defaults write --verbose com.knollsoft.Hookshot launchOnLogin true
+
+#
 # UnnaturalScrollWheels
 #
 
