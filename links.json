@@ -6,5 +6,9 @@
   {
     "source": ".dotfiles/.gitconfig",
     "target": ".gitconfig"
+  },
+  {
+    "source": ".dotfiles/zellij/config.kdl",
+    "target": ".config/zellij/config.kdl"
   }
 ]

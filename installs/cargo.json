@@ -6,5 +6,9 @@
   {
     "name": "nu",
     "version": "0.93.0"
+  },
+  {
+    "name": "zellij",
+    "version": "0.40.1"
   }
 ]
