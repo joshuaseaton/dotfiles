@@ -40,6 +40,7 @@ export def build-info [binary: string] {
 export def installed [] {
     ls $env.GOBIN |
         get name |
+        sort |
         each { |bin|
             let info = build-info $bin
             {
