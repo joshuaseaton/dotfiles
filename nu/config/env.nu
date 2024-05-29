@@ -40,7 +40,7 @@ def create_right_prompt [] {
         let branch = ^git branch --show-current
         let context = if ($branch | is-empty) {
             let first = ^git branch | lines | first
-            let detached = $first | parse "* (HEAD detached at {name})"
+            let detached = $first | parse "* (HEAD detached {at_or_from} {name})"
             if ($detached | is-not-empty) {
                 $detached.name.0
             } else {
