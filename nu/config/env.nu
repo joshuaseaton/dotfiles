@@ -42,7 +42,7 @@ def create_right_prompt [] {
             let first = ^git branch | lines | first
             let detached = $first | parse "* (HEAD detached at {name})"
             if ($detached | is-not-empty) {
-                $detached | get name.0
+                $detached.name.0
             } else {
                 let rebasing = $first |
                     parse "* (no branch, rebasing {branch})" |

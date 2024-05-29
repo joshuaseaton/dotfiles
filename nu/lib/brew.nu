@@ -6,20 +6,20 @@ export def installed [] {
     let casks = $info.casks |
         each {|cask|
         {
-            name: ($cask | get token),
-            description: ($cask | get desc),
+            name: ($cask.token),
+            description: ($cask.desc),
             type: cask,
-            version: ($cask | get version),
+            version: ($cask.version),
         }
     }
     let formulae = $info.formulae |
         each {|formula|
-        let deps = $formula | get dependencies
+        let deps = $formula.dependencies
         {
-            name: ($formula | get name),
-            description: ($formula | get desc),
+            name: ($formula.name),
+            description: ($formula.desc),
             type: formula,
-            version: ($formula | get installed.version.0),
+            version: ($formula.installed.version.0),
         } | if ($deps | is-not-empty) {
             $in | insert dependencies $deps
         } else {

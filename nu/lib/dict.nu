@@ -7,12 +7,12 @@ export def main [
 ] {
   let url = 'https://api.dictionaryapi.dev/api/v2/entries/en/' + ($words | str join %20)
   let result = http get --full --allow-errors $url
-  match ($result | get status) {
+  match $result.status {
     200 => {}
     404 => (error make --unspanned {msg: $"Unknown entry: \"($words | str join ' ')\""})
     $code => (error make --unspanned {msg: $"HTTP error: ($code)"})
   }
-  let body = $result | get body
+  let body = $result.body
   if $phonetics {
     return ($body | get --ignore-errors phonetics.0.text | where $it != null)
   }

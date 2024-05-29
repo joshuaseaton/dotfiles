@@ -45,8 +45,8 @@ export def upgrade [...pkgs: string@"nu-complete apt installed"] {
         do {
             if ($in | is-not-empty) {
                 print $in
-                log info $'Upgrading apt packages: ($in | get name | str join ", ")...'
-                ^sudo apt-get upgrade ...($in | get name)
+                log info $'Upgrading apt packages: ($in.name | str join ", ")...'
+                ^sudo apt-get upgrade ...($in.name)
             }
         }
 }
