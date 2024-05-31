@@ -67,6 +67,6 @@
     "name": "zed",
     "description": "Multiplayer code editor",
     "type": "cask",
-    "version": "0.137.3"
+    "version": "0.137.5"
   }
 ]
