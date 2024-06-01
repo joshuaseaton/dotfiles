@@ -9,7 +9,7 @@
     "name": "brave-browser",
     "description": "Web browser focusing on privacy",
     "type": "cask",
-    "version": "1.66.115.0"
+    "version": "1.66.118.0"
   },
   {
     "name": "ca-certificates",
@@ -67,6 +67,6 @@
     "name": "zed",
     "description": "Multiplayer code editor",
     "type": "cask",
-    "version": "0.137.5"
+    "version": "0.137.6"
   }
 ]
