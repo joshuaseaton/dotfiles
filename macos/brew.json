@@ -27,7 +27,7 @@
     "name": "go",
     "description": "Open source programming language to build simple/reliable/efficient software",
     "type": "formula",
-    "version": "1.22.3"
+    "version": "1.22.4"
   },
   {
     "name": "openssl@3",
@@ -49,7 +49,7 @@
     "name": "spotify",
     "description": "Music streaming service",
     "type": "cask",
-    "version": "1.2.38.720,a4a70a0e,1231"
+    "version": "1.2.39.578,0ea3f38b,108"
   },
   {
     "name": "unnaturalscrollwheels",
@@ -61,12 +61,12 @@
     "name": "visual-studio-code",
     "description": "Open-source code editor",
     "type": "cask",
-    "version": "1.89.1"
+    "version": "1.90.0"
   },
   {
     "name": "zed",
     "description": "Multiplayer code editor",
     "type": "cask",
-    "version": "0.137.6"
+    "version": "0.138.4"
   }
 ]
