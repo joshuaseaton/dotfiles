@@ -57,5 +57,10 @@
     "name": "zed",
     "description": "Multiplayer code editor",
     "type": "cask"
+  },
+  {
+    "name": "zoom",
+    "description": "Video communication and virtual meeting platform",
+    "type": "cask"
   }
 ]
