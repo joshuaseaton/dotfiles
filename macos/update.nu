@@ -12,7 +12,9 @@ cd $env.DOTFILES
 log info "Updating Homebrew casks and formulae..."
 
 ^brew update
-brew installed | to json | save --force macos/brew.json
+# Homebrew doesn't allow installation by version, so capturing a given version
+# in brew.json is not practical.
+brew installed | reject version | to json | save --force macos/brew.json
 
 # Upgrade and tidy anything outdated.
 if (^brew outdated | complete | get stdout | is-not-empty) {
