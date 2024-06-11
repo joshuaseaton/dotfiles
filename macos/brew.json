@@ -54,6 +54,11 @@
     "type": "cask"
   },
   {
+    "name": "webex",
+    "description": "Video communication and virtual meeting platform",
+    "type": "cask"
+  },
+  {
     "name": "zed",
     "description": "Multiplayer code editor",
     "type": "cask"
