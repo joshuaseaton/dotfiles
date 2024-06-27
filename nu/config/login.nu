@@ -8,5 +8,6 @@ use defaults.nu
 use dict.nu
 use file.nu
 use go.nu
+use into.nu
 
 source completions/git.nu
