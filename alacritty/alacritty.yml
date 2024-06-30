@@ -7,9 +7,9 @@ scrolling:
 selection:
   save_to_clipboard: true
 shell:
+  program: .cargo/bin/nu
   args:
   - --login
-  program: .cargo/bin/nu
 window:
   opacity: 0.9
   option_as_alt: Both
