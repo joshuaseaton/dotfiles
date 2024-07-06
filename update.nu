@@ -13,9 +13,18 @@ run ([zed update.nu] | path join)
 # Rust
 log info "Updating Rust installations..."
 
-^rustup update
+def rustc-version [] { rustc --version | parse "rustc {version} {metadata}" | get 0.version }
 
-^cargo install-update --all
+let rustc_version_before = rustc-version
+^rustup update
+let rustc_version_after = rustc-version
+
+if $rustc_version_after == $rustc_version_before {
+    ^cargo install-update --all
+} else {
+    log info $"New version of rustc; recompiling installations: \(($rustc_version_before) -> ($rustc_version_after)\)..."
+    ^cargo install-update --force --all
+}
 
 cargo installed |
     reject binaries |
