@@ -43,7 +43,7 @@ export def write [domain: string@domain-completions, key: cell-path, value: any,
                 msg: $"($domain): `($value)` and current value `($current)` have differing types \(($actual_type) vs. ($expected_type)\); use --force to update"
             })
         }
-        {value: ($plist | update $key $value), context: $"updated from `($current)`"}
+        {value: ($plist | upsert $key $value), context: $"updated from `($current)`"}
     }
 
     native-to-xml $updated.value | to xml | ^defaults import $domain -

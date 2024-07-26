@@ -18,4 +18,7 @@ mkdir $nu.default-config-dir
         file symlink $source $target
     }
 
-exit 0
+mkdir ([$nu.default-config-dir vendor] | path join)
+let vendor_autoload = ([$nu.default-config-dir vendor autoload] | path join)
+let lib_dir = ([$env.DOTFILES nu lib] | path join)
+file symlink $lib_dir $vendor_autoload

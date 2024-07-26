@@ -28,8 +28,7 @@
     "name": "openssl@3",
     "description": "Cryptography and SSL/TLS Toolkit",
     "type": "formula",
-    "dependencies":
-    [
+    "dependencies": [
       "ca-certificates"
     ]
   },
