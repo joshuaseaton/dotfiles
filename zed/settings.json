@@ -18,6 +18,11 @@
       "ensure_final_newline_on_save": false,
       "format_on_save": "off",
       "tab_size": 2
+    },
+    "JSONC": {
+      "ensure_final_newline_on_save": false,
+      "format_on_save": "off",
+      "tab_size": 2
     }
   },
   "terminal": {
