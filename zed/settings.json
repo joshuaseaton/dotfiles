@@ -32,10 +32,7 @@
       "GIT_PAGER": "less"  // `delta` doesn't yet work here.
     },
     "shell": {
-      "with_arguments": {
-        "program": "nu",
-        "args": ["--login"]
-      }
+       "program": "nu"
     }
   },
   "theme": "Everforest Dark",

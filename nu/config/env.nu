@@ -67,6 +67,9 @@ $env.PROMPT_INDICATOR = {|| $"(ansi white) ❯ " }
 # Directories to search for scripts when calling `source` or `use`
 $env.NU_LIB_DIRS = [ ([$nu.home-path .dotfiles nu lib] | path join) ]
 
+# But of course.
+$env.SHELL = "nu"
+
 # The default value, but it's handy in scripts to be able to refer to it without
 # taking the location as a hard-coded dependency.
 $env.GOBIN = ([$nu.home-path go bin] | path join)

@@ -11,14 +11,21 @@ use log.nu
 # directory. This ensures that running `nu` in its interactive mode (as the
 # terminal will do) will implicitly execute with our configuration.
 mkdir $nu.default-config-dir
-[config.nu env.nu login.nu] |
+[config.nu env.nu] |
     each { |config|
         let source = [$env.DOTFILES nu config $config] | path join
         let target = [$nu.default-config-dir $config] | path join
         file symlink $source $target
     }
 
-mkdir ([$nu.default-config-dir vendor] | path join)
-let vendor_autoload = ([$nu.default-config-dir vendor autoload] | path join)
-let lib_dir = ([$env.DOTFILES nu lib] | path join)
-file symlink $lib_dir $vendor_autoload
+# Also install our custom modules for default availability.
+let vendor_autoload = ([$nu.data-dir vendor autoload] | path join)
+mkdir $vendor_autoload
+[autosource.nu $"autosource-($nu.os-info.name).nu"] |
+    each { |config|
+        let source = [$env.DOTFILES nu config $config] | path join
+        let target = [$vendor_autoload $config] | path join
+        file symlink $source $target
+    }
+
+exit
