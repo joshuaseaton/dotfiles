@@ -31,16 +31,16 @@ elif [ "${OS}" = GNU/Linux ]; then
     # Building Nushell on Linux has some dependencies that might need to be
     # downloaded.
     if [ "$(which apt)" ]; then
-        if ! apt-cache show pkg-config 2>&1 /dev/null; then
+        if ! apt-cache show pkg-config >/dev/null 2>&1; then
             sudo apt-get install pkg-config
         fi
-        if ! apt-cache show libssl-dev 2>&1 /dev/null; then
+        if ! apt-cache show libssl-dev >/dev/null 2>&1; then
             sudo apt-get install libssl-dev
         fi
 
         # Not a build dependency, but a helpful utility that our Nushell apt
         # module takes a dependency on.
-        if ! apt-cache show aptitude 2>&1 /dev/null; then
+        if ! apt-cache show aptitude >/dev/null 2>&1; then
             sudo apt-get install aptitude
         fi
     else
