@@ -18,6 +18,10 @@ apt = "git-delta"
 [[package]]
 apt = "golang-go"
 
+# QEMU for full system emulation.
+[[package]]
+apt = "qemu-system"
+
 # Checks shell for syntax errors and POSIX-compliance.
 [[package]]
 apt = "shellcheck"
