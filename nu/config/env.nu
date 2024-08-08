@@ -89,6 +89,8 @@ $env.PATH = ($env.PATH |
 
 $env.DOTFILES = ([$nu.home-path .dotfiles] | path join)
 
+$env.CCACHE = "ccache"
+
 match $nu.os-info.name {
     macos => {
         # Do not print any hints about changing Homebrew’s behaviour with

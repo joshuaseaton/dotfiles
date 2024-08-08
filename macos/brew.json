@@ -5,6 +5,11 @@
     "type": "cask"
   },
   {
+    "name": "blake3",
+    "description": "C implementation of the BLAKE3 cryptographic hash function",
+    "type": "formula"
+  },
+  {
     "name": "brave-browser",
     "description": "Web browser focusing on privacy",
     "type": "cask"
@@ -15,6 +20,23 @@
     "type": "formula"
   },
   {
+    "name": "ccache",
+    "description": "Object-file caching compiler wrapper",
+    "type": "formula",
+    "dependencies": [
+      "blake3",
+      "fmt",
+      "hiredis",
+      "xxhash",
+      "zstd"
+    ]
+  },
+  {
+    "name": "fmt",
+    "description": "Open-source formatting library for C++",
+    "type": "formula"
+  },
+  {
     "name": "git-delta",
     "description": "Syntax-highlighting pager for git and diff output",
     "type": "formula"
@@ -22,6 +44,19 @@
   {
     "name": "go",
     "description": "Open source programming language to build simple/reliable/efficient software",
+    "type": "formula"
+  },
+  {
+    "name": "hiredis",
+    "description": "Minimalistic client for Redis",
+    "type": "formula",
+    "dependencies": [
+      "openssl@3"
+    ]
+  },
+  {
+    "name": "lz4",
+    "description": "Extremely Fast Compression algorithm",
     "type": "formula"
   },
   {
@@ -53,6 +88,16 @@
     "type": "cask"
   },
   {
+    "name": "xxhash",
+    "description": "Extremely fast non-cryptographic hash algorithm",
+    "type": "formula"
+  },
+  {
+    "name": "xz",
+    "description": "General-purpose data compression with high compression ratio",
+    "type": "formula"
+  },
+  {
     "name": "zed",
     "description": "Multiplayer code editor",
     "type": "cask"
@@ -61,5 +106,14 @@
     "name": "zoom",
     "description": "Video communication and virtual meeting platform",
     "type": "cask"
+  },
+  {
+    "name": "zstd",
+    "description": "Zstandard is a real-time compression algorithm",
+    "type": "formula",
+    "dependencies": [
+      "lz4",
+      "xz"
+    ]
   }
 ]

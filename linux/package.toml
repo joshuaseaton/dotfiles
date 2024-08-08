@@ -2,6 +2,10 @@
 [[package]]
 apt = "alacritty"
 
+# C/C++ compiler cache.
+[[package]]
+apt = "ccache"
+
 # Visual Studio: Current code editor of choice.
 [[package]]
 apt = "code"
