@@ -262,6 +262,11 @@
     "type": "cask"
   },
   {
+    "name": "signal",
+    "description": "Instant messaging application focusing on security",
+    "type": "cask"
+  },
+  {
     "name": "snappy",
     "description": "Compression/decompression library aiming for high speed",
     "type": "formula"
