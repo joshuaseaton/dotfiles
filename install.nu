@@ -17,6 +17,12 @@ open links.json |
         file symlink $source $target
     }
 
+# OS-specific set-up.
+#
+# Be sure to do this early, as things below might rely upon OS-specific
+# installations.
+run ([$nu.os-info.name install.nu] | path join)
+
 
 # Keeping around the YAML version is a workaround for dealing with systems with
 # only older versions being available. This is the case on Debian, where the
@@ -30,6 +36,17 @@ open ([alacritty alacritty.toml] | path join) |
 # VSCode
 run ([vscode install.nu] | path join)
 
+# Cargo installations.
+let cargo_installed = cargo installed |
+    each {|crate| {$crate.name: $crate.version}} |
+    reduce {|crate, record| $record | merge $crate }
+open ([installs cargo.json] | path join)|
+    where ($cargo_installed | get --ignore-errors $it.name) != $it.version |
+    each {|crate|
+        log info $"Installing crate: ($crate.name)@($crate.version)"
+        ^cargo install --version $crate.version $crate.name
+    }
+
 # Go binaries.
 open ([installs go.json] | path join) |
     each { |bin|
@@ -40,7 +57,7 @@ open ([installs go.json] | path join) |
         }
     }
 
-# pipx installs.
+# pipx installations.
 let python_version = ^python3 --version
 open ([installs pipx.json] | path join) |
     each { |pkg|
@@ -49,21 +66,6 @@ open ([installs pipx.json] | path join) |
             log info $"pipx: Installing ($pkg.name) \(($pkg.name)@($pkg.version)\)..."
             ^pipx install $"($pkg.name)==($pkg.version)"
         }
-    }
-
-# OS-specific set-up.
-run ([$nu.os-info.name install.nu] | path join)
-
-# Install Cargo crates after the package installations done in the OS-specific
-# set-up.
-let cargo_installed = cargo installed |
-    each {|crate| {$crate.name: $crate.version}} |
-    reduce {|crate, record| $record | merge $crate }
-open ([installs cargo.json] | path join)|
-    where ($cargo_installed | get --ignore-errors $it.name) != $it.version |
-    each {|crate|
-        log info $"Installing crate: ($crate.name)@($crate.version)"
-        ^cargo install --version $crate.version $crate.name
     }
 
 exit

@@ -7,6 +7,13 @@ use pipx.nu
 
 cd $env.DOTFILES
 
+# OS-specifc updates could affect these versions, so capture them now.
+let go_version_before = go version | get version
+let python_version_before = (^python3 --version)
+
+# OS-specific updates.
+run ([$nu.os-info.name update.nu] | path join)
+
 # Editors
 run ([vscode update.nu] | path join)
 run ([zed update.nu] | path join)
@@ -31,13 +38,6 @@ cargo installed |
     reject binaries |
     to json |
     save --force ([installs cargo.json] | path join)
-
-# OS-specifc updates could affect these versions, so capture them now.
-let go_version_before = go version | get version
-let python_version_before = (^python3 --version)
-
-# OS-specific updates.
-run ([$nu.os-info.name update.nu] | path join)
 
 # Update Go binaries after OS-specific updates, so that an updated version of Go
 # can result in installations being recompiled.
