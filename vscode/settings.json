@@ -13,6 +13,9 @@
     "editor.tabSize": 2,
     "files.insertFinalNewline": false
   },
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
   "[toml]": {
     "editor.defaultFormatter": "tamasfe.even-better-toml",
     "editor.formatOnSave": false
@@ -24,6 +27,11 @@
   "editor.autoClosingDelete": "never",
   "editor.autoClosingOvertype": "always",
   "editor.autoClosingQuotes": "beforeWhitespace",
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "never",
+    "source.sortImports": "explicit",
+    "source.fixAll": "explicit"
+  },
   "editor.cursorBlinking": "solid",
   "editor.formatOnSave": true,
   "editor.inlayHints.enabled": "off",
@@ -48,6 +56,18 @@
     "**/out/**": true
   },
   "nushellLanguageServer.includeDirs": [ "~/.dotfiles/nu/lib" ],
+  "ruff.fixAll": true,
+  "ruff.lint.select": ["ALL"],
+  "ruff.lint.ignore": [
+    // Annotations: https://docs.astral.sh/ruff/rules/#flake8-annotations-ann
+    "ANN",
+    // Docstrings: https://docs.astral.sh/ruff/rules/#pydocstyle-d
+    "D",
+    // Security heuristics: https://docs.astral.sh/ruff/rules/#flake8-bandit-s
+    "S",
+    // Print usage: https://docs.astral.sh/ruff/rules/#flake8-print-t20
+    "T20",
+  ],
   "search.exclude": {
     "**/out/**": true
   },

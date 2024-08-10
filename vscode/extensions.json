@@ -1,5 +1,9 @@
 [
   {
+    "name": "charliermarsh.ruff",
+    "version": "2024.40.0"
+  },
+  {
     "name": "fuchsia-authors.language-fidl",
     "version": "0.5.0"
   },
@@ -10,6 +14,10 @@
   {
     "name": "llvm-vs-code-extensions.vscode-clangd",
     "version": "0.1.29"
+  },
+  {
+    "name": "ms-python.python",
+    "version": "2024.12.2"
   },
   {
     "name": "ms-vscode-remote.remote-ssh",
