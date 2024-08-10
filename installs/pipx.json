@@ -1,1 +1,6 @@
-[]
+[
+  {
+    "name": "compiledb",
+    "version": "0.10.1"
+  }
+]
