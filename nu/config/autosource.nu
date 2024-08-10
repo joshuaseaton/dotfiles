@@ -8,5 +8,6 @@ use dict.nu
 use file.nu
 use go.nu
 use into.nu
+use pipx.nu
 
 source completions/git.nu

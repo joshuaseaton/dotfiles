@@ -78,6 +78,7 @@ $env.PATH = ($env.PATH |
     split row (char esep) |
     prepend [
        ([$nu.home-path .cargo bin] | path join),
+       ([$nu.home-path .local bin] | path join),   # pipx installation directory
        $env.GOBIN,
     ] |
     prepend (match $nu.os-info.name {

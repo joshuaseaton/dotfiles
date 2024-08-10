@@ -4,6 +4,7 @@ use cargo.nu
 use file.nu
 use go.nu
 use log.nu
+use pipx.nu
 
 cd $env.DOTFILES
 
@@ -36,6 +37,17 @@ open ([installs go.json] | path join) |
         if not ($local | path exists) or ((go build-info $local | get main.version) != $bin.version) {
             log info $"Installing ($bin.name) \(($bin.path)@($bin.version)\)..."
             ^go install $"($bin.path)@($bin.version)"
+        }
+    }
+
+# pipx installs.
+let python_version = ^python3 --version
+open ([installs pipx.json] | path join) |
+    each { |pkg|
+        let local = ([$nu.home-path .local bin $pkg.name] | path join)
+        if not ($local | path exists) or ((pipx metadata $pkg.name | get python_version) != $python_version) {
+            log info $"pipx: Installing ($pkg.name) \(($pkg.name)@($pkg.version)\)..."
+            ^pipx install $"($pkg.name)==($pkg.version)"
         }
     }
 

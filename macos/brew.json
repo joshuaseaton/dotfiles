@@ -213,6 +213,14 @@
     "type": "formula"
   },
   {
+    "name": "pipx",
+    "description": "Execute binaries from Python packages in isolated environments",
+    "type": "formula",
+    "dependencies": [
+      "python@3.12"
+    ]
+  },
+  {
     "name": "pixman",
     "description": "Low-level library for pixel manipulation",
     "type": "formula"

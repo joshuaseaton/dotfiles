@@ -18,6 +18,10 @@ apt = "git-delta"
 [[package]]
 apt = "golang-go"
 
+# For managing Python installations.
+[[package]]
+apt = "pipx"
+
 # QEMU for full system emulation.
 [[package]]
 apt = "qemu-system"
