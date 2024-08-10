@@ -76,16 +76,15 @@ $env.GOBIN = ([$nu.home-path go bin] | path join)
 
 $env.PATH = ($env.PATH |
     split row (char esep) |
-    append [
+    prepend [
        ([$nu.home-path .cargo bin] | path join),
        $env.GOBIN,
     ] |
-    append (match $nu.os-info.name {
+    prepend (match $nu.os-info.name {
         macos => [ /opt/homebrew/bin ]
         _ => []
     }) |
-    uniq |
-    str join ":")
+    uniq)
 
 $env.DOTFILES = ([$nu.home-path .dotfiles] | path join)
 
