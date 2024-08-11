@@ -14,7 +14,8 @@
     "files.insertFinalNewline": false
   },
   "[python]": {
-    "editor.defaultFormatter": "charliermarsh.ruff"
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.rulers": [ 88 ]
   },
   "[toml]": {
     "editor.defaultFormatter": "tamasfe.even-better-toml",
@@ -59,14 +60,16 @@
   "ruff.fixAll": true,
   "ruff.lint.select": ["ALL"],
   "ruff.lint.ignore": [
-    // Annotations: https://docs.astral.sh/ruff/rules/#flake8-annotations-ann
-    "ANN",
+    // McCabe complexity: https://docs.astral.sh/ruff/rules/#mccabe-c90
+    "C90",
     // Docstrings: https://docs.astral.sh/ruff/rules/#pydocstyle-d
     "D",
+    // Magic values: https://docs.astral.sh/ruff/rules/magic-value-comparison/
+    "PLR2004",
     // Security heuristics: https://docs.astral.sh/ruff/rules/#flake8-bandit-s
     "S",
     // Print usage: https://docs.astral.sh/ruff/rules/#flake8-print-t20
-    "T20",
+    "T20"
   ],
   "search.exclude": {
     "**/out/**": true
