@@ -83,7 +83,8 @@
       "libunistring",
       "nettle",
       "p11-kit",
-      "unbound"
+      "unbound",
+      "gettext"
     ]
   },
   {
