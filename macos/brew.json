@@ -22,7 +22,10 @@
   {
     "name": "capstone",
     "description": "Multi-platform, multi-architecture disassembly framework",
-    "type": "formula"
+    "type": "formula",
+    "dependencies": [
+      "gettext"
+    ]
   },
   {
     "name": "ccache",
