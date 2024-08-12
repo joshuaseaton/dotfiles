@@ -274,6 +274,11 @@
     "type": "cask"
   },
   {
+    "name": "shellcheck",
+    "description": "Static analysis and lint tool, for (ba)sh scripts",
+    "type": "formula"
+  },
+  {
     "name": "signal",
     "description": "Instant messaging application focusing on security",
     "type": "cask"
