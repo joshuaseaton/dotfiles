@@ -1,5 +1,6 @@
 # The main update entrypoint.
 
+use brew.nu
 use cargo.nu
 use go.nu
 use log.nu
@@ -7,12 +8,43 @@ use pipx.nu
 
 cd $env.DOTFILES
 
-# OS-specifc updates could affect these versions, so capture them now.
+# OS-specifc or Homebrew updates could affect these versions, so capture them
+# now.
 let go_version_before = go version | get version
 let python_version_before = (^python3 --version)
 
 # OS-specific updates.
 run ([$nu.os-info.name update.nu] | path join)
+
+#
+# Homebrew-installed packages
+#
+
+log info "Updating Homebrew casks and formulae..."
+
+let brew_installed_before = brew installed
+^brew update
+let brew_installed_after = brew installed
+
+$brew_installed_before |
+    join $brew_installed_after name |
+    select name version version_ |
+    each { |pkg|
+        if $pkg.version != $pkg.version_ {
+            log info $"Homebrew: updated ($pkg.name): ($pkg.version) -> ($pkg.version_)"
+        }
+    }
+
+# Homebrew doesn't allow installation by version, so capturing a given version
+# in brew.json is not practical.
+let brew_json = ([$nu.os-info.name brew.json] | path join)
+$brew_installed_after | reject version | to json | save --force $brew_json
+
+# Upgrade and tidy anything outdated.
+if (^brew outdated | complete | get stdout | is-not-empty) {
+    ^brew upgrade
+}
+^brew cleanup
 
 # Editors
 run ([vscode update.nu] | path join)

@@ -82,6 +82,7 @@ $env.PATH = ($env.PATH |
        $env.GOBIN,
     ] |
     prepend (match $nu.os-info.name {
+        linux => [ /home/linuxbrew/.linuxbrew/bin ]
         macos => [ /opt/homebrew/bin ]
         _ => []
     }) |
@@ -91,13 +92,11 @@ $env.DOTFILES = ([$nu.home-path .dotfiles] | path join)
 
 $env.CCACHE = "ccache"
 
-match $nu.os-info.name {
-    macos => {
-        # Do not print any hints about changing Homebrew’s behaviour with
-        # environment variables.
-        $env.HOMEBREW_NO_ENV_HINTS = 1
-    }
-}
+$env.HOMEBREW_NO_ANALYTICS = 1
+
+# Do not print any hints about changing Homebrew’s behaviour with
+# environment variables.
+$env.HOMEBREW_NO_ENV_HINTS = 1
 
 # TODO: Remove this if/when --env-config ever gets a sane default.
 export def run [script: string, ...args: string] {

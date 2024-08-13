@@ -2,34 +2,6 @@
 [[package]]
 apt = "alacritty"
 
-# C/C++ compiler cache.
-[[package]]
-apt = "ccache"
-
 # Visual Studio: Current code editor of choice.
 [[package]]
 apt = "code"
-
-# A better git pager.
-[[package]]
-apt = "git-delta"
-
-# Golang.
-[[package]]
-apt = "golang-go"
-
-# For managing Python installations.
-[[package]]
-apt = "pipx"
-
-# QEMU for full system emulation.
-[[package]]
-apt = "qemu-system"
-
-# Checks shell for syntax errors and POSIX-compliance.
-[[package]]
-apt = "shellcheck"
-
-# For manipulating the clipboard on the command-line.
-[[package]]
-apt = "xclip"

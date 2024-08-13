@@ -1,5 +1,6 @@
  # The main installation entrypoint. This script should be idempotent.
 
+use brew.nu
 use cargo.nu
 use file.nu
 use go.nu
@@ -17,11 +18,25 @@ open links.json |
         file symlink $source $target
     }
 
+# Be sure to do system package installations early, as things below might rely
+# upon them.
+
 # OS-specific set-up.
-#
-# Be sure to do this early, as things below might rely upon OS-specific
-# installations.
 run ([$nu.os-info.name install.nu] | path join)
+
+#
+# Homebrew-installed packages
+#
+
+let installed = brew installed | get name
+open ([$nu.os-info.name brew.json] | path join) |
+    where not ($it.name in $installed) |
+    each {|pkg|
+            log info $"Installing Homebrew ($pkg.type): ($pkg.name)"
+            let args = if (pkg.name == "alacritty") { [ --no-quarantine ] } else { [] }
+            ^brew install $"--($pkg.type)" ...$args $pkg.name
+    }
+
 
 # VSCode
 run ([vscode install.nu] | path join)

@@ -1,0 +1,1130 @@
+[
+  {
+    "name": "at-spi2-core",
+    "description": "Protocol definitions and daemon for D-Bus at-spi",
+    "type": "formula",
+    "dependencies": [
+      "dbus",
+      "glib",
+      "libx11",
+      "libxi",
+      "libxtst",
+      "xorgproto"
+    ]
+  },
+  {
+    "name": "attr",
+    "description": "Manipulate filesystem extended attributes",
+    "type": "formula"
+  },
+  {
+    "name": "berkeley-db@5",
+    "description": "High performance key/value database",
+    "type": "formula"
+  },
+  {
+    "name": "binutils",
+    "description": "GNU binary tools for native development",
+    "type": "formula",
+    "dependencies": [
+      "zstd"
+    ]
+  },
+  {
+    "name": "blake3",
+    "description": "C implementation of the BLAKE3 cryptographic hash function",
+    "type": "formula"
+  },
+  {
+    "name": "bzip2",
+    "description": "Freely available high-quality data compressor",
+    "type": "formula"
+  },
+  {
+    "name": "ca-certificates",
+    "description": "Mozilla CA certificate store",
+    "type": "formula"
+  },
+  {
+    "name": "cairo",
+    "description": "Vector graphics library with cross-device output support",
+    "type": "formula",
+    "dependencies": [
+      "fontconfig",
+      "freetype",
+      "glib",
+      "libpng",
+      "libx11",
+      "libxcb",
+      "libxext",
+      "libxrender",
+      "lzo",
+      "pixman"
+    ]
+  },
+  {
+    "name": "capstone",
+    "description": "Multi-platform, multi-architecture disassembly framework",
+    "type": "formula"
+  },
+  {
+    "name": "ccache",
+    "description": "Object-file caching compiler wrapper",
+    "type": "formula",
+    "dependencies": [
+      "blake3",
+      "fmt",
+      "hiredis",
+      "xxhash",
+      "zstd"
+    ]
+  },
+  {
+    "name": "dbus",
+    "description": "Message bus system, providing inter-application communication",
+    "type": "formula"
+  },
+  {
+    "name": "dtc",
+    "description": "Device tree compiler",
+    "type": "formula"
+  },
+  {
+    "name": "elfutils",
+    "description": "Libraries and utilities for handling ELF objects",
+    "type": "formula",
+    "dependencies": [
+      "bzip2",
+      "xz",
+      "zlib",
+      "zstd"
+    ]
+  },
+  {
+    "name": "expat",
+    "description": "XML 1.0 parser",
+    "type": "formula"
+  },
+  {
+    "name": "fmt",
+    "description": "Open-source formatting library for C++",
+    "type": "formula"
+  },
+  {
+    "name": "fontconfig",
+    "description": "XML-based font configuration API for X Windows",
+    "type": "formula",
+    "dependencies": [
+      "freetype",
+      "util-linux"
+    ]
+  },
+  {
+    "name": "freeglut",
+    "description": "Open-source alternative to the OpenGL Utility Toolkit (GLUT) library",
+    "type": "formula",
+    "dependencies": [
+      "libx11",
+      "libxi",
+      "libxrandr",
+      "libxxf86vm",
+      "mesa",
+      "mesa-glu",
+      "xinput"
+    ]
+  },
+  {
+    "name": "freetype",
+    "description": "Software library to render fonts",
+    "type": "formula",
+    "dependencies": [
+      "libpng"
+    ]
+  },
+  {
+    "name": "fribidi",
+    "description": "Implementation of the Unicode BiDi algorithm",
+    "type": "formula"
+  },
+  {
+    "name": "gdk-pixbuf",
+    "description": "Toolkit for image loading and pixel buffer manipulation",
+    "type": "formula",
+    "dependencies": [
+      "glib",
+      "jpeg-turbo",
+      "libpng",
+      "libtiff",
+      "shared-mime-info"
+    ]
+  },
+  {
+    "name": "git-delta",
+    "description": "Syntax-highlighting pager for git and diff output",
+    "type": "formula"
+  },
+  {
+    "name": "glib",
+    "description": "Core application library for C",
+    "type": "formula",
+    "dependencies": [
+      "pcre2",
+      "python@3.12",
+      "dbus",
+      "util-linux"
+    ]
+  },
+  {
+    "name": "glslang",
+    "description": "OpenGL and OpenGL ES reference compiler for shading languages",
+    "type": "formula",
+    "dependencies": [
+      "spirv-tools"
+    ]
+  },
+  {
+    "name": "gmp",
+    "description": "GNU multiple precision arithmetic library",
+    "type": "formula"
+  },
+  {
+    "name": "gnutls",
+    "description": "GNU Transport Layer Security (TLS) Library",
+    "type": "formula",
+    "dependencies": [
+      "ca-certificates",
+      "gmp",
+      "libidn2",
+      "libtasn1",
+      "libunistring",
+      "nettle",
+      "p11-kit",
+      "unbound"
+    ]
+  },
+  {
+    "name": "go",
+    "description": "Open source programming language to build simple/reliable/efficient software",
+    "type": "formula"
+  },
+  {
+    "name": "graphite2",
+    "description": "Smart font renderer for non-Roman scripts",
+    "type": "formula"
+  },
+  {
+    "name": "gsettings-desktop-schemas",
+    "description": "GSettings schemas for desktop components",
+    "type": "formula",
+    "dependencies": [
+      "glib"
+    ]
+  },
+  {
+    "name": "gtk+3",
+    "description": "Toolkit for creating graphical user interfaces",
+    "type": "formula",
+    "dependencies": [
+      "at-spi2-core",
+      "cairo",
+      "fribidi",
+      "gdk-pixbuf",
+      "glib",
+      "gsettings-desktop-schemas",
+      "harfbuzz",
+      "hicolor-icon-theme",
+      "libepoxy",
+      "pango",
+      "fontconfig",
+      "iso-codes",
+      "libx11",
+      "libxdamage",
+      "libxext",
+      "libxfixes",
+      "libxi",
+      "libxinerama",
+      "libxkbcommon",
+      "libxrandr",
+      "wayland",
+      "wayland-protocols",
+      "xorgproto"
+    ]
+  },
+  {
+    "name": "gzip",
+    "description": "Popular GNU data compression program",
+    "type": "formula"
+  },
+  {
+    "name": "harfbuzz",
+    "description": "OpenType text shaping engine",
+    "type": "formula",
+    "dependencies": [
+      "cairo",
+      "freetype",
+      "glib",
+      "graphite2",
+      "icu4c"
+    ]
+  },
+  {
+    "name": "hicolor-icon-theme",
+    "description": "Fallback theme for FreeDesktop.org icon themes",
+    "type": "formula"
+  },
+  {
+    "name": "hiredis",
+    "description": "Minimalistic client for Redis",
+    "type": "formula",
+    "dependencies": [
+      "openssl@3"
+    ]
+  },
+  {
+    "name": "icu4c",
+    "description": "C/C++ and Java libraries for Unicode and globalization",
+    "type": "formula"
+  },
+  {
+    "name": "iso-codes",
+    "description": "Provides lists of various ISO standards",
+    "type": "formula"
+  },
+  {
+    "name": "jpeg-turbo",
+    "description": "JPEG image codec that aids compression and decompression",
+    "type": "formula"
+  },
+  {
+    "name": "krb5",
+    "description": "Network authentication protocol",
+    "type": "formula",
+    "dependencies": [
+      "openssl@3"
+    ]
+  },
+  {
+    "name": "libcap",
+    "description": "User-space interfaces to POSIX 1003.1e capabilities",
+    "type": "formula"
+  },
+  {
+    "name": "libcap-ng",
+    "description": "Library for Linux that makes using posix capabilities easy",
+    "type": "formula"
+  },
+  {
+    "name": "libclc",
+    "description": "Implementation of the library requirements of the OpenCL C programming language",
+    "type": "formula"
+  },
+  {
+    "name": "libdrm",
+    "description": "Library for accessing the direct rendering manager",
+    "type": "formula",
+    "dependencies": [
+      "libpciaccess"
+    ]
+  },
+  {
+    "name": "libedit",
+    "description": "BSD-style licensed readline alternative",
+    "type": "formula"
+  },
+  {
+    "name": "libepoxy",
+    "description": "Library for handling OpenGL function pointer management",
+    "type": "formula",
+    "dependencies": [
+      "freeglut"
+    ]
+  },
+  {
+    "name": "libevent",
+    "description": "Asynchronous event library",
+    "type": "formula",
+    "dependencies": [
+      "openssl@3"
+    ]
+  },
+  {
+    "name": "libffi",
+    "description": "Portable Foreign Function Interface library",
+    "type": "formula"
+  },
+  {
+    "name": "libfontenc",
+    "description": "X.Org: Font encoding library",
+    "type": "formula"
+  },
+  {
+    "name": "libice",
+    "description": "X.Org: Inter-Client Exchange Library",
+    "type": "formula",
+    "dependencies": [
+      "xorgproto"
+    ]
+  },
+  {
+    "name": "libidn2",
+    "description": "International domain name library (IDNA2008, Punycode and TR46)",
+    "type": "formula",
+    "dependencies": [
+      "libunistring"
+    ]
+  },
+  {
+    "name": "libnghttp2",
+    "description": "HTTP/2 C Library",
+    "type": "formula"
+  },
+  {
+    "name": "libnsl",
+    "description": "Public client interface for NIS(YP) and NIS+",
+    "type": "formula",
+    "dependencies": [
+      "libtirpc"
+    ]
+  },
+  {
+    "name": "libpciaccess",
+    "description": "Generic PCI access library",
+    "type": "formula",
+    "dependencies": [
+      "zlib"
+    ]
+  },
+  {
+    "name": "libpng",
+    "description": "Library for manipulating PNG images",
+    "type": "formula"
+  },
+  {
+    "name": "libslirp",
+    "description": "General purpose TCP-IP emulator",
+    "type": "formula",
+    "dependencies": [
+      "glib"
+    ]
+  },
+  {
+    "name": "libsm",
+    "description": "X.Org: X Session Management Library",
+    "type": "formula",
+    "dependencies": [
+      "libice"
+    ]
+  },
+  {
+    "name": "libssh",
+    "description": "C library SSHv1/SSHv2 client and server protocols",
+    "type": "formula",
+    "dependencies": [
+      "openssl@3"
+    ]
+  },
+  {
+    "name": "libtasn1",
+    "description": "ASN.1 structure parser library",
+    "type": "formula"
+  },
+  {
+    "name": "libtiff",
+    "description": "TIFF library and utilities",
+    "type": "formula",
+    "dependencies": [
+      "jpeg-turbo",
+      "xz",
+      "zstd"
+    ]
+  },
+  {
+    "name": "libtirpc",
+    "description": "Port of Sun's Transport-Independent RPC library to Linux",
+    "type": "formula",
+    "dependencies": [
+      "krb5"
+    ]
+  },
+  {
+    "name": "libunistring",
+    "description": "C string library for manipulating Unicode strings",
+    "type": "formula"
+  },
+  {
+    "name": "libusb",
+    "description": "Library for USB device access",
+    "type": "formula",
+    "dependencies": [
+      "systemd"
+    ]
+  },
+  {
+    "name": "libva",
+    "description": "Hardware accelerated video processing library",
+    "type": "formula",
+    "dependencies": [
+      "libdrm",
+      "libx11",
+      "libxext",
+      "libxfixes",
+      "wayland"
+    ]
+  },
+  {
+    "name": "libvdpau",
+    "description": "Open source Video Decode and Presentation API library",
+    "type": "formula",
+    "dependencies": [
+      "libx11",
+      "libxext",
+      "xorgproto"
+    ]
+  },
+  {
+    "name": "libx11",
+    "description": "X.Org: Core X11 protocol client library",
+    "type": "formula",
+    "dependencies": [
+      "libxcb",
+      "xorgproto"
+    ]
+  },
+  {
+    "name": "libxau",
+    "description": "X.Org: A Sample Authorization Protocol for X",
+    "type": "formula",
+    "dependencies": [
+      "xorgproto"
+    ]
+  },
+  {
+    "name": "libxcb",
+    "description": "X.Org: Interface to the X Window System protocol",
+    "type": "formula",
+    "dependencies": [
+      "libxau",
+      "libxdmcp"
+    ]
+  },
+  {
+    "name": "libxcrypt",
+    "description": "Extended crypt library for descrypt, md5crypt, bcrypt, and others",
+    "type": "formula"
+  },
+  {
+    "name": "libxcvt",
+    "description": "VESA CVT standard timing modelines generator",
+    "type": "formula"
+  },
+  {
+    "name": "libxdamage",
+    "description": "X.Org: X Damage Extension library",
+    "type": "formula",
+    "dependencies": [
+      "libx11",
+      "libxfixes",
+      "xorgproto"
+    ]
+  },
+  {
+    "name": "libxdmcp",
+    "description": "X.Org: X Display Manager Control Protocol library",
+    "type": "formula",
+    "dependencies": [
+      "xorgproto"
+    ]
+  },
+  {
+    "name": "libxext",
+    "description": "X.Org: Library for common extensions to the X11 protocol",
+    "type": "formula",
+    "dependencies": [
+      "libx11",
+      "xorgproto"
+    ]
+  },
+  {
+    "name": "libxfixes",
+    "description": "X.Org: Header files for the XFIXES extension",
+    "type": "formula",
+    "dependencies": [
+      "libx11",
+      "xorgproto"
+    ]
+  },
+  {
+    "name": "libxfont2",
+    "description": "X11 font rasterisation library",
+    "type": "formula",
+    "dependencies": [
+      "freetype",
+      "libfontenc"
+    ]
+  },
+  {
+    "name": "libxi",
+    "description": "X.Org: Library for the X Input Extension",
+    "type": "formula",
+    "dependencies": [
+      "libx11",
+      "libxext",
+      "libxfixes",
+      "xorgproto"
+    ]
+  },
+  {
+    "name": "libxinerama",
+    "description": "X.Org: API for Xinerama extension to X11 Protocol",
+    "type": "formula",
+    "dependencies": [
+      "libx11",
+      "libxext",
+      "xorgproto"
+    ]
+  },
+  {
+    "name": "libxkbcommon",
+    "description": "Keyboard handling library",
+    "type": "formula",
+    "dependencies": [
+      "libxcb",
+      "xkeyboardconfig",
+      "xorg-server"
+    ]
+  },
+  {
+    "name": "libxkbfile",
+    "description": "X.Org: XKB file handling routines",
+    "type": "formula",
+    "dependencies": [
+      "libx11"
+    ]
+  },
+  {
+    "name": "libxml2",
+    "description": "GNOME XML library",
+    "type": "formula",
+    "dependencies": [
+      "icu4c",
+      "readline"
+    ]
+  },
+  {
+    "name": "libxmu",
+    "description": "X.Org: X miscellaneous utility routines library",
+    "type": "formula",
+    "dependencies": [
+      "libxext",
+      "libxt"
+    ]
+  },
+  {
+    "name": "libxrandr",
+    "description": "X.Org: X Resize, Rotate and Reflection extension library",
+    "type": "formula",
+    "dependencies": [
+      "libx11",
+      "libxext",
+      "libxrender",
+      "xorgproto"
+    ]
+  },
+  {
+    "name": "libxrender",
+    "description": "X.Org: Library for the Render Extension to the X11 protocol",
+    "type": "formula",
+    "dependencies": [
+      "libx11",
+      "xorgproto"
+    ]
+  },
+  {
+    "name": "libxshmfence",
+    "description": "X.Org: Shared memory 'SyncFence' synchronization primitive",
+    "type": "formula"
+  },
+  {
+    "name": "libxt",
+    "description": "X.Org: X Toolkit Intrinsics library",
+    "type": "formula",
+    "dependencies": [
+      "libice",
+      "libsm",
+      "libx11"
+    ]
+  },
+  {
+    "name": "libxtst",
+    "description": "X.Org: Client API for the XTEST & RECORD extensions",
+    "type": "formula",
+    "dependencies": [
+      "libx11",
+      "libxext",
+      "libxi",
+      "xorgproto"
+    ]
+  },
+  {
+    "name": "libxv",
+    "description": "X.Org: X Video (Xv) extension",
+    "type": "formula",
+    "dependencies": [
+      "libx11",
+      "libxext",
+      "xorgproto"
+    ]
+  },
+  {
+    "name": "libxxf86vm",
+    "description": "X.Org: XFree86-VidMode X extension",
+    "type": "formula",
+    "dependencies": [
+      "libx11",
+      "libxext",
+      "xorgproto"
+    ]
+  },
+  {
+    "name": "llvm",
+    "description": "Next-gen compiler infrastructure",
+    "type": "formula",
+    "dependencies": [
+      "python@3.12",
+      "xz",
+      "z3",
+      "zstd",
+      "binutils",
+      "elfutils"
+    ]
+  },
+  {
+    "name": "lm-sensors",
+    "description": "Tools for monitoring the temperatures, voltages, and fans",
+    "type": "formula"
+  },
+  {
+    "name": "lz4",
+    "description": "Extremely Fast Compression algorithm",
+    "type": "formula"
+  },
+  {
+    "name": "lzo",
+    "description": "Real-time data compression library",
+    "type": "formula"
+  },
+  {
+    "name": "mesa",
+    "description": "Graphics Library",
+    "type": "formula",
+    "dependencies": [
+      "expat",
+      "libx11",
+      "libxcb",
+      "libxdamage",
+      "libxext",
+      "libxrandr",
+      "elfutils",
+      "glslang",
+      "gzip",
+      "libclc",
+      "libdrm",
+      "libva",
+      "libvdpau",
+      "libxfixes",
+      "libxshmfence",
+      "libxv",
+      "libxxf86vm",
+      "lm-sensors",
+      "spirv-llvm-translator",
+      "valgrind",
+      "wayland",
+      "wayland-protocols"
+    ]
+  },
+  {
+    "name": "mesa-glu",
+    "description": "Mesa OpenGL Utility library",
+    "type": "formula",
+    "dependencies": [
+      "mesa"
+    ]
+  },
+  {
+    "name": "mpdecimal",
+    "description": "Library for decimal floating point arithmetic",
+    "type": "formula"
+  },
+  {
+    "name": "ncurses",
+    "description": "Text-based UI library",
+    "type": "formula"
+  },
+  {
+    "name": "nettle",
+    "description": "Low-level cryptographic library",
+    "type": "formula",
+    "dependencies": [
+      "gmp"
+    ]
+  },
+  {
+    "name": "openssl@3",
+    "description": "Cryptography and SSL/TLS Toolkit",
+    "type": "formula",
+    "dependencies": [
+      "ca-certificates"
+    ]
+  },
+  {
+    "name": "p11-kit",
+    "description": "Library to load and enumerate PKCS#11 modules",
+    "type": "formula",
+    "dependencies": [
+      "ca-certificates",
+      "libtasn1"
+    ]
+  },
+  {
+    "name": "pango",
+    "description": "Framework for layout and rendering of i18n text",
+    "type": "formula",
+    "dependencies": [
+      "cairo",
+      "fontconfig",
+      "freetype",
+      "fribidi",
+      "glib",
+      "harfbuzz"
+    ]
+  },
+  {
+    "name": "pcre2",
+    "description": "Perl compatible regular expressions library with a new API",
+    "type": "formula"
+  },
+  {
+    "name": "pipx",
+    "description": "Execute binaries from Python packages in isolated environments",
+    "type": "formula",
+    "dependencies": [
+      "python@3.12"
+    ]
+  },
+  {
+    "name": "pixman",
+    "description": "Low-level library for pixel manipulation",
+    "type": "formula"
+  },
+  {
+    "name": "python@3.12",
+    "description": "Interpreted, interactive, object-oriented programming language",
+    "type": "formula",
+    "dependencies": [
+      "mpdecimal",
+      "openssl@3",
+      "sqlite",
+      "xz",
+      "berkeley-db@5",
+      "libnsl"
+    ]
+  },
+  {
+    "name": "qemu",
+    "description": "Generic machine emulator and virtualizer",
+    "type": "formula",
+    "dependencies": [
+      "capstone",
+      "dtc",
+      "glib",
+      "gnutls",
+      "jpeg-turbo",
+      "libpng",
+      "libslirp",
+      "libssh",
+      "libusb",
+      "lzo",
+      "ncurses",
+      "nettle",
+      "pixman",
+      "snappy",
+      "vde",
+      "zstd",
+      "attr",
+      "cairo",
+      "elfutils",
+      "gdk-pixbuf",
+      "gtk+3",
+      "libcap-ng",
+      "libepoxy",
+      "libx11",
+      "libxkbcommon",
+      "mesa",
+      "systemd"
+    ]
+  },
+  {
+    "name": "readline",
+    "description": "Library for command-line editing",
+    "type": "formula"
+  },
+  {
+    "name": "shared-mime-info",
+    "description": "Database of common MIME types",
+    "type": "formula",
+    "dependencies": [
+      "glib"
+    ]
+  },
+  {
+    "name": "shellcheck",
+    "description": "Static analysis and lint tool, for (ba)sh scripts",
+    "type": "formula"
+  },
+  {
+    "name": "snappy",
+    "description": "Compression/decompression library aiming for high speed",
+    "type": "formula"
+  },
+  {
+    "name": "spirv-llvm-translator",
+    "description": "Tool and a library for bi-directional translation between SPIR-V and LLVM IR",
+    "type": "formula",
+    "dependencies": [
+      "llvm"
+    ]
+  },
+  {
+    "name": "spirv-tools",
+    "description": "API and commands for processing SPIR-V modules",
+    "type": "formula"
+  },
+  {
+    "name": "sqlite",
+    "description": "Command-line interface for SQLite",
+    "type": "formula",
+    "dependencies": [
+      "readline"
+    ]
+  },
+  {
+    "name": "systemd",
+    "description": "System and service manager",
+    "type": "formula",
+    "dependencies": [
+      "expat",
+      "glib",
+      "libcap",
+      "libxcrypt",
+      "lz4",
+      "openssl@3",
+      "util-linux",
+      "xz",
+      "zstd"
+    ]
+  },
+  {
+    "name": "unbound",
+    "description": "Validating, recursive, caching DNS resolver",
+    "type": "formula",
+    "dependencies": [
+      "libevent",
+      "libnghttp2",
+      "openssl@3"
+    ]
+  },
+  {
+    "name": "unzip",
+    "description": "Extraction utility for .zip compressed archives",
+    "type": "formula"
+  },
+  {
+    "name": "util-linux",
+    "description": "Collection of Linux utilities",
+    "type": "formula",
+    "dependencies": [
+      "readline"
+    ]
+  },
+  {
+    "name": "valgrind",
+    "description": "Dynamic analysis tools (memory, debug, profiling)",
+    "type": "formula"
+  },
+  {
+    "name": "vde",
+    "description": "Ethernet compliant virtual network",
+    "type": "formula"
+  },
+  {
+    "name": "wayland",
+    "description": "Protocol for a compositor to talk to its clients",
+    "type": "formula",
+    "dependencies": [
+      "expat",
+      "libffi",
+      "libxml2"
+    ]
+  },
+  {
+    "name": "wayland-protocols",
+    "description": "Additional Wayland protocols",
+    "type": "formula"
+  },
+  {
+    "name": "xauth",
+    "description": "X.Org Applications: xauth",
+    "type": "formula",
+    "dependencies": [
+      "libx11",
+      "libxau",
+      "libxext",
+      "libxmu",
+      "libxcb",
+      "libxdmcp"
+    ]
+  },
+  {
+    "name": "xcb-util",
+    "description": "Additional extensions to the XCB library",
+    "type": "formula",
+    "dependencies": [
+      "libxcb"
+    ]
+  },
+  {
+    "name": "xcb-util-image",
+    "description": "XCB port of Xlib's XImage and XShmImage",
+    "type": "formula",
+    "dependencies": [
+      "libxcb",
+      "xcb-util"
+    ]
+  },
+  {
+    "name": "xcb-util-keysyms",
+    "description": "Standard X constants and conversion to/from keycodes",
+    "type": "formula",
+    "dependencies": [
+      "libxcb"
+    ]
+  },
+  {
+    "name": "xcb-util-renderutil",
+    "description": "Convenience functions for the X Render extension",
+    "type": "formula",
+    "dependencies": [
+      "libxcb"
+    ]
+  },
+  {
+    "name": "xcb-util-wm",
+    "description": "Client and window-manager helpers for EWMH and ICCCM",
+    "type": "formula",
+    "dependencies": [
+      "libxcb"
+    ]
+  },
+  {
+    "name": "xclip",
+    "description": "Access X11 clipboards from the command-line",
+    "type": "formula",
+    "dependencies": [
+      "libx11",
+      "libxmu"
+    ]
+  },
+  {
+    "name": "xinput",
+    "description": "Utility to configure and test X input devices",
+    "type": "formula",
+    "dependencies": [
+      "libx11",
+      "libxext",
+      "libxi",
+      "libxinerama",
+      "libxrandr"
+    ]
+  },
+  {
+    "name": "xkbcomp",
+    "description": "XKB keyboard description compiler",
+    "type": "formula",
+    "dependencies": [
+      "libx11",
+      "libxkbfile"
+    ]
+  },
+  {
+    "name": "xkeyboardconfig",
+    "description": "Keyboard configuration database for the X Window System",
+    "type": "formula"
+  },
+  {
+    "name": "xorg-server",
+    "description": "X Window System display server",
+    "type": "formula",
+    "dependencies": [
+      "libx11",
+      "libxau",
+      "libxcb",
+      "libxdmcp",
+      "libxext",
+      "libxfixes",
+      "libxfont2",
+      "mesa",
+      "pixman",
+      "xauth",
+      "xcb-util",
+      "xcb-util-image",
+      "xcb-util-keysyms",
+      "xcb-util-renderutil",
+      "xcb-util-wm",
+      "xkbcomp",
+      "xkeyboardconfig",
+      "dbus",
+      "libdrm",
+      "libepoxy",
+      "libpciaccess",
+      "libtirpc",
+      "libxcvt",
+      "libxshmfence",
+      "nettle",
+      "systemd"
+    ]
+  },
+  {
+    "name": "xorgproto",
+    "description": "X.Org: Protocol Headers",
+    "type": "formula"
+  },
+  {
+    "name": "xxhash",
+    "description": "Extremely fast non-cryptographic hash algorithm",
+    "type": "formula"
+  },
+  {
+    "name": "xz",
+    "description": "General-purpose data compression with high compression ratio",
+    "type": "formula"
+  },
+  {
+    "name": "z3",
+    "description": "High-performance theorem prover",
+    "type": "formula"
+  },
+  {
+    "name": "zlib",
+    "description": "General-purpose lossless data-compression library",
+    "type": "formula"
+  },
+  {
+    "name": "zstd",
+    "description": "Zstandard is a real-time compression algorithm",
+    "type": "formula",
+    "dependencies": [
+      "lz4",
+      "xz"
+    ]
+  }
+]

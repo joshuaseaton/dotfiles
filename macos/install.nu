@@ -7,19 +7,6 @@ use log.nu
 cd $env.DOTFILES
 
 #
-# Homebrew-installed packages
-#
-
-let installed = brew installed | get name
-open macos/brew.json |
-    where not ($it.name in $installed) |
-    each {|pkg|
-            log info $"Installing Homebrew ($pkg.type): ($pkg.name)"
-            let args = if (pkg.name == "alacritty") { [ --no-quarantine ] } else { [] }
-            ^brew install $"--($pkg.type)" ...$args $pkg.name
-    }
-
-#
 # System settings
 #
 # Largely cribbed from https://github.com/mathiasbynens/dotfiles/blob/main/.macos.

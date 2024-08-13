@@ -2,6 +2,7 @@
 # always present in a terminal context. This file is symlinked by
 # bootstrap/nu.sh into a vendor autoload directory.
 
+use brew.nu
 use cargo.nu
 use clipboard.nu
 use dict.nu
