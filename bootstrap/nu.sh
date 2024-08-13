@@ -37,12 +37,6 @@ elif [ "${OS}" = GNU/Linux ]; then
         if ! apt-cache show libssl-dev >/dev/null 2>&1; then
             sudo apt-get install libssl-dev
         fi
-
-        # Not a build dependency, but a helpful utility that our Nushell apt
-        # module takes a dependency on.
-        if ! apt-cache show aptitude >/dev/null 2>&1; then
-            sudo apt-get install aptitude
-        fi
     else
         echo "Warning: Unsupported package manager"
     fi

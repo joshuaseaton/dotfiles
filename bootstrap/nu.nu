@@ -4,6 +4,7 @@
 # It finishes the job of bootstrap/nu.sh in installing our custom Nushell
 # configuration.
 
+use apt.nu
 use file.nu
 use log.nu
 
@@ -28,4 +29,12 @@ mkdir $vendor_autoload
         file symlink $source $target
     }
 
-exit
+
+match $nu.os-info.name {
+    linux => {
+        if (which apt | is-not-empty ) {
+            apt ensure
+        }
+    }
+}
+
