@@ -26,7 +26,7 @@
     "dependencies": [
       "gettext"
     ]
-  },    
+  },
   {
     "name": "ccache",
     "description": "Object-file caching compiler wrapper",
