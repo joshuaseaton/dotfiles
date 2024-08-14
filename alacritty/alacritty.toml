@@ -9,6 +9,16 @@ chars = "\u0013"
 key = "S"
 mods = "Command"
 
+[[keyboard.bindings]]
+action = "SpawnNewInstance"
+key = "N"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "Quit"
+key = "Q"
+mods = "Control"
+
 [scrolling]
 history = 100000
 

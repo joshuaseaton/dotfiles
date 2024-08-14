@@ -2,11 +2,16 @@
 
 font:
   size: 14
-keyboard:
-  bindings:
-  - chars: "\x13"
-    key: S
-    mods: Command
+key_bindings:
+- chars: "\x13"
+  key: S
+  mods: Command
+- action: SpawnNewInstance
+  key: N
+  mods: Control
+- action: Quit
+  key: Q
+  mods: Control
 scrolling:
   history: 100000
 shell:
