@@ -16,8 +16,16 @@
     "version": "0.1.29"
   },
   {
+    "name": "ms-python.debugpy",
+    "version": "2024.8.0"
+  },
+  {
     "name": "ms-python.python",
-    "version": "2024.12.2"
+    "version": "2024.12.3"
+  },
+  {
+    "name": "ms-python.vscode-pylance",
+    "version": "2024.8.1"
   },
   {
     "name": "ms-vscode-remote.remote-ssh",
