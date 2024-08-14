@@ -33,7 +33,7 @@ open ([$nu.os-info.name brew.json] | path join) |
     where not ($it.name in $installed) |
     each {|pkg|
             log info $"Installing Homebrew ($pkg.type): ($pkg.name)"
-            let args = if (pkg.name == "alacritty") { [ --no-quarantine ] } else { [] }
+            let args = if ($pkg.name == "alacritty") { [ --no-quarantine ] } else { [] }
             ^brew install $"--($pkg.type)" ...$args $pkg.name
     }
 
