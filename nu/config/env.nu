@@ -68,7 +68,7 @@ $env.PROMPT_INDICATOR = {|| $"(ansi white) ❯ " }
 $env.NU_LIB_DIRS = [ ([$nu.home-path .dotfiles nu lib] | path join) ]
 
 # But of course.
-$env.SHELL = "nu"
+$env.SHELL = $nu.current-exe
 
 # The default value, but it's handy in scripts to be able to refer to it without
 # taking the location as a hard-coded dependency.
