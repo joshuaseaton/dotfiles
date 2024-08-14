@@ -22,6 +22,7 @@
     "editor.formatOnSave": false
   },
   "clangd.arguments": [ "-header-insertion=never" ],
+  "diffEditor.ignoreTrimWhitespace": false,
   "editor.accessibilitySupport": "off",
   "editor.autoClosingBrackets": "beforeWhitespace",
   "editor.autoClosingComments": "beforeWhitespace",
