@@ -751,6 +751,11 @@
     ]
   },
   {
+    "name": "micro",
+    "description": "Modern and intuitive terminal-based text editor",
+    "type": "formula"
+  },
+  {
     "name": "mpdecimal",
     "description": "Library for decimal floating point arithmetic",
     "type": "formula"

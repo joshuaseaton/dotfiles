@@ -1,0 +1,10 @@
+{
+    "autosu": true,
+    "ft:json": {
+        "eofnewline": false
+    },
+    "hltrailingws": true,
+    "scrollbar": true,
+    "scrollbarchar": " ",
+    "tabstospaces": true
+}

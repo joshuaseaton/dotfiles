@@ -1,11 +1,19 @@
 [
   {
+    "source": ".dotfiles/.gitconfig",
+    "target": ".gitconfig"
+  },
+  {
     "source": ".dotfiles/alacritty/alacritty.toml",
     "target": ".alacritty.toml"
   },
   {
-    "source": ".dotfiles/.gitconfig",
-    "target": ".gitconfig"
+    "source": ".dotfiles/micro/settings.json",
+    "target": ".config/micro/settings.json"
+  },
+  {
+    "source": ".dotfiles/micro/bindings.json",
+    "target": ".config/micro/bindings.json"
   },
   {
     "source": ".dotfiles/zellij/config.kdl",

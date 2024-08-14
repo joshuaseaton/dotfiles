@@ -67,8 +67,20 @@ $env.PROMPT_INDICATOR = {|| $"(ansi white) ❯ " }
 # Directories to search for scripts when calling `source` or `use`
 $env.NU_LIB_DIRS = [ ([$nu.home-path .dotfiles nu lib] | path join) ]
 
+let brew_bin_dir = (match $nu.os-info.name {
+    linux => "/home/linuxbrew/.linuxbrew/bin"
+    macos => "/opt/homebrew/bin"
+})
+
 # But of course.
 $env.SHELL = $nu.current-exe
+
+if ($env | get --ignore-errors EDITOR) == null {
+    # A saner default than Vim. VSCode and Zed will specify their own integrated
+    # terminals.
+    $env.EDITOR = ([$brew_bin_dir micro] | path join)
+}
+$env.MICRO_CONFIG_HOME = ([$nu.home-path .config micro] | path join)
 
 # The default value, but it's handy in scripts to be able to refer to it without
 # taking the location as a hard-coded dependency.
@@ -77,15 +89,11 @@ $env.GOBIN = ([$nu.home-path go bin] | path join)
 $env.PATH = ($env.PATH |
     split row (char esep) |
     prepend [
+        $brew_bin_dir,
        ([$nu.home-path .cargo bin] | path join),
        ([$nu.home-path .local bin] | path join),   # pipx installation directory
        $env.GOBIN,
     ] |
-    prepend (match $nu.os-info.name {
-        linux => [ /home/linuxbrew/.linuxbrew/bin ]
-        macos => [ /opt/homebrew/bin ]
-        _ => []
-    }) |
     uniq)
 
 $env.DOTFILES = ([$nu.home-path .dotfiles] | path join)
