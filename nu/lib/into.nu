@@ -3,15 +3,14 @@ const hex_digits = [ "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b",
 
 # Print the given number as hex.
 export def hex [] {
-    mut n = $in
-
-    if ($n == 0) {
+    if ($in == 0) {
         return "0x0"
     }
 
+    mut n = $in
     mut str = ""
     while $n > 0 {
-        $str += ($hex_digits | get ($n mod 16))
+        $str += ($hex_digits | get ($n mod 16 | into int))
         $n = ($n / 16 | into int)
     }
     "0x" + ($str | str reverse)
