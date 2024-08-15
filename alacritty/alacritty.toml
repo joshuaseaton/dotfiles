@@ -14,11 +14,6 @@ action = "SpawnNewInstance"
 key = "N"
 mods = "Control"
 
-[[keyboard.bindings]]
-action = "Quit"
-key = "Q"
-mods = "Control"
-
 [scrolling]
 history = 100000
 

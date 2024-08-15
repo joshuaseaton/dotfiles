@@ -9,9 +9,6 @@ key_bindings:
 - action: SpawnNewInstance
   key: N
   mods: Control
-- action: Quit
-  key: Q
-  mods: Control
 scrolling:
   history: 100000
 shell:
