@@ -177,6 +177,11 @@
     "type": "formula"
   },
   {
+    "name": "make",
+    "description": "Utility for directing compilation",
+    "type": "formula"
+  },
+  {
     "name": "micro",
     "description": "Modern and intuitive terminal-based text editor",
     "type": "formula"

@@ -64,8 +64,10 @@ $env.PROMPT_COMMAND = {|| create_left_prompt }
 $env.PROMPT_COMMAND_RIGHT = {|| create_right_prompt }
 $env.PROMPT_INDICATOR = {|| $"(ansi white) ❯ " }
 
+$env.DOTFILES = ([$nu.home-path .dotfiles] | path join)
+
 # Directories to search for scripts when calling `source` or `use`
-$env.NU_LIB_DIRS = [ ([$nu.home-path .dotfiles nu lib] | path join) ]
+$env.NU_LIB_DIRS = [ ([$env.DOTFILES nu lib] | path join) ]
 
 # But of course.
 $env.SHELL = $nu.current-exe
@@ -90,11 +92,18 @@ $env.PATH = ($env.PATH |
     ] |
     prepend (match $nu.os-info.name {
         linux => [ /home/linuxbrew/.linuxbrew/bin ]
-        macos => [ /opt/homebrew/bin ]
-    }) |
-    uniq)
+        macos => [
+            /opt/homebrew/bin,
 
-$env.DOTFILES = ([$nu.home-path .dotfiles] | path join)
+            # The mac `make` brew package only puts "gmake" in
+            # /opt/homebrew/bin; this directory defines a symlink to it called
+            # "make".
+            /opt/homebrew/opt/make/libexec/gnubin,
+        ]
+    }) |
+    # Intentionally last for tool overrides (e.g., make).
+    prepend ([$env.DOTFILES scripts] | path join) |
+    uniq)
 
 $env.CCACHE = "ccache"
 

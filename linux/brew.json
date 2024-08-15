@@ -714,6 +714,11 @@
     "type": "formula"
   },
   {
+    "name": "make",
+    "description": "Utility for directing compilation",
+    "type": "formula"
+  },
+  {
     "name": "mesa",
     "description": "Graphics Library",
     "type": "formula",

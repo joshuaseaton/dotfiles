@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# A wrapper script for invoking make commands with `compiledb` to automatically
+# generate compile_commands.json.
+
+# To avoid this script being re-entrant, we prefix $PATH with the next highest
+# precedent `make`.
+NEXT_MAKE="$(which -a make | awk "NR == 2")"
+PATH="$(dirname $NEXT_MAKE):$PATH"
+compiledb make "${@}"
