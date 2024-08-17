@@ -11,12 +11,12 @@ set -e
 
 BREW_LINUX=/home/linuxbrew/.linuxbrew/bin/brew
 BREW_MAC=/opt/homebrew/bin/brew
-CARGO_BIN_DIR="${HOME}/.cargo/bin"
+CARGO="${HOME}/.cargo/bin/cargo"
 DOTFILES="${HOME}/.dotfiles"
 DOTFILES_ACTUAL="$(dirname "$(dirname "$(realpath "$0")")")"
 OS="$(uname -o)"
-NU_ENV_CONFIG="${DOTFILES}/nu/config/env.nu"
-readonly BREW_LINUX BREW_MAC CARGO_BIN_DIR DOTFILES DOTFILES_ACTUAL OS NU_ENV_CONFIG
+NU="${HOME}/.cargo/bin/nu"
+readonly BREW_LINUX BREW_MAC CARGO DOTFILES DOTFILES_ACTUAL OS NU
 
 # This script is also the most convenient spot to install Homebrew, which is
 # intended to be done with bash.
@@ -52,14 +52,13 @@ elif [ "${OS}" = GNU/Linux ]; then
     fi
 fi
 
-if [ ! -f "${CARGO_BIN_DIR}/cargo" ]; then
+if [ ! -f "${CARGO}" ]; then
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 fi
 
-
-if [ ! -f "${CARGO_BIN_DIR}/nu" ]; then
-    "${CARGO_BIN_DIR}/cargo" install nu
+if [ ! -f "${NU}" ]; then
+    "${CARGO}" install nu
 fi
 
 # Now finish our bootstrap in the richer Nushell environment.
-"${CARGO_BIN_DIR}/nu" --env-config "${NU_ENV_CONFIG}" "${DOTFILES}/bootstrap/nu.nu"
+"${NU}" --env-config "${DOTFILES}/nu/config/env.nu" "${DOTFILES}/bootstrap/nu.nu"
