@@ -3,8 +3,10 @@
 # A wrapper script for invoking make commands with `compiledb` to automatically
 # generate compile_commands.json.
 
-# To avoid this script being re-entrant, we prefix $PATH with the next highest
-# precedent `make`.
-NEXT_MAKE="$(which -a make | awk "NR == 2")"
-PATH="$(dirname $NEXT_MAKE):$PATH"
+# compiledb expects the supplied command to start with just "make". To satisfy
+# this and to avoid this script being re-entrant, we prefix $PATH with the next
+# highest precedent `make`. 
+next_make="$(nu -c "which -a make | get path.1")"
+PATH="$(dirname "${next_make}"):$PATH"
+
 compiledb make "${@}"
