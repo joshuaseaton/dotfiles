@@ -922,7 +922,6 @@
     "description": "System and service manager",
     "type": "formula",
     "dependencies": [
-      "expat",
       "glib",
       "libcap",
       "libxcrypt",
