@@ -57,7 +57,3 @@
 [user]
 	name = Joshua Seaton
 	email = josh.a.seaton@gmail.com
-
-# Corporate git configuration overrides.
-[includeIf "gitdir:~/fuchsia/"]
-	path = ~/.gitconfig.corp
