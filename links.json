@@ -8,6 +8,10 @@
     "target": ".alacritty.toml"
   },
   {
+    "source": ".dotfiles/bottom/bottom.toml",
+    "target": ".config/bottom/bottom.toml"
+  },
+  {
     "source": ".dotfiles/micro/settings.json",
     "target": ".config/micro/settings.json"
   },

@@ -1,5 +1,9 @@
 [
   {
+    "name": "bottom",
+    "version": "0.10.2"
+  },
+  {
     "name": "cargo-update",
     "version": "14.0.0"
   },
