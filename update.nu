@@ -6,7 +6,7 @@ use go.nu
 use log.nu
 use pipx.nu
 
-cd $env.DOTFILES
+cd $env.FILE_PWD
 
 # OS-specifc or Homebrew updates could affect these versions, so capture them
 # now.

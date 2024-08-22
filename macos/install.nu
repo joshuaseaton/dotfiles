@@ -4,8 +4,6 @@ use brew.nu
 use defaults.nu
 use log.nu
 
-cd $env.DOTFILES
-
 #
 # System settings
 #

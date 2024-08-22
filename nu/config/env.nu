@@ -64,10 +64,10 @@ $env.PROMPT_COMMAND = {|| create_left_prompt }
 $env.PROMPT_COMMAND_RIGHT = {|| create_right_prompt }
 $env.PROMPT_INDICATOR = {|| $"(ansi white) ❯ " }
 
-$env.DOTFILES = ([$nu.home-path .dotfiles] | path join)
+let dotfiles = ([$nu.home-path .dotfiles] | path join)
 
 # Directories to search for scripts when calling `source` or `use`
-$env.NU_LIB_DIRS = [ ([$env.DOTFILES nu lib] | path join) ]
+$env.NU_LIB_DIRS = [ ([$dotfiles nu lib] | path join) ]
 
 # But of course.
 $env.SHELL = $nu.current-exe
@@ -102,7 +102,7 @@ $env.PATH = ($env.PATH |
         ]
     }) |
     # Intentionally last for tool overrides (e.g., make).
-    prepend ([$env.DOTFILES scripts] | path join) |
+    prepend ([$dotfiles scripts] | path join) |
     uniq)
 
 $env.CCACHE = "ccache"

@@ -1,8 +1,8 @@
 use apt.nu
 
-cd $env.DOTFILES
+cd $env.FILE_PWD
 
-let packages = open linux/package.toml | get package
+let packages = open package.toml | get package
 if (which apt | is-not-empty) {
     apt install ...($packages | get apt)
 }

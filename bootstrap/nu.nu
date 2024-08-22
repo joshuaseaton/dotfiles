@@ -11,10 +11,11 @@ use log.nu
 # Install via symlink our custom configuration in the default configuration
 # directory. This ensures that running `nu` in its interactive mode (as the
 # terminal will do) will implicitly execute with our configuration.
+let nu_configs = ([$nu.home-dir .dotfiles nu config] | path join)
 mkdir $nu.default-config-dir
 [config.nu env.nu] |
     each { |config|
-        let source = [$env.DOTFILES nu config $config] | path join
+        let source = [$nu_configs $config] | path join
         let target = [$nu.default-config-dir $config] | path join
         file symlink $source $target
     }
@@ -24,7 +25,7 @@ let vendor_autoload = ([$nu.data-dir vendor autoload] | path join)
 mkdir $vendor_autoload
 [autosource.nu $"autosource-($nu.os-info.name).nu"] |
     each { |config|
-        let source = [$env.DOTFILES nu config $config] | path join
+        let source = [$nu_configs  $config] | path join
         let target = [$vendor_autoload $config] | path join
         file symlink $source $target
     }

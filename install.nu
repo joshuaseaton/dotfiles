@@ -7,7 +7,7 @@ use go.nu
 use log.nu
 use pipx.nu
 
-cd $env.DOTFILES
+cd $env.FILE_PWD
 
 # Linked configuration files.
 open links.json |
