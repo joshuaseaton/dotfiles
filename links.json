@@ -12,11 +12,11 @@
     "target": ".config/bottom/bottom.toml"
   },
   {
-    "source": ".dotfiles/micro/settings.json",
+    "source": ".dotfiles/editors/micro/settings.json",
     "target": ".config/micro/settings.json"
   },
   {
-    "source": ".dotfiles/micro/bindings.json",
+    "source": ".dotfiles/editors/micro/bindings.json",
     "target": ".config/micro/bindings.json"
   },
   {

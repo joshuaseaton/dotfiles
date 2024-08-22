@@ -14,6 +14,13 @@
     "repository": "https://github.com/d1y/git_firefly"
   },
   {
+    "id": "html",
+    "name": "HTML",
+    "version": "0.1.2",
+    "description": "HTML support.",
+    "repository": "https://github.com/zed-industries/zed"
+  },
+  {
     "id": "nu",
     "name": "Nu",
     "version": "0.0.3",

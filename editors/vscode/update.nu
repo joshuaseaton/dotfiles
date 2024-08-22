@@ -11,4 +11,4 @@ log info "Updating VSCode extensions..."
 
 vscode installed-extensions |
     to json |
-    save --force ([$env.DOTFILES vscode extensions.json] | path join)
+    save --force ([$env.DOTFILES editors vscode extensions.json] | path join)

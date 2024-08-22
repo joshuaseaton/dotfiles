@@ -1,4 +1,4 @@
- # The main installation entrypoint. This script should be idempotent.
+# The main installation entrypoint. This script should be idempotent.
 
 use brew.nu
 use cargo.nu
@@ -38,8 +38,8 @@ open ([$nu.os-info.name brew.json] | path join) |
     }
 
 
-# VSCode
-run ([vscode install.nu] | path join)
+# Editors
+run ([editors install.nu] | path join)
 
 # Cargo installations.
 let cargo_installed = cargo installed |

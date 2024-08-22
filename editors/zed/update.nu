@@ -7,4 +7,4 @@ if $nu.os-info.name != macos {
 
 zed installed-extensions |
     to json |
-    save --force ([$env.DOTFILES zed extensions.json] | path join)
+    save --force ([$env.DOTFILES editors zed extensions.json] | path join)

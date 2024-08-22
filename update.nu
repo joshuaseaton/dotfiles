@@ -47,8 +47,7 @@ if (^brew outdated | complete | get stdout | is-not-empty) {
 ^brew cleanup
 
 # Editors
-run ([vscode update.nu] | path join)
-run ([zed update.nu] | path join)
+run ([editors update.nu] | path join)
 
 # Rust
 log info "Updating Rust installations..."

@@ -4,11 +4,11 @@
     "target": ".config/alacritty/alacritty.yml"
   },
   {
-    "source": ".dotfiles/vscode/keybindings.json",
+    "source": ".dotfiles/editors/vscode/keybindings.json",
     "target": ".config/Code/User/keybindings.json"
   },
   {
-    "source": ".dotfiles/vscode/settings.json",
+    "source": ".dotfiles/editors/vscode/settings.json",
     "target": ".config/Code/User/settings.json"
   }
 ]

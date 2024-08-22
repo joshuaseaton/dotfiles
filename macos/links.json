@@ -1,18 +1,18 @@
 [
   {
-    "source": ".dotfiles/vscode/keybindings.json",
+    "source": ".dotfiles/editors/vscode/keybindings.json",
     "target": "Library/Application Support/Code/User/keybindings.json"
   },
   {
-    "source": ".dotfiles/vscode/settings.json",
+    "source": ".dotfiles/editors/vscode/settings.json",
     "target": "Library/Application Support/Code/User/settings.json"
   },
   {
-    "source": ".dotfiles/zed/keymap.json",
+    "source": ".dotfiles/editors/zed/keymap.json",
     "target": ".config/zed/keymap.json"
   },
   {
-    "source": ".dotfiles/zed/settings.json",
+    "source": ".dotfiles/editors/zed/settings.json",
     "target": ".config/zed/settings.json"
   }
 ]
