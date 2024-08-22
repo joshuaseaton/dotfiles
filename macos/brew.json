@@ -45,6 +45,11 @@
     "type": "formula"
   },
   {
+    "name": "duf",
+    "description": "Disk Usage/Free Utility - a better 'df' alternative",
+    "type": "formula"
+  },
+  {
     "name": "fmt",
     "description": "Open-source formatting library for C++",
     "type": "formula"

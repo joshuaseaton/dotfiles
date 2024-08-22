@@ -5,6 +5,7 @@
 use brew.nu
 use cargo.nu
 use clipboard.nu
+use df.nu
 use dict.nu
 use file.nu
 use go.nu
