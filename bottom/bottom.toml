@@ -5,7 +5,7 @@
 #dot_marker = false
 
 # The update rate of the application.
-rate = "5s"
+rate = "3s"
 
 # Whether to put the CPU legend to the left.
 cpu_left_legend = true
