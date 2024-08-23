@@ -90,6 +90,11 @@
     "type": "formula"
   },
   {
+    "name": "duf",
+    "description": "Disk Usage/Free Utility - a better 'df' alternative",
+    "type": "formula"
+  },
+  {
     "name": "elfutils",
     "description": "Libraries and utilities for handling ELF objects",
     "type": "formula",
