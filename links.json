@@ -4,10 +4,6 @@
     "target": ".config/git/config"
   },
   {
-    "source": ".dotfiles/alacritty/alacritty.toml",
-    "target": ".alacritty.toml"
-  },
-  {
     "source": ".dotfiles/bottom/bottom.toml",
     "target": ".config/bottom/bottom.toml"
   },
@@ -20,7 +16,11 @@
     "target": ".config/micro/bindings.json"
   },
   {
-    "source": ".dotfiles/zellij/config.kdl",
+    "source": ".dotfiles/terminal/alacritty/alacritty.toml",
+    "target": ".alacritty.toml"
+  },
+  {
+    "source": ".dotfiles/terminal/zellij/config.kdl",
     "target": ".config/zellij/config.kdl"
   }
 ]
