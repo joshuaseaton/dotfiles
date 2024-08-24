@@ -12,6 +12,10 @@
     "version": "0.97.1"
   },
   {
+    "name": "ripgrep",
+    "version": "14.1.0"
+  },
+  {
     "name": "zellij",
     "version": "0.40.1"
   }
