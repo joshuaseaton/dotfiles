@@ -40,6 +40,11 @@
     ]
   },
   {
+    "name": "dosfstools",
+    "description": "Tools to create, check and label file systems of the FAT family",
+    "type": "formula"
+  },
+  {
     "name": "dtc",
     "description": "Device tree compiler",
     "type": "formula"
