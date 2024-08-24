@@ -13,6 +13,10 @@ scrolling:
   history: 100000
 shell:
   program: .cargo/bin/nu
+  args:
+  - --login
+  - --commands
+  - zellij
 window:
   opacity: 0.9
   option_as_alt: Both
