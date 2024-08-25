@@ -1,8 +1,6 @@
 # Performs the macOS-specific portion of the installation and configuration.
 
-use brew.nu
 use defaults.nu
-use log.nu
 
 #
 # System settings
@@ -123,5 +121,3 @@ defaults write --verbose com.knollsoft.Hookshot launchOnLogin true
 
 defaults write --verbose com.theron.UnnaturalScrollWheels LaunchAtLogin true
 defaults write --verbose com.theron.UnnaturalScrollWheels ScrollLines 4
-
-exit

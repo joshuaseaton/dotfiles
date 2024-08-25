@@ -19,5 +19,3 @@ open extensions.json |
         log info $"Installing VSCode extension: ($ext)"
         ^code --install-extension $ext
     }
-
-exit

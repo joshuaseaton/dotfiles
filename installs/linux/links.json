@@ -10,5 +10,5 @@
   {
     "source": ".dotfiles/terminal/alacritty/alacritty.yml",
     "target": ".config/alacritty/alacritty.yml"
-  },
+  }
 ]
