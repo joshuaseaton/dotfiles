@@ -20,6 +20,14 @@
     "target": ".alacritty.toml"
   },
   {
+    "source": ".dotfiles/terminal/yazi/keymap.toml",
+    "target": ".config/yazi/keymap.toml"
+  },
+  {
+    "source": ".dotfiles/terminal/yazi/yazi.toml",
+    "target": ".config/yazi/yazi.toml"
+  },
+  {
     "source": ".dotfiles/terminal/zellij/config.kdl",
     "target": ".config/zellij/config.kdl"
   }
