@@ -1,5 +1,6 @@
 {
     "autosu": true,
+    "colorscheme": "zenburn",
     "ft:json": {
         "eofnewline": false
     },
