@@ -104,8 +104,6 @@ $env.PATH = ($env.PATH |
             /opt/homebrew/opt/make/libexec/gnubin,
         ]
     }) |
-    # Intentionally last for tool overrides (e.g., make).
-    prepend ([$dotfiles scripts] | path join) |
     uniq)
 
 $env.CCACHE = "ccache"
