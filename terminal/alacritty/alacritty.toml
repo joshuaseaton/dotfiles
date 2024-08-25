@@ -1,6 +1,7 @@
 # See https://alacritty.org/config-alacritty.html
 
 [font]
+normal = { family = "IBM Plex Mono", style = "Light" }
 size = 14
 
 # Enables Cmd+s to save on macOS in a terminal editor.

@@ -35,6 +35,7 @@
     "source.fixAll": "explicit"
   },
   "editor.cursorBlinking": "solid",
+  "editor.fontFamily": "IBM Plex Mono Light",
   "editor.formatOnSave": true,
   "editor.inlayHints.enabled": "off",
   "editor.mouseWheelScrollSensitivity": 3,

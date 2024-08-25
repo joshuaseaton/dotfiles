@@ -60,6 +60,11 @@
     "type": "formula"
   },
   {
+    "name": "font-ibm-plex-mono",
+    "description": null,
+    "type": "cask"
+  },
+  {
     "name": "gettext",
     "description": "GNU internationalization (i18n) and localization (l10n) library",
     "type": "formula"
