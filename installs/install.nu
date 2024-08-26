@@ -29,14 +29,16 @@ match $nu.os-info.name {
 # Homebrew-installed packages
 #
 
-let installed = brew installed | get name
-open ([$nu.os-info.name brew.json] | path join) |
-    where not ($it.name in $installed) |
-    each {|pkg|
-            log info $"Installing Homebrew ($pkg.type): ($pkg.name)"
-            let args = if ($pkg.name == "alacritty") { [ --no-quarantine ] } else { [] }
-            ^brew install $"--($pkg.type)" ...$args $pkg.name
-    }
+if (which brew | is-not-empty) {
+    let installed = brew installed | get name
+    open ([$nu.os-info.name brew.json] | path join) |
+        where not ($it.name in $installed) |
+        each {|pkg|
+                log info $"Installing Homebrew ($pkg.type): ($pkg.name)"
+                let args = if ($pkg.name == "alacritty") { [ --no-quarantine ] } else { [] }
+                ^brew install $"--($pkg.type)" ...$args $pkg.name
+        }
+}
 
 # Cargo installations.
 let cargo_installed = cargo installed |

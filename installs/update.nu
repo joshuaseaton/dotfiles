@@ -24,29 +24,31 @@ match $nu.os-info.name {
 
 log info "Updating Homebrew casks and formulae..."
 
-let brew_installed_before = brew installed
-^brew update
-let brew_installed_after = brew installed
+if (which brew | is-not-empty) {
+    let brew_installed_before = brew installed
+    ^brew update
+    let brew_installed_after = brew installed
 
-$brew_installed_before |
-    join $brew_installed_after name |
-    select name version version_ |
-    each { |pkg|
-        if $pkg.version != $pkg.version_ {
-            log info $"Homebrew: updated ($pkg.name): ($pkg.version) -> ($pkg.version_)"
+    $brew_installed_before |
+        join $brew_installed_after name |
+        select name version version_ |
+        each { |pkg|
+            if $pkg.version != $pkg.version_ {
+                log info $"Homebrew: updated ($pkg.name): ($pkg.version) -> ($pkg.version_)"
+            }
         }
+
+    # Homebrew doesn't allow installation by version, so capturing a given version
+    # in brew.json is not practical.
+    let brew_json = ([$nu.os-info.name brew.json] | path join)
+    $brew_installed_after | reject version | to json | save --force $brew_json
+
+    # Upgrade and tidy anything outdated.
+    if (^brew outdated | complete | get stdout | is-not-empty) {
+        ^brew upgrade
     }
-
-# Homebrew doesn't allow installation by version, so capturing a given version
-# in brew.json is not practical.
-let brew_json = ([$nu.os-info.name brew.json] | path join)
-$brew_installed_after | reject version | to json | save --force $brew_json
-
-# Upgrade and tidy anything outdated.
-if (^brew outdated | complete | get stdout | is-not-empty) {
-    ^brew upgrade
+    ^brew cleanup
 }
-^brew cleanup
 
 # Rust
 log info "Updating Rust installations..."

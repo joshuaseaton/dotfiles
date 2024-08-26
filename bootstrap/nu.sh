@@ -18,6 +18,20 @@ OS="$(uname -o)"
 NU="${HOME}/.cargo/bin/nu"
 readonly BREW_LINUX BREW_MAC CARGO DOTFILES DOTFILES_ACTUAL OS NU
 
+USE_HOMEBREW=1
+while [ $# -gt 0 ]; do
+    case "$1" in
+        --no-homebrew)
+        USE_HOMEBREW=0
+        shift
+        ;;
+    *)
+        echo "Unknown flag: $1"
+        exit 1
+        ;;
+    esac
+done
+
 # This script is also the most convenient spot to install Homebrew, which is
 # intended to be done with bash.
 install_homebrew () {
@@ -30,11 +44,11 @@ if [ "${DOTFILES_ACTUAL}" !=  "${DOTFILES}" ]; then
 fi
 
 if [ "${OS}" = Darwin ]; then
-    if [ ! -f "${BREW_MAC}" ]; then
+    if [ $USE_HOMEBREW -eq 1 ] && [ ! -f "${BREW_MAC}" ]; then
         install_homebrew
     fi
 elif [ "${OS}" = GNU/Linux ]; then
-    if [ ! -f "${BREW_LINUX}" ]; then
+    if [ $USE_HOMEBREW -eq 1 ] && [ ! -f "${BREW_LINUX}" ]; then
         install_homebrew
     fi
 

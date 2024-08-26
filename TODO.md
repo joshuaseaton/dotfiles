@@ -3,7 +3,6 @@
 ## General
 
 ## Linux
-* Make Homebrew usage optional
 
 ## macOS
 
