@@ -5,3 +5,7 @@ apt = "alacritty"
 # Visual Studio: Current code editor of choice.
 [[package]]
 apt = "code"
+
+# Font of choice
+[[package]]
+apt = "fonts-ibm-plex"
