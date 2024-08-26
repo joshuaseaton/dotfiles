@@ -1,7 +1,6 @@
 # TODO
 
 ## General
-* Investigate editor and terminal themes
 * Investigate shellcheck path VSCode extension issue
 
 ## Linux

@@ -11,6 +11,23 @@
   "buffer_font_family": "IBM Plex Mono Light",
   "buffer_font_size": 16,
   "cursor_blink": false,
+  "experimental.theme_overrides": {
+    // For VScode Dark Plus
+    "warning.background": "#1e1e1e",
+    "syntax": {
+      "comment": {
+        "color": "#6a9955"
+      },
+      "comment.doc": {
+        "color": "#6a9955"
+      },
+      "punctuation.delimiter": {
+        "color": "#9cdcfe"
+      }
+    },
+    "terminal.ansi.cyan": "#6a9fb5",
+    "terminal.ansi.green": "#90a959"
+  },
   "features": {
     "copilot": false
   },
@@ -36,7 +53,7 @@
        "program": "nu"
     }
   },
-  "theme": "Everforest Dark",
+  "theme": "VScode Dark Plus",
   "ui_font_size": 16,
   "wrap_guides": [80]
 }

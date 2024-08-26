@@ -10,7 +10,11 @@ cd $env.FILE_PWD
 
 let installed = vscode installed-extensions |
     each {|ext| {$ext.name: $ext.version}} |
-    reduce {|ext, acc| $acc | merge $ext}
+    if ($in | is-not-empty) {
+        $in | reduce {|ext, acc| $acc | merge $ext}
+    } else {
+        []
+    }
 
 open extensions.json |
     where ($installed | get --ignore-errors $it.name) != $it.version |

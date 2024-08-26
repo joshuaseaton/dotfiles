@@ -1,24 +1,10 @@
 [
   {
-    "id": "everforest",
-    "name": "Everforest Theme",
-    "version": "0.0.2",
-    "description": "Everforest is a green based color scheme; it's designed to be warm and soft in order to protect developers' eyes.",
-    "repository": "https://github.com/ThomasAlban/everforest-zed"
-  },
-  {
     "id": "git-firefly",
     "name": "Git Firefly",
     "version": "0.0.3",
     "description": "Provides Git Syntax Highlighting",
     "repository": "https://github.com/d1y/git_firefly"
-  },
-  {
-    "id": "html",
-    "name": "HTML",
-    "version": "0.1.2",
-    "description": "HTML support.",
-    "repository": "https://github.com/zed-industries/zed"
   },
   {
     "id": "nu",
@@ -33,5 +19,12 @@
     "version": "0.1.1",
     "description": "TOML support.",
     "repository": "https://github.com/zed-industries/zed"
+  },
+  {
+    "id": "vscode-dark-plus",
+    "name": "Vscode Dark Plus Theme",
+    "version": "0.0.1",
+    "description": "Portable Vscode Dark Plus Theme",
+    "repository": "https://github.com/d1y/vscode_dark_plus.zed"
   }
 ]

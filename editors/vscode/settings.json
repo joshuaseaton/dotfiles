@@ -34,6 +34,20 @@
     "source.sortImports": "explicit",
     "source.fixAll": "explicit"
   },
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      // Undo underlining.
+      {
+        "scope": [
+          "entity.name.type",
+          "entity.other.inherited-class"
+        ],
+        "settings": {
+          "fontStyle": ""
+        }
+      }
+    ]
+  },
   "editor.cursorBlinking": "solid",
   "editor.fontFamily": "IBM Plex Mono Light",
   "editor.formatOnSave": true,
@@ -100,7 +114,7 @@
   },
   "window.newWindowDimensions": "maximized",
   "window.zoomLevel": 1,
-  "workbench.colorTheme": "Default Dark Modern",
+  "workbench.colorTheme": "Dark+ Black",
   "workbench.editor.enablePreview": false,
   "workbench.editor.highlightModifiedTabs": true
 }
