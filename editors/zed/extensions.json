@@ -21,10 +21,10 @@
     "repository": "https://github.com/zed-industries/zed"
   },
   {
-    "id": "vscode-dark-plus",
-    "name": "Vscode Dark Plus Theme",
-    "version": "0.0.1",
-    "description": "Portable Vscode Dark Plus Theme",
-    "repository": "https://github.com/d1y/vscode_dark_plus.zed"
+    "id": "vscode-dark-modern",
+    "name": "VSCode Dark Modern",
+    "version": "0.0.4",
+    "description": "VSCode Dark Modern Theme for Zed",
+    "repository": "https://github.com/kcamcam/vscode_dark_modern.zed"
   }
 ]
