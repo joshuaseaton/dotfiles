@@ -620,6 +620,7 @@
     "description": "X.Org: X miscellaneous utility routines library",
     "type": "formula",
     "dependencies": [
+      "libx11",
       "libxext",
       "libxt"
     ]
