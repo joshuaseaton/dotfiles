@@ -1,7 +1,6 @@
 # TODO
 
 ## General
-* Investigate shellcheck path VSCode extension issue
 
 ## Linux
 * Make Homebrew usage optional

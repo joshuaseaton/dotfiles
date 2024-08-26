@@ -93,7 +93,6 @@
   "search.followSymlinks": false,
   "security.workspace.trust.untrustedFiles": "open",
   "shellcheck.customArgs": [ "--external-sources" ],
-  "shellcheck.executablePath": "shellcheck",
   "terminal.integrated.defaultProfile.linux": "nu",
   "terminal.integrated.defaultProfile.osx": "nu",
   "terminal.integrated.env.linux": {
