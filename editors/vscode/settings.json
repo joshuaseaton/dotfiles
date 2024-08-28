@@ -74,6 +74,11 @@
     // Print usage: https://docs.astral.sh/ruff/rules/#flake8-print-t20
     "T20"
   ],
+  // Disable graph visualization of incoming/outgoing changes. This feature
+  // does not work well on repos with deep and complex histories. If left
+  // enabled, this would otherwise cause infinite loading in the "Source
+  // Control" tab.
+  "scm.showHistoryGraph": false,
   "search.exclude": {
     "**/out/**": true
   },
