@@ -1,5 +1,6 @@
 [advice]
 	addEmptyPathspec = false
+    detachedHead = false
 
 [branch]
 	# Sort branches by most recently used, instead of alphabetically.
