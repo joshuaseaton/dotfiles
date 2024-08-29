@@ -14,7 +14,7 @@
   },
   {
     "source": ".dotfiles/terminal/alacritty/alacritty.toml",
-    "target": ".alacritty.toml"
+    "target": ".config/alacritty/alacritty.toml"
   },
   {
     "source": ".dotfiles/terminal/bottom/bottom.toml",
