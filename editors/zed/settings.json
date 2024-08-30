@@ -1,7 +1,6 @@
 // See https://zed.dev/docs/configuring-zed for documentation.
 {
   "auto_install_extensions": {
-    "everforest": true,
     "git-firefly": true,
     "html": false,
     "nu": true,
