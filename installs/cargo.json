@@ -4,6 +4,10 @@
     "version": "0.10.2"
   },
   {
+    "name": "cargo-expand",
+    "version": "1.0.90"
+  },
+  {
     "name": "cargo-update",
     "version": "14.0.0"
   },
