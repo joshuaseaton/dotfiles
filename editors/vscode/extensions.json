@@ -48,6 +48,10 @@
     "version": "0.1.4"
   },
   {
+    "name": "rust-lang.rust-analyzer",
+    "version": "0.3.2089"
+  },
+  {
     "name": "tamasfe.even-better-toml",
     "version": "0.19.2"
   },

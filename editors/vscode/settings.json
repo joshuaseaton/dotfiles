@@ -17,6 +17,9 @@
     "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.rulers": [ 88 ]
   },
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer",
+  },
   "[toml]": {
     "editor.defaultFormatter": "tamasfe.even-better-toml",
     "editor.formatOnSave": false
@@ -74,6 +77,17 @@
     // Print usage: https://docs.astral.sh/ruff/rules/#flake8-print-t20
     "T20"
   ],
+  "rust-analyzer.check.overrideCommand": [
+    "cargo",
+    "clippy",
+    "--fix",
+    "--workspace",
+    "--message-format=json",
+    "--all-targets",
+    "--allow-dirty",
+    "--allow-staged"
+  ],
+  "rust-analyzer.lens.implementations.enable": false,
   // Disable graph visualization of incoming/outgoing changes. This feature
   // does not work well on repos with deep and complex histories. If left
   // enabled, this would otherwise cause infinite loading in the "Source
