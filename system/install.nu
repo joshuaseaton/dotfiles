@@ -1,5 +1,3 @@
 cd $env.FILE_PWD
 
-match $nu.os-info.name {
-    macos => { run ([ macos install.nu ] | path join) }
-}
+run ([ $nu.os-info.name install.nu ] | path join)
