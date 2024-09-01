@@ -58,7 +58,7 @@ defaults write --verbose com.apple.symbolichotkeys AppleSymbolicHotKeys."160".va
     (defaults write --verbose --force com.apple.dock show-recents false),
 
     # Only show open applications in the dock.
-    # defaults write --verbose --force com.apple.dock static-only true
+    (defaults write --verbose --force com.apple.dock static-only true),
 
     # Do not show the "open application" indicator. We can CTRL+TAB through them
     # instead.
