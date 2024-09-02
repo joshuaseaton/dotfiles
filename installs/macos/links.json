@@ -14,5 +14,13 @@
   {
     "source": ".dotfiles/editors/zed/settings.json",
     "target": ".config/zed/settings.json"
+  },
+  {
+    "source": ".dotfiles/system/macos/hammerspoon/init.lua",
+    "target": ".hammerspoon/init.lua"
+  },
+  {
+    "source": ".dotfiles/third_party/github.com/Hammerspoon/Spoons/Source",
+    "target": ".hammerspoon/Spoons"
   }
 ]

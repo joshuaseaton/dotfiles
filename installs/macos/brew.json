@@ -111,6 +111,11 @@
     "type": "formula"
   },
   {
+    "name": "hammerspoon",
+    "description": "Desktop automation application",
+    "type": "cask"
+  },
+  {
     "name": "hiredis",
     "description": "Minimalistic client for Redis",
     "type": "formula",
@@ -179,6 +184,11 @@
   {
     "name": "libusb",
     "description": "Library for USB device access",
+    "type": "formula"
+  },
+  {
+    "name": "lua",
+    "description": "Powerful, lightweight programming language",
     "type": "formula"
   },
   {

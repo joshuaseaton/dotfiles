@@ -121,3 +121,9 @@ defaults write --verbose com.knollsoft.Hookshot launchOnLogin true
 
 defaults write --verbose com.theron.UnnaturalScrollWheels LaunchAtLogin true
 defaults write --verbose com.theron.UnnaturalScrollWheels ScrollLines 4
+
+#
+# Hammerspoon
+#
+
+defaults write --verbose org.hammerspoon.Hammerspoon SUEnableAutomaticChecks true

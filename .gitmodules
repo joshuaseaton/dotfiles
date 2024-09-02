@@ -1,0 +1,3 @@
+[submodule "third_party/github.com/Hammerspoon/Spoons"]
+	path = third_party/github.com/Hammerspoon/Spoons
+	url = https://github.com/Hammerspoon/Spoons

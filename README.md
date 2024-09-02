@@ -11,8 +11,9 @@ configuration for it).
 ```sh
 # The checkout *must* take place at $HOME/.dotfiles.
 git clone git@github.com:joshuaseaton/dotfiles.git "${HOME}/.dotfiles"
-
-"${HOME}/.dotfiles/bootstrap/nu.sh"
+cd "${HOME}/.dotfiles"
+git submodule update --init --recursive
+./bootstrap/nu.sh
 ```
 
 ## Installation
