@@ -75,4 +75,4 @@ if [ ! -f "${NU}" ]; then
 fi
 
 # Now finish our bootstrap in the richer Nushell environment.
-"${NU}" --env-config "${DOTFILES}/nu/config/env.nu" "${DOTFILES}/bootstrap/nu.nu"
+"${NU}" --env-config "${DOTFILES}/lang/nu/config/env.nu" "${DOTFILES}/bootstrap/nu.nu"

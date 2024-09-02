@@ -11,7 +11,7 @@ use log.nu
 # Install via symlink our custom configuration in the default configuration
 # directory. This ensures that running `nu` in its interactive mode (as the
 # terminal will do) will implicitly execute with our configuration.
-let nu_configs = ([$nu.home-path .dotfiles nu config] | path join)
+let nu_configs = ([$nu.home-path .dotfiles lang nu config] | path join)
 mkdir $nu.default-config-dir
 [config.nu env.nu] |
     each { |config|

@@ -67,7 +67,7 @@ $env.PROMPT_INDICATOR = {|| $"(ansi white) ❯ " }
 let dotfiles = ([$nu.home-path .dotfiles] | path join)
 
 # Directories to search for scripts when calling `source` or `use`
-$env.NU_LIB_DIRS = [ ([$dotfiles nu lib] | path join) ]
+$env.NU_LIB_DIRS = [ ([$dotfiles lang nu lib] | path join) ]
 
 # But of course.
 $env.SHELL = $nu.current-exe

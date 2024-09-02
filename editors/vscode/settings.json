@@ -62,7 +62,7 @@
   "files.watcherExclude": {
     "**/out/**": true
   },
-  "nushellLanguageServer.includeDirs": [ "~/.dotfiles/nu/lib" ],
+  "nushellLanguageServer.includeDirs": [ "~/.dotfiles/lang/nu/lib" ],
   "ruff.fixAll": true,
   "ruff.lint.select": ["ALL"],
   "ruff.lint.ignore": [
