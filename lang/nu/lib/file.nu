@@ -2,6 +2,10 @@ use log.nu
 
 # Symlinks $source to $target.
 export def symlink [source: string, target: string] {
+    if not ($source | path exists) {
+        log error $"Symlink source ($source) does not exist"
+        return
+    }
     let is_dir = ($source | path type) == dir
     let do_link = not ($target | path exists) or (
         if ($is_dir) {
