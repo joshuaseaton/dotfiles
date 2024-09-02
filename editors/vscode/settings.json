@@ -13,12 +13,15 @@
     "editor.tabSize": 2,
     "files.insertFinalNewline": false
   },
+  "[lua]": {
+    "editor.defaultFormatter": "sumneko.lua"
+  },
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.rulers": [ 88 ]
   },
   "[rust]": {
-    "editor.defaultFormatter": "rust-lang.rust-analyzer",
+    "editor.defaultFormatter": "rust-lang.rust-analyzer"
   },
   "[toml]": {
     "editor.defaultFormatter": "tamasfe.even-better-toml",

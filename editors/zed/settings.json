@@ -3,6 +3,7 @@
   "auto_install_extensions": {
     "git-firefly": true,
     "html": false,
+    "lua": true,
     "nu": true,
     "toml": true,
     "vscode-dark-modern": true
