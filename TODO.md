@@ -8,7 +8,6 @@
 * Make ctrl+alt+t open alacritty (ideally refocusing an existing instance)
 
 ## macOS
-* Replace Rectangle usage with 'push' mechanics
 
 ## Windows
 * Basic support

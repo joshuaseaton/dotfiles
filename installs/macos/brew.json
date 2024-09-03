@@ -304,11 +304,6 @@
     "type": "formula"
   },
   {
-    "name": "rectangle-pro",
-    "description": "Window snapping tool",
-    "type": "cask"
-  },
-  {
     "name": "shellcheck",
     "description": "Static analysis and lint tool, for (ba)sh scripts",
     "type": "formula"
