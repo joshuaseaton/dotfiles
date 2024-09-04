@@ -15,6 +15,9 @@
   "features": {
     "copilot": false
   },
+  "file_types": {
+    "Git Config": [ "**/.gitconfig", "**/git/config" ]
+  },
   "languages": {
     "JSON": {
       "ensure_final_newline_on_save": false,
