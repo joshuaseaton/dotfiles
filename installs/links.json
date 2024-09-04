@@ -1,6 +1,6 @@
 [
   {
-    "source": ".dotfiles/.gitconfig",
+    "source": ".dotfiles/git/config",
     "target": ".config/git/config"
   },
 
@@ -11,10 +11,6 @@
   {
     "source": ".dotfiles/editors/micro/bindings.json",
     "target": ".config/micro/bindings.json"
-  },
-  {
-    "source": ".dotfiles/lang/lua/luarc.local.json",
-    "target": ".dotfiles/.luarc.json"
   },
   {
     "source": ".dotfiles/terminal/alacritty/alacritty.toml",
