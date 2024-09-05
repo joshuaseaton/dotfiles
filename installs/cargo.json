@@ -1,5 +1,9 @@
 [
   {
+    "name": "bat",
+    "version": "0.24.0"
+  },
+  {
     "name": "bottom",
     "version": "0.10.2"
   },
