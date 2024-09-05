@@ -48,7 +48,7 @@ open cargo.json |
     where ($cargo_installed | get --ignore-errors $it.name) != $it.version |
     each {|crate|
         log info $"Installing crate: ($crate.name)@($crate.version)"
-        ^cargo install --locked --version $crate.version $crate.name
+        ^cargo install --version $crate.version $crate.name
     }
 
 # Go binaries.
