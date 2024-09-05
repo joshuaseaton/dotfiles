@@ -20,12 +20,8 @@
     "version": "14.1.0"
   },
   {
-    "name": "yazi-cli",
-    "version": "0.3.2"
-  },
-  {
     "name": "yazi-fm",
-    "version": "0.3.2"
+    "version": "0.3.3"
   },
   {
     "name": "zellij",
