@@ -114,9 +114,8 @@ $env.HOMEBREW_NO_ANALYTICS = 1
 # environment variables.
 $env.HOMEBREW_NO_ENV_HINTS = 1
 
-# Saner defaults than less and cat.
+# A saner default than less.
 $env.MANPAGER = "bat"
-alias cat = bat
 
 # TODO: Remove this if/when --env-config ever gets a sane default.
 export def run [script: string, ...args: string] {
