@@ -26,5 +26,6 @@ source completions/git.nu
 # Aliases
 #
 
-alias cat = bat
+alias cat = ^bat
+alias make = ^compiledb make  # Autogenerate a compile_commands.json
 alias stat = file stat
