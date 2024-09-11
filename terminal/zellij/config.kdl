@@ -212,7 +212,10 @@ plugins {
 //   - detach (Default)
 //   - quit
 //
-// on_force_close "quit"
+// TODO: Ideally, it would be nice if the setting here was detach and there was
+// a way for zellij to default to opening the last detached session, but that
+// doesn't yet seem to be possible.
+on_force_close "quit"
 
 //  Send a request for a simplified ui (without arrow fonts) to plugins
 //  Options:

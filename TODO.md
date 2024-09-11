@@ -11,3 +11,6 @@
 
 ## Windows
 * Basic support
+
+## Bugs to file
+* zellij: ability to open last detached session or open a new one
