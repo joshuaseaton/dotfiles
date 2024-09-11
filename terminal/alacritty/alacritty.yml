@@ -6,12 +6,12 @@ font:
     style: Light
   size: 14
 key_bindings:
-- chars: "\x13"
-  key: S
+- key: S
   mods: Command
-- action: SpawnNewInstance
-  key: N
+  chars: "\x13"
+- key: N
   mods: Control
+  action: SpawnNewInstance
 scrolling:
   history: 100000
 shell:

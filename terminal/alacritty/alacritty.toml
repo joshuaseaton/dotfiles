@@ -4,16 +4,16 @@
 normal = { family = "IBM Plex Mono", style = "Light" }
 size = 14
 
-# Enables Cmd+s to save on macOS in a terminal editor.
+# Enables <Cmd>S to save on macOS in a terminal editor.
 [[keyboard.bindings]]
-chars = "\u0013"
 key = "S"
 mods = "Command"
+chars = "\u0013"
 
 [[keyboard.bindings]]
-action = "SpawnNewInstance"
 key = "N"
 mods = "Control"
+action = "SpawnNewInstance"
 
 [scrolling]
 history = 100000
