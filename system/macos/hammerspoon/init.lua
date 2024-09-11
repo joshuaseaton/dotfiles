@@ -7,6 +7,12 @@ hs.hotkey.bind({ "ctrl", "alt" }, "T", function()
     hs.application.launchOrFocus("alacritty")
 end)
 
+-- <Control><Alt>B: Launch a new browser instance if none are running, or else
+-- focus an existing one.
+hs.hotkey.bind({ "ctrl", "alt" }, "B", function()
+    hs.application.launchOrFocus("Brave Browser")
+end)
+
 -- <Control><Alt>Return: Maximize window
 hs.hotkey.bind({ "ctrl", "alt" }, "Return", function()
     hs.window.focusedWindow():maximize(0)
