@@ -25,3 +25,8 @@ the installation (which should always be a idemptotent operation).
 
 Once installed, running `run ~/.dotfiles/update.nu` will update any
 relevant installations (e.g., those managed by a package manager).
+
+## Dot-files in dotfiles
+
+Any dot-files that appear at the root of dotfiles.git are specific to the repo
+and are not intended to be a part of a wider user installation.
