@@ -18,10 +18,6 @@ hs.hotkey.bind({ "ctrl", "alt" }, "Return", function()
     hs.window.focusedWindow():maximize(0)
 end)
 
-hs.hotkey.bind({ "ctrl", "alt" }, "P", function()
-    hs.window.focusedWindow():minimize()
-end)
-
 --[=====[
 The following bindings give the equivalent of GNOME's "push tile" window
 management behaviour.
