@@ -19,7 +19,7 @@ hs.hotkey.bind({ "ctrl", "alt" }, "Return", function()
 end)
 
 --[=====[
-The following bindings give the equivalent of GNOME's "push tile" window
+The following bindings give the equivalent of Cinnamon's "push tile" window
 management behaviour.
 --]=====]
 
