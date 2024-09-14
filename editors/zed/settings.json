@@ -33,8 +33,7 @@
   "terminal": {
     "blinking": "off",
     "env": {
-      "EDITOR": "zed --wait",
-      "GIT_PAGER": "less"  // `delta` doesn't yet work here.
+      "EDITOR": "zed --wait"
     },
     "shell": {
        "program": "nu"
