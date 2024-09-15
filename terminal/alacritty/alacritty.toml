@@ -4,15 +4,28 @@
 normal = { family = "IBM Plex Mono", style = "Light" }
 size = 14
 
-# Enables <Cmd>S to save on macOS in a terminal editor.
+# Alt + Left: move left one word.
 [[keyboard.bindings]]
-key = "S"
+mods = "Alt"
+key = "Left"
+chars = "\u001B[1;5D"
+
+# Alt + Right: move right one word.
+[[keyboard.bindings]]
+mods = "Alt"
+key = "Right"
+chars = "\u001B[1;5C"
+
+# Cmd + S on macOS: reinterpreted as Ctrl + S.
+[[keyboard.bindings]]
 mods = "Command"
+key = "S"
 chars = "\u0013"
 
+# Ctrl + N: open new Alacritty instance.
 [[keyboard.bindings]]
-key = "N"
 mods = "Control"
+key = "N"
 action = "SpawnNewInstance"
 
 [scrolling]

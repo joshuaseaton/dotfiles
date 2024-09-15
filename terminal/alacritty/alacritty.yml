@@ -6,11 +6,17 @@ font:
     style: Light
   size: 14
 key_bindings:
-- key: S
-  mods: Command
+- mods: Alt
+  key: Left
+  chars: "\e[1;5D"
+- mods: Alt
+  key: Right
+  chars: "\e[1;5C"
+- mods: Command
+  key: S
   chars: "\x13"
-- key: N
-  mods: Control
+- mods: Control
+  key: N
   action: SpawnNewInstance
 scrolling:
   history: 100000
