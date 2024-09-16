@@ -49,11 +49,6 @@
   "evenBetterToml.formatter.arrayTrailingComma": true,
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
-  "files.associations": {
-    "*.json": "json",
-    "settings.json": "jsonc",
-    "*.toml": "toml"
-  },
   "files.autoSave": "onFocusChange",
   "files.exclude": {
     "**/out/**": true

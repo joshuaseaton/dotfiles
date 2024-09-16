@@ -16,7 +16,8 @@
     "copilot": false
   },
   "file_types": {
-    "Git Config": [ "**/.gitconfig", "**/git/config" ]
+    "Git Config": [ "**/.gitconfig", "**/git/config" ],
+    "JSONC": [ "**/.dotfiles/editors/vscode/*.json" ]
   },
   "languages": {
     "JSON": {
