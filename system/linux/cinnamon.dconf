@@ -1,3 +1,9 @@
+[org/cinnamon/desktop/applications/terminal]
+exec='alacritty'
+
+[org/cinnamon/desktop/keybindings/media-keys]
+terminal=['<Control><Alt>T']
+
 # We intentionally disable any settings that will interfere with being able
 # to toggle maximizing the window or snapping it around. The push keybindings
 # are made to coincide with what was we also chose for macOS.

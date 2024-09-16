@@ -6,7 +6,7 @@
 * "save to file if contents are different"
 
 ## Linux
-* Make `<Control><Alt>T` open alacritty (ideally refocusing an existing instance)
+* Make `<Control><Alt>T` refocus an existing alacritty window if there is one
 * Make `<Control><Alt>B` open the browser (ideally refocusing an existing
   instance)
 * Make `<Control><Alt>E` open VSCode (or current editor of choice)?
