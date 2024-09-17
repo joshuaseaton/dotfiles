@@ -8,10 +8,10 @@ font:
 key_bindings:
 - mods: Alt
   key: Left
-  chars: "\e[1;5D"
+  chars: "\eb"
 - mods: Alt
   key: Right
-  chars: "\e[1;5C"
+  chars: "\ef"
 - mods: Command
   key: S
   chars: "\x13"

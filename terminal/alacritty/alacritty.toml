@@ -8,13 +8,13 @@ size = 14
 [[keyboard.bindings]]
 mods = "Alt"
 key = "Left"
-chars = "\u001B[1;5D"
+chars = "\u001bb"
 
 # Alt + Right: move right one word.
 [[keyboard.bindings]]
 mods = "Alt"
 key = "Right"
-chars = "\u001B[1;5C"
+chars = "\u001bf"
 
 # Cmd + S on macOS: reinterpreted as Ctrl + S.
 [[keyboard.bindings]]
