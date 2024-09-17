@@ -3,7 +3,7 @@
 ## General
 * Try to redirect auto-generated history files away from the root of the home
   directory and possibly in a more conventional config location.
-* "save to file if contents are different" 
+* "save to file if contents are different"
 
 ## Linux
 * Make `<Control><Alt>T` open alacritty (ideally refocusing an existing instance)
