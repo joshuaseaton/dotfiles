@@ -1,6 +1,6 @@
 # Nushell Environment Config File
 #
-# version = "0.91.1"
+# version = "0.98.0"
 
 def create_left_prompt [] {
     let dir = match (do --ignore-shell-errors { $env.PWD | path relative-to $nu.home-path }) {
@@ -66,8 +66,22 @@ $env.PROMPT_INDICATOR = {|| $"(ansi white) ❯ " }
 
 let dotfiles = ([$nu.home-path .dotfiles] | path join)
 
+# Specifies how environment variables are:
+# - converted from a string to a value on Nushell startup (from_string)
+# - converted from a value back to a string when running external commands (to_string)
+# Note: The conversions happen *after* config.nu is loaded
+$env.ENV_CONVERSIONS = {
+    "PATH": {
+        from_string: { |s| $s | split row (char esep) | path expand --no-symlink }
+        to_string: { |v| $v | path expand --no-symlink | str join (char esep) }
+    }
+}
+
 # Directories to search for scripts when calling `source` or `use`
 $env.NU_LIB_DIRS = [ ([$dotfiles lang nu lib] | path join) ]
+
+# Directories to search for plugin binaries when calling register
+$env.NU_PLUGIN_DIRS = []
 
 # But of course.
 $env.SHELL = $nu.current-exe
