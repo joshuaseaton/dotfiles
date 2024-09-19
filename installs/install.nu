@@ -71,3 +71,5 @@ open pipx.json |
             ^pipx install $"($pkg.name)==($pkg.version)"
         }
     }
+
+exit

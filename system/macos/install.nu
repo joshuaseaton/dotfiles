@@ -121,3 +121,5 @@ defaults write --verbose com.theron.UnnaturalScrollWheels ScrollLines 4
 #
 
 defaults write --verbose org.hammerspoon.Hammerspoon SUEnableAutomaticChecks true
+
+exit
