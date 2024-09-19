@@ -39,7 +39,7 @@ export def remove [...pkgs: string@"nu-complete apt installed"] {
 # Updates package info.
 export def update [] {
     # Slightly less verbose than `apt update` and `apt-get update`.
-    ^sudo aptitude update
+    ^sudo aptitude update -y
 }
 
 # Upgrades the provided apt packages, if not already at the most recent
@@ -54,7 +54,7 @@ export def upgrade [...pkgs: string@"nu-complete apt installed"] {
             if ($in | is-not-empty) {
                 print $in
                 log info $'Upgrading apt packages: ($in.name | str join ", ")...'
-                ^sudo apt-get upgrade ...($in.name)
+                ^sudo apt-get upgrade --yes ...($in.name)
             }
         }
 }
