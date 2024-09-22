@@ -13,6 +13,14 @@
     "target": ".config/micro/bindings.json"
   },
   {
+    "source": ".dotfiles/shell/profile",
+    "target": ".bash_profile"
+  },
+  {
+    "source": ".dotfiles/shell/profile",
+    "target": ".zprofile"
+  },
+  {
     "source": ".dotfiles/terminal/alacritty/alacritty.toml",
     "target": ".config/alacritty/alacritty.toml"
   },
