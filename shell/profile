@@ -1,21 +1,13 @@
 # A POSIX-compliant shell "profile" file intended to be used as a .zprofile,
 # .bash_profile, etc.
 
-BREW_LINUX=/home/linuxbrew/.linuxbrew/bin/brew
-BREW_MAC=/opt/homebrew/bin/brew
-CARGO_ENV="${HOME}/.cargo/env"
-GOBIN="${HOME}/go/bin"
-OS="$(uname -o)"
-readonly BREW_LINUX BREW_MAC CARGO_ENV GOBIN OS
+NU="${HOME}/.cargo/bin/nu"
+readonly NU
 
-if [ -f "${CARGO_ENV}" ]; then
-    . "${CARGO_ENV}"
+if [ ! -f "${NU}" ]; then
+    exit
 fi
 
-export PATH="${GOBIN}:${PATH}"
-
-if [ "${OS}" = Darwin ] && [ -f "${BREW_MAC}" ]; then
-    eval "$("${BREW_MAC}" shellenv)"
-elif [ "${OS}" = GNU/Linux ] && [ -f "${BREW_LINUX}" ]; then
-    eval "$("${BREW_LINUX}" shellenv)"
-fi
+# Set the PATH as configured in Nushell.
+PATH="$("${NU}" --login --commands "do \$env.ENV_CONVERSIONS.PATH.to_string \$env.PATH")"
+export PATH
