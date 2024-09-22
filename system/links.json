@@ -1,0 +1,7 @@
+[
+  {
+    "source": "macos/hammerspoon/init.lua",
+    "target": ".hammerspoon/init.lua",
+    "os": "macos"
+  }
+]

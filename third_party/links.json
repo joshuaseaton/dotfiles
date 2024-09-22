@@ -1,0 +1,6 @@
+[
+  {
+    "source": "github.com/Hammerspoon/Spoons/Source",
+    "target": ".hammerspoon/Spoons"
+  }
+]

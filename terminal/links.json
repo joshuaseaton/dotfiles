@@ -1,0 +1,27 @@
+[
+  {
+    "source": "alacritty/alacritty.toml",
+    "target": ".config/alacritty/alacritty.toml"
+  },
+  {
+    "source": "alacritty/alacritty.yml",
+    "target": ".config/alacritty/alacritty.yml",
+    "os": "linux"
+  },
+  {
+    "source": "bottom/bottom.toml",
+    "target": ".config/bottom/bottom.toml"
+  },
+  {
+    "source": "yazi/keymap.toml",
+    "target": ".config/yazi/keymap.toml"
+  },
+  {
+    "source": "yazi/yazi.toml",
+    "target": ".config/yazi/yazi.toml"
+  },
+  {
+    "source": "zellij/config.kdl",
+    "target": ".config/zellij/config.kdl"
+  }
+]

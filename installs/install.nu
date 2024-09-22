@@ -1,20 +1,10 @@
 use brew.nu
 use cargo.nu
-use file.nu
 use go.nu
 use log.nu
 use pipx.nu
 
 cd $env.FILE_PWD
-
-# Linked configuration files.
-open links.json |
-    append (open ([$nu.os-info.name links.json] | path join)) |
-    each { |link|
-        let source = [$env.HOME $link.source] | path join
-        let target = [$env.HOME $link.target] | path join
-        file symlink $source $target
-    }
 
 # Be sure to do system package installations early, as things below might rely
 # upon them.

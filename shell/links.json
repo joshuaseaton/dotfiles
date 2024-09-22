@@ -1,0 +1,10 @@
+[
+  {
+    "source": "profile",
+    "target": ".bash_profile"
+  },
+  {
+    "source": "profile",
+    "target": ".zprofile"
+  }
+]

@@ -1,0 +1,6 @@
+[
+  {
+    "source": "config",
+    "target": ".config/git/config"
+  }
+]

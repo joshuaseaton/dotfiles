@@ -1,0 +1,40 @@
+[
+  {
+    "source": "micro/settings.json",
+    "target": ".config/micro/settings.json"
+  },
+  {
+    "source": "micro/bindings.json",
+    "target": ".config/micro/bindings.json"
+},
+  {
+    "source": "vscode/keybindings.json",
+    "target": ".config/Code/User/keybindings.json",
+    "os": "linux"
+  },
+  {
+    "source": "vscode/keybindings.json",
+    "target": "Library/Application Support/Code/User/keybindings.json",
+    "os": "macos"
+  },
+  {
+    "source": "vscode/settings.json",
+    "target": ".config/Code/User/settings.json",
+    "os": "linux"
+  },
+  {
+    "source": "vscode/settings.json",
+    "target": "Library/Application Support/Code/User/settings.json",
+    "os": "macos"
+  },
+  {
+    "source": "zed/keymap.json",
+    "target": ".config/zed/keymap.json",
+    "os": "macos"
+  },
+  {
+    "source": "zed/settings.json",
+    "target": ".config/zed/settings.json",
+    "os": "macos"
+  }
+]
