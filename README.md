@@ -18,8 +18,8 @@ git submodule update --init --recursive
 
 ## Installation
 
-Once bootstrapped, running `run ~/.dotfiles/install.nu` should complete
-the installation (which should always be a idemptotent operation).
+Once having bootstrapped, running `run ~/.dotfiles/install.nu` will apply
+current dot-file state. This should always be a idemptotent operation.
 
 ## Updating
 
