@@ -12,6 +12,7 @@ configuration for it).
 # The checkout *must* take place at $HOME/.dotfiles.
 git clone git@github.com:joshuaseaton/dotfiles.git "${HOME}/.dotfiles"
 cd "${HOME}/.dotfiles"
+git submodule update --init --recursive
 ./bootstrap.sh
 ```
 

@@ -82,5 +82,4 @@ fi
 
 # Now finish our bootstrap by going through official installation endpoint.
 cd "${DOTFILES}"
-git submodule update --init --recursive
 "${NU}" --env-config shell/nu/env.nu install.nu
