@@ -4,12 +4,15 @@
 BREW_LINUX=/home/linuxbrew/.linuxbrew/bin/brew
 BREW_MAC=/opt/homebrew/bin/brew
 CARGO_ENV="${HOME}/.cargo/env"
+GOBIN="${HOME}/go/bin"
 OS="$(uname -o)"
-readonly BREW_LINUX BREW_MAC CARGO_ENV OS
+readonly BREW_LINUX BREW_MAC CARGO_ENV GOBIN OS
 
 if [ -f "${CARGO_ENV}" ]; then
     . "${CARGO_ENV}"
 fi
+
+export PATH="${GOBIN}:${PATH}"
 
 if [ "${OS}" = Darwin ] && [ -f "${BREW_MAC}" ]; then
     eval "$("${BREW_MAC}" shellenv)"
