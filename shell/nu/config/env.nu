@@ -78,7 +78,7 @@ $env.ENV_CONVERSIONS = {
 }
 
 # Directories to search for scripts when calling `source` or `use`
-$env.NU_LIB_DIRS = [ ([$dotfiles lang nu lib] | path join) ]
+$env.NU_LIB_DIRS = [ ([$dotfiles shell nu lib] | path join) ]
 
 # Directories to search for plugin binaries when calling register
 $env.NU_PLUGIN_DIRS = []
