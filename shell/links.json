@@ -6,5 +6,45 @@
   {
     "source": "profile",
     "target": ".zprofile"
+  },
+  {
+    "source": "nu/autosource.nu",
+    "target": ".local/share/nushell/vendor/autoload/autosource.nu",
+    "os": "linux"
+  },
+  {
+    "source": "nu/autosource.nu",
+    "target": "Library/Application Support/nushell/vendor/autoload/autosource.nu",
+    "os": "macos"
+  },
+  {
+    "source": "nu/autosource-linux.nu",
+    "target": ".local/share/nushell/vendor/autoload/autosource-linux.nu",
+    "os": "linux"
+  },
+  {
+    "source": "nu/autosource-macos.nu",
+    "target": "Library/Application Support/nushell/vendor/autoload/autosource-macos.nu",
+    "os": "macos"
+  },
+  {
+    "source": "nu/config.nu",
+    "target": ".config/nushell/config.nu",
+    "os": "linux"
+  },
+  {
+    "source": "nu/config.nu",
+    "target": "Library/Application Support/nushell/config.nu",
+    "os": "macos"
+  },
+  {
+    "source": "nu/env.nu",
+    "target": ".config/nushell/env.nu",
+    "os": "linux"
+  },
+  {
+    "source": "nu/env.nu",
+    "target": "Library/Application Support/nushell/env.nu",
+    "os": "macos"
   }
 ]

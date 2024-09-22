@@ -13,7 +13,7 @@ BREW_LINUX=/home/linuxbrew/.linuxbrew/bin/brew
 BREW_MAC=/opt/homebrew/bin/brew
 CARGO="${HOME}/.cargo/bin/cargo"
 DOTFILES="${HOME}/.dotfiles"
-DOTFILES_ACTUAL="$(dirname "$(dirname "$(realpath "$0")")")"
+DOTFILES_ACTUAL="$(dirname "$(realpath "$0")")"
 OS="$(uname -o)"
 NU="${HOME}/.cargo/bin/nu"
 readonly BREW_LINUX BREW_MAC CARGO DOTFILES DOTFILES_ACTUAL OS NU
@@ -61,6 +61,12 @@ elif [ "${OS}" = GNU/Linux ]; then
         if ! apt-cache show libssl-dev >/dev/null 2>&1; then
             sudo apt-get install libssl-dev
         fi
+
+        # Not a Nushell dependency, this is the most convenient spot to install
+        # `aptitude`, which the apt module depends on.
+        if ! apt-cache show aptitude >/dev/null 2>&1; then
+            sudo apt-get install aptitude
+        fi
     else
         echo "Warning: Unsupported package manager"
     fi
@@ -74,5 +80,7 @@ if [ ! -f "${NU}" ]; then
     "${CARGO}" install nu
 fi
 
-# Now finish our bootstrap in the richer Nushell environment.
-"${NU}" --env-config "${DOTFILES}/shell/nu/config/env.nu" "${DOTFILES}/bootstrap/nu.nu"
+# Now finish our bootstrap by going through official installation endpoint.
+cd "${DOTFILES}"
+git submodule update --init --recursive
+"${NU}" --env-config shell/nu/env.nu install.nu

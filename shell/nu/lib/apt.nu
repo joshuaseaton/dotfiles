@@ -1,13 +1,5 @@
 use log.nu
 
-# Ensures usability of the apt module on an apt-based system.
-export def ensure [] {
-    if (which aptitude | is-empty) {
-        log info "apt: Installing aptitude"
-        ^sudo apt-get install aptitude
-    }
-}
-
 # Outputs a table of the installed packages, and their current and available
 # versions, and descriptions.
 export def installed [] {
