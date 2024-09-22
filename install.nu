@@ -14,6 +14,7 @@ cd $env.FILE_PWD
             each { |link|
                 let source = [$env.HOME .dotfiles $dir $link.source] | path join
                 let target = [$env.HOME $link.target] | path join
+                mkdir ($target | path dirname)
                 file symlink $source $target
             }
     }
