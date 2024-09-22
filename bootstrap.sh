@@ -80,6 +80,6 @@ if [ ! -f "${NU}" ]; then
     "${CARGO}" install nu
 fi
 
-# Now finish our bootstrap by going through official installation endpoint.
+# Now finish our bootstrap by going through the official installation endpoint.
 cd "${DOTFILES}"
 "${NU}" --env-config shell/nu/env.nu install.nu
