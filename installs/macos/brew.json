@@ -80,6 +80,7 @@
     "type": "formula",
     "dependencies": [
       "pcre2",
+      "python-packaging",
       "python@3.12",
       "gettext"
     ]
@@ -262,6 +263,11 @@
   {
     "name": "pixman",
     "description": "Low-level library for pixel manipulation",
+    "type": "formula"
+  },
+  {
+    "name": "python-packaging",
+    "description": "Core utilities for Python packages",
     "type": "formula"
   },
   {
