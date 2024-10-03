@@ -1,12 +1,13 @@
-NU="${HOME}/.cargo/bin/nu"
+# shellcheck shell=bash
+
 BASHRC_PRIV="${HOME}/.bashrc.private"
-readonly NU BASHRC_PRIV
+LIB_SH="${HOME}/.dotfiles/shell/sh/lib.sh"
+readonly BASHRC_PRIV LIB_SH
+
+source "${LIB_SH}"
 
 # Set the PATH as configured in Nushell.
-if [ -f "${NU}" ]; then
-    PATH="$("${NU}" --login --commands "do \$env.ENV_CONVERSIONS.PATH.to_string \$env.PATH")"
-    export PATH
-fi
+set_path_from_nu
 
 # Source a private bashrc if present.
 if [ -f "${BASHRC_PRIV}" ]; then

@@ -1,12 +1,11 @@
-NU="${HOME}/.cargo/bin/nu"
+LIB_SH="${HOME}/.dotfiles/shell/sh/lib.sh"
 ZSHRC_PRIV="${HOME}/.zshrc.private"
-readonly NU ZSHRC_PRIV
+readonly LIB_SH ZSHRC_PRIV
+
+source "${LIB_SH}"
 
 # Set the PATH as configured in Nushell.
-if [ -f "${NU}" ]; then
-    PATH="$("${NU}" --login --commands "do \$env.ENV_CONVERSIONS.PATH.to_string \$env.PATH")"
-    export PATH
-fi
+set_path_from_nu
 
 # Source a private zshrc if present.
 if [ -f "${ZSHRC_PRIV}" ]; then
