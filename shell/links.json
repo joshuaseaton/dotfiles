@@ -1,13 +1,5 @@
 [
   {
-    "source": "bash/bashrc",
-    "target": ".bashrc"
-  },
-  {
-    "source": "zsh/zshrc",
-    "target": ".zshrc"
-  },
-  {
     "source": "nu/autosource.nu",
     "target": ".local/share/nushell/vendor/autoload/autosource.nu",
     "os": "linux"
