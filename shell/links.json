@@ -1,11 +1,11 @@
 [
   {
-    "source": "profile",
-    "target": ".bash_profile"
+    "source": "bash/bashrc",
+    "target": ".bashrc"
   },
   {
-    "source": "profile",
-    "target": ".zprofile"
+    "source": "zsh/zshrc",
+    "target": ".zshrc"
   },
   {
     "source": "nu/autosource.nu",

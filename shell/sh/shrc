@@ -1,0 +1,12 @@
+# Common, POSIX-compliant shell "rc" file contents, intended to be sourced in
+#a .zshrc, .bashrc,
+# etc.
+
+NU="${HOME}/.cargo/bin/nu"
+readonly NU
+
+# Set the PATH as configured in Nushell.
+if [ -f "${NU}" ]; then
+    PATH="$("${NU}" --login --commands "do \$env.ENV_CONVERSIONS.PATH.to_string \$env.PATH")"
+    export PATH
+fi

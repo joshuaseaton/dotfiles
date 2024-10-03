@@ -1,0 +1,20 @@
+# A POSIX-compliant shell "rc" file intended to be used as a .zshrc, .bashrc,
+# etc.
+
+SHELL_NAME="$(basename "${SHELL}")"
+
+NU="${HOME}/.cargo/bin/nu"
+SHELLRC_PRIV="${HOME}/.${SHELL_NAME}rc.private"
+readonly NU SHELLRC_PRIV
+
+# Set the PATH as configured in Nushell.
+if [ -f "${NU}" ]; then
+    PATH="$("${NU}" --login --commands "do \$env.ENV_CONVERSIONS.PATH.to_string \$env.PATH")"
+    export PATH
+fi
+
+# Source a private shell "rc" if present.
+if [ -f "${SHELLRC_PRIV}" ]; then
+    . "${SHELLRC_PRIV}"
+fi
+
