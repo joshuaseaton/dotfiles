@@ -133,5 +133,8 @@ $env.MANPAGER = "bat"
 
 # TODO: Remove this if/when --env-config ever gets a sane default.
 export def run [script: string, ...args: string] {
+    if not ($script | path exists) {
+        error make --unspanned {msg: $"Script does not exist: ($script)"}
+    }
     ^nu --env-config $nu.env-path $script ...$args
 }
