@@ -270,7 +270,7 @@
       "freetype",
       "glib",
       "graphite2",
-      "icu4c"
+      "icu4c@75"
     ]
   },
   {
@@ -612,7 +612,7 @@
     "description": "GNOME XML library",
     "type": "formula",
     "dependencies": [
-      "icu4c",
+      "icu4c@75",
       "readline"
     ]
   },
