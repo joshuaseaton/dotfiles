@@ -292,6 +292,11 @@
     "type": "formula"
   },
   {
+    "name": "icu4c@75",
+    "description": "C/C++ and Java libraries for Unicode and globalization",
+    "type": "formula"
+  },
+  {
     "name": "iso-codes",
     "description": "Provides lists of various ISO standards",
     "type": "formula"
