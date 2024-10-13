@@ -831,7 +831,7 @@
     "description": "Execute binaries from Python packages in isolated environments",
     "type": "formula",
     "dependencies": [
-      "python@3.12"
+      "python@3.13"
     ]
   },
   {
