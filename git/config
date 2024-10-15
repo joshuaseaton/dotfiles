@@ -18,6 +18,9 @@
 [diff]
 	algorithm = histogram
 
+	# The default 3 is rarely enough.
+	context = 10
+
 	# Give a more useful diff of submodules.
 	submodule = log
 
