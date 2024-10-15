@@ -81,7 +81,7 @@
     "dependencies": [
       "pcre2",
       "python-packaging",
-      "python@3.12",
+      "python@3.13",
       "gettext"
     ]
   },
