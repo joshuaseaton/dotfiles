@@ -702,7 +702,7 @@
     "description": "Next-gen compiler infrastructure",
     "type": "formula",
     "dependencies": [
-      "python@3.12",
+      "python@3.13",
       "xz",
       "z3",
       "zstd",
