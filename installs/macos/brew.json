@@ -67,7 +67,10 @@
   {
     "name": "gettext",
     "description": "GNU internationalization (i18n) and localization (l10n) library",
-    "type": "formula"
+    "type": "formula",
+    "dependencies": [
+      "libunistring"
+    ]
   },
   {
     "name": "git-delta",
