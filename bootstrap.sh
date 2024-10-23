@@ -18,11 +18,11 @@ OS="$(uname -o)"
 NU="${HOME}/.cargo/bin/nu"
 readonly BREW_LINUX BREW_MAC CARGO DOTFILES DOTFILES_ACTUAL OS NU
 
-USE_HOMEBREW=1
+USE_HOMEBREW=0
 while [ $# -gt 0 ]; do
     case "$1" in
-        --no-homebrew)
-        USE_HOMEBREW=0
+        --homebrew)
+        USE_HOMEBREW=1
         shift
         ;;
     *)
