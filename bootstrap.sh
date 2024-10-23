@@ -55,16 +55,19 @@ elif [ "${OS}" = GNU/Linux ]; then
     # Building Nushell on Linux has some dependencies that might need to be
     # downloaded.
     if [ "$(which apt)" ]; then
-        if ! apt-cache show pkg-config >/dev/null 2>&1; then
+        if ! dpkg -s build-essential >/dev/null 2>&1; then
+            sudo apt-get install build-essential
+        fi
+        if ! dpkg -s pkg-config >/dev/null 2>&1; then
             sudo apt-get install pkg-config
         fi
-        if ! apt-cache show libssl-dev >/dev/null 2>&1; then
+        if ! dpkg -s libssl-dev >/dev/null 2>&1; then
             sudo apt-get install libssl-dev
         fi
 
         # Not a Nushell dependency, this is the most convenient spot to install
         # `aptitude`, which the apt module depends on.
-        if ! apt-cache show aptitude >/dev/null 2>&1; then
+        if ! dpkg -s aptitude >/dev/null 2>&1; then
             sudo apt-get install aptitude
         fi
     else
