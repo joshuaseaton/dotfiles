@@ -859,6 +859,20 @@
     ]
   },
   {
+    "name": "python@3.13",
+    "description": "Interpreted, interactive, object-oriented programming language",
+    "type": "formula",
+    "dependencies": [
+      "mpdecimal",
+      "openssl@3",
+      "sqlite",
+      "xz",
+      "berkeley-db@5",
+      "libnsl",
+      "libtirpc"
+    ]
+  },
+  {
     "name": "qemu",
     "description": "Generic machine emulator and virtualizer",
     "type": "formula",
