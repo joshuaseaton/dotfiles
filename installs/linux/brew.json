@@ -270,7 +270,7 @@
       "freetype",
       "glib",
       "graphite2",
-      "icu4c@75"
+      "icu4c@76"
     ]
   },
   {
@@ -287,12 +287,12 @@
     ]
   },
   {
-    "name": "icu4c",
+    "name": "icu4c@75",
     "description": "C/C++ and Java libraries for Unicode and globalization",
     "type": "formula"
   },
   {
-    "name": "icu4c@75",
+    "name": "icu4c@76",
     "description": "C/C++ and Java libraries for Unicode and globalization",
     "type": "formula"
   },
@@ -617,7 +617,7 @@
     "description": "GNOME XML library",
     "type": "formula",
     "dependencies": [
-      "icu4c@75",
+      "icu4c@76",
       "readline"
     ]
   },
