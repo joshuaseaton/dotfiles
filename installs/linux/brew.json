@@ -1011,7 +1011,10 @@
   {
     "name": "wayland-protocols",
     "description": "Additional Wayland protocols",
-    "type": "formula"
+    "type": "formula",
+    "dependencies": [
+      "wayland"
+    ]
   },
   {
     "name": "xauth",
