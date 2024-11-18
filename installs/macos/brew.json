@@ -5,6 +5,14 @@
     "type": "cask"
   },
   {
+    "name": "binutils",
+    "description": "GNU binary tools for native development",
+    "type": "formula",
+    "dependencies": [
+      "zstd"
+    ]
+  },
+  {
     "name": "blake3",
     "description": "C implementation of the BLAKE3 cryptographic hash function",
     "type": "formula"

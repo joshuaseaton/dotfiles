@@ -108,8 +108,7 @@ $env.PATH = ($env.PATH |
         linux => [ /home/linuxbrew/.linuxbrew/bin ]
         macos => [
             /opt/homebrew/bin,
-
-            # The dosfstools package installs nothing under /opt/homebrew/bin.
+            /opt/homebrew/opt/binutils/bin,
             /opt/homebrew/opt/dosfstools/sbin,
 
             # The mac `make` brew package only puts "gmake" in
