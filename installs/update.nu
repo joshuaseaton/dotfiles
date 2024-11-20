@@ -60,10 +60,10 @@ let rustc_version_before = rustc-version
 let rustc_version_after = rustc-version
 
 if $rustc_version_after == $rustc_version_before {
-    ^cargo install-update --all
+    ^cargo install-update --locked --all
 } else {
     log info $"New version of rustc; recompiling installations: \(($rustc_version_before) -> ($rustc_version_after)\)..."
-    ^cargo install-update --force --all
+    ^cargo install-update --force --locked --all
 }
 
 cargo installed | reject binaries | to json | save --force cargo.json

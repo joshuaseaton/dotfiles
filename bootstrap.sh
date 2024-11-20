@@ -80,7 +80,7 @@ if [ ! -f "${CARGO}" ]; then
 fi
 
 if [ ! -f "${NU}" ]; then
-    "${CARGO}" install nu
+    "${CARGO}" install --locked nu
 fi
 
 # Now finish our bootstrap by going through the official installation endpoint.
