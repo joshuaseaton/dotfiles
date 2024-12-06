@@ -30,7 +30,7 @@
   {
     "id": "vscode-dark-modern",
     "name": "VSCode Dark Modern",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "description": "VSCode Dark Modern Theme for Zed",
     "repository": "https://github.com/kcamcam/vscode_dark_modern.zed"
   }
