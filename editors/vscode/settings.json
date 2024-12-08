@@ -76,11 +76,16 @@
     "cargo",
     "clippy",
     "--fix",
+    "--all",
     "--workspace",
     "--message-format=json",
     "--all-targets",
     "--allow-dirty",
-    "--allow-staged"
+    "--allow-staged",
+    "--",
+    "--deny", "clippy::all",
+    "--deny", "clippy::pedantic",
+    "--allow", "clippy::too_many_lines"
   ],
   "rust-analyzer.lens.implementations.enable": false,
   // Disable graph visualization of incoming/outgoing changes. This feature
