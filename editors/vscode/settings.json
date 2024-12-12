@@ -42,6 +42,7 @@
   "editor.formatOnSave": true,
   "editor.inlayHints.enabled": "off",
   "editor.mouseWheelScrollSensitivity": 3,
+  "editor.renderWhitespace": "boundary",
   "editor.rulers": [ 80 ],
   "editor.showDeprecated": false,
   "evenBetterToml.formatter.alignComments": true,
