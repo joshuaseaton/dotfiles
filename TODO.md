@@ -20,8 +20,6 @@
 
 ## Bugs to file
 * zellij: ability to open last detached session or open a new one
-* nushell: with `sync_on_enter: false`, history won't actually be synced on
-  macOS with `<Cmd>Q`
 * nushell: option to keep view at beginning of output
 * nushell: match block with multiple patterns
 * nushell: `$record | sort` should be recursive for inner records?
