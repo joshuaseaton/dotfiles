@@ -12,6 +12,9 @@
   "buffer_font_family": "IBM Plex Mono Light",
   "buffer_font_size": 16,
   "cursor_blink": false,
+  "preview_tabs": {
+    "enabled": false
+  },
   "features": {
     "copilot": false
   },
