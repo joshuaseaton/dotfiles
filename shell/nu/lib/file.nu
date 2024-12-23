@@ -51,7 +51,7 @@ export def stat [source: string] {
     }
 }
 
-def perms [raw: int] string {
+def perms [raw: int] : nothing -> string {
     [
         {mask: 0b100, perm: "r"},
         {mask: 0b010, perm: "w"},
