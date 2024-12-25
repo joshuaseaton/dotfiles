@@ -166,7 +166,11 @@
   {
     "name": "git-delta",
     "description": "Syntax-highlighting pager for git and diff output",
-    "type": "formula"
+    "type": "formula",
+    "dependencies": [
+      "libgit2",
+      "oniguruma"
+    ]
   },
   {
     "name": "glib",
@@ -183,10 +187,7 @@
   {
     "name": "glslang",
     "description": "OpenGL and OpenGL ES reference compiler for shading languages",
-    "type": "formula",
-    "dependencies": [
-      "spirv-tools"
-    ]
+    "type": "formula"
   },
   {
     "name": "gmp",
@@ -364,6 +365,15 @@
     "type": "formula"
   },
   {
+    "name": "libgit2",
+    "description": "C library of Git core methods that is re-entrant and linkable",
+    "type": "formula",
+    "dependencies": [
+      "libssh2",
+      "openssl@3"
+    ]
+  },
+  {
     "name": "libice",
     "description": "X.Org: Inter-Client Exchange Library",
     "type": "formula",
@@ -424,6 +434,14 @@
   {
     "name": "libssh",
     "description": "C library SSHv1/SSHv2 client and server protocols",
+    "type": "formula",
+    "dependencies": [
+      "openssl@3"
+    ]
+  },
+  {
+    "name": "libssh2",
+    "description": "C library implementing the SSH2 protocol",
     "type": "formula",
     "dependencies": [
       "openssl@3"
@@ -785,6 +803,11 @@
     "dependencies": [
       "gmp"
     ]
+  },
+  {
+    "name": "oniguruma",
+    "description": "Regular expressions library",
+    "type": "formula"
   },
   {
     "name": "openssl@3",
