@@ -145,12 +145,11 @@
     ]
   },
   {
-    "name": "libgit2",
+    "name": "libgit2@1.8",
     "description": "C library of Git core methods that is re-entrant and linkable",
     "type": "formula",
     "dependencies": [
-      "libssh2",
-      "openssl@3"
+      "libssh2"
     ]
   },
   {
@@ -210,6 +209,34 @@
     "name": "libusb",
     "description": "Library for USB device access",
     "type": "formula"
+  },
+  {
+    "name": "lld",
+    "description": "LLVM Project Linker",
+    "type": "formula",
+    "dependencies": [
+      "llvm",
+      "zstd"
+    ]
+  },
+  {
+    "name": "llvm",
+    "description": "Next-gen compiler infrastructure",
+    "type": "formula",
+    "dependencies": [
+      "python@3.13",
+      "xz",
+      "z3",
+      "zstd"
+    ]
+  },
+  {
+    "name": "llvm@18",
+    "description": "Next-gen compiler infrastructure",
+    "type": "formula",
+    "dependencies": [
+      "zstd"
+    ]
   },
   {
     "name": "lua",
@@ -410,6 +437,11 @@
   {
     "name": "xz",
     "description": "General-purpose data compression with high compression ratio",
+    "type": "formula"
+  },
+  {
+    "name": "z3",
+    "description": "High-performance theorem prover",
     "type": "formula"
   },
   {
