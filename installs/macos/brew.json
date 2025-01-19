@@ -145,7 +145,7 @@
     ]
   },
   {
-    "name": "libgit2@1.8",
+    "name": "libgit2",
     "description": "C library of Git core methods that is re-entrant and linkable",
     "type": "formula",
     "dependencies": [
