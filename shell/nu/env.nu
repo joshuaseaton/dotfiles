@@ -110,6 +110,9 @@ $env.PATH = ($env.PATH |
             /opt/homebrew/bin,
             /opt/homebrew/opt/binutils/bin,
             /opt/homebrew/opt/dosfstools/sbin,
+            /opt/homebrew/opt/lld/bin,
+            /opt/homebrew/opt/llvm/bin,
+            /opt/homebrew/opt/llvm@18/bin,
 
             # The mac `make` brew package only puts "gmake" in
             # /opt/homebrew/bin; this directory defines a symlink to it called
