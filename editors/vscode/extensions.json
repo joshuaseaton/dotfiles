@@ -40,6 +40,10 @@
     "version": "0.1.4"
   },
   {
+    "name": "nefrob.vscode-just-syntax",
+    "version": "0.8.0"
+  },
+  {
     "name": "rust-lang.rust-analyzer",
     "version": "0.3.2264"
   },
