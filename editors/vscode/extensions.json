@@ -1,5 +1,9 @@
 [
   {
+    "name": "basdp.language-gas-x86",
+    "version": "0.0.2"
+  },
+  {
     "name": "charliermarsh.ruff",
     "version": "2025.2.0"
   },
