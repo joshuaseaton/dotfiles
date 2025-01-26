@@ -70,5 +70,9 @@
   {
     "name": "waderyan.gitblame",
     "version": "11.1.1"
+  },
+  {
+    "name": "zixuanwang.linkerscript",
+    "version": "1.0.4"
   }
 ]
