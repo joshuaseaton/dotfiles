@@ -51,9 +51,6 @@
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "files.autoSave": "onFocusChange",
-  "files.exclude": {
-    "**/out/**": true
-  },
   "files.insertFinalNewline": true,
   "files.watcherExclude": {
     "**/out/**": true
