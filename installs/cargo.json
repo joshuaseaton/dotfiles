@@ -8,6 +8,10 @@
     "version": "0.10.2"
   },
   {
+    "name": "cargo-binutils",
+    "version": "0.3.6"
+  },
+  {
     "name": "cargo-expand",
     "version": "1.0.100"
   },
