@@ -1,6 +1,6 @@
 # The OS-agnostic, custom module imports, completions, and aliases that would be
 # handy to have always present in a terminal context. This file is symlinked by
-# bootstrap/nu.sh into a vendor autoload directory.
+# bootstrap/nu.sh into a user autoload directory.
 
 #
 # Imports
