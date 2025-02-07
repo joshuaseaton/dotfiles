@@ -11,4 +11,4 @@ log info "Updating VSCode extensions..."
 # extensions.json.
 ^code --update-extensions
 
-vscode installed-extensions | to json | save --force extensions.json
+vscode installed-extensions | get name  | save --force extensions.json

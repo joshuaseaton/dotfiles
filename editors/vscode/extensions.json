@@ -1,78 +1,21 @@
 [
-  {
-    "name": "basdp.language-gas-x86",
-    "version": "0.0.2"
-  },
-  {
-    "name": "charliermarsh.ruff",
-    "version": "2025.6.0"
-  },
-  {
-    "name": "fuchsia-authors.language-fidl",
-    "version": "0.5.0"
-  },
-  {
-    "name": "golang.go",
-    "version": "0.44.0"
-  },
-  {
-    "name": "kdl-org.kdl",
-    "version": "2.1.3"
-  },
-  {
-    "name": "llvm-vs-code-extensions.vscode-clangd",
-    "version": "0.1.33"
-  },
-  {
-    "name": "ms-python.python",
-    "version": "2025.0.0"
-  },
-  {
-    "name": "ms-vscode-remote.remote-ssh",
-    "version": "0.117.0"
-  },
-  {
-    "name": "ms-vscode-remote.remote-ssh-edit",
-    "version": "0.87.0"
-  },
-  {
-    "name": "ms-vscode.remote-explorer",
-    "version": "0.4.3"
-  },
-  {
-    "name": "msedge-dev.gnls",
-    "version": "0.1.4"
-  },
-  {
-    "name": "nefrob.vscode-just-syntax",
-    "version": "0.8.0"
-  },
-  {
-    "name": "rust-lang.rust-analyzer",
-    "version": "0.3.2291"
-  },
-  {
-    "name": "sumneko.lua",
-    "version": "3.13.6"
-  },
-  {
-    "name": "tamasfe.even-better-toml",
-    "version": "0.21.2"
-  },
-  {
-    "name": "thenuprojectcontributors.vscode-nushell-lang",
-    "version": "1.10.0"
-  },
-  {
-    "name": "timonwong.shellcheck",
-    "version": "0.37.6"
-  },
-  {
-    "name": "waderyan.gitblame",
-    "version": "11.1.1"
-  },
-  {
-    "name": "zixuanwang.linkerscript",
-    "version": "1.0.4"
-  }
+  "basdp.language-gas-x86",
+  "charliermarsh.ruff",
+  "fuchsia-authors.language-fidl",
+  "golang.go",
+  "kdl-org.kdl",
+  "llvm-vs-code-extensions.vscode-clangd",
+  "ms-python.python",
+  "ms-vscode-remote.remote-ssh",
+  "ms-vscode-remote.remote-ssh-edit",
+  "ms-vscode.remote-explorer",
+  "msedge-dev.gnls",
+  "nefrob.vscode-just-syntax",
+  "rust-lang.rust-analyzer",
+  "sumneko.lua",
+  "tamasfe.even-better-toml",
+  "thenuprojectcontributors.vscode-nushell-lang",
+  "timonwong.shellcheck",
+  "waderyan.gitblame",
+  "zixuanwang.linkerscript"
 ]

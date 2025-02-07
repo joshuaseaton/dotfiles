@@ -7,4 +7,7 @@ if $nu.os-info.name != macos {
     return
 }
 
-zed installed-extensions | to json | save --force extensions.json
+zed installed-extensions |
+    reject version |
+    to json |
+    save --force extensions.json
