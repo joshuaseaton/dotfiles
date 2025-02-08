@@ -767,6 +767,7 @@
       "libxxf86vm",
       "lm-sensors",
       "spirv-llvm-translator",
+      "spirv-tools",
       "valgrind",
       "wayland",
       "wayland-protocols",
@@ -885,9 +886,7 @@
       "openssl@3",
       "sqlite",
       "xz",
-      "berkeley-db@5",
-      "libnsl",
-      "libtirpc"
+      "berkeley-db@5"
     ]
   },
   {
