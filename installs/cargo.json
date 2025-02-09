@@ -32,10 +32,6 @@
     "version": "14.1.1"
   },
   {
-    "name": "yazi-fm",
-    "version": "0.4.2"
-  },
-  {
     "name": "zellij",
     "version": "0.41.2"
   }
