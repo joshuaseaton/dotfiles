@@ -14,7 +14,7 @@
   {
     "id": "nu",
     "name": "Nu",
-    "description": "Nu language support for Zed",
+    "description": "Nushell language support for Zed",
     "repository": "https://github.com/zed-extensions/nu"
   },
   {
