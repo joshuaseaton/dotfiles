@@ -748,7 +748,6 @@
     "description": "Graphics Library",
     "type": "formula",
     "dependencies": [
-      "expat",
       "libx11",
       "libxcb",
       "libxext",
