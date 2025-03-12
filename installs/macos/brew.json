@@ -87,6 +87,7 @@
     "type": "formula",
     "dependencies": [
       "pcre2",
+      "python-setuptools",
       "gettext"
     ]
   },
@@ -322,6 +323,11 @@
   {
     "name": "python-packaging",
     "description": "Core utilities for Python packages",
+    "type": "formula"
+  },
+  {
+    "name": "python-setuptools",
+    "description": "Easily download, build, install, upgrade, and uninstall Python packages",
     "type": "formula"
   },
   {
