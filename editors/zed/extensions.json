@@ -9,7 +9,7 @@
     "id": "lua",
     "name": "Lua",
     "description": "Lua support.",
-    "repository": "https://github.com/zed-industries/zed"
+    "repository": "https://github.com/zed-extensions/lua"
   },
   {
     "id": "nu",
