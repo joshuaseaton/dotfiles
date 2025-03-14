@@ -87,7 +87,6 @@
     "type": "formula",
     "dependencies": [
       "pcre2",
-      "python-setuptools",
       "gettext"
     ]
   },
