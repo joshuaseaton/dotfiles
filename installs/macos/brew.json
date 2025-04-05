@@ -325,11 +325,6 @@
     "type": "formula"
   },
   {
-    "name": "python-setuptools",
-    "description": "Easily download, build, install, upgrade, and uninstall Python packages",
-    "type": "formula"
-  },
-  {
     "name": "python@3.12",
     "description": "Interpreted, interactive, object-oriented programming language",
     "type": "formula",
