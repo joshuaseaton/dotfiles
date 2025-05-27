@@ -185,7 +185,11 @@
   {
     "name": "glslang",
     "description": "OpenGL and OpenGL ES reference compiler for shading languages",
-    "type": "formula"
+    "type": "formula",
+    "dependencies": [
+      "spirv-headers",
+      "spirv-tools"
+    ]
   },
   {
     "name": "gmp",
@@ -269,7 +273,7 @@
       "freetype",
       "glib",
       "graphite2",
-      "icu4c@76"
+      "icu4c@77"
     ]
   },
   {
@@ -488,6 +492,7 @@
     "dependencies": [
       "libdrm",
       "libx11",
+      "libxcb",
       "libxext",
       "libxfixes",
       "wayland"
@@ -611,7 +616,7 @@
     "type": "formula",
     "dependencies": [
       "libxcb",
-      "xkeyboardconfig",
+      "xkeyboard-config",
       "xorg-server"
     ]
   },
@@ -628,7 +633,7 @@
     "description": "GNOME XML library",
     "type": "formula",
     "dependencies": [
-      "icu4c@76",
+      "icu4c@77",
       "readline"
     ]
   },
@@ -746,29 +751,23 @@
     "description": "Graphics Library",
     "type": "formula",
     "dependencies": [
+      "libclc",
+      "libpng",
       "libx11",
       "libxcb",
       "libxext",
       "libxfixes",
-      "libxrandr",
-      "elfutils",
-      "glslang",
-      "gzip",
-      "libclc",
-      "libdrm",
-      "libva",
-      "libvdpau",
-      "libxml2",
-      "libxshmfence",
-      "libxv",
-      "libxxf86vm",
-      "lm-sensors",
+      "llvm",
       "spirv-llvm-translator",
       "spirv-tools",
-      "valgrind",
-      "wayland",
-      "wayland-protocols",
-      "zstd"
+      "zstd",
+      "elfutils",
+      "libdrm",
+      "libxml2",
+      "libxshmfence",
+      "libxxf86vm",
+      "lm-sensors",
+      "wayland"
     ]
   },
   {
@@ -936,7 +935,10 @@
   {
     "name": "shellcheck",
     "description": "Static analysis and lint tool, for (ba)sh scripts",
-    "type": "formula"
+    "type": "formula",
+    "dependencies": [
+      "gmp"
+    ]
   },
   {
     "name": "snappy",
@@ -1115,7 +1117,7 @@
     ]
   },
   {
-    "name": "xkeyboardconfig",
+    "name": "xkeyboard-config",
     "description": "Keyboard configuration database for the X Window System",
     "type": "formula"
   },
@@ -1140,7 +1142,7 @@
       "xcb-util-renderutil",
       "xcb-util-wm",
       "xkbcomp",
-      "xkeyboardconfig",
+      "xkeyboard-config",
       "dbus",
       "libdrm",
       "libepoxy",
