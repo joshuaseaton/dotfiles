@@ -320,11 +320,6 @@
     "type": "formula"
   },
   {
-    "name": "python-packaging",
-    "description": "Core utilities for Python packages",
-    "type": "formula"
-  },
-  {
     "name": "python@3.12",
     "description": "Interpreted, interactive, object-oriented programming language",
     "type": "formula",
