@@ -5,6 +5,7 @@ $env.config.ls.use_ls_colors = false
 $env.config.show_banner = false
 $env.config.table.mode = "thin"
 $env.config.table.index_mode = "never"
+$env.config.table.missing_value_symbol = " ∅ "
 
 def create_left_prompt [] {
     let dir = match (do --ignore-errors { $env.PWD | path relative-to $nu.home-path }) {
