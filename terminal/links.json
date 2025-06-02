@@ -4,11 +4,6 @@
     "target": ".config/alacritty/alacritty.toml"
   },
   {
-    "source": "alacritty/alacritty.yml",
-    "target": ".config/alacritty/alacritty.yml",
-    "os": "linux"
-  },
-  {
     "source": "bottom/bottom.toml",
     "target": ".config/bottom/bottom.toml"
   },
