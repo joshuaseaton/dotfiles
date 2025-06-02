@@ -1,3 +1,75 @@
+const BLUE_PASTEL = "#b3d9ff"
+const GREEN_PASTEL = "#b8e6b8"
+const PEACH_PASTEL = "#ffd1b3"
+const PINK_PASTEL = "#ffd1f0"
+const PURPLE_PASTEL = "#d1b3ff"
+const RED_PASTEL = "#ffb3b3"
+const YELLOW_PASTEL = "#fff2b3"
+
+$env.config.color_config = {
+    # Settings commented out are defaults I don't know yet what to do with
+    # or haven't encountered.
+
+    separator: white_bold
+    #leading_trailing_space_bg: { attr: n }
+    header: { fg: $PEACH_PASTEL, attr: "b" }
+    #empty: blue
+    bool: {fg: $GREEN_PASTEL, attr: "b"}
+    int: $BLUE_PASTEL
+    filesize: $BLUE_PASTEL
+    duration: $BLUE_PASTEL
+    datetime: $PINK_PASTEL
+    range: $YELLOW_PASTEL
+    float: $BLUE_PASTEL
+    string: $RED_PASTEL
+    #nothing: white
+    #binary: white
+    #cell-path: white
+    #row_index: green_bold
+    record: white
+    list: white
+    closure: white
+    glob: white_bold
+    #block: white
+    #hints: dark_gray
+    search_result: { bg: "white", fg: "black", attr: "i" }
+    #shape_binary: purple_bold
+    shape_block: white
+    shape_bool: {fg: $GREEN_PASTEL, attr: "b"}
+    shape_closure: white
+    #shape_custom: green
+    shape_datetime: $RED_PASTEL
+    #shape_directory: cyan
+    shape_external: white
+    shape_externalarg: $YELLOW_PASTEL
+    #shape_external_resolved: light_yellow_bold
+    shape_filepath: white
+    shape_flag: $YELLOW_PASTEL
+    shape_float: $BLUE_PASTEL
+    shape_glob_interpolation: white_bold
+    shape_globpattern: white_bold
+    shape_int: $BLUE_PASTEL
+    shape_internalcall: white_bold
+    shape_keyword: $YELLOW_PASTEL
+    shape_list: white
+    #shape_literal: blue
+    shape_match_pattern: $PEACH_PASTEL
+    #shape_matching_brackets: { attr: u }
+    #shape_nothing: light_cyan
+    shape_operator: white_bold
+    shape_pipe: white_bold
+    shape_range: $YELLOW_PASTEL
+    shape_record: white
+    shape_redirection: {fg: $PURPLE_PASTEL, attr: "b"}
+    #shape_signature: green_bold
+    shape_string: $RED_PASTEL
+    #shape_string_interpolation: cyan_bold
+    #shape_table: blue_bold
+    shape_variable: $PURPLE_PASTEL
+    shape_vardecl: $PURPLE_PASTEL
+    #shape_raw_string: light_purple
+    shape_garbage: {fg: "red", attr: "bi" }
+}
 $env.config.completions.algorithm = "fuzzy"
 $env.config.completions.sort = "smart"
 $env.config.footer_mode = "always"
