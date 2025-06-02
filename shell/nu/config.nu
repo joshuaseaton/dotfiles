@@ -37,7 +37,7 @@ $env.config.color_config = {
     shape_block: white
     shape_bool: {fg: $GREEN_PASTEL, attr: "b"}
     shape_closure: white
-    #shape_custom: green
+    shape_custom: white
     shape_datetime: $RED_PASTEL
     #shape_directory: cyan
     shape_external: white
