@@ -14,7 +14,7 @@ hs.hotkey.bind({ "ctrl", "alt" }, "B", function()
 end)
 
 -- <Control><Alt>Return: Maximize window
-hs.hotkey.bind({ "ctrl", "alt" }, "Return", function()
+hs.hotkey.bind({ "ctrl", "alt" }, "M", function()
     hs.window.focusedWindow():maximize(0)
 end)
 
