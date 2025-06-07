@@ -295,6 +295,11 @@
     "type": "formula"
   },
   {
+    "name": "icu4c@77",
+    "description": "C/C++ and Java libraries for Unicode and globalization",
+    "type": "formula"
+  },
+  {
     "name": "iso-codes",
     "description": "Provides lists of various ISO standards",
     "type": "formula"
@@ -943,6 +948,11 @@
   {
     "name": "snappy",
     "description": "Compression/decompression library aiming for high speed",
+    "type": "formula"
+  },
+  {
+    "name": "spirv-headers",
+    "description": "Headers for SPIR-V",
     "type": "formula"
   },
   {
