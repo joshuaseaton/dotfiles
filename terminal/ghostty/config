@@ -1,0 +1,28 @@
+# See https://ghostty.org/docs/config/reference
+
+# --- Font ---
+font-family = "IBM Plex Mono"
+font-size = 14
+
+# --- Window ---
+background = 181818
+background-blur = 3
+background-opacity = 0.7
+maximize = true
+quit-after-last-window-closed=true
+
+# --- Scrolling ---
+scrollback-limit = 100000
+
+# --- Shell ---
+command = .cargo/bin/nu --login --commands zellij
+
+# --- Keybindings ---
+
+macos-option-as-alt = true
+
+# Cmd + S on macOS: reinterpreted as Ctrl + S.
+keybind = cmd+s=text:\x13
+
+# Ctrl + N: open new Ghostty instance.
+keybind = ctrl+n=new_window

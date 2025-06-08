@@ -73,6 +73,11 @@
     ]
   },
   {
+    "name": "ghostty",
+    "description": "Terminal emulator that uses platform-native UI and GPU acceleration",
+    "type": "cask"
+  },
+  {
     "name": "git-delta",
     "description": "Syntax-highlighting pager for git and diff output",
     "type": "formula",
