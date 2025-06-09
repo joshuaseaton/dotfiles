@@ -9,17 +9,9 @@ keybinds clear-defaults=true {
         bind "Alt +" { Resize "Increase"; }
         bind "Alt -" { Resize "Decrease"; }
         bind "Alt n" { NewPane; }
+        bind "Ctrl q" { Detach; }
     }
 }
-
-// Choose what to do when zellij receives SIGTERM, SIGINT, SIGQUIT or SIGHUP
-// eg. when terminal window with an active zellij session is closed
-// (Requires restart)
-// Options:
-//   - detach (Default)
-//   - quit
-//
-on_force_close "quit"
  
 // Choose the theme that is specified in the themes section.
 // Default: default

@@ -15,7 +15,7 @@ quit-after-last-window-closed=true
 scrollback-limit = 100000
 
 # --- Shell ---
-command = .cargo/bin/nu --login --commands zellij
+command = .cargo/bin/nu --login --commands zellij_start
 
 # --- Keybindings ---
 

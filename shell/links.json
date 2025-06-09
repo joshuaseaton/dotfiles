@@ -28,5 +28,15 @@
     "source": "nu/config.nu",
     "target": "Library/Application Support/nushell/config.nu",
     "os": "macos"
+  },
+  {
+    "source": "nu/login.nu",
+    "target": ".config/nushell/login.nu",
+    "os": "linux"
+  },
+  {
+    "source": "nu/login.nu",
+    "target": "Library/Application Support/nushell/login.nu",
+    "os": "macos"
   }
 ]
