@@ -1,17 +1,13 @@
 // See https://zellij.dev/documentation/configuration
 
-keybinds {
-    locked {
-        bind "Ctrl g" { SwitchToMode "normal"; }
-    }
-    shared {
+keybinds clear-defaults=true {
+    normal {
         bind "Alt left" { MoveFocus "left"; }
         bind "Alt right" { MoveFocus "right"; }
         bind "Alt down" { MoveFocus "down"; }
         bind "Alt up" { MoveFocus "up"; }
         bind "Alt +" { Resize "Increase"; }
         bind "Alt -" { Resize "Decrease"; }
-        bind "Alt =" { Resize "Increase"; }
         bind "Alt n" { NewPane; }
     }
 }
@@ -29,11 +25,6 @@ on_force_close "quit"
 // Default: default
 // 
 theme "iceberg-dark"
- 
-// Choose the base input mode of zellij.
-// Default: normal
-// 
-default_mode "locked"
  
 // Choose the path to the default shell that zellij will use for opening new panes
 // Default: $SHELL
