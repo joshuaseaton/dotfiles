@@ -4,6 +4,18 @@
 normal = { family = "IBM Plex Mono", style = "Light" }
 size = 14
 
+# Cmd + right on macOS: home
+[[keyboard.bindings]]
+key = "Left"
+mods = "Command"
+chars = "\u0001"
+
+# Cmd + right on macOS: end
+[[keyboard.bindings]]
+key = "Right"
+mods = "Command"
+chars = "\u0005"
+
 # Cmd + S on macOS: reinterpreted as Ctrl + S.
 [[keyboard.bindings]]
 mods = "Command"
