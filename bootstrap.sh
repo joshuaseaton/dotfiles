@@ -85,4 +85,4 @@ fi
 
 # Now finish our bootstrap by going through the official installation endpoint.
 cd "${DOTFILES}"
-"${NU}" --env-config shell/nu/env.nu install.nu
+"${NU}" --config shell/nu/config.nu install.nu
