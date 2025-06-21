@@ -5,6 +5,37 @@
     "type": "cask"
   },
   {
+    "name": "aom",
+    "description": "Codec library for encoding and decoding AV1 video streams",
+    "type": "formula",
+    "dependencies": [
+      "jpeg-xl",
+      "libvmaf"
+    ]
+  },
+  {
+    "name": "aribb24",
+    "description": "Library for ARIB STD-B24, decoding JIS 8 bit characters and parsing MPEG-TS",
+    "type": "formula",
+    "dependencies": [
+      "libpng"
+    ]
+  },
+  {
+    "name": "at-spi2-core",
+    "description": "Protocol definitions and daemon for D-Bus at-spi",
+    "type": "formula",
+    "dependencies": [
+      "dbus",
+      "glib",
+      "libx11",
+      "libxi",
+      "libxtst",
+      "xorgproto",
+      "gettext"
+    ]
+  },
+  {
     "name": "blake3",
     "description": "C implementation of the BLAKE3 cryptographic hash function",
     "type": "formula"
@@ -15,9 +46,32 @@
     "type": "cask"
   },
   {
+    "name": "brotli",
+    "description": "Generic-purpose lossless compression algorithm by Google",
+    "type": "formula"
+  },
+  {
     "name": "ca-certificates",
     "description": "Mozilla CA certificate store",
     "type": "formula"
+  },
+  {
+    "name": "cairo",
+    "description": "Vector graphics library with cross-device output support",
+    "type": "formula",
+    "dependencies": [
+      "fontconfig",
+      "freetype",
+      "glib",
+      "libpng",
+      "libx11",
+      "libxcb",
+      "libxext",
+      "libxrender",
+      "lzo",
+      "pixman",
+      "gettext"
+    ]
   },
   {
     "name": "capstone",
@@ -40,6 +94,21 @@
     ]
   },
   {
+    "name": "cjson",
+    "description": "Ultralightweight JSON parser in ANSI C",
+    "type": "formula"
+  },
+  {
+    "name": "dav1d",
+    "description": "AV1 decoder targeted to be small and fast",
+    "type": "formula"
+  },
+  {
+    "name": "dbus",
+    "description": "Message bus system, providing inter-application communication",
+    "type": "formula"
+  },
+  {
     "name": "dosfstools",
     "description": "Tools to create, check and label file systems of the FAT family",
     "type": "formula"
@@ -55,6 +124,79 @@
     "type": "formula"
   },
   {
+    "name": "faac",
+    "description": "ISO AAC audio encoder",
+    "type": "formula"
+  },
+  {
+    "name": "faad2",
+    "description": "ISO AAC audio decoder",
+    "type": "formula"
+  },
+  {
+    "name": "fdk-aac",
+    "description": "Standalone library of the Fraunhofer FDK AAC code from Android",
+    "type": "formula"
+  },
+  {
+    "name": "ffmpeg",
+    "description": "Play, record, convert, and stream audio and video",
+    "type": "formula",
+    "dependencies": [
+      "aom",
+      "aribb24",
+      "dav1d",
+      "fontconfig",
+      "freetype",
+      "frei0r",
+      "gnutls",
+      "harfbuzz",
+      "jpeg-xl",
+      "lame",
+      "libass",
+      "libbluray",
+      "librist",
+      "libsoxr",
+      "libssh",
+      "libvidstab",
+      "libvmaf",
+      "libvorbis",
+      "libvpx",
+      "libx11",
+      "libxcb",
+      "opencore-amr",
+      "openjpeg",
+      "opus",
+      "rav1e",
+      "rubberband",
+      "sdl2",
+      "snappy",
+      "speex",
+      "srt",
+      "svt-av1",
+      "tesseract",
+      "theora",
+      "webp",
+      "x264",
+      "x265",
+      "xvid",
+      "xz",
+      "zeromq",
+      "zimg",
+      "libarchive",
+      "libogg",
+      "libsamplerate"
+    ]
+  },
+  {
+    "name": "flac",
+    "description": "Free lossless audio codec",
+    "type": "formula",
+    "dependencies": [
+      "libogg"
+    ]
+  },
+  {
     "name": "fmt",
     "description": "Open-source formatting library for C++",
     "type": "formula"
@@ -63,6 +205,44 @@
     "name": "font-ibm-plex-mono",
     "description": null,
     "type": "cask"
+  },
+  {
+    "name": "fontconfig",
+    "description": "XML-based font configuration API for X Windows",
+    "type": "formula",
+    "dependencies": [
+      "freetype"
+    ]
+  },
+  {
+    "name": "freetype",
+    "description": "Software library to render fonts",
+    "type": "formula",
+    "dependencies": [
+      "libpng"
+    ]
+  },
+  {
+    "name": "frei0r",
+    "description": "Minimalistic plugin API for video effects",
+    "type": "formula"
+  },
+  {
+    "name": "fribidi",
+    "description": "Implementation of the Unicode BiDi algorithm",
+    "type": "formula"
+  },
+  {
+    "name": "gdk-pixbuf",
+    "description": "Toolkit for image loading and pixel buffer manipulation",
+    "type": "formula",
+    "dependencies": [
+      "glib",
+      "jpeg-turbo",
+      "libpng",
+      "libtiff",
+      "gettext"
+    ]
   },
   {
     "name": "gettext",
@@ -76,6 +256,11 @@
     "name": "ghostty",
     "description": "Terminal emulator that uses platform-native UI and GPU acceleration",
     "type": "cask"
+  },
+  {
+    "name": "giflib",
+    "description": "Library and utilities for processing GIFs",
+    "type": "formula"
   },
   {
     "name": "git-delta",
@@ -92,6 +277,17 @@
     "type": "formula",
     "dependencies": [
       "pcre2",
+      "gettext"
+    ]
+  },
+  {
+    "name": "glib-networking",
+    "description": "Network related modules for glib",
+    "type": "formula",
+    "dependencies": [
+      "glib",
+      "gnutls",
+      "gsettings-desktop-schemas",
       "gettext"
     ]
   },
@@ -122,9 +318,169 @@
     "type": "formula"
   },
   {
+    "name": "gobject-introspection",
+    "description": "Generate introspection data for GObject libraries",
+    "type": "formula",
+    "dependencies": [
+      "cairo",
+      "glib",
+      "pkgconf",
+      "python@3.13"
+    ]
+  },
+  {
+    "name": "graphene",
+    "description": "Thin layer of graphic data types",
+    "type": "formula",
+    "dependencies": [
+      "glib",
+      "gettext"
+    ]
+  },
+  {
+    "name": "graphite2",
+    "description": "Smart font renderer for non-Roman scripts",
+    "type": "formula"
+  },
+  {
+    "name": "gsettings-desktop-schemas",
+    "description": "GSettings schemas for desktop components",
+    "type": "formula",
+    "dependencies": [
+      "glib"
+    ]
+  },
+  {
+    "name": "gstreamer",
+    "description": "Development framework for multimedia applications",
+    "type": "formula",
+    "dependencies": [
+      "aom",
+      "cairo",
+      "dav1d",
+      "faac",
+      "faad2",
+      "fdk-aac",
+      "ffmpeg",
+      "flac",
+      "gdk-pixbuf",
+      "glib",
+      "graphene",
+      "gtk+3",
+      "gtk4",
+      "imath",
+      "jpeg-turbo",
+      "json-glib",
+      "lame",
+      "libass",
+      "libnice",
+      "libogg",
+      "libpng",
+      "libshout",
+      "libsndfile",
+      "libsodium",
+      "libsoup",
+      "libusrsctp",
+      "libvorbis",
+      "libvpx",
+      "libx11",
+      "libxcb",
+      "libxext",
+      "libxfixes",
+      "libxi",
+      "libxtst",
+      "little-cms2",
+      "mpg123",
+      "nettle",
+      "opencore-amr",
+      "openexr",
+      "openjpeg",
+      "openssl@3",
+      "opus",
+      "orc",
+      "pango",
+      "pygobject3",
+      "python@3.13",
+      "rtmpdump",
+      "speex",
+      "srt",
+      "srtp",
+      "svt-av1",
+      "taglib",
+      "theora",
+      "webp",
+      "x264",
+      "x265",
+      "gettext",
+      "harfbuzz",
+      "musepack"
+    ]
+  },
+  {
+    "name": "gtk+3",
+    "description": "Toolkit for creating graphical user interfaces",
+    "type": "formula",
+    "dependencies": [
+      "at-spi2-core",
+      "cairo",
+      "fribidi",
+      "gdk-pixbuf",
+      "glib",
+      "gsettings-desktop-schemas",
+      "harfbuzz",
+      "hicolor-icon-theme",
+      "libepoxy",
+      "pango",
+      "gettext"
+    ]
+  },
+  {
+    "name": "gtk4",
+    "description": "Toolkit for creating graphical user interfaces",
+    "type": "formula",
+    "dependencies": [
+      "cairo",
+      "fontconfig",
+      "fribidi",
+      "gdk-pixbuf",
+      "glib",
+      "graphene",
+      "harfbuzz",
+      "hicolor-icon-theme",
+      "jpeg-turbo",
+      "libepoxy",
+      "libpng",
+      "libtiff",
+      "pango",
+      "gettext"
+    ]
+  },
+  {
     "name": "hammerspoon",
     "description": "Desktop automation application",
     "type": "cask"
+  },
+  {
+    "name": "harfbuzz",
+    "description": "OpenType text shaping engine",
+    "type": "formula",
+    "dependencies": [
+      "cairo",
+      "freetype",
+      "glib",
+      "graphite2",
+      "icu4c@77"
+    ]
+  },
+  {
+    "name": "hicolor-icon-theme",
+    "description": "Fallback theme for FreeDesktop.org icon themes",
+    "type": "formula"
+  },
+  {
+    "name": "highway",
+    "description": "Performance-portable, length-agnostic SIMD with runtime dispatch",
+    "type": "formula"
   },
   {
     "name": "hiredis",
@@ -135,8 +491,117 @@
     ]
   },
   {
+    "name": "icu4c@77",
+    "description": "C/C++ and Java libraries for Unicode and globalization",
+    "type": "formula"
+  },
+  {
+    "name": "imath",
+    "description": "Library of 2D and 3D vector, matrix, and math operations",
+    "type": "formula"
+  },
+  {
+    "name": "jpeg",
+    "description": "Image manipulation library",
+    "type": "formula"
+  },
+  {
     "name": "jpeg-turbo",
     "description": "JPEG image codec that aids compression and decompression",
+    "type": "formula"
+  },
+  {
+    "name": "jpeg-xl",
+    "description": "New file format for still image compression",
+    "type": "formula",
+    "dependencies": [
+      "brotli",
+      "giflib",
+      "highway",
+      "imath",
+      "jpeg-turbo",
+      "libpng",
+      "little-cms2",
+      "openexr",
+      "webp"
+    ]
+  },
+  {
+    "name": "json-glib",
+    "description": "Library for JSON, based on GLib",
+    "type": "formula",
+    "dependencies": [
+      "glib",
+      "gettext"
+    ]
+  },
+  {
+    "name": "lame",
+    "description": "High quality MPEG Audio Layer III (MP3) encoder",
+    "type": "formula"
+  },
+  {
+    "name": "leptonica",
+    "description": "Image processing and image analysis library",
+    "type": "formula",
+    "dependencies": [
+      "giflib",
+      "jpeg-turbo",
+      "libpng",
+      "libtiff",
+      "openjpeg",
+      "webp"
+    ]
+  },
+  {
+    "name": "libarchive",
+    "description": "Multi-format archive and compression library",
+    "type": "formula",
+    "dependencies": [
+      "libb2",
+      "lz4",
+      "xz",
+      "zstd"
+    ]
+  },
+  {
+    "name": "libass",
+    "description": "Subtitle renderer for the ASS/SSA subtitle format",
+    "type": "formula",
+    "dependencies": [
+      "freetype",
+      "fribidi",
+      "harfbuzz",
+      "libunibreak"
+    ]
+  },
+  {
+    "name": "libb2",
+    "description": "Secure hashing function",
+    "type": "formula"
+  },
+  {
+    "name": "libbluray",
+    "description": "Blu-Ray disc playback library for media players like VLC",
+    "type": "formula",
+    "dependencies": [
+      "fontconfig",
+      "freetype"
+    ]
+  },
+  {
+    "name": "libcuefile",
+    "description": "Library to work with CUE files",
+    "type": "formula"
+  },
+  {
+    "name": "libdeflate",
+    "description": "Heavily optimized DEFLATE/zlib/gzip compression and decompression",
+    "type": "formula"
+  },
+  {
+    "name": "libepoxy",
+    "description": "Library for handling OpenGL function pointer management",
     "type": "formula"
   },
   {
@@ -165,8 +630,31 @@
     ]
   },
   {
+    "name": "libmicrohttpd",
+    "description": "Light HTTP/1.1 server library",
+    "type": "formula",
+    "dependencies": [
+      "gnutls"
+    ]
+  },
+  {
     "name": "libnghttp2",
     "description": "HTTP/2 C Library",
+    "type": "formula"
+  },
+  {
+    "name": "libnice",
+    "description": "GLib ICE implementation",
+    "type": "formula",
+    "dependencies": [
+      "glib",
+      "gnutls",
+      "gettext"
+    ]
+  },
+  {
+    "name": "libogg",
+    "description": "Ogg Bitstream Library",
     "type": "formula"
   },
   {
@@ -175,12 +663,90 @@
     "type": "formula"
   },
   {
+    "name": "libpsl",
+    "description": "C library for the Public Suffix List",
+    "type": "formula",
+    "dependencies": [
+      "libidn2",
+      "libunistring"
+    ]
+  },
+  {
+    "name": "libreplaygain",
+    "description": "Library to implement ReplayGain standard for audio",
+    "type": "formula"
+  },
+  {
+    "name": "librist",
+    "description": "Reliable Internet Stream Transport (RIST)",
+    "type": "formula",
+    "dependencies": [
+      "cjson",
+      "libmicrohttpd",
+      "mbedtls"
+    ]
+  },
+  {
+    "name": "libsamplerate",
+    "description": "Library for sample rate conversion of audio data",
+    "type": "formula"
+  },
+  {
+    "name": "libshout",
+    "description": "Data and connectivity library for the Icecast server",
+    "type": "formula",
+    "dependencies": [
+      "libogg",
+      "libvorbis",
+      "openssl@3",
+      "speex",
+      "theora"
+    ]
+  },
+  {
     "name": "libslirp",
     "description": "General purpose TCP-IP emulator",
     "type": "formula",
     "dependencies": [
       "glib"
     ]
+  },
+  {
+    "name": "libsndfile",
+    "description": "C library for files containing sampled sound",
+    "type": "formula",
+    "dependencies": [
+      "flac",
+      "lame",
+      "libogg",
+      "libvorbis",
+      "mpg123",
+      "opus"
+    ]
+  },
+  {
+    "name": "libsodium",
+    "description": "NaCl networking and cryptography library",
+    "type": "formula"
+  },
+  {
+    "name": "libsoup",
+    "description": "HTTP client/server library for GNOME",
+    "type": "formula",
+    "dependencies": [
+      "glib",
+      "glib-networking",
+      "gnutls",
+      "libnghttp2",
+      "libpsl",
+      "sqlite",
+      "gettext"
+    ]
+  },
+  {
+    "name": "libsoxr",
+    "description": "High quality, one-dimensional sample-rate conversion library",
+    "type": "formula"
   },
   {
     "name": "libssh",
@@ -204,6 +770,21 @@
     "type": "formula"
   },
   {
+    "name": "libtiff",
+    "description": "TIFF library and utilities",
+    "type": "formula",
+    "dependencies": [
+      "jpeg-turbo",
+      "xz",
+      "zstd"
+    ]
+  },
+  {
+    "name": "libunibreak",
+    "description": "Implementation of the Unicode line- and word-breaking algorithms",
+    "type": "formula"
+  },
+  {
     "name": "libunistring",
     "description": "C string library for manipulating Unicode strings",
     "type": "formula"
@@ -212,6 +793,126 @@
     "name": "libusb",
     "description": "Library for USB device access",
     "type": "formula"
+  },
+  {
+    "name": "libusrsctp",
+    "description": "Portable SCTP userland stack",
+    "type": "formula"
+  },
+  {
+    "name": "libvidstab",
+    "description": "Transcode video stabilization plugin",
+    "type": "formula"
+  },
+  {
+    "name": "libvmaf",
+    "description": "Perceptual video quality assessment based on multi-method fusion",
+    "type": "formula"
+  },
+  {
+    "name": "libvorbis",
+    "description": "Vorbis general audio compression codec",
+    "type": "formula",
+    "dependencies": [
+      "libogg"
+    ]
+  },
+  {
+    "name": "libvpx",
+    "description": "VP8/VP9 video codec",
+    "type": "formula"
+  },
+  {
+    "name": "libx11",
+    "description": "X.Org: Core X11 protocol client library",
+    "type": "formula",
+    "dependencies": [
+      "libxcb",
+      "xorgproto"
+    ]
+  },
+  {
+    "name": "libxau",
+    "description": "X.Org: A Sample Authorization Protocol for X",
+    "type": "formula",
+    "dependencies": [
+      "xorgproto"
+    ]
+  },
+  {
+    "name": "libxcb",
+    "description": "X.Org: Interface to the X Window System protocol",
+    "type": "formula",
+    "dependencies": [
+      "libxau",
+      "libxdmcp"
+    ]
+  },
+  {
+    "name": "libxdmcp",
+    "description": "X.Org: X Display Manager Control Protocol library",
+    "type": "formula",
+    "dependencies": [
+      "xorgproto"
+    ]
+  },
+  {
+    "name": "libxext",
+    "description": "X.Org: Library for common extensions to the X11 protocol",
+    "type": "formula",
+    "dependencies": [
+      "libx11",
+      "xorgproto"
+    ]
+  },
+  {
+    "name": "libxfixes",
+    "description": "X.Org: Header files for the XFIXES extension",
+    "type": "formula",
+    "dependencies": [
+      "libx11",
+      "xorgproto"
+    ]
+  },
+  {
+    "name": "libxi",
+    "description": "X.Org: Library for the X Input Extension",
+    "type": "formula",
+    "dependencies": [
+      "libx11",
+      "libxext",
+      "libxfixes",
+      "xorgproto"
+    ]
+  },
+  {
+    "name": "libxrender",
+    "description": "X.Org: Library for the Render Extension to the X11 protocol",
+    "type": "formula",
+    "dependencies": [
+      "libx11",
+      "xorgproto"
+    ]
+  },
+  {
+    "name": "libxtst",
+    "description": "X.Org: Client API for the XTEST & RECORD extensions",
+    "type": "formula",
+    "dependencies": [
+      "libx11",
+      "libxext",
+      "libxi",
+      "xorgproto"
+    ]
+  },
+  {
+    "name": "little-cms2",
+    "description": "Color management engine supporting ICC profiles",
+    "type": "formula",
+    "dependencies": [
+      "jpeg-turbo",
+      "libtiff"
+    ]
   },
   {
     "name": "lld",
@@ -262,6 +963,11 @@
     "type": "formula"
   },
   {
+    "name": "mbedtls",
+    "description": "Cryptographic & SSL/TLS library",
+    "type": "formula"
+  },
+  {
     "name": "micro",
     "description": "Modern and intuitive terminal-based text editor",
     "type": "formula"
@@ -270,6 +976,20 @@
     "name": "mpdecimal",
     "description": "Library for decimal floating point arithmetic",
     "type": "formula"
+  },
+  {
+    "name": "mpg123",
+    "description": "MP3 player for Linux and UNIX",
+    "type": "formula"
+  },
+  {
+    "name": "musepack",
+    "description": "Audio compression format and tools",
+    "type": "formula",
+    "dependencies": [
+      "libcuefile",
+      "libreplaygain"
+    ]
   },
   {
     "name": "ncurses",
@@ -290,6 +1010,30 @@
     "type": "formula"
   },
   {
+    "name": "opencore-amr",
+    "description": "Audio codecs extracted from Android open source project",
+    "type": "formula"
+  },
+  {
+    "name": "openexr",
+    "description": "High dynamic-range image file format",
+    "type": "formula",
+    "dependencies": [
+      "imath",
+      "libdeflate"
+    ]
+  },
+  {
+    "name": "openjpeg",
+    "description": "Library for JPEG-2000 image manipulation",
+    "type": "formula",
+    "dependencies": [
+      "libpng",
+      "libtiff",
+      "little-cms2"
+    ]
+  },
+  {
     "name": "openssl@3",
     "description": "Cryptography and SSL/TLS Toolkit",
     "type": "formula",
@@ -298,12 +1042,35 @@
     ]
   },
   {
+    "name": "opus",
+    "description": "Audio codec",
+    "type": "formula"
+  },
+  {
+    "name": "orc",
+    "description": "Oil Runtime Compiler (ORC)",
+    "type": "formula"
+  },
+  {
     "name": "p11-kit",
     "description": "Library to load and enumerate PKCS#11 modules",
     "type": "formula",
     "dependencies": [
       "ca-certificates",
       "libtasn1"
+    ]
+  },
+  {
+    "name": "pango",
+    "description": "Framework for layout and rendering of i18n text",
+    "type": "formula",
+    "dependencies": [
+      "cairo",
+      "fontconfig",
+      "freetype",
+      "fribidi",
+      "glib",
+      "harfbuzz"
     ]
   },
   {
@@ -323,6 +1090,30 @@
     "name": "pixman",
     "description": "Low-level library for pixel manipulation",
     "type": "formula"
+  },
+  {
+    "name": "pkgconf",
+    "description": "Package compiler and linker metadata toolkit",
+    "type": "formula"
+  },
+  {
+    "name": "py3cairo",
+    "description": "Python 3 bindings for the Cairo graphics library",
+    "type": "formula",
+    "dependencies": [
+      "cairo"
+    ]
+  },
+  {
+    "name": "pygobject3",
+    "description": "GNOME Python bindings (based on GObject Introspection)",
+    "type": "formula",
+    "dependencies": [
+      "cairo",
+      "glib",
+      "gobject-introspection",
+      "py3cairo"
+    ]
   },
   {
     "name": "python@3.12",
@@ -365,13 +1156,41 @@
       "nettle",
       "pixman",
       "snappy",
+      "spice-server",
       "vde",
       "zstd"
     ]
   },
   {
+    "name": "rav1e",
+    "description": "Fastest and safest AV1 video encoder",
+    "type": "formula"
+  },
+  {
     "name": "readline",
     "description": "Library for command-line editing",
+    "type": "formula"
+  },
+  {
+    "name": "rtmpdump",
+    "description": "Tool for downloading RTMP streaming media",
+    "type": "formula",
+    "dependencies": [
+      "openssl@3"
+    ]
+  },
+  {
+    "name": "rubberband",
+    "description": "Audio time stretcher tool and library",
+    "type": "formula",
+    "dependencies": [
+      "libsamplerate",
+      "libsndfile"
+    ]
+  },
+  {
+    "name": "sdl2",
+    "description": "Low-level access to audio, keyboard, mouse, joystick, and graphics",
     "type": "formula"
   },
   {
@@ -393,6 +1212,30 @@
     "type": "formula"
   },
   {
+    "name": "speex",
+    "description": "Audio codec designed for speech",
+    "type": "formula",
+    "dependencies": [
+      "libogg"
+    ]
+  },
+  {
+    "name": "spice-server",
+    "description": "Implements the server side of the SPICE protocol",
+    "type": "formula",
+    "dependencies": [
+      "glib",
+      "gstreamer",
+      "jpeg",
+      "lz4",
+      "openssl@3",
+      "opus",
+      "orc",
+      "pixman",
+      "gettext"
+    ]
+  },
+  {
     "name": "spotify",
     "description": "Music streaming service",
     "type": "cask"
@@ -403,6 +1246,61 @@
     "type": "formula",
     "dependencies": [
       "readline"
+    ]
+  },
+  {
+    "name": "srt",
+    "description": "Secure Reliable Transport",
+    "type": "formula",
+    "dependencies": [
+      "openssl@3"
+    ]
+  },
+  {
+    "name": "srtp",
+    "description": "Implementation of the Secure Real-time Transport Protocol",
+    "type": "formula",
+    "dependencies": [
+      "openssl@3"
+    ]
+  },
+  {
+    "name": "svt-av1",
+    "description": "AV1 encoder",
+    "type": "formula"
+  },
+  {
+    "name": "taglib",
+    "description": "Audio metadata library",
+    "type": "formula",
+    "dependencies": [
+      "utf8cpp"
+    ]
+  },
+  {
+    "name": "tesseract",
+    "description": "OCR (Optical Character Recognition) engine",
+    "type": "formula",
+    "dependencies": [
+      "cairo",
+      "fontconfig",
+      "glib",
+      "harfbuzz",
+      "icu4c@77",
+      "leptonica",
+      "libarchive",
+      "pango",
+      "freetype",
+      "gettext"
+    ]
+  },
+  {
+    "name": "theora",
+    "description": "Open video compression format",
+    "type": "formula",
+    "dependencies": [
+      "libogg",
+      "libvorbis"
     ]
   },
   {
@@ -421,6 +1319,11 @@
     "type": "cask"
   },
   {
+    "name": "utf8cpp",
+    "description": "UTF-8 with C++ in a Portable Way",
+    "type": "formula"
+  },
+  {
     "name": "vde",
     "description": "Ethernet compliant virtual network",
     "type": "formula"
@@ -429,6 +1332,37 @@
     "name": "visual-studio-code",
     "description": "Open-source code editor",
     "type": "cask"
+  },
+  {
+    "name": "webp",
+    "description": "Image format providing lossless and lossy compression for web images",
+    "type": "formula",
+    "dependencies": [
+      "giflib",
+      "jpeg-turbo",
+      "libpng",
+      "libtiff"
+    ]
+  },
+  {
+    "name": "x264",
+    "description": "H.264/AVC encoder",
+    "type": "formula"
+  },
+  {
+    "name": "x265",
+    "description": "H.265/HEVC encoder",
+    "type": "formula"
+  },
+  {
+    "name": "xorgproto",
+    "description": "X.Org: Protocol Headers",
+    "type": "formula"
+  },
+  {
+    "name": "xvid",
+    "description": "High-performance, high-quality MPEG-4 video library",
+    "type": "formula"
   },
   {
     "name": "xxhash",
@@ -449,6 +1383,19 @@
     "name": "zed",
     "description": "Multiplayer code editor",
     "type": "cask"
+  },
+  {
+    "name": "zeromq",
+    "description": "High-performance, asynchronous messaging library",
+    "type": "formula",
+    "dependencies": [
+      "libsodium"
+    ]
+  },
+  {
+    "name": "zimg",
+    "description": "Scaling, colorspace conversion, and dithering library",
+    "type": "formula"
   },
   {
     "name": "zoom",
