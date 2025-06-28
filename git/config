@@ -25,9 +25,8 @@
 	submodule = log
 
 [delta]
-	# Use n to navigate to the next diff section, and N to the previous.
-	navigate = true
-    side-by-side = true
+	side-by-side = true
+	pager = less --RAW-CONTROL-CHARS --quit-if-one-screen --no-init --mouse
 
 [interactive]
 	diffFilter = delta --color-only
