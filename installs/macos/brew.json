@@ -15,6 +15,16 @@
     "type": "cask"
   },
   {
+    "name": "brotli",
+    "description": "Generic-purpose lossless compression algorithm by Google",
+    "type": "formula"
+  },
+  {
+    "name": "c-ares",
+    "description": "Asynchronous DNS library",
+    "type": "formula"
+  },
+  {
     "name": "ca-certificates",
     "description": "Mozilla CA certificate store",
     "type": "formula"
@@ -135,6 +145,11 @@
     ]
   },
   {
+    "name": "icu4c@77",
+    "description": "C/C++ and Java libraries for Unicode and globalization",
+    "type": "formula"
+  },
+  {
     "name": "jpeg-turbo",
     "description": "JPEG image codec that aids compression and decompression",
     "type": "formula"
@@ -214,6 +229,11 @@
     "type": "formula"
   },
   {
+    "name": "libuv",
+    "description": "Multi-platform support library with a focus on asynchronous I/O",
+    "type": "formula"
+  },
+  {
     "name": "lld",
     "description": "LLVM Project Linker",
     "type": "formula",
@@ -282,6 +302,19 @@
     "type": "formula",
     "dependencies": [
       "gmp"
+    ]
+  },
+  {
+    "name": "node",
+    "description": "Platform built on V8 to build network applications",
+    "type": "formula",
+    "dependencies": [
+      "brotli",
+      "c-ares",
+      "icu4c@77",
+      "libnghttp2",
+      "libuv",
+      "openssl@3"
     ]
   },
   {
