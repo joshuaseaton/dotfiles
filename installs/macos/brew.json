@@ -464,6 +464,14 @@
     "type": "cask"
   },
   {
+    "name": "wabt",
+    "description": "Web Assembly Binary Toolkit",
+    "type": "formula",
+    "dependencies": [
+      "openssl@3"
+    ]
+  },
+  {
     "name": "xxhash",
     "description": "Extremely fast non-cryptographic hash algorithm",
     "type": "formula"
