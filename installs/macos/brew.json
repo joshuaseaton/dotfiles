@@ -313,8 +313,13 @@
       "c-ares",
       "icu4c@77",
       "libnghttp2",
+      "libnghttp3",
+      "libngtcp2",
       "libuv",
-      "openssl@3"
+      "openssl@3",
+      "simdjson",
+      "sqlite",
+      "zstd"
     ]
   },
   {
