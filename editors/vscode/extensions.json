@@ -1,4 +1,5 @@
 [
+  "anthropic.claude-code",
   "basdp.language-gas-x86",
   "charliermarsh.ruff",
   "fuchsia-authors.language-fidl",
