@@ -14,7 +14,7 @@ export def main [
   }
   let body = $result.body
   if $phonetics {
-    return ($body | get --ignore-errors phonetics.0.text | where $it != null)
+    return ($body | get --optional phonetics.0.text | where $it != null)
   }
   $body |
     get meanings

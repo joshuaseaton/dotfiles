@@ -25,7 +25,7 @@ export def write [domain: string@domain-completions, key: cell-path, value: any,
         return (error make --unspanned {msg: "Value cannot be null"})
     }
     let plist = read $domain
-    let current = $plist | get --ignore-errors $key
+    let current = $plist | get --optional $key
     if $current == $value {
         return false
     }

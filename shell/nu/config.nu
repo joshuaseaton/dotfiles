@@ -163,7 +163,7 @@ $env.NU_PLUGIN_DIRS = []
 # But of course.
 $env.SHELL = $nu.current-exe
 
-if ($env | get --ignore-errors EDITOR) == null {
+if ($env | get --optional EDITOR) == null {
     # A saner default than Vim. VSCode and Zed will specify their own integrated
     # terminals.
     $env.EDITOR = "micro"
@@ -177,6 +177,8 @@ $env.GOBIN = ([$nu.home-path go bin] | path join)
 $env.PATH = ($env.PATH |
     split row (char esep) |
     prepend [
+        /bin,
+        /usr/bin,
        ([$nu.home-path .cargo bin] | path join),
        ([$nu.home-path .local bin] | path join),   # pipx installation directory
        $env.GOBIN,

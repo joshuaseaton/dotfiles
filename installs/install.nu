@@ -34,7 +34,7 @@ let cargo_installed = cargo installed |
     each {|crate| {$crate.name: $crate.version}} |
     reduce {|crate, record| $record | merge $crate }
 open cargo.json |
-    where ($cargo_installed | get --ignore-errors $it.name) != $it.version |
+    where ($cargo_installed | get --optional $it.name) != $it.version |
     each {|crate|
         log info $"Installing crate: ($crate.name)@($crate.version)"
         ^cargo install --locked --version $crate.version $crate.name
