@@ -176,9 +176,8 @@ $env.GOBIN = ([$nu.home-path go bin] | path join)
 
 $env.PATH = ($env.PATH |
     split row (char esep) |
+    append [ "/bin", "/sbin", "/usr/bin", "/usr/sbin" ] |
     prepend [
-        /bin,
-        /usr/bin,
        ([$nu.home-path .cargo bin] | path join),
        ([$nu.home-path .local bin] | path join),   # pipx installation directory
        $env.GOBIN,
