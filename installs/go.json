@@ -3,7 +3,7 @@
     "name": "gopls",
     "module": "golang.org/x/tools/gopls",
     "path": "golang.org/x/tools/gopls",
-    "version": "v0.19.1"
+    "version": "v0.20.0"
   },
   {
     "name": "staticcheck",
