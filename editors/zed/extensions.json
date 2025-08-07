@@ -6,6 +6,12 @@
     "repository": "https://github.com/d1y/git_firefly"
   },
   {
+    "id": "just",
+    "name": "Justfile",
+    "description": "Justfile syntax highlighting",
+    "repository": "https://github.com/jackTabsCode/zed-just"
+  },
+  {
     "id": "lua",
     "name": "Lua",
     "description": "Lua support.",
