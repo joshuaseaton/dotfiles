@@ -185,6 +185,19 @@
     "type": "formula"
   },
   {
+    "name": "libnghttp3",
+    "description": "HTTP/3 library written in C",
+    "type": "formula"
+  },
+  {
+    "name": "libngtcp2",
+    "description": "IETF QUIC protocol implementation",
+    "type": "formula",
+    "dependencies": [
+      "openssl@3"
+    ]
+  },
+  {
     "name": "libpng",
     "description": "Library for manipulating PNG images",
     "type": "formula"
@@ -424,6 +437,11 @@
     "name": "signal",
     "description": "Instant messaging application focusing on security",
     "type": "cask"
+  },
+  {
+    "name": "simdjson",
+    "description": "SIMD-accelerated C++ JSON parser",
+    "type": "formula"
   },
   {
     "name": "snappy",
