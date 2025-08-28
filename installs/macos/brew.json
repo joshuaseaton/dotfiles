@@ -332,6 +332,7 @@
       "openssl@3",
       "simdjson",
       "sqlite",
+      "uvwasi",
       "zstd"
     ]
   },
