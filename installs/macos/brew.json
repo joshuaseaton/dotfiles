@@ -478,6 +478,14 @@
     "type": "cask"
   },
   {
+    "name": "uvwasi",
+    "description": "WASI syscall API built atop libuv",
+    "type": "formula",
+    "dependencies": [
+      "libuv"
+    ]
+  },
+  {
     "name": "vde",
     "description": "Ethernet compliant virtual network",
     "type": "formula"
