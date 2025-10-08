@@ -112,6 +112,7 @@
       "path": "${env:HOME}/.cargo/bin/nu"
     }
   },
+  "terminal.integrated.stickyScroll.enabled": false,
   "window.newWindowDimensions": "maximized",
   "window.zoomLevel": 1,
   "workbench.editor.enablePreview": false,
