@@ -4,6 +4,7 @@
   "charliermarsh.ruff",
   "fuchsia-authors.language-fidl",
   "golang.go",
+  "google.gn",
   "kdl-org.kdl",
   "llvm-vs-code-extensions.vscode-clangd",
   "ms-python.debugpy",
