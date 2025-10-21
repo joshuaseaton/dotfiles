@@ -3,6 +3,12 @@
 use log.nu
 use vscode.nu
 
+const BLACKLIST = [
+    "ms-python.debugpy"
+    "ms-python.vscode-pylance"
+    "ms-python.vscode-python-envs"
+]
+
 cd $env.FILE_PWD
 
 log info "Updating VSCode extensions..."
@@ -11,4 +17,16 @@ log info "Updating VSCode extensions..."
 # extensions.json.
 ^code --update-extensions
 
-vscode installed-extensions | get name  | save --force extensions.json
+vscode installed-extensions
+    | get name
+    | each {
+        |ext|
+        if $ext in $BLACKLIST {
+            log warning $"Bleh! VSCode extension ($ext) was auto-reinstalled; uninstalling..."
+            ^code --uninstall-extension $ext
+            null
+        } else {
+            $ext
+        }
+    }
+    | save --force extensions.json
