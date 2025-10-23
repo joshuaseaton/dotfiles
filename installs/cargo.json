@@ -20,6 +20,10 @@
     "version": "18.0.0"
   },
   {
+    "name": "jj-cli",
+    "version": "0.34.0"
+  },
+  {
     "name": "just",
     "version": "1.43.0"
   },
