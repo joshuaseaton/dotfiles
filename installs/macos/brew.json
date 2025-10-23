@@ -260,7 +260,7 @@
     "description": "Next-gen compiler infrastructure",
     "type": "formula",
     "dependencies": [
-      "python@3.13",
+      "python@3.14",
       "xz",
       "z3",
       "zstd"
@@ -396,6 +396,18 @@
       "openssl@3",
       "sqlite",
       "xz"
+    ]
+  },
+  {
+    "name": "python@3.14",
+    "description": "Interpreted, interactive, object-oriented programming language",
+    "type": "formula",
+    "dependencies": [
+      "mpdecimal",
+      "openssl@3",
+      "sqlite",
+      "xz",
+      "zstd"
     ]
   },
   {
