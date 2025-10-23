@@ -210,6 +210,7 @@ $env.HOMEBREW_NO_ENV_HINTS = 1
 
 # A saner default than less.
 $env.MANPAGER = "bat"
+$env.PAGER = "bat" # jj uses this.
 
 # TODO: Remove this if/when --config ever gets a sane default.
 export def run [script: string, ...args: string] {
