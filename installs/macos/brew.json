@@ -319,7 +319,7 @@
   },
   {
     "name": "node",
-    "description": "Platform built on V8 to build network applications",
+    "description": "Open-source, cross-platform JavaScript runtime environment",
     "type": "formula",
     "dependencies": [
       "brotli",
