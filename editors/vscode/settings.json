@@ -114,6 +114,7 @@
   },
   "terminal.integrated.shellIntegration.enabled": false,
   "terminal.integrated.stickyScroll.enabled": false,
+  "terminal.integrated.suggest.quickSuggestions": false,
   "window.newWindowDimensions": "maximized",
   "window.zoomLevel": 1,
   "workbench.editor.enablePreview": false,
