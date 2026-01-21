@@ -80,7 +80,7 @@ $env.config.table.index_mode = "never"
 $env.config.table.missing_value_symbol = " ∅ "
 
 def create_left_prompt [] {
-    let dir = match (do --ignore-errors { $env.PWD | path relative-to $nu.home-path }) {
+    let dir = match (do --ignore-errors { $env.PWD | path relative-to $nu.home-dir }) {
         null => $env.PWD
         '' => '~'
         $relative_pwd => ([~ $relative_pwd] | path join)
@@ -141,7 +141,7 @@ $env.PROMPT_COMMAND = {|| create_left_prompt }
 $env.PROMPT_COMMAND_RIGHT = {|| create_right_prompt }
 $env.PROMPT_INDICATOR = {|| $"(ansi white) ❯ " }
 
-let dotfiles = ([$nu.home-path .dotfiles] | path join)
+let dotfiles = ([$nu.home-dir .dotfiles] | path join)
 
 # Specifies how environment variables are:
 # - converted from a string to a value on Nushell startup (from_string)
@@ -168,18 +168,18 @@ if ($env | get --optional EDITOR) == null {
     # terminals.
     $env.EDITOR = "micro"
 }
-$env.MICRO_CONFIG_HOME = ([$nu.home-path .config micro] | path join)
+$env.MICRO_CONFIG_HOME = ([$nu.home-dir .config micro] | path join)
 
 # The default value, but it's handy in scripts to be able to refer to it without
 # taking the location as a hard-coded dependency.
-$env.GOBIN = ([$nu.home-path go bin] | path join)
+$env.GOBIN = ([$nu.home-dir go bin] | path join)
 
 $env.PATH = ($env.PATH |
     split row (char esep) |
     append [ "/bin", "/sbin", "/usr/bin", "/usr/sbin" ] |
     prepend [
-       ([$nu.home-path .cargo bin] | path join),
-       ([$nu.home-path .local bin] | path join),   # pipx installation directory
+       ([$nu.home-dir .cargo bin] | path join),
+       ([$nu.home-dir .local bin] | path join),   # pipx installation directory
        $env.GOBIN,
     ] |
     prepend (match $nu.os-info.name {

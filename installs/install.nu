@@ -53,7 +53,7 @@ open go.json |
 # pipx installations.
 open pipx.json |
     each { |pkg|
-        let local = ([$nu.home-path .local bin $pkg.name] | path join)
+        let local = ([$nu.home-dir .local bin $pkg.name] | path join)
         if not ($local | path exists) {
             log info $"pipx: Installing ($pkg.name) \(($pkg.name)@($pkg.version)\)..."
             ^pipx install $"($pkg.name)==($pkg.version)"
