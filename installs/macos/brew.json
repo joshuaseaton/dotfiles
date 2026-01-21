@@ -145,7 +145,7 @@
     ]
   },
   {
-    "name": "icu4c@77",
+    "name": "icu4c@78",
     "description": "C/C++ and Java libraries for Unicode and globalization",
     "type": "formula"
   },
@@ -324,7 +324,7 @@
     "dependencies": [
       "brotli",
       "c-ares",
-      "icu4c@77",
+      "icu4c@78",
       "libnghttp2",
       "libnghttp3",
       "libngtcp2",
@@ -426,7 +426,6 @@
       "libusb",
       "lzo",
       "ncurses",
-      "nettle",
       "pixman",
       "snappy",
       "vde",
