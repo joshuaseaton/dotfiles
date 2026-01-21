@@ -1,11 +1,11 @@
 [
   {
     "name": "bat",
-    "version": "0.26.0"
+    "version": "0.26.1"
   },
   {
     "name": "bottom",
-    "version": "0.11.2"
+    "version": "0.12.3"
   },
   {
     "name": "cargo-binutils",
@@ -13,7 +13,7 @@
   },
   {
     "name": "cargo-expand",
-    "version": "1.0.118"
+    "version": "1.0.119"
   },
   {
     "name": "cargo-update",
@@ -21,11 +21,11 @@
   },
   {
     "name": "jj-cli",
-    "version": "0.34.0"
+    "version": "0.37.0"
   },
   {
     "name": "just",
-    "version": "1.43.0"
+    "version": "1.46.0"
   },
   {
     "name": "nu",
