@@ -28,6 +28,12 @@ mods = "Control"
 key = "N"
 action = "SpawnNewInstance"
 
+# Shift + Enter is a natural for newlines that don't execute
+[[keyboard.bindings]]
+mods = "Shift"
+key = "Return"
+chars = "\n"
+
 [scrolling]
 history = 100000
 
