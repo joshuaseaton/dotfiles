@@ -1,551 +1,118 @@
 [
   {
     "name": "alacritty",
-    "description": "GPU-accelerated terminal emulator",
     "type": "cask"
-  },
-  {
-    "name": "blake3",
-    "description": "C implementation of the BLAKE3 cryptographic hash function",
-    "type": "formula"
   },
   {
     "name": "brave-browser",
-    "description": "Web browser focusing on privacy",
     "type": "cask"
   },
   {
-    "name": "brotli",
-    "description": "Generic-purpose lossless compression algorithm by Google",
-    "type": "formula"
-  },
-  {
-    "name": "c-ares",
-    "description": "Asynchronous DNS library",
-    "type": "formula"
-  },
-  {
-    "name": "ca-certificates",
-    "description": "Mozilla CA certificate store",
-    "type": "formula"
-  },
-  {
-    "name": "capstone",
-    "description": "Multi-platform, multi-architecture disassembly framework",
-    "type": "formula",
-    "dependencies": [
-      "gettext"
-    ]
-  },
-  {
     "name": "ccache",
-    "description": "Object-file caching compiler wrapper",
-    "type": "formula",
-    "dependencies": [
-      "blake3",
-      "fmt",
-      "hiredis",
-      "xxhash",
-      "zstd"
-    ]
+    "type": "formula"
+  },
+  {
+    "name": "claude-code",
+    "type": "cask"
+  },
+  {
+    "name": "cmake",
+    "type": "formula"
   },
   {
     "name": "dosfstools",
-    "description": "Tools to create, check and label file systems of the FAT family",
-    "type": "formula"
-  },
-  {
-    "name": "dtc",
-    "description": "Device tree compiler",
     "type": "formula"
   },
   {
     "name": "duf",
-    "description": "Disk Usage/Free Utility - a better 'df' alternative",
-    "type": "formula"
-  },
-  {
-    "name": "fmt",
-    "description": "Open-source formatting library for C++",
     "type": "formula"
   },
   {
     "name": "font-ibm-plex-mono",
-    "description": null,
     "type": "cask"
   },
   {
-    "name": "gettext",
-    "description": "GNU internationalization (i18n) and localization (l10n) library",
-    "type": "formula",
-    "dependencies": [
-      "libunistring"
-    ]
+    "name": "gh",
+    "type": "formula"
   },
   {
     "name": "ghostty",
-    "description": "Terminal emulator that uses platform-native UI and GPU acceleration",
     "type": "cask"
   },
   {
     "name": "git-delta",
-    "description": "Syntax-highlighting pager for git and diff output",
-    "type": "formula",
-    "dependencies": [
-      "libgit2",
-      "oniguruma"
-    ]
-  },
-  {
-    "name": "glib",
-    "description": "Core application library for C",
-    "type": "formula",
-    "dependencies": [
-      "pcre2",
-      "gettext"
-    ]
-  },
-  {
-    "name": "gmp",
-    "description": "GNU multiple precision arithmetic library",
     "type": "formula"
   },
   {
-    "name": "gnutls",
-    "description": "GNU Transport Layer Security (TLS) Library",
-    "type": "formula",
-    "dependencies": [
-      "ca-certificates",
-      "gmp",
-      "libidn2",
-      "libtasn1",
-      "libunistring",
-      "nettle",
-      "p11-kit",
-      "unbound",
-      "gettext"
-    ]
-  },
-  {
     "name": "go",
-    "description": "Open source programming language to build simple/reliable/efficient software",
     "type": "formula"
   },
   {
     "name": "hammerspoon",
-    "description": "Desktop automation application",
     "type": "cask"
   },
   {
-    "name": "hiredis",
-    "description": "Minimalistic client for Redis",
-    "type": "formula",
-    "dependencies": [
-      "openssl@3"
-    ]
-  },
-  {
-    "name": "icu4c@78",
-    "description": "C/C++ and Java libraries for Unicode and globalization",
-    "type": "formula"
-  },
-  {
-    "name": "jpeg-turbo",
-    "description": "JPEG image codec that aids compression and decompression",
-    "type": "formula"
-  },
-  {
-    "name": "libevent",
-    "description": "Asynchronous event library",
-    "type": "formula",
-    "dependencies": [
-      "openssl@3"
-    ]
-  },
-  {
-    "name": "libgit2",
-    "description": "C library of Git core methods that is re-entrant and linkable",
-    "type": "formula",
-    "dependencies": [
-      "libssh2"
-    ]
-  },
-  {
-    "name": "libidn2",
-    "description": "International domain name library (IDNA2008, Punycode and TR46)",
-    "type": "formula",
-    "dependencies": [
-      "libunistring",
-      "gettext"
-    ]
-  },
-  {
-    "name": "libnghttp2",
-    "description": "HTTP/2 C Library",
-    "type": "formula"
-  },
-  {
-    "name": "libnghttp3",
-    "description": "HTTP/3 library written in C",
-    "type": "formula"
-  },
-  {
-    "name": "libngtcp2",
-    "description": "IETF QUIC protocol implementation",
-    "type": "formula",
-    "dependencies": [
-      "openssl@3"
-    ]
-  },
-  {
-    "name": "libpng",
-    "description": "Library for manipulating PNG images",
-    "type": "formula"
-  },
-  {
-    "name": "libslirp",
-    "description": "General purpose TCP-IP emulator",
-    "type": "formula",
-    "dependencies": [
-      "glib"
-    ]
-  },
-  {
-    "name": "libssh",
-    "description": "C library SSHv1/SSHv2 client and server protocols",
-    "type": "formula",
-    "dependencies": [
-      "openssl@3"
-    ]
-  },
-  {
-    "name": "libssh2",
-    "description": "C library implementing the SSH2 protocol",
-    "type": "formula",
-    "dependencies": [
-      "openssl@3"
-    ]
-  },
-  {
-    "name": "libtasn1",
-    "description": "ASN.1 structure parser library",
-    "type": "formula"
-  },
-  {
-    "name": "libunistring",
-    "description": "C string library for manipulating Unicode strings",
-    "type": "formula"
-  },
-  {
-    "name": "libusb",
-    "description": "Library for USB device access",
-    "type": "formula"
-  },
-  {
-    "name": "libuv",
-    "description": "Multi-platform support library with a focus on asynchronous I/O",
-    "type": "formula"
-  },
-  {
     "name": "lld",
-    "description": "LLVM Project Linker",
-    "type": "formula",
-    "dependencies": [
-      "llvm",
-      "zstd"
-    ]
+    "type": "formula"
   },
   {
     "name": "llvm",
-    "description": "Next-gen compiler infrastructure",
-    "type": "formula",
-    "dependencies": [
-      "python@3.14",
-      "xz",
-      "z3",
-      "zstd"
-    ]
-  },
-  {
-    "name": "llvm@18",
-    "description": "Next-gen compiler infrastructure",
-    "type": "formula",
-    "dependencies": [
-      "zstd"
-    ]
+    "type": "formula"
   },
   {
     "name": "lua",
-    "description": "Powerful, lightweight programming language",
-    "type": "formula"
-  },
-  {
-    "name": "lz4",
-    "description": "Extremely Fast Compression algorithm",
-    "type": "formula"
-  },
-  {
-    "name": "lzo",
-    "description": "Real-time data compression library",
     "type": "formula"
   },
   {
     "name": "make",
-    "description": "Utility for directing compilation",
     "type": "formula"
   },
   {
     "name": "micro",
-    "description": "Modern and intuitive terminal-based text editor",
     "type": "formula"
   },
   {
-    "name": "mpdecimal",
-    "description": "Library for decimal floating point arithmetic",
+    "name": "ninja",
     "type": "formula"
-  },
-  {
-    "name": "ncurses",
-    "description": "Text-based UI library",
-    "type": "formula"
-  },
-  {
-    "name": "nettle",
-    "description": "Low-level cryptographic library",
-    "type": "formula",
-    "dependencies": [
-      "gmp"
-    ]
   },
   {
     "name": "node",
-    "description": "Open-source, cross-platform JavaScript runtime environment",
-    "type": "formula",
-    "dependencies": [
-      "brotli",
-      "c-ares",
-      "icu4c@78",
-      "libnghttp2",
-      "libnghttp3",
-      "libngtcp2",
-      "libuv",
-      "openssl@3",
-      "simdjson",
-      "sqlite",
-      "uvwasi",
-      "zstd"
-    ]
-  },
-  {
-    "name": "oniguruma",
-    "description": "Regular expressions library",
-    "type": "formula"
-  },
-  {
-    "name": "openssl@3",
-    "description": "Cryptography and SSL/TLS Toolkit",
-    "type": "formula",
-    "dependencies": [
-      "ca-certificates"
-    ]
-  },
-  {
-    "name": "p11-kit",
-    "description": "Library to load and enumerate PKCS#11 modules",
-    "type": "formula",
-    "dependencies": [
-      "ca-certificates",
-      "libtasn1"
-    ]
-  },
-  {
-    "name": "pcre2",
-    "description": "Perl compatible regular expressions library with a new API",
     "type": "formula"
   },
   {
     "name": "pipx",
-    "description": "Execute binaries from Python packages in isolated environments",
-    "type": "formula",
-    "dependencies": [
-      "python@3.14"
-    ]
-  },
-  {
-    "name": "pixman",
-    "description": "Low-level library for pixel manipulation",
     "type": "formula"
   },
   {
-    "name": "python@3.12",
-    "description": "Interpreted, interactive, object-oriented programming language",
-    "type": "formula",
-    "dependencies": [
-      "mpdecimal",
-      "openssl@3",
-      "sqlite",
-      "xz"
-    ]
-  },
-  {
-    "name": "python@3.13",
-    "description": "Interpreted, interactive, object-oriented programming language",
-    "type": "formula",
-    "dependencies": [
-      "mpdecimal",
-      "openssl@3",
-      "sqlite",
-      "xz"
-    ]
-  },
-  {
     "name": "python@3.14",
-    "description": "Interpreted, interactive, object-oriented programming language",
-    "type": "formula",
-    "dependencies": [
-      "mpdecimal",
-      "openssl@3",
-      "sqlite",
-      "xz",
-      "zstd"
-    ]
+    "type": "formula"
   },
   {
     "name": "qemu",
-    "description": "Generic machine emulator and virtualizer",
-    "type": "formula",
-    "dependencies": [
-      "capstone",
-      "dtc",
-      "glib",
-      "gnutls",
-      "jpeg-turbo",
-      "libpng",
-      "libslirp",
-      "libssh",
-      "libusb",
-      "lzo",
-      "ncurses",
-      "pixman",
-      "snappy",
-      "vde",
-      "zstd"
-    ]
-  },
-  {
-    "name": "readline",
-    "description": "Library for command-line editing",
     "type": "formula"
   },
   {
     "name": "shellcheck",
-    "description": "Static analysis and lint tool, for (ba)sh scripts",
-    "type": "formula",
-    "dependencies": [
-      "gmp"
-    ]
+    "type": "formula"
   },
   {
     "name": "signal",
-    "description": "Instant messaging application focusing on security",
     "type": "cask"
-  },
-  {
-    "name": "simdjson",
-    "description": "SIMD-accelerated C++ JSON parser",
-    "type": "formula"
-  },
-  {
-    "name": "snappy",
-    "description": "Compression/decompression library aiming for high speed",
-    "type": "formula"
-  },
-  {
-    "name": "spotify",
-    "description": "Music streaming service",
-    "type": "cask"
-  },
-  {
-    "name": "sqlite",
-    "description": "Command-line interface for SQLite",
-    "type": "formula",
-    "dependencies": [
-      "readline"
-    ]
-  },
-  {
-    "name": "unbound",
-    "description": "Validating, recursive, caching DNS resolver",
-    "type": "formula",
-    "dependencies": [
-      "libevent",
-      "libnghttp2",
-      "openssl@3"
-    ]
   },
   {
     "name": "unnaturalscrollwheels",
-    "description": "Tool to invert scroll direction for physical scroll wheels",
     "type": "cask"
-  },
-  {
-    "name": "uvwasi",
-    "description": "WASI syscall API built atop libuv",
-    "type": "formula",
-    "dependencies": [
-      "libuv"
-    ]
-  },
-  {
-    "name": "vde",
-    "description": "Ethernet compliant virtual network",
-    "type": "formula"
   },
   {
     "name": "visual-studio-code",
-    "description": "Open-source code editor",
     "type": "cask"
   },
   {
-    "name": "wabt",
-    "description": "Web Assembly Binary Toolkit",
-    "type": "formula",
-    "dependencies": [
-      "openssl@3"
-    ]
-  },
-  {
-    "name": "xxhash",
-    "description": "Extremely fast non-cryptographic hash algorithm",
-    "type": "formula"
-  },
-  {
-    "name": "xz",
-    "description": "General-purpose data compression with high compression ratio",
-    "type": "formula"
-  },
-  {
-    "name": "z3",
-    "description": "High-performance theorem prover",
-    "type": "formula"
-  },
-  {
     "name": "zed",
-    "description": "Multiplayer code editor",
     "type": "cask"
   },
   {
     "name": "zoom",
-    "description": "Video communication and virtual meeting platform",
     "type": "cask"
-  },
-  {
-    "name": "zstd",
-    "description": "Zstandard is a real-time compression algorithm",
-    "type": "formula",
-    "dependencies": [
-      "lz4",
-      "xz"
-    ]
   }
 ]

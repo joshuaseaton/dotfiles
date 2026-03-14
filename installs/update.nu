@@ -25,29 +25,25 @@ match $nu.os-info.name {
 log info "Updating Homebrew casks and formulae..."
 
 if (which brew | is-not-empty) {
-    let brew_installed_before = brew installed
     ^brew update
-    let brew_installed_after = brew installed
-
-    $brew_installed_before |
-        join $brew_installed_after name |
-        select name version version_ |
-        each { |pkg|
-            if $pkg.version != $pkg.version_ {
-                log info $"Homebrew: updated ($pkg.name): ($pkg.version) -> ($pkg.version_)"
-            }
-        }
-
-    # Homebrew doesn't allow installation by version, so capturing a given version
-    # in brew.json is not practical.
-    let brew_json = ([$nu.os-info.name brew.json] | path join)
-    $brew_installed_after | reject version | to json | save --force $brew_json
 
     # Upgrade and tidy anything outdated.
     if (^brew outdated | complete | get stdout | is-not-empty) {
         ^brew upgrade
     }
     ^brew cleanup
+
+    # Dump back to brew.json: preserve already-tracked entries and add any new
+    # leaves (top-level installs that nothing else depends on). This allows us
+    # track things that we explicitly want that are dependencies of other
+    # tracked packages/formulae.
+    let brew_json = ([$nu.os-info.name brew.json] | path join)
+    let existing = open $brew_json | get name
+    let leaves = ^brew leaves | lines
+    brew installed
+        | where ($it.name in $existing) or ($it.name in $leaves)
+        | to json
+        | save --force $brew_json
 }
 
 # Rust
