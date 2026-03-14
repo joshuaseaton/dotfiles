@@ -30,14 +30,12 @@ if (which brew | is-not-empty) {
 }
 
 # Cargo installations.
-let cargo_installed = cargo installed |
-    each {|crate| {$crate.name: $crate.version}} |
-    reduce {|crate, record| $record | merge $crate }
+let cargo_installed = cargo installed | get name
 open cargo.json |
-    where ($cargo_installed | get --optional $it.name) != $it.version |
+    where not ($it in $cargo_installed) |
     each {|crate|
-        log info $"Installing crate: ($crate.name)@($crate.version)"
-        ^cargo install --locked --version $crate.version $crate.name
+        log info $"Installing crate: ($crate)"
+        ^cargo install --locked $crate
     }
 
 # Go binaries.

@@ -66,7 +66,7 @@ if $rustc_version_after == $rustc_version_before {
     ^cargo install-update --force --locked --all
 }
 
-cargo installed | reject binaries | to json | save --force cargo.json
+cargo installed | get name | to json | save --force cargo.json
 
 # Update Go binaries after OS-specific updates, so that an updated version of Go
 # can result in installations being recompiled.
