@@ -18,7 +18,6 @@ log info "Updating VSCode extensions..."
 ^code --update-extensions
 
 vscode installed-extensions
-    | get name
     | each {
         |ext|
         if $ext in $BLACKLIST {

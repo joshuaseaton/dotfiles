@@ -1,8 +1,4 @@
-# Returns a table of the installed extensions and their current versions.
+# Returns the installed extensions as a sorted list of names.
 export def installed-extensions [] {
-    open ([$env.HOME .vscode extensions extensions.json] | path join) |
-        flatten identifier |
-        select id version |
-        rename name |
-        sort-by name
+    ^code --list-extensions | lines | sort
 }
