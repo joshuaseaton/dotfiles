@@ -2,13 +2,11 @@
   {
     "name": "gopls",
     "module": "golang.org/x/tools/gopls",
-    "path": "golang.org/x/tools/gopls",
-    "version": "v0.21.0"
+    "path": "golang.org/x/tools/gopls"
   },
   {
     "name": "staticcheck",
     "module": "honnef.co/go/tools",
-    "path": "honnef.co/go/tools/cmd/staticcheck",
-    "version": "v0.6.1"
+    "path": "honnef.co/go/tools/cmd/staticcheck"
   }
 ]

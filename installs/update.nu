@@ -86,7 +86,7 @@ go installed |
         }
     }
 
-go installed | to json | save --force go.json
+go installed | select name module path | to json | save --force go.json
 
 # Ditto for Python and pipx packages
 log info "Updating pipx installations..."

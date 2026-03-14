@@ -42,9 +42,10 @@ open cargo.json |
 open go.json |
     each { |bin|
         let local = [$env.GOBIN $bin.name] | path join
-        if not ($local | path exists) or ((go build-info $local | get main.version) != $bin.version) {
-            log info $"Installing ($bin.name) \(($bin.path)@($bin.version)\)..."
-            ^go install $"($bin.path)@($bin.version)"
+        if not ($local | path exists) {
+            let latest = go latest-stable-version $bin.module
+            log info $"Installing ($bin.name) \(($bin.path)@($latest)\)..."
+            ^go install $"($bin.path)@($latest)"
         }
     }
 
