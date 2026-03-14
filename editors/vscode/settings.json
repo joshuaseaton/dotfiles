@@ -81,6 +81,7 @@
     "--allow", "clippy::must-use-candidate",
     "--allow", "clippy::too_many_lines"
   ],
+  "rust-analyzer.completion.autoimport.enable": true,
   "rust-analyzer.lens.implementations.enable": false,
   // Disable graph visualization of incoming/outgoing changes. This feature
   // does not work well on repos with deep and complex histories. If left
