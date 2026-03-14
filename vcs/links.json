@@ -1,0 +1,10 @@
+[
+  {
+    "source": "git/config",
+    "target": ".config/git/config"
+  },
+  {
+    "source": "jj/config.toml",
+    "target": ".config/jj/config.toml"
+  }
+]

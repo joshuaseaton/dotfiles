@@ -1,0 +1,11 @@
+  [user]
+  name = "Joshua Seaton"
+  email = "josh.a.seaton@gmail.com"
+
+  [ui]
+  default-command = "status"
+  diff.tool = ["delta"]
+  pager = "delta"
+
+  [diff]
+  context = 10

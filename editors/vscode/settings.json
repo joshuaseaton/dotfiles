@@ -25,6 +25,7 @@
     "editor.formatOnSave": false
   },
   "clangd.arguments": [ "-header-insertion=never" ],
+  "claudeCode.preferredLocation": "panel",
   "diffEditor.ignoreTrimWhitespace": false,
   "editor.accessibilitySupport": "off",
   "editor.autoClosingBrackets": "beforeWhitespace",
@@ -41,7 +42,13 @@
   "editor.fontFamily": "IBM Plex Mono Light",
   "editor.formatOnSave": true,
   "editor.inlayHints.enabled": "off",
+  // Enable the "Ghost Text" style for the AI
+  "editor.inlineSuggest.enabled": true,
+  // Recommended: Prevent the AI and rust-analyzer from fighting
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+
   "editor.mouseWheelScrollSensitivity": 3,
+  "editor.quickSuggestsions": "true",
   "editor.renderWhitespace": "boundary",
   "editor.rulers": [ 80 ],
   "editor.showDeprecated": false,
@@ -119,5 +126,6 @@
   "window.newWindowDimensions": "maximized",
   "window.zoomLevel": 1,
   "workbench.editor.enablePreview": false,
-  "workbench.editor.highlightModifiedTabs": true
+  "workbench.editor.highlightModifiedTabs": true,
+  "extensions.ignoreRecommendations": true
 }
