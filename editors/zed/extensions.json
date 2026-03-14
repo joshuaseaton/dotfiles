@@ -8,7 +8,7 @@
   {
     "id": "just",
     "name": "Justfile",
-    "description": "Justfile syntax highlighting",
+    "description": "Justfile language support",
     "repository": "https://github.com/jackTabsCode/zed-just"
   },
   {
@@ -27,7 +27,7 @@
     "id": "toml",
     "name": "TOML",
     "description": "TOML support.",
-    "repository": "https://github.com/zed-industries/zed"
+    "repository": "https://github.com/zed-extensions/toml"
   },
   {
     "id": "vscode-dark-modern",
