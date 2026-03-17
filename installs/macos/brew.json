@@ -84,6 +84,10 @@
     "type": "formula"
   },
   {
+    "name": "python@3.13",
+    "type": "formula"
+  },
+  {
     "name": "python@3.14",
     "type": "formula"
   },
