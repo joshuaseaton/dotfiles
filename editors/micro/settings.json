@@ -1,11 +1,12 @@
 {
-    "autosu": true,
-    "colorscheme": "zenburn",
-    "ft:json": {
-        "eofnewline": false
-    },
-    "hltrailingws": true,
-    "scrollbar": true,
-    "scrollbarchar": " ",
-    "tabstospaces": true
+  "autosu": true,
+  "colorscheme": "zenburn",
+  "ft:json": {
+    "eofnewline": false
+  },
+  "hltrailingws": true,
+  "mkparents": true,
+  "scrollbar": true,
+  "scrollbarchar": " ",
+  "tabstospaces": true
 }
