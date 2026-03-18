@@ -1,5 +1,8 @@
 # See https://alacritty.org/config-alacritty.html
 
+[env]
+COLORTERM = "truecolor"
+
 [font]
 normal = { family = "IBM Plex Mono", style = "Light" }
 size = 14
