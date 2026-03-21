@@ -52,6 +52,10 @@
     "type": "cask"
   },
   {
+    "name": "launchie",
+    "type": "cask"
+  },
+  {
     "name": "lld",
     "type": "formula"
   },

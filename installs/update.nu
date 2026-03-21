@@ -41,7 +41,7 @@ if (which brew | is-not-empty) {
     let existing = open $brew_json | get name
     let leaves = ^brew leaves | lines
     brew installed
-        | where ($it.name in $existing) or ($it.name in $leaves)
+        | where ($it.name in $existing) or ($it.name in $leaves) or ($it.type == cask)
         | to json
         | save --force $brew_json
 }
