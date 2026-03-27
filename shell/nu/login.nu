@@ -1,6 +1,9 @@
 # Reattaches to the last detached zellij session, if available.
 def zellij_start [] {
-    let sessions = ^zellij list-sessions --short | lines
+    let sessions = ^zellij list-sessions --short
+        | complete
+        | get stdout
+        | lines
     if ($sessions | is-empty) {
         ^zellij
     } else {
