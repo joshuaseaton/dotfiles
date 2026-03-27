@@ -125,6 +125,7 @@
   "terminal.integrated.suggest.quickSuggestions": false,
   "window.newWindowDimensions": "maximized",
   "window.zoomLevel": 1,
+  "workbench.colorTheme": "Default Dark Modern",
   "workbench.editor.enablePreview": false,
   "workbench.editor.highlightModifiedTabs": true,
   "extensions.ignoreRecommendations": true
