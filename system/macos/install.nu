@@ -45,16 +45,17 @@ defaults write --verbose com.apple.symbolichotkeys AppleSymbolicHotKeys."64".val
 /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
 
 [
-    # Launchpad: space + cmd
+    # "Show apps" via Spotlight: disabled
     #
-    # Launchpad is so much nicer than Spotlight, which binds space + cmd by
-    # default.
+    # They killed Launchpad in Tahoe! So we rely on a third-party app for a
+    # substitute and bind it to cmd + space, which is the default binding for
+    # "Show apps".
     {
         id: 160,
         parameters: [
-            0x20, # ASCII output: space
-            0x31, # primary key: spacebar
-            0x100000, # modfier: cmd
+            0xffff, # ASCII output: none
+            0xffff, # primary key: none
+            0x0, # modfier: none
         ],
     },
     # Move left a desktop space: left + ctrl + cmd
