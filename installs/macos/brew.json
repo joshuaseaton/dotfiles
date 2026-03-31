@@ -118,9 +118,5 @@
   {
     "name": "zed",
     "type": "cask"
-  },
-  {
-    "name": "zoom",
-    "type": "cask"
   }
 ]
