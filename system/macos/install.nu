@@ -40,8 +40,8 @@ defaults write --verbose com.apple.AppleMultitouchTrackpad ForceSuppressed true
 # the keybinding for Spotlight. Trial and error reveals that we first need to
 # unregister the Spotlight keybinding and commit it before we can register the
 # Launchpad keybinding.
-defaults write --verbose com.apple.symbolichotkeys AppleSymbolicHotKeys."64".enabled false
-defaults write --verbose com.apple.symbolichotkeys AppleSymbolicHotKeys."64".value.parameters [65535 65535 0]
+defaults write --verbose --force com.apple.symbolichotkeys AppleSymbolicHotKeys."64".enabled false
+defaults write --verbose --force com.apple.symbolichotkeys AppleSymbolicHotKeys."64".value.parameters [65535 65535 0]
 /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
 
 [
@@ -84,13 +84,13 @@ defaults write --verbose com.apple.symbolichotkeys AppleSymbolicHotKeys."64".val
     },
 ] | each { |key|
     (
-        defaults write --verbose
+        defaults write --verbose --force
             com.apple.symbolichotkeys
             ([AppleSymbolicHotKeys, $"($key.id)", enabled] | into cell-path)
             true
     )
     (
-        defaults write --verbose
+        defaults write --verbose --force
         com.apple.symbolichotkeys
         ([AppleSymbolicHotKeys, $"($key.id)", value parameters] | into cell-path)
         $key.parameters
