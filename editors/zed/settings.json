@@ -9,14 +9,12 @@
     "vscode-dark-modern": true
   },
   "autosave": "on_focus_change",
-  "buffer_font_family": "IBM Plex Mono Light",
+  "buffer_font_family": "Cascadia Code",
   "buffer_font_size": 16,
+  "buffer_font_weight": 300,
   "cursor_blink": false,
   "preview_tabs": {
     "enabled": false
-  },
-  "features": {
-    "copilot": false
   },
   "file_types": {
     "Git Config": [ "**/.gitconfig", "**/git/config" ],
@@ -44,6 +42,11 @@
     }
   },
   "theme": "VSCode Dark Modern",
+  "theme_overrides": {
+    "VSCode Dark Modern": {
+      "terminal.ansi.white": "#eeeeeeff"
+    }
+  },
   "ui_font_size": 16,
   "wrap_guides": [80]
 }

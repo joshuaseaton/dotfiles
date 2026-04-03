@@ -1,8 +1,10 @@
 # See https://ghostty.org/docs/config/reference
 
 # --- Font ---
-font-family = "IBM Plex Mono"
-font-size = 14
+font-family = "Cascadia Code"
+font-size = 15
+font-style = Light
+font-style-bold = Regular
 
 # --- Window ---
 background = 181818

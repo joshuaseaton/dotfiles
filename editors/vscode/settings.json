@@ -39,8 +39,11 @@
     "source.fixAll": "explicit"
   },
   "editor.cursorBlinking": "solid",
-  "editor.fontFamily": "IBM Plex Mono Light",
+  "editor.fontFamily": "Cascadia Code",
+  "editor.fontLigatures": true,
+  "editor.fontWeight": "300",
   "editor.formatOnSave": true,
+  "extensions.ignoreRecommendations": true,
   "editor.inlayHints.enabled": "off",
   // Enable the "Ghost Text" style for the AI
   "editor.inlineSuggest.enabled": true,
@@ -120,6 +123,8 @@
       "path": "${env:HOME}/.cargo/bin/nu"
     }
   },
+  "terminal.integrated.fontFamily": "Cascadia Code",
+  "terminal.integrated.fontWeight": "300",
   "terminal.integrated.shellIntegration.enabled": false,
   "terminal.integrated.stickyScroll.enabled": false,
   "terminal.integrated.suggest.quickSuggestions": false,
@@ -128,5 +133,7 @@
   "workbench.colorTheme": "Default Dark Modern",
   "workbench.editor.enablePreview": false,
   "workbench.editor.highlightModifiedTabs": true,
-  "extensions.ignoreRecommendations": true
+  "workbench.colorCustomizations": {
+    "terminal.ansiWhite": "#eeeeee"
+  }
 }
