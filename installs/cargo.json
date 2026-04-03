@@ -5,6 +5,7 @@
   "cargo-bloat",
   "cargo-expand",
   "cargo-update",
+  "fd-find",
   "jj-cli",
   "just",
   "nu",
