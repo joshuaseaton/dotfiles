@@ -8,4 +8,4 @@ apt = "code"
 
 # Font of choice
 [[package]]
-apt = "fonts-ibm-plex"
+apt = "fonts-cascadia-code"

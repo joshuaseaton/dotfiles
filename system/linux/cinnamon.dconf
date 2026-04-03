@@ -27,3 +27,12 @@ switch-to-workspace-right=['<Super><Alt>Right']
 switch-to-workspace-up=['<Super><Alt>Down']
 toggle-maximized=['<Control><Alt>M']
 unmaximize=@as []
+
+[org/cinnamon/desktop/interface]
+font-name = 'Cascadia Code 9'
+
+[org/cinnamon/desktop/wm/preferences]
+titlebar-font = 'Cascadia Code 10'
+
+[org/nemo/desktop]
+font = 'Cascadia Code 10'
