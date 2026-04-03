@@ -4,7 +4,7 @@ hs.loadSpoon("EmmyLua")
 -- <Control><Alt>T: Launch a new Alacritty instance if none are running, or else
 -- focus an existing one.
 hs.hotkey.bind({ "ctrl", "alt" }, "T", function()
-    hs.application.launchOrFocus("alacritty")
+    hs.application.launchOrFocus("ghostty")
 end)
 
 -- <Control><Alt>B: Launch a new browser instance if none are running, or else

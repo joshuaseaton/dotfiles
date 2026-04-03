@@ -1,5 +1,5 @@
 [org/cinnamon/desktop/applications/terminal]
-exec='alacritty'
+exec='ghostty'
 
 [org/cinnamon/desktop/keybindings/media-keys]
 terminal=['<Control><Alt>T']
