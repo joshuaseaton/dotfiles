@@ -1,41 +1,52 @@
 const BLUE_PASTEL = "#b3d9ff"
+const CREAM = "#fff5e6" 
 const GREEN_PASTEL = "#b8e6b8"
 const PEACH_PASTEL = "#ffd1b3"
 const PINK_PASTEL = "#ffd1f0"
 const PURPLE_PASTEL = "#d1b3ff"
 const RED_PASTEL = "#ffb3b3"
+const SILVER_LIGHT = "#d0d0d0."
 const YELLOW_PASTEL = "#fff2b3"
 
 $env.config.color_config = {
-    # Settings commented out are defaults I don't know yet what to do with
-    # or haven't encountered.
+    # Commented-out settings show upstream defaults.
 
-    separator: white_bold
-    #leading_trailing_space_bg: { attr: n }
-    header: { fg: $PEACH_PASTEL, attr: "b" }
-    #empty: blue
-    bool: {fg: $GREEN_PASTEL, attr: "b"}
-    int: $BLUE_PASTEL
-    filesize: $BLUE_PASTEL
-    duration: $BLUE_PASTEL
-    datetime: $PINK_PASTEL
-    range: $YELLOW_PASTEL
-    float: $BLUE_PASTEL
-    string: $RED_PASTEL
-    #nothing: white
-    #binary: white
-    #cell-path: white
-    #row_index: green_bold
-    record: white
-    list: white
+    # Data/output colors
+
+    #binary: default
+    #binary_ascii_other: purple_bold
+    #binary_non_ascii: yellow_bold
+    #binary_null_char: { fg: "#6c6c6c" }
+    #binary_printable: cyan_bold
+    #binary_whitespace: green_bold
+    #block: default
+    bool: $GREEN_PASTEL
+    #cell-path: default
     closure: white
-    glob: white_bold
-    #block: white
+    datetime: $PINK_PASTEL
+    duration: $BLUE_PASTEL
+    #empty: blue
+    filesize: $BLUE_PASTEL
+    float: $BLUE_PASTEL
+    glob: white
+    header: $PEACH_PASTEL
     #hints: dark_gray
+    int: $BLUE_PASTEL
+    #leading_trailing_space_bg: { bg: "#808080" }
+    list: white
+    #nothing: default
+    range: $YELLOW_PASTEL
+    record: white
+    #row_index: green_bold
     search_result: { bg: "white", fg: "black", attr: "i" }
+    separator: white
+    string: $RED_PASTEL
+
+    # Syntax highlighting shapes
+
     #shape_binary: purple_bold
     shape_block: white
-    shape_bool: {fg: $GREEN_PASTEL, attr: "b"}
+    shape_bool: $GREEN_PASTEL
     shape_closure: white
     shape_custom: white
     shape_datetime: $RED_PASTEL
@@ -46,29 +57,29 @@ $env.config.color_config = {
     shape_filepath: white
     shape_flag: $YELLOW_PASTEL
     shape_float: $BLUE_PASTEL
-    shape_glob_interpolation: white_bold
-    shape_globpattern: white_bold
+    shape_garbage: { fg: "red", attr: "i" }
+    shape_glob_interpolation: white
+    shape_globpattern: white
     shape_int: $BLUE_PASTEL
-    shape_internalcall: white_bold
+    shape_internalcall: $SILVER_LIGHT
     shape_keyword: $YELLOW_PASTEL
     shape_list: white
     #shape_literal: blue
     shape_match_pattern: $PEACH_PASTEL
     #shape_matching_brackets: { attr: u }
     #shape_nothing: light_cyan
-    shape_operator: white_bold
-    shape_pipe: white_bold
+    shape_operator: $CREAM
+    shape_pipe: $CREAM
     shape_range: $YELLOW_PASTEL
+    #shape_raw_string: light_magenta_bold
     shape_record: white
-    shape_redirection: {fg: $PURPLE_PASTEL, attr: "b"}
+    shape_redirection: $PURPLE_PASTEL
     #shape_signature: green_bold
     shape_string: $RED_PASTEL
     #shape_string_interpolation: cyan_bold
     #shape_table: blue_bold
     shape_variable: $PURPLE_PASTEL
     shape_vardecl: $PURPLE_PASTEL
-    #shape_raw_string: light_purple
-    shape_garbage: {fg: "red", attr: "bi" }
 }
 $env.config.completions.algorithm = "fuzzy"
 $env.config.completions.sort = "smart"
@@ -129,7 +140,7 @@ def create_right_prompt [] {
         } else {
             $branch
         }
-        [(ansi reset) (ansi purple) $context] | str join
+        [(ansi reset) (ansi $PURPLE_PASTEL) $context] | str join
     }
 
     [$last_exit_code $git_context $time_segment] |
