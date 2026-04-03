@@ -128,6 +128,7 @@
   "terminal.integrated.fontWeight": "300",
   "terminal.integrated.fontSize": "13",
   "terminal.integrated.shellIntegration.enabled": false,
+  "terminal.integrated.shellIntegration.decorationsEnabled": "never",
   "terminal.integrated.stickyScroll.enabled": false,
   "terminal.integrated.suggest.quickSuggestions": false,
   "window.newWindowDimensions": "maximized",
