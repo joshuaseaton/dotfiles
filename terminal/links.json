@@ -22,5 +22,9 @@
   {
     "source": "zellij/config.kdl",
     "target": ".config/zellij/config.kdl"
+  },
+  {
+    "source": "zellij/themes/black-and-white.kdl",
+    "target": ".config/zellij/themes/black-and-white.kdl"
   }
 ]
