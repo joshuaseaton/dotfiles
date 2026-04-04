@@ -5,7 +5,6 @@ const PEACH_PASTEL = "#ffd1b3"
 const PINK_PASTEL = "#ffd1f0"
 const PURPLE_PASTEL = "#d1b3ff"
 const RED_PASTEL = "#ffb3b3"
-const SILVER_LIGHT = "#d0d0d0."
 const YELLOW_PASTEL = "#fff2b3"
 
 $env.config.color_config = {
@@ -50,24 +49,24 @@ $env.config.color_config = {
     shape_closure: white
     shape_custom: white
     shape_datetime: $RED_PASTEL
-    #shape_directory: cyan
+    shape_directory: white
     shape_external: white
-    shape_externalarg: $YELLOW_PASTEL
+    shape_externalarg: white
     #shape_external_resolved: light_yellow_bold
     shape_filepath: white
-    shape_flag: $YELLOW_PASTEL
+    shape_flag: white
     shape_float: $BLUE_PASTEL
     shape_garbage: { fg: "red", attr: "i" }
     shape_glob_interpolation: white
     shape_globpattern: white
     shape_int: $BLUE_PASTEL
-    shape_internalcall: $SILVER_LIGHT
+    shape_internalcall: {fg: white, attr: "u"}
     shape_keyword: $YELLOW_PASTEL
     shape_list: white
     #shape_literal: blue
     shape_match_pattern: $PEACH_PASTEL
     #shape_matching_brackets: { attr: u }
-    #shape_nothing: light_cyan
+    shape_nothing: {fg: white, attr: "i"}
     shape_operator: $CREAM
     shape_pipe: $CREAM
     shape_range: $YELLOW_PASTEL
