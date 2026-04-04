@@ -1,14 +1,14 @@
 color-link default "#ffffff,#000000"        # white on black
-color-link comment "#b8e6b8"                # pastel green
-color-link identifier "#ffd1f0"             # pastel pink
-color-link constant "#b3d9ff"               # pastel blue
-color-link constant.number "#b3d9ff"        # pastel blue
-color-link constant.string "#ffb3b3"        # pastel red
-color-link statement "#b3d9ff"              # pastel blue
-color-link symbol.operator "#ffffff"        # white
-color-link preproc "#d1b3ff"                # pastel purple
-color-link type "#ffd1b3"                   # peach pastel
-color-link special "#fff2b3"               # pastel yellow
+color-link comment "#b0b0b0"                # pastel gray
+color-link identifier "#b3d9ff"             # pastel blue
+color-link constant "#ffd1b3"               # peach pastel
+color-link constant.number "#ffd1b3"        # peach pastel
+color-link constant.string "#b8e6b8"        # pastel green
+color-link statement "#d1b3ff"              # pastel purple
+color-link symbol.operator "#b3e6e0"        # pastel aqua
+color-link preproc "#ffd1f0"                # pastel pink
+color-link type "#fff2b3"                   # pastel yellow
+color-link special "#ffb3b3"               # pastel red
 color-link underlined "#b3d9ff"             # pastel blue
 color-link error "bold #ffb3b3,#3c2020"     # pastel red on dark red
 color-link todo "bold #fff2b3,#000000"      # pastel yellow on black

@@ -1,0 +1,29 @@
+color-link default "#ffffff,#000000"        # white on black
+color-link comment "#969896"                # gray
+color-link identifier "#81a2be"             # blue
+color-link constant "#de935f"               # orange
+color-link constant.number "#c89191"        # warm rose
+color-link constant.string "#a8bf8a"        # green
+color-link statement "#b294bb"              # purple
+color-link symbol.operator "#8abeb7"        # aqua
+color-link preproc "#cc99a8"                # pink
+color-link type "#f0c674"                   # yellow
+color-link special "#cc6666"               # red
+color-link underlined "#81a2be"             # blue
+color-link error "bold #cc6666,#3c2020"     # red on dark red
+color-link todo "bold #f0c674,#000000"      # yellow on black
+color-link statusline "#ffffff,#000000"     # white on black
+color-link tabbar "#ffffff,#000000"         # white on black
+color-link indent-char "#2e2e2e,#000000"    # dark gray
+color-link line-number "#4a4a4a,#000000"    # gray
+color-link current-line-number "#ffffff,#000000" # white
+color-link diff-added "#a8bf8a"             # green
+color-link diff-modified "#f0c674"          # yellow
+color-link diff-deleted "#cc6666"           # red
+color-link gutter-error "#cc6666,#000000"   # red
+color-link gutter-warning "#f0c674,#000000" # yellow
+color-link cursor-line "#1a1a1a"            # near-black
+color-link color-column "#1a1a1a"           # near-black
+color-link match "#000000,#ffffff"          # black on white
+color-link selection "#2a2a3a"              # dark blue-gray
+color-link hltrailingws ",#3c2020"          # dark red background
