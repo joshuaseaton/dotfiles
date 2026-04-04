@@ -88,8 +88,10 @@ keybind = shift+enter=text:\n
 # Ctrl + N: open new Ghostty instance.
 keybind = ctrl+n=new_window
 
-# By default ghostty binds shift+home/end to adjust_selection, consuming the
-# keys before they reach the terminal app (e.g., micro). The performable: prefix
-# forwards the keys unless a native ghostty selection is active.
+# ghostty consumes these keypresses for its own actions, so we need to redefine
+# how we want them to be passed through to terminal programs with "performable",
+# which forwards the keys if a native ghostty selection is not active.
 keybind = performable:shift+home=adjust_selection:home
 keybind = performable:shift+end=adjust_selection:end
+keybind = performable:alt+left=goto_split:left
+keybind = performable:alt+right=goto_split:right
