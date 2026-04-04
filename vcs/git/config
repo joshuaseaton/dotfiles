@@ -8,6 +8,29 @@
 	# Sort branches by most recently used, instead of alphabetically.
 	sort = -committerdate
 
+#
+# Pastel versions of the default colors:
+# - Red pastel: #ffb3b3
+# - Green pastel: #b8e6b8
+# - Blue pastel: #b3d9ff
+# - Yellow pastel: #fff2b3
+# - Purple pastel: #d1b3ff
+#
+
+[color "diff"]
+    commit = "#fff2b3" 
+    
+[color "decorate"]
+    branch = "#b3d9ff"
+    remoteBranch = "#ffb3b3"
+    tag = "#d1b3ff"
+    HEAD = "#b2f2bb" # Green pastel
+
+[color "status"]
+	added = "#b8e6b8" # Green pastel
+	changed = "#ffb3b3" # Red pastel
+	untracked = "#ffb3b3" # Red pastel
+
 [commit]
 	# Show the diff when editing a commit message.
 	verbose = true
