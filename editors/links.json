@@ -6,7 +6,11 @@
   {
     "source": "micro/bindings.json",
     "target": ".config/micro/bindings.json"
-},
+  },
+  {
+    "source": "micro/colorschemes/pastel-dark.micro",
+    "target": ".config/micro/colorschemes/pastel-dark.micro"
+  },
   {
     "source": "vscode/keybindings.json",
     "target": ".config/Code/User/keybindings.json",

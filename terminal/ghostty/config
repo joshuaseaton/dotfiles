@@ -61,13 +61,25 @@ command = .cargo/bin/nu --login --commands zellij_start
 
 macos-option-as-alt = true
 
-# Cmd + Left on macOS: home (Ctrl+A).
-keybind = cmd+left=text:\x01
+# Cmd + Left on macOS: Home.
+keybind = cmd+left=text:\x1b[H
 
-# Cmd + Right on macOS: end (Ctrl+E).
-keybind = cmd+right=text:\x05
+# Cmd + Shift + Left on macOS: Shift+Home (select to start of line).
+keybind = cmd+shift+left=text:\x1b[1;2H
 
-# Cmd + S on macOS: reinterpreted as Ctrl + S.
+# Cmd + Right on macOS: End.
+keybind = cmd+right=text:\x1b[F
+
+# Cmd + Shift + Right on macOS: Shift+End (select to end of line).
+keybind = cmd+shift+right=text:\x1b[1;2F
+
+# Cmd + Z on macOS: Ctrl+Z (undo in micro, suspend in shell).
+keybind = cmd+z=text:\x1a
+
+# Cmd + Y on macOS: Ctrl+Y (redo in micro).
+keybind = cmd+y=text:\x19
+
+# Cmd + S on macOS: Ctrl+S (save in micro).
 keybind = cmd+s=text:\x13
 
 # Shift + Enter: newline without execution.
@@ -75,3 +87,9 @@ keybind = shift+enter=text:\n
 
 # Ctrl + N: open new Ghostty instance.
 keybind = ctrl+n=new_window
+
+# By default ghostty binds shift+home/end to adjust_selection, consuming the
+# keys before they reach the terminal app (e.g., micro). The performable: prefix
+# forwards the keys unless a native ghostty selection is active.
+keybind = performable:shift+home=adjust_selection:home
+keybind = performable:shift+end=adjust_selection:end

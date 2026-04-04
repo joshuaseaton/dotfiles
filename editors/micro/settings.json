@@ -1,12 +1,19 @@
 {
   "autosu": true,
-  "colorscheme": "zenburn",
+  "colorscheme": "pastel-dark",
+  "diffgutter": true,
   "ft:json": {
     "eofnewline": false
   },
   "hltrailingws": true,
   "mkparents": true,
+  "reload": "auto",
+  "rmtrailingws": true,
+  "savecursor": true,
+  "saveundo": true,
   "scrollbar": true,
   "scrollbarchar": " ",
+  "statusformatl": "$(filename) $(modified)$(overwrite)($(line),$(col)) $(status.paste)",
+  "statusformatr": "$(status.branch)",
   "tabstospaces": true
 }

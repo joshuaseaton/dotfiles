@@ -1,4 +1,3 @@
 {
-    "Alt-/": "lua:comment.comment",
-    "CtrlUnderscore": "lua:comment.comment"
+  "Alt-r": "command:reload"
 }
