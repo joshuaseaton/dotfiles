@@ -12,6 +12,7 @@ font-style = Light
 # Window
 #
 
+app-notifications = no-clipboard-copy
 background-blur = 3
 background-opacity = 0.8
 confirm-close-surface = false
