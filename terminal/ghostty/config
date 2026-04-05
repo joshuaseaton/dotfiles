@@ -16,10 +16,10 @@ app-notifications = no-clipboard-copy
 background-blur = 3
 background-opacity = 0.8
 confirm-close-surface = false
+macos-titlebar-style = hidden
 maximize = true
 mouse-hide-while-typing = true
 quit-after-last-window-closed=true
-window-padding-x = 16
 
 #
 # Colors
