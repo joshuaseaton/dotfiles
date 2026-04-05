@@ -20,6 +20,10 @@
     "target": ".config/yazi/yazi.toml"
   },
   {
+    "source": "yazi/theme.toml",
+    "target": ".config/yazi/theme.toml"
+  },
+  {
     "source": "zellij/config.kdl",
     "target": ".config/zellij/config.kdl"
   },

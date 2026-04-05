@@ -1,0 +1,230 @@
+# Tomorrow Night theme for yazi.
+#
+# Palette:
+#   background: #1d1f21
+#   foreground: #c5c8c6
+#   selection:  #373b41
+#   line:       #282a2e
+#   comment:    #969896
+#   red:        #cc6666
+#   orange:     #de935f
+#   yellow:     #f0c674
+#   green:      #b5bd68
+#   aqua:       #8abeb7
+#   blue:       #81a2be
+#   purple:     #b294bb
+
+"$schema" = "https://yazi-rs.github.io/schemas/theme.json"
+
+# : Manager {{{
+
+[mgr]
+cwd = { fg = "#8abeb7" }
+
+find_keyword  = { fg = "#f0c674", bold = true, italic = true, underline = true }
+find_position = { fg = "#b294bb", bg = "reset", bold = true, italic = true }
+
+symlink_target = { fg = "#969896", italic = true }
+
+marker_copied   = { fg = "#b5bd68", bg = "#b5bd68" }
+marker_cut      = { fg = "#cc6666", bg = "#cc6666" }
+marker_marked   = { fg = "#8abeb7", bg = "#8abeb7" }
+marker_selected = { fg = "#f0c674", bg = "#f0c674" }
+marker_symbol   = "│"
+
+count_copied   = { fg = "#1d1f21", bg = "#b5bd68" }
+count_cut      = { fg = "#1d1f21", bg = "#cc6666" }
+count_selected = { fg = "#1d1f21", bg = "#f0c674" }
+
+border_symbol = "│"
+border_style  = { fg = "#969896" }
+
+# : }}}
+
+
+# : Tabs {{{
+
+[tabs]
+active   = { fg = "#1d1f21", bg = "#81a2be", bold = true }
+inactive = { fg = "#81a2be", bg = "#282a2e" }
+
+sep_inner = { open = "", close = "" }
+sep_outer = { open = "", close = "" }
+
+# : }}}
+
+
+# : Mode {{{
+
+[mode]
+normal_main = { fg = "#1d1f21", bg = "#81a2be", bold = true }
+normal_alt  = { fg = "#81a2be", bg = "#282a2e" }
+
+select_main = { fg = "#1d1f21", bg = "#cc6666", bold = true }
+select_alt  = { fg = "#cc6666", bg = "#282a2e" }
+
+unset_main = { fg = "#1d1f21", bg = "#cc6666", bold = true }
+unset_alt  = { fg = "#cc6666", bg = "#282a2e" }
+
+# : }}}
+
+
+# : Indicator {{{
+
+[indicator]
+parent  = { reversed = true }
+current = { reversed = true }
+preview = { underline = true }
+padding = { open = "", close = "" }
+
+# : }}}
+
+
+# : Status bar {{{
+
+[status]
+overall   = {}
+sep_left  = { open = "", close = "" }
+sep_right = { open = "", close = "" }
+
+perm_sep   = { fg = "#373b41" }
+perm_type  = { fg = "#b5bd68" }
+perm_read  = { fg = "#f0c674" }
+perm_write = { fg = "#cc6666" }
+perm_exec  = { fg = "#8abeb7" }
+
+progress_label  = { bold = true }
+progress_normal = { fg = "#b5bd68", bg = "#1d1f21" }
+progress_error  = { fg = "#f0c674", bg = "#cc6666" }
+
+# : }}}
+
+
+# : Which {{{
+
+[which]
+cols            = 3
+mask            = { bg = "#1d1f21" }
+cand            = { fg = "#8abeb7" }
+rest            = { fg = "#969896" }
+desc            = { fg = "#b294bb" }
+separator       = "  "
+separator_style = { fg = "#373b41" }
+
+# : }}}
+
+
+# : Confirmation {{{
+
+[confirm]
+border     = { fg = "#81a2be" }
+title      = { fg = "#81a2be" }
+body       = {}
+list       = {}
+btn_yes    = { reversed = true }
+btn_no     = {}
+btn_labels = [ "  [Y]es  ", "  (N)o  " ]
+
+# : }}}
+
+
+# : Spotter {{{
+
+[spot]
+border = { fg = "#81a2be" }
+title  = { fg = "#81a2be" }
+
+tbl_col  = { fg = "#81a2be" }
+tbl_cell = { fg = "#f0c674", reversed = true }
+
+# : }}}
+
+
+# : Notification {{{
+
+[notify]
+title_info  = { fg = "#b5bd68" }
+title_warn  = { fg = "#f0c674" }
+title_error = { fg = "#cc6666" }
+
+icon_info  = ""
+icon_warn  = ""
+icon_error = ""
+
+# : }}}
+
+
+# : Picker {{{
+
+[pick]
+border   = { fg = "#81a2be" }
+active   = { fg = "#b294bb", bold = true }
+inactive = {}
+
+# : }}}
+
+
+# : Input {{{
+
+[input]
+border   = { fg = "#81a2be" }
+title    = {}
+value    = {}
+selected = { reversed = true }
+
+# : }}}
+
+
+# : Completion {{{
+
+[cmp]
+border   = { fg = "#81a2be" }
+active   = { reversed = true }
+inactive = {}
+
+icon_file    = ""
+icon_folder  = ""
+icon_command = ""
+
+# : }}}
+
+
+# : Task manager {{{
+
+[tasks]
+border  = { fg = "#81a2be" }
+title   = {}
+hovered = { fg = "#b294bb", bold = true }
+
+# : }}}
+
+
+# : Help menu {{{
+
+[help]
+on      = { fg = "#8abeb7" }
+run     = { fg = "#b294bb" }
+desc    = {}
+hovered = { reversed = true, bold = true }
+footer  = { fg = "#1d1f21", bg = "#c5c8c6" }
+
+# : }}}
+
+
+# : File-specific styles {{{
+
+[filetype]
+rules = [
+	{ mime = "image/*", fg = "#f0c674" },
+	{ mime = "{audio,video}/*", fg = "#b294bb" },
+	{ mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", fg = "#cc6666" },
+	{ mime = "application/{pdf,doc,rtf}", fg = "#8abeb7" },
+	{ mime = "vfs/{absent,stale}", fg = "#969896" },
+	{ url = "*", is = "orphan", bg = "#cc6666" },
+	{ url = "*", is = "exec", fg = "#c5c8c6" },
+	{ url = "*", is = "dummy", bg = "#cc6666" },
+	{ url = "*/", is = "dummy", bg = "#cc6666" },
+	{ url = "*/", fg = "#81a2be" },
+]
+
+# : }}}
