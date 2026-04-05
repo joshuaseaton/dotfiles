@@ -2,30 +2,58 @@
 
 keybinds clear-defaults=true {
     normal {
+        // Pane navigation
         bind "Alt left" { MoveFocus "left"; }
         bind "Alt right" { MoveFocus "right"; }
         bind "Alt down" { MoveFocus "down"; }
         bind "Alt up" { MoveFocus "up"; }
+
+        // Pane splitting
+        bind "Alt d" { NewPane "down"; }
+        bind "Alt r" { NewPane "right"; }
+
+        // Pane management
+        bind "Alt w" { CloseFocus; }
+        bind "Alt f" { ToggleFloatingPanes; }
+
+        // Resize
         bind "Alt +" { Resize "Increase"; }
         bind "Alt -" { Resize "Decrease"; }
-        bind "Alt n" { NewPane; }
+
+        // Tabs
+        bind "Alt t" { NewTab; }
+        bind "Alt 1" { GoToTab 1; }
+        bind "Alt 2" { GoToTab 2; }
+        bind "Alt 3" { GoToTab 3; }
+        bind "Alt 4" { GoToTab 4; }
+        bind "Alt [" { GoToPreviousTab; }
+        bind "Alt ]" { GoToNextTab; }
+
+        // Session
+        bind "Alt q" { Detach; }
     }
 }
-
-// Choose the theme that is specified in the themes section.
-// Default: default
-// 
-theme "black-and-white" // inlined below
  
 // Choose the path to the default shell that zellij will use for opening new panes
 // Default: $SHELL
 // 
 default_shell "nu"
+
+// Enable mouse hover visual effects, such as pane frame highlight and help
+// text when hovering over panes.
+// Default: true
+//
+mouse_hover_effects false
  
 // Whether to show tips on startup
 // Default: true
 // 
 show_startup_tips false
+
+// Choose the theme that is specified in the themes section.
+// Default: default
+// 
+theme "black-and-white" // inlined below
 
 // We inline the theme here since there appears to be a race condition in the
 // theme loading that causes the default theme sometimes to be loaded used

@@ -26,5 +26,9 @@
   {
     "source": "zellij/config.kdl",
     "target": ".config/zellij/config.kdl"
+  },
+  {
+    "source": "zellij/layouts/default.kdl",
+    "target": ".config/zellij/layouts/default.kdl"
   }
 ]
