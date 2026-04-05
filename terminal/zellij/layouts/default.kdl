@@ -1,9 +1,14 @@
 layout {
-    pane split_direction="vertical" {
-        pane command="yazi" size="30"
-        pane split_direction="horizontal" {
-            pane size="67%"
-            pane size="33%"
+    default_tab_template {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        pane split_direction="vertical" {
+            pane split_direction="horizontal" {
+                pane size="67%"
+                children
+            }
         }
     }
+    tab {}
 }
