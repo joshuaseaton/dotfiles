@@ -40,10 +40,6 @@
     "type": "cask"
   },
   {
-    "name": "git-delta",
-    "type": "formula"
-  },
-  {
     "name": "go",
     "type": "formula"
   },

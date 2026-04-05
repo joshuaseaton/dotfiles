@@ -222,6 +222,9 @@ $env.HOMEBREW_NO_ENV_HINTS = 1
 $env.MANPAGER = "bat"
 $env.PAGER = "bat" # jj uses this.
 
+ # bat uses less as a pager
+$env.LESS = "less --RAW-CONTROL-CHARS --quit-if-one-screen --no-init --mouse"
+
 # TODO: Remove this if/when --config ever gets a sane default.
 export def run [script: string, ...args: string] {
     if not ($script | path exists) {

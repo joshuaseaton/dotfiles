@@ -36,7 +36,7 @@
 	verbose = true
 
 [core]
-	pager = delta
+	pager = bat --paging=always --color=never
 
 [diff]
 	algorithm = histogram
@@ -46,13 +46,6 @@
 
 	# Give a more useful diff of submodules.
 	submodule = log
-
-[delta]
-	side-by-side = true
-	pager = less --RAW-CONTROL-CHARS --quit-if-one-screen --no-init --mouse
-
-[interactive]
-	diffFilter = delta --color-only
 
 [merge]
 	conflictStyle = zdiff3
