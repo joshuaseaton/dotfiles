@@ -39,7 +39,7 @@
 	verbose = true
 
 [core]
-	pager = bat --paging=always --color=never
+	pager = bat --paging=always --color=never --pager "'less --RAW-CONTROL-CHARS --quit-if-one-screen --no-init --mouse'"
 
 [diff]
 	algorithm = histogram
