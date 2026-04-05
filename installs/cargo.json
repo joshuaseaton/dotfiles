@@ -10,5 +10,8 @@
   "just",
   "nu",
   "ripgrep",
+  "yazi-build",
+  "yazi-cli",
+  "yazi-fm",
   "zellij"
 ]
