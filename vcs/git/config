@@ -19,6 +19,9 @@
 
 [color "diff"]
     commit = "#fff2b3" 
+	old = "#ffb3b3" # Red pastel
+	new = "#b8e6b8" # Green pastel
+	frag = "#b3d9ff" # Blue pastel
     
 [color "decorate"]
     branch = "#b3d9ff"
