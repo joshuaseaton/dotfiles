@@ -61,6 +61,10 @@
   "evenBetterToml.formatter.arrayTrailingComma": true,
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
+  "files.associations": {
+    "config": "plaintext",
+    "**/ghostty/config": "ghostty"
+  },
   "files.autoSave": "onFocusChange",
   "files.insertFinalNewline": true,
   "files.watcherExclude": {
