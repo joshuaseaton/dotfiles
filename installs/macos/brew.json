@@ -28,6 +28,10 @@
     "type": "formula"
   },
   {
+    "name": "flow-control",
+    "type": "formula"
+  },
+  {
     "name": "font-cascadia-code",
     "type": "cask"
   },

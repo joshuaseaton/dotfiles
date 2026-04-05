@@ -40,5 +40,9 @@
     "source": "zed/settings.json",
     "target": ".config/zed/settings.json",
     "os": "macos"
+  },
+  {
+    "source": "flow/config",
+    "target": ".config/flow/config"
   }
 ]
