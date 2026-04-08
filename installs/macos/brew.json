@@ -118,5 +118,9 @@
   {
     "name": "zed",
     "type": "cask"
+  },
+  {
+    "name": "zig",
+    "type": "formula"
   }
 ]
