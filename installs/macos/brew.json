@@ -36,6 +36,10 @@
     "type": "cask"
   },
   {
+    "name": "fzf",
+    "type": "formula"
+  },
+  {
     "name": "gh",
     "type": "formula"
   },

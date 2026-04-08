@@ -222,6 +222,10 @@ $env.HOMEBREW_NO_ENV_HINTS = 1
 $env.MANPAGER = "bat"
 $env.PAGER = "bat" # jj uses this.
 
+# fzf has no auto-detect mechanism for its config.
+$env.FZF_DEFAULT_OPTS_FILE = [$env.HOME .config fzf fzfrc] | path join
+$env.FZF_DEFAULT_COMMAND = "fd --type f --hidden --follow --exclude .git"
+
 # TODO: Remove this if/when --config ever gets a sane default.
 export def run [script: string, ...args: string] {
     if not ($script | path exists) {

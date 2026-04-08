@@ -8,6 +8,10 @@
     "target": ".config/bottom/bottom.toml"
   },
   {
+    "source": "fzf/fzfrc",
+    "target": ".config/fzf/fzfrc"
+  },
+  {
     "source": "ghostty/config",
     "target": ".config/ghostty/config"
   },
