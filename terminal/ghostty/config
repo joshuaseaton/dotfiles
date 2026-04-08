@@ -15,6 +15,7 @@ font-style = Light
 app-notifications = no-clipboard-copy
 background-blur = 3
 background-opacity = 0.8
+clipboard-read = allow
 confirm-close-surface = false
 macos-titlebar-style = hidden
 maximize = true
@@ -61,32 +62,38 @@ command = .cargo/bin/nu --login --commands zellij_start
 
 macos-option-as-alt = true
 
+# Remap each use of Cmd here with Ctrl:
+keybind = cmd+c=text:\x03
+keybind = cmd+p=text:\x1b[112;5u
+keybind = cmd+s=text:\x13
+keybind = cmd+y=text:\x19
+keybind = cmd+z=text:\x1a
+keybind = cmd+shift+p=text:\x1b[112;6u
+
 # Cmd + Left on macOS: Home.
 keybind = cmd+left=text:\x1b[H
-
-# Cmd + Shift + Left on macOS: Shift+Home (select to start of line).
-keybind = cmd+shift+left=text:\x1b[1;2H
 
 # Cmd + Right on macOS: End.
 keybind = cmd+right=text:\x1b[F
 
+# Cmd + Shift + Left on macOS: Shift+Home (select to start of line).
+keybind = cmd+shift+left=text:\x1b[1;2H
+
 # Cmd + Shift + Right on macOS: Shift+End (select to end of line).
 keybind = cmd+shift+right=text:\x1b[1;2F
 
-# Cmd + Z on macOS: Ctrl+Z (undo in micro, suspend in shell).
-keybind = cmd+z=text:\x1a
+# Ctrl + N: open new Ghostty instance.
+keybind = ctrl+n=new_window
 
-# Cmd + Y on macOS: Ctrl+Y (redo in micro).
-keybind = cmd+y=text:\x19
+# Ctrl + V: paste from system clipboard (bracketed paste), bypassing OSC 52
+# reads which Zellij doesn't forward.
+keybind = ctrl+v=paste_from_clipboard
 
-# Cmd + S on macOS: Ctrl+S (save in micro).
-keybind = cmd+s=text:\x13
+# Ctrl + Shift + P: unbind so that this can be used in Flow.
+keybind = ctrl+shift+p=unbind
 
 # Shift + Enter: newline without execution.
 keybind = shift+enter=text:\n
-
-# Ctrl + N: open new Ghostty instance.
-keybind = ctrl+n=new_window
 
 # ghostty consumes these keypresses for its own actions, so we need to redefine
 # how we want them to be passed through to terminal programs with "performable",
