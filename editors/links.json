@@ -44,5 +44,13 @@
   {
     "source": "flow/config",
     "target": ".config/flow/config"
+  },
+  {
+    "source": "flow/keys/flow.json",
+    "target": ".config/flow/keys/flow.json"
+  },
+  {
+    "source": "flow/lsp/rust-analyzer.json",
+    "target": ".config/flow/lsp/rust-analyzer.json"
   }
 ]

@@ -9,7 +9,7 @@
 # frame_rate 60
 # value type: positive integer
 
-theme "tomorrow-dark"
+theme "dark_modern"
 # default value: "ayu-mirage-bordered"
 # value type: quoted string
 
@@ -103,11 +103,15 @@ theme "tomorrow-dark"
 # idle_commands null
 # value type: list of quoted strings or null
 
-# enable_format_on_save false
+enable_format_on_save true
+# default value: false
 # value type: true or false
 
 # restore_last_cursor_position true
 # value type: true or false
+
+# restore_last_cursor_position_exclusions ["COMMIT_EDITMSG"]
+# value type: list of quoted strings
 
 # follow_cursor_on_buffer_switch false
 # value type: true or false
@@ -175,6 +179,9 @@ theme "tomorrow-dark"
 # show_local_diagnostics_in_panel false
 # value type: true or false
 
+# auto_open_panel_for_diagnostics true
+# value type: true or false
+
 # scrollbar_auto_hide true
 # value type: true or false
 
@@ -238,12 +245,10 @@ theme "tomorrow-dark"
 # centered_view false
 # value type: true or false
 
-centered_view_width 151
-# default value: 145
+# centered_view_width 145
 # value type: positive integer
 
-centered_view_min_screen_width 151
-# default value: 145
+# centered_view_min_screen_width 145
 # value type: positive integer
 
 # lsp_output "quiet"
