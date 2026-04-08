@@ -88,6 +88,10 @@
     "type": "formula"
   },
   {
+    "name": "prettier",
+    "type": "formula"
+  },
+  {
     "name": "python@3.13",
     "type": "formula"
   },
