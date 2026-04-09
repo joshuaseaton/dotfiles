@@ -222,9 +222,23 @@ $env.HOMEBREW_NO_ENV_HINTS = 1
 $env.MANPAGER = "bat"
 $env.PAGER = "bat" # jj uses this.
 
-# fzf has no auto-detect mechanism for its config.
-$env.FZF_DEFAULT_OPTS_FILE = [$env.HOME .config fzf fzfrc] | path join
-$env.FZF_DEFAULT_COMMAND = "fd --type f --hidden --follow --exclude .git"
+# This command includes an alternate config with internal utilities for defining
+# fzf bindings. We keep it separate to not pollute the global command/module
+# namespace with these internals.
+let fzf_shell_command = ([
+    nu
+    --include-path ($env.NU_LIB_DIRS | first) # Because auto-load cannot be suppressed
+    --config ([$env.HOME .dotfiles shell nu config.fzf-internal.nu] | path join)
+    --commands
+] | str join " ")
+$env.FZF_DEFAULT_COMMAND = "fd --type f --follow --exclude .git"
+$env.FZF_DEFAULT_OPTS = ([
+    --with-shell $"'($fzf_shell_command)'"
+    --prompt "'copy+. > '"
+    --bind "'enter:become(fzf-internal-copy {})'"
+    --bind "'alt-.:transform(fzf-internal-toggle-hidden)'"
+    --bind "'alt-o:transform(fzf-internal-toggle-open)'"
+] | str join " ")
 
 # TODO: Remove this if/when --config ever gets a sane default.
 export def run [script: string, ...args: string] {

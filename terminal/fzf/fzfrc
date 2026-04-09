@@ -1,1 +1,0 @@
---bind 'enter:become(^($env.EDITOR | split words | first) {})'
