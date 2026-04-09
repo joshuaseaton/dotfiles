@@ -6,7 +6,7 @@ export def main [] {
             if $in == null {
                 ^xclip -o
             } else {
-                $in | ^xclip
+                $in | ^xclip -selection clipboard
             }
         }
         macos => {
