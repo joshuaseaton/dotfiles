@@ -89,6 +89,23 @@ $env.config.table.mode = "thin"
 $env.config.table.index_mode = "never"
 $env.config.table.missing_value_symbol = " ∅ "
 
+$env.config.keybindings = ($env.config.keybindings | append {
+    name: fzf_history
+    modifier: control
+    keycode: char_r
+    mode: [emacs, vi_normal, vi_insert]
+    event: {
+        send: executehostcommand
+        cmd: "
+            let result = (
+                history | get command | reverse | uniq | str join (char newline) |
+                ^fzf ...$env.FZF_CTRL_R_OPTS | str trim
+            );
+            if ($result | is-not-empty) { commandline edit --replace $result }
+        "
+    }
+})
+
 def create_left_prompt [] {
     let dir = match (do --ignore-errors { $env.PWD | path relative-to $nu.home-dir }) {
         null => $env.PWD
@@ -266,6 +283,16 @@ $env.FZF_DEFAULT_OPTS = ([
     --bind "'shift-up:preview-up'"
     --bind "'shift-down:preview-down'"
 ] | str join " ")
+
+$env.FZF_CTRL_R_OPTS = [
+    --scheme history
+    --no-sort
+    --no-preview
+    --bind "start:change-prompt(history ❯ )"
+    --bind "enter:accept"
+    --bind "alt-.:ignore"
+    --bind "alt-o:ignore"
+]
 
 # TODO: Remove this if/when --config ever gets a sane default.
 export def run [script: string, ...args: string] {
