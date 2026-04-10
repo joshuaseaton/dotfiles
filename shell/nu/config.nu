@@ -89,22 +89,40 @@ $env.config.table.mode = "thin"
 $env.config.table.index_mode = "never"
 $env.config.table.missing_value_symbol = " ∅ "
 
-$env.config.keybindings = ($env.config.keybindings | append {
-    name: fzf_history
-    modifier: control
-    keycode: char_r
-    mode: [emacs, vi_normal, vi_insert]
-    event: {
-        send: executehostcommand
-        cmd: "
-            let result = (
-                history | get command | reverse | uniq | str join (char newline) |
-                ^fzf ...$env.FZF_CTRL_R_OPTS | str trim
-            );
-            if ($result | is-not-empty) { commandline edit --replace $result }
-        "
+$env.config.keybindings = ($env.config.keybindings | append [
+    {
+        name: fzf_history
+        modifier: control
+        keycode: char_r
+        mode: [emacs, vi_normal, vi_insert]
+        event: {
+            send: executehostcommand
+            cmd: "
+                let result = (
+                    history | get command | reverse | uniq | str join (char newline) |
+                    ^fzf ...$env.FZF_CTRL_R_OPTS | str trim
+                );
+                if ($result | is-not-empty) { commandline edit --replace $result }
+            "
+        }
     }
-})
+    {
+        name: fzf_cd
+        modifier: alt
+        keycode: char_c
+        mode: [emacs, vi_normal, vi_insert]
+        event: {
+            send: executehostcommand
+            cmd: "
+                let result = (
+                    fd --type d --follow --exclude .git --exclude .jj |
+                    ^fzf ...$env.FZF_ALT_C_OPTS | str trim
+                );
+                if ($result | is-not-empty) { cd $result }
+            "
+        }
+    }
+])
 
 def create_left_prompt [] {
     let dir = match (do --ignore-errors { $env.PWD | path relative-to $nu.home-dir }) {
@@ -289,6 +307,15 @@ $env.FZF_CTRL_R_OPTS = [
     --no-sort
     --no-preview
     --bind "start:change-prompt(history ❯ )"
+    --bind "enter:accept"
+    --bind "alt-.:ignore"
+    --bind "alt-o:ignore"
+]
+
+$env.FZF_ALT_C_OPTS = [
+    --scheme path
+    --no-preview
+    --bind "start:change-prompt(cd ❯ )"
     --bind "enter:accept"
     --bind "alt-.:ignore"
     --bind "alt-o:ignore"
