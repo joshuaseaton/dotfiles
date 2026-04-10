@@ -124,6 +124,51 @@ $env.config.keybindings = ($env.config.keybindings | append [
     }
 ])
 
+let carapace_completer = {|spans|
+  load-env {
+  	CARAPACE_SHELL_BUILTINS: (
+        help commands |
+        where category != "" |
+        get name |
+        each { split row " " | first } |
+        uniq |
+        str join "\n"
+    )
+  	CARAPACE_SHELL_FUNCTIONS: (
+        help commands |
+        where category == "" |
+        get name |
+        each { split row " " | first } |
+        uniq |
+        str join "\n"
+    )
+  }
+
+  # If the current command is an alias, get it's expansion.
+  let expanded_alias = (scope aliases | where name == $spans.0 | $in.0?.expansion?)
+
+  # Overwrite
+  let spans = (if $expanded_alias != null  {
+    # Put the first word of the expanded alias first in the span
+    $spans | skip 1 | prepend ($expanded_alias | split row " " | take 1)
+  } else {
+    $spans | skip 1 | prepend ($spans.0)
+  })
+
+  carapace $spans.0 nushell ...$spans | from json
+}
+
+$env.config.completions = ($env.config.completions | merge {
+    case_sensitive: false  # case-insensitive matching
+    algorithm: "fuzzy"  # fuzzy match instead of prefix-only
+    quick: true  # auto-accept sole matches
+    partial: true  # fill common prefix on tab
+    external: {
+        enable: true
+        completer: $carapace_completer
+    }
+})
+
 def create_left_prompt [] {
     let dir = match (do --ignore-errors { $env.PWD | path relative-to $nu.home-dir }) {
         null => $env.PWD

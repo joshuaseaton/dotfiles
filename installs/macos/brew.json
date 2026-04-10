@@ -8,6 +8,10 @@
     "type": "cask"
   },
   {
+    "name": "carapace",
+    "type": "formula"
+  },
+  {
     "name": "ccache",
     "type": "formula"
   },

@@ -23,12 +23,6 @@ use into.nu
 use pipx.nu
 
 #
-# Completions
-#
-
-source completions/git.nu
-
-#
 # Aliases
 #
 
