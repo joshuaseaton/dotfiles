@@ -222,6 +222,21 @@ $env.HOMEBREW_NO_ENV_HINTS = 1
 $env.MANPAGER = "bat"
 $env.PAGER = "bat" # jj uses this.
 
+# Pastel color scheme for fzf, matching the nushell theme.
+let fzf_colors = ({
+    fg: "-1"                # terminal default
+    bg: "-1"                # terminal default
+    hl: $RED_PASTEL         # matched substrings
+    "fg+": $RED_PASTEL    # current line text
+    "bg+": "-1"             # terminal default
+    "hl+": $RED_PASTEL      # current line matched substrings
+    prompt: $BLUE_PASTEL
+    pointer: $RED_PASTEL
+    info: $PEACH_PASTEL
+    preview-scrollbar: "white:-1"
+    border: white
+} | items {|k, v| $"($k):($v)" } | str join ",")
+
 # This command includes an alternate config with internal utilities for defining
 # fzf bindings. We keep it separate to not pollute the global command/module
 # namespace with these internals.
@@ -236,6 +251,8 @@ $env.FZF_DEFAULT_OPTS = ([
 
     # Styling.
     --layout reverse
+    --border none
+    --color $fzf_colors
 
     # Core search bindings.
     --bind "'start:transform<fzf-internal-start>'"
@@ -245,6 +262,7 @@ $env.FZF_DEFAULT_OPTS = ([
 
     # Previews.
     --preview "'bat --color=always --style=numbers --line-range=:500 {}'"
+    --preview-window border-none
     --bind "'ctrl-/:toggle-preview'"
     --bind "'shift-up:preview-up'"
     --bind "'shift-down:preview-down'"
