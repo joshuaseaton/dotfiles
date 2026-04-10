@@ -2,7 +2,7 @@
 # An alternate config used internally in the definition of fzf bindings.
 #
 
-const DEFAULT_STATE = {hidden: true, open: false}
+const DEFAULT_STATE = {hidden: false, open: false}
 
 const FIND_WITHOUT_HIDDEN = "fd --type f --follow --exclude .git --exclude .jj"
 const FIND_WITH_HIDDEN = "fd --type f --follow --unrestricted --exclude .git --exclude .jj"
@@ -26,7 +26,7 @@ export def fzf-internal-start [] {
     let prompt = prompt-state-to-string $DEFAULT_STATE
     [
         $"change-prompt<($prompt)>"
-        $"reload<($FIND_WITH_HIDDEN)>"
+        $"reload<($FIND_WITHOUT_HIDDEN)>"
     ] | str join "+"
 }
 
