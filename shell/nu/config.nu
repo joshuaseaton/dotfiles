@@ -284,9 +284,12 @@ $env.FZF_DEFAULT_OPTS = ([
     --with-shell $"'($fzf_shell_command)'"
 
     # Styling.
-    --layout reverse
     --border none
     --color $fzf_colors
+
+    # Navigation.
+    --layout reverse
+    --scroll-off 3
 
     # Core search bindings.
     --bind "'start:transform<fzf-internal-start>'"
