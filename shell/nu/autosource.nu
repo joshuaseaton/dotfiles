@@ -18,6 +18,7 @@ use clipboard.nu
 use df.nu
 use dict.nu
 use file.nu
+use git.nu
 use go.nu
 use into.nu
 use pipx.nu

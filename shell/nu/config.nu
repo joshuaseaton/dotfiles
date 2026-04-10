@@ -144,15 +144,17 @@ let carapace_completer = {|spans|
     )
   }
 
-  # If the current command is an alias, get it's expansion.
+  # Module subcommands arrive as a single span (e.g., "git log").
+  # Split them so carapace sees individual words.
+  let spans = $spans | each { split row " " } | flatten
+
+  # If the current command is an alias, get its expansion.
   let expanded_alias = (scope aliases | where name == $spans.0 | $in.0?.expansion?)
 
-  # Overwrite
   let spans = (if $expanded_alias != null  {
-    # Put the first word of the expanded alias first in the span
     $spans | skip 1 | prepend ($expanded_alias | split row " " | take 1)
   } else {
-    $spans | skip 1 | prepend ($spans.0)
+    $spans
   })
 
   carapace $spans.0 nushell ...$spans | from json
@@ -345,6 +347,7 @@ $env.FZF_DEFAULT_OPTS = ([
     # Previews.
     --preview "'bat --color=always --style=numbers --line-range=:500 {}'"
     --preview-window border-none
+    --preview-window noinfo
     --bind "'ctrl-/:toggle-preview'"
     --bind "'shift-up:preview-up'"
     --bind "'shift-down:preview-down'"
