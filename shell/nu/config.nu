@@ -233,11 +233,21 @@ let fzf_shell_command = ([
 ] | str join " ")
 $env.FZF_DEFAULT_OPTS = ([
     --with-shell $"'($fzf_shell_command)'"
+
+    # Styling.
     --layout reverse
+
+    # Core search bindings.
     --bind "'start:transform<fzf-internal-start>'"
     --bind "'enter:transform<fzf-internal-dispatch-enter>'"
     --bind "'alt-.:transform<fzf-internal-toggle-hidden>'"
     --bind "'alt-o:transform<fzf-internal-toggle-open>'"
+
+    # Previews.
+    --preview "'bat --color=always --style=numbers --line-range=:500 {}'"
+    --bind "'ctrl-/:toggle-preview'"
+    --bind "'shift-up:preview-up'"
+    --bind "'shift-down:preview-down'"
 ] | str join " ")
 
 # TODO: Remove this if/when --config ever gets a sane default.
