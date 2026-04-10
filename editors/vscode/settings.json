@@ -132,6 +132,7 @@
   "terminal.integrated.fontWeight": "300",
   "terminal.integrated.fontSize": "13",
   "terminal.integrated.gpuAcceleration": "on",
+  "terminal.integrated.macOptionIsMeta": true,
   "terminal.integrated.shellIntegration.enabled": false,
   "terminal.integrated.shellIntegration.decorationsEnabled": "never",
   "terminal.integrated.stickyScroll.enabled": false,
