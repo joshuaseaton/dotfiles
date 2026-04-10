@@ -9,3 +9,7 @@ apt = "code"
 # Font of choice
 [[package]]
 apt = "fonts-cascadia-code"
+
+# File picker
+[[package]]
+apt = "fzf"
