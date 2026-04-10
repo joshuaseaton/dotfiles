@@ -339,6 +339,7 @@ $env.FZF_DEFAULT_OPTS = ([
 
     # Navigation.
     --layout reverse
+    --multi
     --scroll-off 3
 
     # Core search bindings.
@@ -346,6 +347,7 @@ $env.FZF_DEFAULT_OPTS = ([
     --bind "'enter:transform<fzf-internal-dispatch-enter>'"
     --bind "'alt-.:transform<fzf-internal-toggle-hidden>'"
     --bind "'alt-o:transform<fzf-internal-toggle-open>'"
+    --bind "'tab:toggle'"
 
     # Previews.
     --preview "'bat --color=always --style=numbers --line-range=:500 {}'"
@@ -364,6 +366,7 @@ $env.FZF_CTRL_R_OPTS = [
     --bind "enter:accept"
     --bind "alt-.:ignore"
     --bind "alt-o:ignore"
+    --bind "'tab:toggle'"
 ]
 
 $env.FZF_ALT_C_OPTS = [

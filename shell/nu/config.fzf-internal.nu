@@ -35,11 +35,11 @@ export def fzf-internal-start [] {
 export def fzf-internal-dispatch-enter []: nothing -> string {
     let state = get-prompt-state
     let command = if $state.open {
-        $"^($env.EDITOR | split words | first) {}"
+        $"^($env.EDITOR | split words | first) {+}"
     } else {
         match $nu.os-info.name {
-            linux => "{} | ^xclip -selection clipboard",
-            macos => "{} | ^pbcopy",
+            linux => "[{+}] | str join (char newline) | ^xclip -selection clipboard",
+            macos => "[{+}] | str join (char newline) | ^pbcopy",
         }
     }
     $"become<($command)>"
