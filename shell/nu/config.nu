@@ -242,7 +242,6 @@ let fzf_colors = ({
 # namespace with these internals.
 let fzf_shell_command = ([
     nu
-    --include-path ($env.NU_LIB_DIRS | first) # Because auto-load cannot be suppressed
     --config ([$env.HOME .dotfiles shell nu config.fzf-internal.nu] | path join)
     --commands
 ] | str join " ")

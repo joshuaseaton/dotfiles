@@ -2,4 +2,10 @@
 # have always present in a terminal context. When on a macOS host, this file is
 # symlinked by bootstrap/nu.sh into a vendor autoload directory.
 
+# autoloading can't be turned off, so this ensures that nushell with a custom
+# config works.
+if ($env.NU_LIB_DIRS | is-empty) {
+    return
+}
+
 use defaults.nu
