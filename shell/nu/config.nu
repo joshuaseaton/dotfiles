@@ -231,13 +231,13 @@ let fzf_shell_command = ([
     --config ([$env.HOME .dotfiles shell nu config.fzf-internal.nu] | path join)
     --commands
 ] | str join " ")
-$env.FZF_DEFAULT_COMMAND = "fd --type f --follow --exclude .git"
 $env.FZF_DEFAULT_OPTS = ([
     --with-shell $"'($fzf_shell_command)'"
-    --prompt "'copy+. > '"
-    --bind "'enter:become(fzf-internal-copy {})'"
-    --bind "'alt-.:transform(fzf-internal-toggle-hidden)'"
-    --bind "'alt-o:transform(fzf-internal-toggle-open)'"
+    --layout reverse
+    --bind "'start:transform<fzf-internal-start>'"
+    --bind "'enter:transform<fzf-internal-dispatch-enter>'"
+    --bind "'alt-.:transform<fzf-internal-toggle-hidden>'"
+    --bind "'alt-o:transform<fzf-internal-toggle-open>'"
 ] | str join " ")
 
 # TODO: Remove this if/when --config ever gets a sane default.
