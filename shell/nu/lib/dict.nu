@@ -9,12 +9,12 @@ export def main [
   let result = http get --full --allow-errors $url
   match $result.status {
     200 => {}
-    404 => (error make --unspanned {msg: $"Unknown entry: \"($words | str join ' ')\""})
-    $code => (error make --unspanned {msg: $"HTTP error: ($code)"})
+    404 => (error make --unspanned $"Unknown entry: \"($words | str join ' ')\"")
+    $code => (error make --unspanned $"HTTP error: ($code)")
   }
   let body = $result.body
   if $phonetics {
-    return ($body | get --optional phonetics.0.text | where $it != null)
+    return ($body | get --optional phonetics.0.text | compact)
   }
   $body |
     get meanings

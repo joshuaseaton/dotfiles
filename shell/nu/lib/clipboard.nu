@@ -16,5 +16,6 @@ export def main [] {
                 $in | ^pbcopy
             }
         }
+        _ => { error make --unspanned $"Unsupported OS: ($nu.os-info.name)" }
     }
 }

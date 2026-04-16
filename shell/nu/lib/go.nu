@@ -2,7 +2,7 @@
 export def build-info [binary: string] {
     let info = ^go version -m $binary |
         lines |
-        each {|| str trim --left }
+        each { str trim --left }
     let go_version = $info |
         first |
         parse $"($binary): go{version}" |
@@ -68,6 +68,6 @@ export def version [] {
 export def versions [module: string] {
     ^go list -versions -m $module |
         split row ' ' |
-        drop nth 0 |
+        skip 1 |
         reverse
 }

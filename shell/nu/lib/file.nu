@@ -26,15 +26,30 @@ export def stat [source: string] {
         log error $"Source ($source) does not exist"
         return
     }
-    let info = ^stat -f `{
-        size: %Uz,    
-        perms: %Up,
-        user: %Su,
-        group: %Sg,
-        accessed: %a,
-        modified: %m,
-        device: %Sd,
-    }` $source | from nuon
+    let info = match $nu.os-info.name {
+        macos => {
+            ^stat -f `{
+                size: %Uz,
+                perms: %Up,
+                user: %Su,
+                group: %Sg,
+                accessed: %a,
+                modified: %m,
+                device: %Sd,
+            }` $source
+        }
+        linux => {
+            ^stat -c `{
+                size: %s,
+                perms: 0x%f,
+                user: %U,
+                group: %G,
+                accessed: %X,
+                modified: %Y,
+                device: %t:%T,
+            }` $source
+        }
+    } | from nuon
 
     {
         size: ($info.size | into filesize), 

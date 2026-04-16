@@ -54,7 +54,7 @@ scrollback-limit = 100000
 # Shell
 #
 
-command = .cargo/bin/nu --login --commands zellij_start
+command = .cargo/bin/nu --login --commands zellij-start
 
 #
 # Keybindings

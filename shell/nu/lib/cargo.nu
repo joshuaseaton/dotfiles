@@ -2,7 +2,7 @@
 export def installed [] {
     ^cargo install --list |
         lines |
-        reduce --fold null {|line, table|
+        reduce --fold [] {|line, table|
             if ($line | str ends-with ":") {
                 $table | append ($line | parse "{name} v{version}:" | insert binaries [])
             } else {

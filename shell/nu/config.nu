@@ -80,8 +80,6 @@ $env.config.color_config = {
     shape_variable: $PURPLE_PASTEL
     shape_vardecl: $PURPLE_PASTEL
 }
-$env.config.completions.algorithm = "fuzzy"
-$env.config.completions.sort = "smart"
 $env.config.footer_mode = "always"
 $env.config.history.file_format = "sqlite"
 $env.config.history.isolation = true
@@ -135,7 +133,7 @@ let carapace_completer = {|spans|
         get name |
         each { split row " " | first } |
         uniq |
-        str join "\n"
+        str join (char newline)
     )
   	CARAPACE_SHELL_FUNCTIONS: (
         help commands |
@@ -143,7 +141,7 @@ let carapace_completer = {|spans|
         get name |
         each { split row " " | first } |
         uniq |
-        str join "\n"
+        str join (char newline)
     )
   }
 
@@ -166,6 +164,7 @@ let carapace_completer = {|spans|
 $env.config.completions = ($env.config.completions | merge {
     case_sensitive: false  # case-insensitive matching
     algorithm: "fuzzy"  # fuzzy match instead of prefix-only
+    sort: "smart"
     quick: true  # auto-accept sole matches
     partial: true  # fill common prefix on tab
     external: {
@@ -174,7 +173,7 @@ $env.config.completions = ($env.config.completions | merge {
     }
 })
 
-def create_left_prompt [] {
+def create-left-prompt [] {
     let dir = match (do --ignore-errors { $env.PWD | path relative-to $nu.home-dir }) {
         null => $env.PWD
         '' => '~'
@@ -188,7 +187,7 @@ def create_left_prompt [] {
     $path_segment | str replace --all (char path_sep) $"($separator_color)(char path_sep)($path_color)"
 }
 
-def create_right_prompt [] {
+def create-right-prompt [] {
     # create a right prompt in magenta with green separators and am/pm underlined
     let time_segment = ([
         (ansi reset)
@@ -228,12 +227,12 @@ def create_right_prompt [] {
     }
 
     [$last_exit_code $git_context $time_segment] |
-        where $it != null |
+        compact |
         str join (char space)
 }
 
-$env.PROMPT_COMMAND = {|| create_left_prompt }
-$env.PROMPT_COMMAND_RIGHT = {|| create_right_prompt }
+$env.PROMPT_COMMAND = {|| create-left-prompt }
+$env.PROMPT_COMMAND_RIGHT = {|| create-right-prompt }
 $env.PROMPT_INDICATOR = {|| $"(ansi white) ❯ " }
 
 let dotfiles = ([$nu.home-dir .dotfiles] | path join)
@@ -258,7 +257,7 @@ $env.NU_PLUGIN_DIRS = []
 # But of course.
 $env.SHELL = $nu.current-exe
 
-if ($env | get --optional EDITOR) == null {
+if $env.EDITOR? == null {
     # A saner default than Vim. VSCode and Zed will specify their own integrated
     # terminals.
     $env.EDITOR = "micro"
@@ -381,7 +380,7 @@ $env.FZF_ALT_C_OPTS = [
 # TODO: Remove this if/when --config ever gets a sane default.
 export def run [script: string, ...args: string] {
     if not ($script | path exists) {
-        error make --unspanned {msg: $"Script does not exist: ($script)"}
+        error make --unspanned $"Script does not exist: ($script)"
     }
     ^nu --config $nu.config-path $script ...$args
 }

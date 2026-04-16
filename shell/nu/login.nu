@@ -1,5 +1,5 @@
 # Reattaches to the last detached zellij session, if available.
-def zellij_start [] {
+def zellij-start [] {
     let sessions = ^zellij list-sessions --short
         | complete
         | get stdout

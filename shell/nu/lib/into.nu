@@ -6,7 +6,7 @@ export def hex [] {
     # math floor will round to int, but this seems to detect fractional part
     # (though it doesn't fully preserve it.)
     if ($in mod 1) != 0 {
-        error make --unspanned {msg: "into hex: input must be integral"}
+        error make --unspanned "into hex: input must be integral"
     }
 
     if ($in == 0) {

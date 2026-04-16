@@ -16,4 +16,4 @@ open extensions.json |
         ^code --install-extension $ext
     }
 
-exit
+ignore

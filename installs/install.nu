@@ -59,4 +59,4 @@ open pipx.json |
         }
     }
 
-exit
+ignore

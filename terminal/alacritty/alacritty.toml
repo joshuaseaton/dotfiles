@@ -42,7 +42,7 @@ history = 100000
 
 [terminal.shell]
 program = ".cargo/bin/nu"
-args = [ "--login", "--commands", "zellij_start" ]
+args = [ "--login", "--commands", "zellij-start" ]
 
 [window]
 opacity = 0.9

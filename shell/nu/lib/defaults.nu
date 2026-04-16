@@ -5,7 +5,7 @@ use log.nu
 
 # Lists all domains.
 export def domains [] {
-    ^defaults domains | split row "," | each {|| str trim }
+    ^defaults domains | split row "," | each { str trim }
 }
 
 # Reads the settings of a given domain.
@@ -22,7 +22,7 @@ export def read [domain: string@domain-completions, key?: cell-path] {
 # overwritten.
 export def write [domain: string@domain-completions, key: cell-path, value: any, --force, --verbose] {
     if $value == null {
-        return (error make --unspanned {msg: "Value cannot be null"})
+        return (error make --unspanned "Value cannot be null")
     }
     let plist = read $domain
     let current = $plist | get --optional $key
@@ -32,16 +32,14 @@ export def write [domain: string@domain-completions, key: cell-path, value: any,
 
     let updated = if $current == null {  # Inserting
         if not $force {
-            return (error make --unspanned {msg: $"($domain): ($key) not present. Use --force to insert"})
+            return (error make --unspanned $"($domain): ($key) not present. Use --force to insert")
         }
         {value: ($plist | insert $key $value), context: "inserted"}
     } else {  # Updating
         let expected_type = $current | describe
         let actual_type = $value | describe
         if not $force and $expected_type != $actual_type {
-            return (error make --unspanned {
-                msg: $"($domain): `($value)` and current value `($current)` have differing types \(($actual_type) vs. ($expected_type)\); use --force to update"
-            })
+            return (error make --unspanned $"($domain): `($value)` and current value `($current)` have differing types \(($actual_type) vs. ($expected_type)\); use --force to update")
         }
         {value: ($plist | upsert $key $value), context: $"updated from `($current)`"}
     }
@@ -89,7 +87,7 @@ def xml-to-native [xml: record<tag:string, content:any>] {
             }
             $dict
         }
-        _ => { error make --unspanned {msg: $"Invalid plist tag type \"($xml.tag)\"" }}
+        _ => { error make --unspanned $"Invalid plist tag type \"($xml.tag)\"" }
     }
 }
 
@@ -122,6 +120,6 @@ def xml-tag [value: any] {
         "date" => "date"
         "list" => "array"
         "record" => "dict"
-        _ => { error make --unspanned {msg: $"Nushell object does not represent a plist value: `($value)`"}}
+        _ => { error make --unspanned $"Nushell object does not represent a plist value: `($value)`" }
     }
 }
