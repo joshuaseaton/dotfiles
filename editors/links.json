@@ -52,5 +52,17 @@
   {
     "source": "flow/lsp/rust-analyzer.json",
     "target": ".config/flow/lsp/rust-analyzer.json"
+  },
+  {
+    "source": "vscode/themes/kanagawa-forest/package.json",
+    "target": ".vscode/extensions/kanagawa-forest/package.json"
+  },
+  {
+    "source": "vscode/themes/kanagawa-forest/kanagawa-forest-color-theme.json",
+    "target": ".vscode/extensions/kanagawa-forest/kanagawa-forest-color-theme.json"
+  },
+  {
+    "source": "../themes/kanagawa-forest.tmTheme",
+    "target": ".vscode/extensions/kanagawa-forest/kanagawa-forest.tmTheme"
   }
 ]

@@ -1,0 +1,21 @@
+{
+	"name": "kanagawa-forest",
+	"displayName": "Kanagawa Forest",
+	"description": "Custom Kanagawa Forest theme",
+	"version": "0.1.0",
+	"engines": {
+		"vscode": "^1.77.0"
+	},
+	"categories": [
+		"Themes"
+	],
+	"contributes": {
+		"themes": [
+			{
+				"label": "Kanagawa Forest",
+				"uiTheme": "vs-dark",
+				"path": "./kanagawa-forest-color-theme.json"
+			}
+		]
+	}
+}
