@@ -24,6 +24,10 @@
     "target": ".config/yazi/theme.toml"
   },
   {
+    "source": "../themes/kanagawa-forest.tmTheme",
+    "target": ".config/bat/themes/kanagawa-forest.tmTheme"
+  },
+  {
     "source": "zellij/config.kdl",
     "target": ".config/zellij/config.kdl"
   },

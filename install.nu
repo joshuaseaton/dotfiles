@@ -12,7 +12,7 @@ cd $env.FILE_PWD
             default $nu.os-info.name os |
             where os == $nu.os-info.name |
             each { |link|
-                let source = [$env.HOME .dotfiles $dir $link.source] | path join
+                let source = [$env.HOME .dotfiles $dir $link.source] | path join | path expand
                 let target = [$env.HOME $link.target] | path join
                 mkdir ($target | path dirname)
                 file symlink $source $target

@@ -305,6 +305,7 @@ $env.HOMEBREW_NO_ENV_HINTS = 1
 # A saner default than less.
 $env.MANPAGER = "bat"
 $env.PAGER = "bat" # jj uses this.
+$env.BAT_THEME = "kanagawa-forest"
 
 # Pastel color scheme for fzf, matching the nushell theme.
 let fzf_colors = ({
