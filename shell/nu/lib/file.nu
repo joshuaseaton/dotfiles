@@ -46,7 +46,7 @@ export def stat [source: string] {
                 group: %G,
                 accessed: %X,
                 modified: %Y,
-                device: %t:%T,
+                device: "%t:%T",
             }` $source
         }
     } | from nuon
