@@ -8,8 +8,8 @@
     "target": ".config/micro/bindings.json"
   },
   {
-    "source": "micro/colorschemes/pastel-dark.micro",
-    "target": ".config/micro/colorschemes/pastel-dark.micro"
+    "source": "micro/colorschemes/kanagawa-forest.micro",
+    "target": ".config/micro/colorschemes/kanagawa-forest.micro"
   },
   {
     "source": "vscode/keybindings.json",

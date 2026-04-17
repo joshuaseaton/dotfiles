@@ -1,7 +1,7 @@
 {
   "autosu": true,
   "colorcolumn": 80,
-  "colorscheme": "pastel-dark",
+  "colorscheme": "kanagawa-forest",
   "diffgutter": true,
   "ft:json": {
     "eofnewline": false
