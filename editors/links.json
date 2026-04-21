@@ -64,5 +64,9 @@
   {
     "source": "../themes/kanagawa-forest.tmTheme",
     "target": ".vscode/extensions/kanagawa-forest/kanagawa-forest.tmTheme"
+  },
+  {
+    "source": "formatters/prettier/prettierrc.toml",
+    "target": ".prettierrc.toml"
   }
 ]

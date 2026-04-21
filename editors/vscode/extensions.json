@@ -2,6 +2,7 @@
   "anthropic.claude-code",
   "basdp.language-gas-x86",
   "charliermarsh.ruff",
+  "esbenp.prettier-vscode",
   "fuchsia-authors.language-fidl",
   "golang.go",
   "google.gn",

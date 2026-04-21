@@ -6,12 +6,20 @@
     "editor.defaultFormatter": "golang.go"
   },
   "[json][jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": false,
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "never"
+    },
     "editor.tabSize": 2,
     "files.insertFinalNewline": false
   },
   "[lua]": {
     "editor.defaultFormatter": "sumneko.lua"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": false
   },
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff",
