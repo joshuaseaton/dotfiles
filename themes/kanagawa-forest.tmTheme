@@ -38,7 +38,7 @@
 			<key>name</key>
 			<string>Variable</string>
 			<key>scope</key>
-			<string>variable, variable.other, string constant.other.placeholder</string>
+			<string>variable, variable.other, string constant.other.placeholder, meta.function-call.arguments</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
@@ -341,7 +341,7 @@
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>Rust Constants</string>
+			<string>Constants</string>
 			<key>scope</key>
 			<string>constant.other.caps</string>
 			<key>settings</key>
@@ -975,6 +975,19 @@
 			<dict>
 				<key>foreground</key>
 				<string>#d3c6aa</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Nushell Parameter</string>
+			<key>scope</key>
+			<string>variable.parameter.nushell, variable.parameter.nushell keyword.control.nushell</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#ea9158</string>
+				<key>fontStyle</key>
+				<string></string>
 			</dict>
 		</dict>
 	</array>
