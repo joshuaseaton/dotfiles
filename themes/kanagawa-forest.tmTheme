@@ -990,6 +990,41 @@
 				<string></string>
 			</dict>
 		</dict>
+		<dict>
+			<key>name</key>
+			<string>GN Tag</string>
+			<key>scope</key>
+			<string>entity.name.tag.gn</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#63b1a7</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>GN Attribute</string>
+			<key>scope</key>
+			<string>entity.other.attribute-name.gn</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#d3c6aa</string>
+				<key>fontStyle</key>
+				<string>underline</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Git Rebase SHA</string>
+			<key>scope</key>
+			<string>constant.sha.git-rebase</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#d3869b</string>
+			</dict>
+		</dict>
 	</array>
 	<key>uuid</key>
 	<string>7630769D-B696-4F15-88D8-E50304C0F7E0</string>
