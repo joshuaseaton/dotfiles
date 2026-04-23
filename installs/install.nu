@@ -54,7 +54,7 @@ open pipx.json |
         let local = ([$nu.home-dir .local bin $pkg.name] | path join)
         if not ($local | path exists) {
             log info $"pipx: Installing ($pkg.name) \(($pkg.name)@($pkg.version)\)..."
-            ^pipx install $"($pkg.name)==($pkg.version)"
+            ^pipx install $"($pkg.name)==($pkg.version)" --index-url https://pypi.org/simple/
         }
     }
 
