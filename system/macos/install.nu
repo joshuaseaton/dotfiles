@@ -115,7 +115,7 @@ defaults write --verbose --force com.apple.symbolichotkeys AppleSymbolicHotKeys.
 
     # Do not show the "open application" indicator. We can CTRL+TAB through them
     # instead.
-    (defaults write --verbose com.apple.dock show-process-indicators false),
+    (defaults write --verbose --force com.apple.dock show-process-indicators false),
 
     # Minimize windows into their application’s icon.
     (defaults write --verbose --force com.apple.dock minimize-to-application true),
@@ -129,26 +129,13 @@ defaults write --verbose --force com.apple.symbolichotkeys AppleSymbolicHotKeys.
     # Enable auto-hiding of the dock and make it reappear quickly.
     (defaults write --verbose --force com.apple.dock autohide true),
     (defaults write --verbose --force com.apple.dock autohide-delay 0.0),
+    (defaults write --verbose --force com.apple.dock autohide-time-modifier 1.0),
 ] |
     reduce {|result, changed| $changed or $result } |
     if $in {
         # Force the changes to take effect by restarting the Dock.
         ^killall Dock
     }
-
-#
-# Spotlight
-#
-
-# If we have to use Spotlight, best to neuter it and just have it search for
-# applications.
-const allowed_spotlight_items = [ APPLICATIONS ]
-let spotlight_items = defaults read com.apple.spotlight orderedItems |
-    each {
-        |item|
-        $item | merge {enabled: ($item.name in $allowed_spotlight_items)}
-    }
-defaults write --verbose com.apple.spotlight orderedItems $spotlight_items
 
 #
 # Messages
@@ -166,13 +153,13 @@ defaults write --verbose --force com.apple.messageshelper.MessageController SOIn
 # UnnaturalScrollWheels
 #
 
-defaults write --verbose com.theron.UnnaturalScrollWheels LaunchAtLogin true
-defaults write --verbose com.theron.UnnaturalScrollWheels ScrollLines 4
+defaults write --verbose --force com.theron.UnnaturalScrollWheels LaunchAtLogin true
+defaults write --verbose --force com.theron.UnnaturalScrollWheels ScrollLines 4
 
 #
 # Hammerspoon
 #
 
-defaults write --verbose org.hammerspoon.Hammerspoon SUEnableAutomaticChecks true
+defaults write --verbose --force org.hammerspoon.Hammerspoon SUEnableAutomaticChecks true
 
 ignore

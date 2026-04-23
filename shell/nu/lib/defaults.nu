@@ -111,15 +111,16 @@ def native-to-xml [value: any, tag?: string] {
 # Gives the plist 'type' or XML tag associated with a native Nushell
 # representation.
 def xml-tag [value: any] {
-    match ($value | describe --detailed | get type) {
+    let type = ($value | describe --detailed | get type)
+    match $type {
         "bool" => ($value | into string)
         "int" => "integer"
         "float" => "real"
         "string" => "string"
         "binary" => "data"
-        "date" => "date"
+        "date" | "datetime" => "date"
         "list" => "array"
         "record" => "dict"
-        _ => { error make --unspanned $"Nushell object does not represent a plist value: `($value)`" }
+        _ => { error make --unspanned $"Nushell object of type ($type) does not represent a plist value: `($value)`" }
     }
 }
