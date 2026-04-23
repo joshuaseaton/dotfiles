@@ -366,7 +366,7 @@ $env.FZF_CTRL_R_OPTS = [
     --bind "enter:accept"
     --bind "alt-.:ignore"
     --bind "alt-o:ignore"
-    --bind "'tab:toggle'"
+    --bind "tab:toggle"
 ]
 
 $env.FZF_ALT_C_OPTS = [
