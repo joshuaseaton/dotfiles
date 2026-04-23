@@ -1,9 +1,5 @@
 [
   {
-    "source": "alacritty/alacritty.toml",
-    "target": ".config/alacritty/alacritty.toml"
-  },
-  {
     "source": "bottom/bottom.toml",
     "target": ".config/bottom/bottom.toml"
   },

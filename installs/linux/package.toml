@@ -1,7 +1,3 @@
-# A slick, minimal terminal emulator.
-[[package]]
-apt = "alacritty"
-
 # Visual Studio: Current code editor of choice.
 [[package]]
 apt = "code"

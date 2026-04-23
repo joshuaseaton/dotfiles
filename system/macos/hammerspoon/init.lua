@@ -1,7 +1,7 @@
 -- Auto-generates annotations for all installed Spoons.
 hs.loadSpoon("EmmyLua")
 
--- <Control><Alt>T: Launch a new Alacritty instance if none are running, or else
+-- <Control><Alt>T: Launch a new Ghostty instance if none are running, or else
 -- focus an existing one.
 hs.hotkey.bind({ "ctrl", "alt" }, "T", function()
     hs.application.launchOrFocus("ghostty")

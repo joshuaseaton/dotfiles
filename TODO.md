@@ -1,25 +1,30 @@
 # TODO
 
 ## General
-* Try to redirect auto-generated history files away from the root of the home
+
+- Try to redirect auto-generated history files away from the root of the home
   directory and possibly in a more conventional config location.
-* "save to file if contents are different"
+- "save to file if contents are different"
 
 ## Linux
-* Make `<Control><Alt>T` refocus an existing alacritty window if there is one
-* Make `<Control><Alt>B` open the browser (ideally refocusing an existing
+
+- Make `<Control><Alt>T` refocus an existing ghostty window if there is one
+- Make `<Control><Alt>B` open the browser (ideally refocusing an existing
   instance)
-* Make `<Control><Alt>E` open VSCode (or current editor of choice)?
+- Make `<Control><Alt>E` open VSCode (or current editor of choice)?
 
 ## macOS
-* Make `<Command><Alt>(Left|Right)` move between workspaces (with quick
+
+- Make `<Command><Alt>(Left|Right)` move between workspaces (with quick
   transitions). Figure out some other workspace-related keybindings.
 
 ## Windows
-* Basic support
+
+- Basic support
 
 ## Bugs to file
-* zellij: ability to open last detached session or open a new one
-* nushell: option to keep view at beginning of output
-* nushell: match block with multiple patterns
-* nushell: `$record | sort` should be recursive for inner records?
+
+- zellij: ability to open last detached session or open a new one
+- nushell: option to keep view at beginning of output
+- nushell: match block with multiple patterns
+- nushell: `$record | sort` should be recursive for inner records?

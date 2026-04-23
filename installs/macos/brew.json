@@ -1,9 +1,5 @@
 [
   {
-    "name": "alacritty",
-    "type": "cask"
-  },
-  {
     "name": "brave-browser",
     "type": "cask"
   },
