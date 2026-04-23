@@ -347,6 +347,7 @@ $env.FZF_DEFAULT_OPTS = ([
     --bind "'enter:transform<fzf-internal-dispatch-enter>'"
     --bind "'alt-.:transform<fzf-internal-toggle-hidden>'"
     --bind "'alt-o:transform<fzf-internal-toggle-open>'"
+    --bind "'ctrl-c:transform<fzf-internal-clear-or-abort>'"
     --bind "'tab:toggle'"
 
     # Previews.

@@ -68,3 +68,12 @@ export def fzf-internal-toggle-open []: nothing -> string {
     let new_prompt = prompt-state-to-string $state
     $"change-prompt<($new_prompt)>"
 }
+
+# Clear the query if non-empty, otherwise abort.
+export def fzf-internal-clear-or-abort []: nothing -> string {
+    if ($env.FZF_QUERY | is-empty) {
+        "abort"
+    } else {
+        "clear-query"
+    }
+}
