@@ -69,6 +69,59 @@ export def fzf-internal-toggle-open []: nothing -> string {
     $"change-prompt<($new_prompt)>"
 }
 
+# Preview a line from `git status --short`, choosing the right view based on
+# the XY status prefix: XY where X = index (staged) and Y = working tree.
+export def fzf-internal-git-status-preview [line: string] {
+    let index = $line | str substring 0..0
+    let worktree = $line | str substring 1..1
+    let file = $line | str substring 3..
+
+    let is_untracked = $index == "?"
+    let is_conflicted = (
+        $index == "U" or $worktree == "U"  # unmerged
+        or ($index == "A" and $worktree == "A")  # added
+        or ($index == "D" and $worktree == "D")  # deleted
+    )
+    let has_unstaged_changes = $worktree != " "
+
+    if $is_untracked or $is_conflicted {
+        ^bat --color=always --style=numbers $file
+    } else if $has_unstaged_changes {
+        ^git diff --color=always -- $file
+    } else {
+        ^git diff --cached --color=always -- $file
+    }
+}
+
+# Toggle the staging state of a file from `git status --short` and return a
+# reload action for use in a transform binding.
+export def fzf-internal-git-status-toggle-stage [line: string]: nothing -> string {
+    let index = $line | str substring 0..0
+    let file = $line | str substring 3..
+    let is_staged = $index != " " and $index != "?" and $index != "U"  # space/untracked/unmerged
+
+    if $is_staged {
+        ^git restore --staged -- $file
+    } else {
+        ^git add -- $file
+    }
+    "reload(fzf-internal-git-status-list)"
+}
+
+# List `git status --short -uall` with staged files italicized.
+export def fzf-internal-git-status-list [] {
+    ^git status --short -uall | lines |
+    sort-by { str substring 3.. } |
+    each {|line|
+        let index = $line | str substring 0..0
+        if $index != " " and $index != "?" and $index != "U" {  # staged
+            $"(ansi -e '3m')($line)(ansi reset)"
+        } else {
+            $line
+        }
+    } | str join (char newline)
+}
+
 # Clear the query if non-empty, otherwise abort.
 export def fzf-internal-clear-or-abort []: nothing -> string {
     if ($env.FZF_QUERY | is-empty) {

@@ -59,17 +59,32 @@ export def --wrapped "status" [...args] {
         return
     }
 
-    let line = ^git status --short |
-        (
-            ^fzf ...$GIT_FZF_OPTS
-            --bind "start:change-prompt(status ❯ )"
-            --preview "git diff --color=always -- {-1}"
-        ) |
-        str trim
-    if ($line | is-not-empty) {
-        let file = $line | split row " " | last
-        commandline edit --append $file
+    let git_dir = ^git rev-parse --git-dir | str trim
+    let rebase_merge = [$git_dir rebase-merge] | path join
+    let rebase_apply = [$git_dir rebase-apply] | path join
+
+    let header_args = if ($rebase_merge | path exists) {
+        let head_name = open ([$rebase_merge head-name] | path join) | str trim | str replace "refs/heads/" ""
+        let onto_short = open ([$rebase_merge onto] | path join) | str trim | ^git rev-parse --short $in | str trim
+        let done = open ([$rebase_merge done] | path join) | lines | where { $in | is-not-empty } | length
+        let todo = open ([$rebase_merge git-rebase-todo] | path join) | lines | where { not ($in | str starts-with "#") and ($in | is-not-empty) } | length
+        [--header $"rebasing ($head_name) onto ($onto_short) \(($done)/($done + $todo)\)"]
+    } else if ($rebase_apply | path exists) {
+        let next = open ([$rebase_apply next] | path join) | str trim
+        let last = open ([$rebase_apply last] | path join) | str trim
+        [--header $"rebase in progress \(($next)/($last)\)"]
+    } else {
+        []
     }
+
+    ^git status --short -uall |
+        (
+            ^fzf ...$GIT_FZF_OPTS ...$header_args
+            --ansi
+            --bind "start:change-prompt(status ❯ )+reload(fzf-internal-git-status-list)"
+            --bind "tab:transform(fzf-internal-git-status-toggle-stage {})"
+            --preview "fzf-internal-git-status-preview {}"
+        ) | ignore
 }
 
 # `git diff` with a nice fzf view of changed files when executed without args.
