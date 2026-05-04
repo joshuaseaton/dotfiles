@@ -55,15 +55,15 @@
   },
   {
     "source": "vscode/themes/kanagawa-forest/package.json",
-    "target": ".vscode/extensions/kanagawa-forest/package.json"
+    "target": ".vscode/extensions/joshuaseaton.kanagawa-forest-0.1.0/package.json"
   },
   {
     "source": "vscode/themes/kanagawa-forest/kanagawa-forest-color-theme.json",
-    "target": ".vscode/extensions/kanagawa-forest/kanagawa-forest-color-theme.json"
+    "target": ".vscode/extensions/joshuaseaton.kanagawa-forest-0.1.0/kanagawa-forest-color-theme.json"
   },
   {
     "source": "../themes/kanagawa-forest.tmTheme",
-    "target": ".vscode/extensions/kanagawa-forest/kanagawa-forest.tmTheme"
+    "target": ".vscode/extensions/joshuaseaton.kanagawa-forest-0.1.0/kanagawa-forest.tmTheme"
   },
   {
     "source": "formatters/prettier/prettierrc.toml",

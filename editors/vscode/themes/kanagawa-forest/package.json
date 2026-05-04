@@ -1,6 +1,7 @@
 {
 	"name": "kanagawa-forest",
 	"displayName": "Kanagawa Forest",
+	"publisher": "joshuaseaton",
 	"description": "Custom Kanagawa Forest theme",
 	"version": "0.1.0",
 	"engines": {

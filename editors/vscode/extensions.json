@@ -6,6 +6,7 @@
   "fuchsia-authors.language-fidl",
   "golang.go",
   "google.gn",
+  "joshuaseaton.kanagawa-forest",
   "kdl-org.kdl",
   "llvm-vs-code-extensions.vscode-clangd",
   "ms-python.python",
@@ -20,7 +21,6 @@
   "tamasfe.even-better-toml",
   "thenuprojectcontributors.vscode-nushell-lang",
   "timonwong.shellcheck",
-  "undefined_publisher.kanagawa-forest",
   "waderyan.gitblame",
   "ziglang.vscode-zig",
   "zixuanwang.linkerscript"
