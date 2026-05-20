@@ -16,6 +16,9 @@ use defaults.nu
 defaults write --verbose --force NSGlobalDomain NSAutomaticSpellingCorrectionEnabled false
 defaults write --verbose --force NSGlobalDomain NSAutomaticCapitalizationEnabled false
 
+# Disable auto-insertion of a period for double spaces.
+ defaults write --verbose --force NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled false
+
 #
 # Touchpad
 #
