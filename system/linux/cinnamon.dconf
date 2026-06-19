@@ -25,6 +25,7 @@ switch-to-workspace-down=['<Super><Alt>Up']
 switch-to-workspace-left=['<Super><Alt>Left']
 switch-to-workspace-right=['<Super><Alt>Right']
 switch-to-workspace-up=['<Super><Alt>Down']
+switch-windows=['<Control>Tab']
 toggle-maximized=['<Control><Alt>M']
 unmaximize=@as []
 
