@@ -29,7 +29,7 @@ if (which brew | is-not-empty) {
 
     # Upgrade and tidy anything outdated.
     if (^brew outdated | complete | get stdout | is-not-empty) {
-        ^brew upgrade
+        ^brew upgrade --yes
     }
     ^brew cleanup
 
