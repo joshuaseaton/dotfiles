@@ -56,6 +56,12 @@ scrollback-limit = 100000
 
 command = .cargo/bin/nu --login --commands zellij-start
 
+
+# ssh-env: SSH environment compatibility feature (e.g., around TERM)
+# ssh-terminfo: installs ghostty terminfo on remote host if not present
+# sudo: Preserves terminfo under sudo
+shell-integration-features = ssh-env,ssh-terminfo,sudo
+
 #
 # Keybindings
 #
