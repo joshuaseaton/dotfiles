@@ -1,5 +1,8 @@
 // See https://zed.dev/docs/configuring-zed for documentation.
 {
+  "session": {
+    "trust_all_worktrees": true
+  },
   "auto_install_extensions": {
     "git-firefly": true,
     "html": false,
