@@ -98,9 +98,6 @@ keybind = ctrl+v=paste_from_clipboard
 # Ctrl + Shift + P: unbind so that this can be used in Flow.
 keybind = ctrl+shift+p=unbind
 
-# Shift + Enter: newline without execution.
-keybind = shift+enter=text:\n
-
 # ghostty consumes these keypresses for its own actions, so we need to redefine
 # how we want them to be passed through to terminal programs with "performable",
 # which forwards the keys if a native ghostty selection is not active.

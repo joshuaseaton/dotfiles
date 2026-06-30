@@ -90,6 +90,10 @@ $env.config.table.mode = "thin"
 $env.config.table.index_mode = "never"
 $env.config.table.missing_value_symbol = " ∅ "
 
+# Request the kitty keyboard protocol so terminals that support it (e.g.
+# ghostty) report disambiguated keys.
+$env.config.use_kitty_protocol = true
+
 $env.config.keybindings = ($env.config.keybindings | append [
     {
         name: fzf_history
@@ -122,6 +126,17 @@ $env.config.keybindings = ($env.config.keybindings | append [
                 if ($result | is-not-empty) { cd $result }
             "
         }
+    }
+    {
+        # Shift+Enter always inserts a newline instead of deferring to
+        # reedline's behaviour of only *sometimes* inserting a newline (e.g.,
+        # relating to open brace detection) vs. otherwise executing the current
+        # command.
+        name: insert_newline
+        modifier: shift
+        keycode: enter
+        mode: [emacs, vi_normal, vi_insert]
+        event: { edit: insertnewline }
     }
 ])
 
