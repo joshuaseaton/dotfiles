@@ -1,7 +1,7 @@
 [
   {
     "source": "nu/autosource.nu",
-    "target": ".local/share/nushell/autoload/autosource.nu",
+    "target": ".config/nushell/autoload/autosource.nu",
     "os": "linux"
   },
   {
@@ -11,7 +11,7 @@
   },
   {
     "source": "nu/autosource-linux.nu",
-    "target": ".local/share/nushell/autoload/autosource-linux.nu",
+    "target": ".config/nushell/autoload/autosource-linux.nu",
     "os": "linux"
   },
   {
