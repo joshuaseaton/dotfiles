@@ -71,7 +71,8 @@
   "explorer.confirmDragAndDrop": false,
   "files.associations": {
     "config": "plaintext",
-    "**/ghostty/config": "ghostty"
+    "**/ghostty/config": "ghostty",
+    "OWNERS": "plaintext"
   },
   "files.autoSave": "onFocusChange",
   "files.insertFinalNewline": true,
