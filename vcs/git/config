@@ -35,6 +35,10 @@
 	untracked = "#ffb3b3" # Red pastel
 
 [commit]
+    # Nothing above the `# ------------------------ >8 ------------------------`
+	# will be modified (e.g., treated as comments).
+	cleanup = scissors
+
 	# Show the diff when editing a commit message.
 	verbose = true
 
