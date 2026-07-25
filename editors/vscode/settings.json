@@ -79,6 +79,10 @@
   "files.watcherExclude": {
     "**/out/**": true
   },
+  "lean4.alwaysAskBeforeInstallingLeanVersions": true,
+  "lean4.alwaysShowTitleBarMenu": false,
+  "lean4.infoview.debounceTime": 20,
+  "lean4.infoview.emphasizeFirstGoal": true,
   "nushellLanguageServer.includeDirs": [ "~/.dotfiles/shell/nu/lib" ],
   "ruff.fixAll": true,
   "ruff.lint.select": ["ALL"],

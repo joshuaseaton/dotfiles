@@ -28,6 +28,10 @@
     "type": "formula"
   },
   {
+    "name": "elan-init",
+    "type": "formula"
+  },
+  {
     "name": "font-cascadia-code",
     "type": "cask"
   },

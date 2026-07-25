@@ -8,6 +8,7 @@
   "google.gn",
   "joshuaseaton.kanagawa-forest",
   "kdl-org.kdl",
+  "leanprover.lean4",
   "llvm-vs-code-extensions.vscode-clangd",
   "ms-python.python",
   "ms-vscode-remote.remote-ssh",
