@@ -85,6 +85,7 @@ $env.config.history.file_format = "sqlite"
 $env.config.history.isolation = true
 $env.config.history.sync_on_enter = true
 $env.config.ls.use_ls_colors = false
+$env.config.rm.always_trash = true  # `rm --permanent` to actually delete
 $env.config.show_banner = false
 $env.config.table.mode = "thin"
 $env.config.table.index_mode = "never"
