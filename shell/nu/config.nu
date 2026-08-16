@@ -396,11 +396,3 @@ $env.FZF_ALT_C_OPTS = [
     --bind "alt-.:ignore"
     --bind "alt-o:ignore"
 ]
-
-# TODO: Remove this if/when --config ever gets a sane default.
-export def run [script: string, ...args: string] {
-    if not ($script | path exists) {
-        error make --unspanned $"Script does not exist: ($script)"
-    }
-    ^nu --config $nu.config-path $script ...$args
-}
