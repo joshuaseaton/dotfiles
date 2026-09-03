@@ -6,6 +6,7 @@
 # Imports
 #
 
+use boc.nu
 use brew.nu
 use cargo.nu
 use clipboard.nu
