@@ -1,0 +1,8 @@
+[net]
+# Fetch git dependencies with the git CLI. Cargo's built-in libgit2 transport
+# can only authenticate over SSH via ssh-agent. On the other hand, the CLI
+# honors ~/.ssh identities directly.
+git-fetch-with-cli = true
+
+[unstable]
+json-target-spec = true

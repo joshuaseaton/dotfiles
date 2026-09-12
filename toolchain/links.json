@@ -1,0 +1,6 @@
+[
+  {
+    "source": "cargo/config.toml",
+    "target": ".cargo/config.toml"
+  }
+]

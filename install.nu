@@ -5,7 +5,7 @@ use file.nu
 cd $env.FILE_PWD
 
 # Linked configuration files.
-[ "editors" "shell" "system" "terminal" "third_party" "vcs" ] |
+[ "editors" "shell" "system" "terminal" "third_party" "toolchain" "vcs" ] |
     each { |dir|
         let file = $dir | path join links.json
         open $file |
