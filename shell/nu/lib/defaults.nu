@@ -76,7 +76,7 @@ def xml-to-native [xml: record<tag:string, content:any>] {
         "array" => ($xml.content | each {|el| xml-to-native $el })
         "dict" => {
             mut dict = {}
-            mut key = null
+            mut key = ""
             for $row in $xml.content {
                 let value = (xml-to-native $row)
                 if $row.tag == "key" {
