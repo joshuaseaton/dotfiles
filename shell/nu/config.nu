@@ -141,7 +141,7 @@ $env.config.keybindings = ($env.config.keybindings | append [
     }
 ])
 
-let carapace_completer = {|spans|
+let carapace_completer = {|place|
   load-env {
   	CARAPACE_SHELL_BUILTINS: (
         help commands |
@@ -163,7 +163,7 @@ let carapace_completer = {|spans|
 
   # Module subcommands arrive as a single span (e.g., "git log").
   # Split them so carapace sees individual words.
-  let spans = $spans | each { split row " " } | flatten
+  let spans = $place.command | each { split row " " } | flatten
 
   # If the current command is an alias, get its expansion.
   let expanded_alias = (scope aliases | where name == $spans.0 | $in.0?.expansion?)
