@@ -85,6 +85,7 @@
   "lean4.infoview.emphasizeFirstGoal": true,
   "nushellLanguageServer.includeDirs": [ "~/.dotfiles/shell/nu/lib" ],
   "ruff.fixAll": true,
+  "ruff.path": [ "${userHome}/.cargo/bin/ruff" ],
   "rust-analyzer.check.overrideCommand": [
     "cargo",
     "clippy",
