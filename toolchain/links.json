@@ -2,5 +2,9 @@
   {
     "source": "cargo/config.toml",
     "target": ".cargo/config.toml"
+  },
+  {
+    "source": "ruff/ruff.toml",
+    "target": ".config/ruff/ruff.toml"
   }
 ]
